@@ -1,0 +1,25 @@
+@import "components/_starter";
+
+header {
+  height: 600px;
+  background: transparentize($colorMain, 0.4);
+
+  &:before {
+    content: ' ';
+    display: block;
+    position: absolute;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    z-index: -1;
+    opacity: 0.6;
+    background-image: url('../images/background.jpg');
+    background-repeat: no-repeat;
+    background-size: cover;
+  }
+}
+
+section.first {
+  padding-bottom: 0;
+}

@@ -5,27 +5,44 @@ module.exports = function ( grunt ) {
 			all: [ 'src/js/*.js' ]
 		},
 		sass: {
-			build: {
-				files: {
-					'dublove/css/style.css': 'src/sass/*.scss'
+				build: {
+						files: [{
+								expand: true,
+								cwd: 'src/sass',
+								src: ['*.scss'],
+								dest: 'dublove/css',
+								ext: '.css'
+						}]
 				}
-			}
 		},
-		autoprefixer: {
-	    options: {
-	      browserlist : "> 5%"
-	    },
-			dist: {
-						files: {
-								'dublove/css/style.css': 'dist/css/style.css'
-						}
+		postcss: {
+				options: {
+						map: false,
+						processors: [
+								require('autoprefixer')({
+										browsers: ['> 1%'],
+										remove: false
+								})
+						]
+				},
+				dist: {
+						files: [{
+								expand: true,
+								cwd: 'dublove/css',
+								src: ['*.css'],
+								dest: 'dublove/css'
+						}]
 				}
-	  },
+		},
 		cssmin: {
-			build: {
-				files: {
-					'dublove/css/style.min.css': 'dublove/css/style.css'
-				}
+			target: {
+					files: [{
+							expand: true,
+							cwd: 'dublove/css',
+							src: ['*.css', '!*.min.css'],
+							dest: 'dublove/css',
+							ext: '.min.css'
+					}]
 			}
 		},
 		uglify: {
@@ -41,7 +58,7 @@ module.exports = function ( grunt ) {
 		watch: {
 			css: {
 				files: [ 'src/sass/**/*.scss' ],
-				tasks: [ 'sass', 'autoprefixer', 'cssmin' ],
+				tasks: ['sass', 'postcss', 'cssmin'],
 				options: {
 					livereload: true
 				}
@@ -74,7 +91,7 @@ module.exports = function ( grunt ) {
 	grunt.loadNpmTasks( 'grunt-contrib-cssmin' );
 	grunt.loadNpmTasks( 'grunt-contrib-watch' );
 	grunt.loadNpmTasks( 'grunt-concurrent' );
-	grunt.loadNpmTasks('grunt-autoprefixer');
+  grunt.loadNpmTasks('grunt-postcss');
 	grunt.loadNpmTasks( 'grunt-notify' );
 
 	grunt.registerTask( 'default', [ 'sass', 'cssmin', 'jshint', 'uglify', 'concurrent' ] );

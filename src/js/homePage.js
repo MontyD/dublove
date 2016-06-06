@@ -22,15 +22,21 @@
   //define headerElement
   var nav = document.getElementById('stickyNav');
 
-  //define scroll events
+  var animatationEls = document.getElementsByClassName('animateUp');
+
+  console.log(animatationEls);
+
+    //define scroll events
   var scrollEvents = debounce(function() {
     var doc = document.documentElement;
     var top = (window.pageYOffset || doc.scrollTop) - (doc.clientTop || 0);
-    if (top > 20) {
-      nav.className = 'headerSmall';
-    } else {
-      nav.className = '';
+    for (var i = 0; i < animatationEls.length; i++) {
+      if (animatationEls[i].getBoundingClientRect().top < 400 && animatationEls[i].className.indexOf('active') === -1) {
+        animatationEls[i].className += ' active';
+
+      }
     }
+
   }, 10);
 
   //on scroll check if nav is at top, if not, make it small

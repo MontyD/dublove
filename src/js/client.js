@@ -20,37 +20,37 @@ function addEvent(evnt, elem, func) {
   //*********************
   //** Handle mobile navigation menu
   //*********************
-  var mobileNav = document.getElementById('mobileNav'),
-    mobileNavClickElements = document.getElementsByClassName('navOnClick'),
-    navOpen = false,
-    toggleMobileNav = function(e) {
-      var evt = e || window.event;
-      if (evt.preventDefault) {
-        evt.preventDefault();
-      } else {
-        evt.returnValue = false;
-      }
-      if (navOpen) {
-        overlay.className = "";
-        mobileNav.className = "";
-        navOpen = false;
-      } else {
-        overlay.className = "active";
-        mobileNav.className = "active";
-        navOpen = true;
-      }
-    };
-
-  for( var i = 0; i < mobileNavClickElements.length; i++) {
-    addEvent('click', mobileNavClickElements[i], toggleMobileNav);
-  }
+  // var mobileNav = document.getElementById('mobileNav'),
+  //   mobileNavClickElements = document.getElementsByClassName('navOnClick'),
+  //   navOpen = false,
+  //   toggleMobileNav = function(e) {
+  //     var evt = e || window.event;
+  //     if (evt.preventDefault) {
+  //       evt.preventDefault();
+  //     } else {
+  //       evt.returnValue = false;
+  //     }
+  //     if (navOpen) {
+  //       overlay.className = "";
+  //       mobileNav.className = "";
+  //       navOpen = false;
+  //     } else {
+  //       overlay.className = "active";
+  //       mobileNav.className = "active";
+  //       navOpen = true;
+  //     }
+  //   };
+  //
+  // for( var i = 0; i < mobileNavClickElements.length; i++) {
+  //   addEvent('click', mobileNavClickElements[i], toggleMobileNav);
+  // }
 
   //*********************
   //** Add date year to footer
   //*********************
-  var dateElement = document.getElementById('dateNow');
-  if (dateElement) {
-    var tempDate = new Date();
-    dateElement.innerHTML = tempDate.getFullYear();
-  }
+  // var dateElement = document.getElementById('dateNow');
+  // if (dateElement) {
+  //   var tempDate = new Date();
+  //   dateElement.innerHTML = tempDate.getFullYear();
+  // }
 })();
