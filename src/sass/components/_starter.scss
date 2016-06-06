@@ -12,7 +12,7 @@ $colorGrey: #757575;
 $colorWhite: #FFFFFF;
 $colorBlack: #212121;
 $containerWidth: 1000px;
-$funFont: 'Cabin Sketch', sans-serif;
+$funFont: 'Bad Script', sans-serif;
 @function top-shadow($depth) {
     $primary-offset: nth(1.5 3 10 14 19, $depth) * 1px;
     $blur          : nth(1.5 3 10 14 19, $depth) * 4px;
@@ -60,7 +60,7 @@ $funFont: 'Cabin Sketch', sans-serif;
     text-shadow: 1px 1px 0 rgba(0, 0, 0, 0.8);
 }
 body {
-    font-family            : 'Nixie One', sans-serif;
+    font-family            : 'Josefin Sans', sans-serif;
     min-height             : 100%;
     background             : $colorBackground;
     color                  : $colorBlack;
@@ -76,7 +76,7 @@ h5 {
 }
 h1 {
     font-size: 2.5em;
-    margin   : 0.6em auto 0.2em;
+    margin   : 0.2em auto;
     &.main {
         letter-spacing: 3px;
         font-size     : 4em;
@@ -112,11 +112,12 @@ h2 {
 button {
     display        : inline-block;
     background     : $colorMain;
-    padding        : 0.6em 1.6em 0.7em;
+    padding        : 0.6em 1.6em;
     margin         : 0.5em auto;
     border         : none;
     border-radius  : 3px;
     color          : $colorWhite;
+    font-weight    : 700;
     text-decoration: none;
     font-size      : 1.2em;
     @include shadow(1);

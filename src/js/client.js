@@ -53,4 +53,7 @@ function addEvent(evnt, elem, func) {
   //   var tempDate = new Date();
   //   dateElement.innerHTML = tempDate.getFullYear();
   // }
+  window.setTimeout(function(){
+    document.getElementsByTagName('body')[0].className = 'active';
+  },100);
 })();

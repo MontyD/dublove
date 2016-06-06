@@ -1,1 +1,1 @@
-function addEvent(a,b,c){b.addEventListener?b.addEventListener(a,c,!1):b.attachEvent?b.attachEvent("on"+a,c):b[a]=c}!function(){"use strict"}();
+function addEvent(a,b,c){b.addEventListener?b.addEventListener(a,c,!1):b.attachEvent?b.attachEvent("on"+a,c):b[a]=c}!function(){"use strict";window.setTimeout(function(){document.getElementsByTagName("body")[0].className="active"},100)}();

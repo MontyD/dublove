@@ -23,3 +23,41 @@ header {
 section.first {
   padding-bottom: 0;
 }
+
+img.plant {
+  position: absolute;
+  margin: 0;
+  padding: 0;
+  opacity: 0;
+  transform: scale(0);
+  transition: opacity, transform;
+
+  &.one {
+    top: 20px;
+    left: 30px;
+    transition-delay: 0.6s;
+    transition-duration: 1.3s;
+  }
+  &.two {
+    top: 40px;
+    right: 30px;
+    transition-delay: 0.3s;
+    transition-duration: 1s;
+  }
+  &.three {
+    top: 80px;
+    right: 60px;
+    transition-delay: 0.6s;
+    transition-duration: 0.6s;
+  }
+  &.four {
+    top: 70px;
+    left: 75px;
+    transition-delay: 0.5s;
+    transition-duration: 1.2s;
+  }
+}
+.active img.plant {
+  opacity: 1;
+  transform: scale(1);
+}
