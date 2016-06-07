@@ -1,4 +1,5 @@
 @import "components/_starter";
+@import "components/_imageViewer";
 
 header {
   height: 600px;
@@ -60,4 +61,8 @@ img.plant {
 .active img.plant {
   opacity: 1;
   transform: scale(1);
+}
+.second {
+  padding-top: 2em;
+  padding-bottom: 5em;
 }

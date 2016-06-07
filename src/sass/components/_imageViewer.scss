@@ -1,0 +1,60 @@
+@import "_starter";
+.imageViewer {
+    display : block;
+    position: relative;
+    width   : 100%;
+    margin  : 0 auto;
+    padding : 0.5em;
+    height  : 300px;
+    button {
+        position  : absolute;
+        top       : 0;
+        height    : 100%;
+        width     : 10%;
+        padding: 0;
+        background: transparent;
+        box-shadow: none;
+        z-index: 10;
+        cursor: pointer;
+        &.imgLeft {
+            left: 0;
+        }
+        &.imgRight {
+            right: 0;
+        }
+    }
+    img.b-lazy {
+        display      : block;
+        position     : absolute;
+        top          : 50%;
+        transform    : translateY(-50%);
+        left         : 0;
+        right        : 0;
+        margin       : 0 auto;
+        padding      : 0.8em;
+        background   : $colorBackground;
+        border-radius: 3px;
+        opacity      : 0;
+        visibility   : hidden;
+        max-width    : 90%;
+        @include shadow(1);
+        transition   : all .3s ease;
+        &.active {
+            visibility: visible;
+            opacity   : 1;
+        }
+        &.left,
+        &.right {
+            opacity   : 0.5;
+            transform : translateY(-50%) scale(0.7);
+            cursor    : pointer;
+            visibility: visible;
+        }
+        &.left {
+            transform : translateY(-50%) translateX(-120%) scale(0.7);
+        }
+        &.right {
+            transform : translateY(-50%) translateX(120%) scale(0.7);
+        }
+    }
+}

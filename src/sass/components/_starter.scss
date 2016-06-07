@@ -89,24 +89,28 @@ h1 {
         }
     }
 }
-h3 {
-    font-size: 3em;
-}
+
 h2 {
     font-weight: normal;
     text-align : center;
-    font-size  : 2em;
+    font-size  : 2.5em;
     &.main {
-        font-size: 1.8em;
+        font-size: 3em;
         @include darkShadow;
         @include media-large {
-            font-size: 2.5em;
+            font-size: 2em;
         }
     }
+}
+h3 {
+    font-size: 3em;
 }
 .subtleText {
     color     : $colorGrey;
     font-style: italic;
+}
+.textShadow {
+  @include darkShadow;
 }
 .likeButton,
 button {
