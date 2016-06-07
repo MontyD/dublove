@@ -1,6 +1,6 @@
 @import "normalize"; // font
 //Variables
-$colorMain: #4A2FA9;
+$colorMain: #673AB7;
 $colorDark: #240D72;
 $colorLightMain: #9575CD;
 $colorSubtle: #2B52A4;
@@ -112,14 +112,13 @@ h2 {
 button {
     display        : inline-block;
     background     : $colorMain;
-    padding        : 0.6em 1.6em;
+    padding        : 0.6em 1.6em 0.5em;
     margin         : 0.5em auto;
     border         : none;
     border-radius  : 3px;
     color          : $colorWhite;
-    font-weight    : 700;
     text-decoration: none;
-    font-size      : 1.2em;
+    font-size      : 1.4em;
     @include shadow(1);
     transition     : box-shadow 0.2s ease;
     &.primary {
@@ -160,13 +159,24 @@ main {
     overflow     : hidden;
     @include shadow(1);
     section {
-        padding: 1em 0.5em;
+        padding: 1em;
     }
 }
 .funFont {
     font-family: $funFont;
     font-size  : 1em;
     color      : $colorMain;
+}
+.container {
+  display: block;
+  position: relative;
+  width: 100%;
+  max-width: $containerWidth;
+  margin: 0 auto;
+  box-sizing: border-box;
+  &.padded {
+    padding: 1em;
+  }
 }
 p {
     width      : 80%;

@@ -33,26 +33,26 @@ img.plant {
   transition: opacity, transform;
 
   &.one {
-    top: 20px;
-    left: 30px;
+    top: 5px;
+    left: 0;
     transition-delay: 0.6s;
     transition-duration: 1.3s;
   }
   &.two {
-    top: 40px;
-    right: 30px;
+    top: 45px;
+    left: 20px;
     transition-delay: 0.3s;
     transition-duration: 1s;
   }
   &.three {
-    top: 80px;
-    right: 60px;
+    top: 5px;
+    right: 0;
     transition-delay: 0.6s;
     transition-duration: 0.6s;
   }
   &.four {
-    top: 70px;
-    left: 75px;
+    top: 45px;
+    right: 20px;
     transition-delay: 0.5s;
     transition-duration: 1.2s;
   }
