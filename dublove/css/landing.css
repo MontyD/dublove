@@ -1052,7 +1052,7 @@ p {
   width: 100%;
   margin: 0 auto;
   padding: 0.5em;
-  height: 300px; }
+  height: 400px; }
   .imageViewer button {
     position: absolute;
     top: 0;
@@ -1076,30 +1076,30 @@ p {
     left: 0;
     right: 0;
     margin: 0 auto;
-    padding: 0.8em;
+    padding: 0.4em;
     background: #F1ECD6;
     border-radius: 3px;
     opacity: 0;
     visibility: hidden;
-    max-width: 90%;
+    max-height: 90%;
     box-shadow: 0 1.5px 4px rgba(0, 0, 0, 0.24), 0 1.5px 6px rgba(0, 0, 0, 0.12);
-    -webkit-transition: all .3s ease;
-    transition: all .3s ease; }
+    -webkit-transition: all 0.3s ease;
+    transition: all 0.3s ease; }
     .imageViewer img.b-lazy.active {
       visibility: visible;
       opacity: 1; }
     .imageViewer img.b-lazy.left, .imageViewer img.b-lazy.right {
       opacity: 0.5;
-      -webkit-transform: translateY(-50%) scale(0.7);
-              transform: translateY(-50%) scale(0.7);
+      -webkit-transform: translateY(-30%) scale(0.7);
+              transform: translateY(-30%) scale(0.7);
       cursor: pointer;
       visibility: visible; }
     .imageViewer img.b-lazy.left {
-      -webkit-transform: translateY(-50%) translateX(-120%) scale(0.7);
-              transform: translateY(-50%) translateX(-120%) scale(0.7); }
+      -webkit-transform: translateY(-50%) translateX(-100%) scale(0.7);
+              transform: translateY(-50%) translateX(-100%) scale(0.7); }
     .imageViewer img.b-lazy.right {
-      -webkit-transform: translateY(-50%) translateX(120%) scale(0.7);
-              transform: translateY(-50%) translateX(120%) scale(0.7); }
+      -webkit-transform: translateY(-50%) translateX(100%) scale(0.7);
+              transform: translateY(-50%) translateX(100%) scale(0.7); }
 
 header {
   height: 600px;
@@ -1121,50 +1121,63 @@ header {
 section.first {
   padding-bottom: 0; }
 
-img.plant {
+.flowerGroup {
   position: absolute;
+  display: inline-block;
   margin: 0;
-  padding: 0;
-  opacity: 0;
-  -webkit-transform: scale(0);
-          transform: scale(0);
-  -webkit-transition: opacity, -webkit-transform;
-  transition: opacity, -webkit-transform;
-  transition: opacity, transform;
-  transition: opacity, transform, -webkit-transform; }
-  img.plant.one {
-    top: 5px;
-    left: 0;
-    -webkit-transition-delay: 0.6s;
-            transition-delay: 0.6s;
-    -webkit-transition-duration: 1.3s;
-            transition-duration: 1.3s; }
-  img.plant.two {
-    top: 45px;
-    left: 20px;
-    -webkit-transition-delay: 0.3s;
-            transition-delay: 0.3s;
-    -webkit-transition-duration: 1s;
-            transition-duration: 1s; }
-  img.plant.three {
-    top: 5px;
-    right: 0;
-    -webkit-transition-delay: 0.6s;
-            transition-delay: 0.6s;
-    -webkit-transition-duration: 0.6s;
-            transition-duration: 0.6s; }
-  img.plant.four {
-    top: 45px;
-    right: 20px;
-    -webkit-transition-delay: 0.5s;
-            transition-delay: 0.5s;
-    -webkit-transition-duration: 1.2s;
-            transition-duration: 1.2s; }
+  padding: 0; }
+  .flowerGroup img {
+    opacity: 0;
+    -webkit-transform: scaleX(0) scaleY(0);
+            transform: scaleX(0) scaleY(0);
+    -webkit-transition: all 1s ease;
+    transition: all 1s ease; }
+  .flowerGroup.top {
+    top: 2em;
+    left: 0; }
+    .flowerGroup.top img.two {
+      position: relative;
+      top: -3.2em;
+      left: -1.9em;
+      -webkit-transition-delay: 0.3s;
+              transition-delay: 0.3s;
+      -webkit-transition-duration: 1.2s;
+              transition-duration: 1.2s; }
+    .flowerGroup.top img.three {
+      position: relative;
+      top: 0.2em;
+      left: -10em;
+      -webkit-transition-delay: 0.5s;
+              transition-delay: 0.5s;
+      -webkit-transition-duration: .8s;
+              transition-duration: .8s; }
+  .flowerGroup.bottom {
+    bottom: 0;
+    right: 0; }
+    .flowerGroup.bottom img.two {
+      position: relative;
+      bottom: -2.5em;
+      right: -2em;
+      -webkit-transition-delay: 0.8s;
+              transition-delay: 0.8s;
+      -webkit-transition-duration: .5s;
+              transition-duration: .5s; }
+    .flowerGroup.bottom img.three {
+      position: relative;
+      bottom: -0.2em;
+      right: -10em;
+      -webkit-transition-delay: 0.6s;
+              transition-delay: 0.6s;
+      -webkit-transition-duration: 1s;
+              transition-duration: 1s; }
 
-.active img.plant {
+.active .flowerGroup img {
   opacity: 1;
-  -webkit-transform: scale(1);
-          transform: scale(1); }
+  -webkit-transform: scaleY(1) scaleX(1);
+          transform: scaleY(1) scaleX(1); }
+.active .flowerGroup.bottom img {
+  -webkit-transform: scaleY(1) scaleX(-1);
+          transform: scaleY(1) scaleX(-1); }
 
 .second {
   padding-top: 2em;
