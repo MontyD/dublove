@@ -10,9 +10,11 @@ $colorLight: #FFE154;
 $colorBackground: #F1ECD6;
 $colorGrey: #757575;
 $colorWhite: #FFFFFF;
+$colorLightGrey: #f1f1f1;
 $colorBlack: #212121;
 $containerWidth: 1000px;
 $funFont: 'Bad Script', sans-serif;
+$normalFont: 'Josefin Sans', sans-serif;
 @function top-shadow($depth) {
     $primary-offset: nth(1.5 3 10 14 19, $depth) * 1px;
     $blur          : nth(1.5 3 10 14 19, $depth) * 4px;
@@ -60,7 +62,7 @@ $funFont: 'Bad Script', sans-serif;
     text-shadow: 1px 1px 0 rgba(0, 0, 0, 0.8);
 }
 body {
-    font-family            : 'Josefin Sans', sans-serif;
+    font-family            : $normalFont;
     min-height             : 100%;
     background             : $colorBackground;
     color                  : $colorBlack;
@@ -89,7 +91,6 @@ h1 {
         }
     }
 }
-
 h2 {
     font-weight: normal;
     text-align : center;
@@ -101,16 +102,29 @@ h2 {
             font-size: 2em;
         }
     }
+    &.funFont {
+      font-family: $funFont;
+      font-size: 3.2em;
+      margin: 0.2em auto;
+      letter-spacing: 0.05em;
+    }
 }
 h3 {
     font-size: 3em;
+    &.normalFont {
+      font-family: $normalFont;
+    }
 }
 .subtleText {
     color     : $colorGrey;
     font-style: italic;
 }
+p.subtleText {
+  font-size: 1.4em;
+  margin: 0.5em auto 1em;
+}
 .textShadow {
-  @include darkShadow;
+    @include darkShadow;
 }
 .likeButton,
 button {
@@ -138,6 +152,9 @@ button {
         outline: none;
     }
 }
+.noTransition {
+    transition: none;
+}
 header {
     position  : relative;
     background: $colorLightMain;
@@ -160,27 +177,35 @@ main {
     margin-bottom: 2em;
     background   : $colorWhite;
     border-radius: 3px;
-    overflow     : hidden;
+    overflow-x     : hidden;
     @include shadow(1);
     section {
         padding: 1em;
     }
 }
-.funFont {
+section {
+    position: relative;
+}
+footer {
+  width: 100%;
+  margin: 2em 0 0;
+}
+span.funFont {
     font-family: $funFont;
     font-size  : 1em;
     color      : $colorMain;
 }
 .container {
-  display: block;
-  position: relative;
-  width: 100%;
-  max-width: $containerWidth;
-  margin: 0 auto;
+    display   : block;
+    position  : relative;
+    width     : 100%;
+    max-width : $containerWidth;
+    margin    : 0 auto;
+    box-sizing: border-box;
+}
+.padded {
   box-sizing: border-box;
-  &.padded {
-    padding: 1em;
-  }
+    padding: 0.5em;
 }
 p {
     width      : 80%;
@@ -192,8 +217,23 @@ p {
     text-align: center;
 }
 .thirds {
-    width      : 30.6666666667%;
-    margin-left: 4%;
+    display   : inline-block;
+    width     : 32%;
+    text-align: justify;
+    padding   : 1em;
+    box-sizing: border-box;
+    margin-left: 0;
+    margin-right: 0;
+    p {
+      padding: 0;
+      margin: 0;
+      vertical-align: top;
+      width: 100%;
+    }
+    h3 {
+      margin: 0 auto;
+      font-size: 2.2em;
+    }
 }
 .feature {
     display   : block;
@@ -215,7 +255,43 @@ p {
         transform: translateY(0);
     }
 }
+.innerModal {
+  display: block;
+  margin: 0 auto;
+  position: relative;
+  padding: 0.5em;
+  box-sizing: border-box;
+  width: 90%;
+  max-width: 600px;
+  border-radius: 4px;
+  @include shadow(1);
+
+  h1,h2,h3,h4 {
+    margin: 0.2em;
+  }
+}
 .dark {
     background: $colorMain;
+    background-image: linear-gradient(to bottom right, $colorLightMain, $colorMain);
     color     : $colorWhite;
+}
+.grey {
+  background: $colorLightGrey;
+}
+.animateScale {
+    transform : scale(0);
+    opacity   : 0;
+    transition: opacity 0.3s ease, transform 0.3s ease;
+    &.active {
+        transform: scale(1);
+        opacity  : 1;
+    }
+}
+.b-lazy {
+    transition: opacity 500ms ease-in-out;
+    max-width : 100%;
+    opacity   : 0;
+}
+.b-lazy.b-loaded {
+    opacity: 1;
 }

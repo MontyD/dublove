@@ -22,7 +22,7 @@
     //define headerElement
     var nav = document.getElementById('stickyNav');
 
-    var animatationEls = document.getElementsByClassName('animateUp');
+    var animatationEls = document.getElementsByClassName('animate');
 
     console.log(animatationEls);
 
@@ -31,13 +31,13 @@
         var doc = document.documentElement;
         var top = (window.pageYOffset || doc.scrollTop) - (doc.clientTop || 0);
         for (var i = 0; i < animatationEls.length; i++) {
-            if (animatationEls[i].getBoundingClientRect().top < 400 && animatationEls[i].className.indexOf('active') === -1) {
+            if (animatationEls[i].getBoundingClientRect().top < 550 && animatationEls[i].className.indexOf('active') === -1) {
                 animatationEls[i].className += ' active';
 
             }
         }
 
-    }, 10);
+    }, 30);
 
     var bLazy = new Blazy({
         offset: 200
@@ -67,6 +67,7 @@
                 images[i].className = images[i].className.replace(/\sactive|\sleft|\sright/gi, '');
             }
         }
+        bLazy.revalidate();
         return false;
     }, 20);
 

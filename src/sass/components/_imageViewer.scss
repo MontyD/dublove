@@ -24,7 +24,7 @@
         }
     }
     img.b-lazy {
-        display      : block;
+        display      : none;
         position     : absolute;
         top          : 50%;
         transform    : translateY(-50%);
@@ -40,11 +40,13 @@
         @include shadow(1);
         transition   : all 0.3s ease;
         &.active {
+            display: block;
             visibility: visible;
             opacity   : 1;
         }
         &.left,
         &.right {
+            display: block;
             opacity   : 0.5;
             transform : translateY(-30%) scale(0.7);
             cursor    : pointer;

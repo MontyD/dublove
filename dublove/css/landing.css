@@ -365,7 +365,7 @@ textarea {
   /* 2 */ }
 
 body {
-  font-family: 'Josefin Sans', sans-serif;
+  font-family: "Josefin Sans", sans-serif;
   min-height: 100%;
   background: #F1ECD6;
   color: #212121;
@@ -403,13 +403,24 @@ h2 {
     @media only screen and (min-width: 50em) {
       h2.main {
         font-size: 2em; } }
+  h2.funFont {
+    font-family: "Bad Script", sans-serif;
+    font-size: 3.2em;
+    margin: 0.2em auto;
+    letter-spacing: 0.05em; }
 
 h3 {
   font-size: 3em; }
+  h3.normalFont {
+    font-family: "Josefin Sans", sans-serif; }
 
 .subtleText {
   color: #757575;
   font-style: italic; }
+
+p.subtleText {
+  font-size: 1.4em;
+  margin: 0.5em auto 1em; }
 
 .textShadow {
   text-shadow: 1px 1px 0 rgba(0, 0, 0, 0.8); }
@@ -441,6 +452,10 @@ button {
     color: #FFFFFF;
     outline: none; }
 
+.noTransition {
+  -webkit-transition: none;
+  transition: none; }
+
 header {
   position: relative;
   background: #9575CD;
@@ -462,12 +477,19 @@ main {
   margin-bottom: 2em;
   background: #FFFFFF;
   border-radius: 3px;
-  overflow: hidden;
+  overflow-x: hidden;
   box-shadow: 0 1.5px 4px rgba(0, 0, 0, 0.24), 0 1.5px 6px rgba(0, 0, 0, 0.12); }
   main section {
     padding: 1em; }
 
-.funFont {
+section {
+  position: relative; }
+
+footer {
+  width: 100%;
+  margin: 2em 0 0; }
+
+span.funFont {
   font-family: "Bad Script", sans-serif;
   font-size: 1em;
   color: #673AB7; }
@@ -479,8 +501,10 @@ main {
   max-width: 1000px;
   margin: 0 auto;
   box-sizing: border-box; }
-  .container.padded {
-    padding: 1em; }
+
+.padded {
+  box-sizing: border-box;
+  padding: 0.5em; }
 
 p {
   width: 80%;
@@ -492,8 +516,21 @@ p {
   text-align: center; }
 
 .thirds {
-  width: 30.6666666667%;
-  margin-left: 4%; }
+  display: inline-block;
+  width: 32%;
+  text-align: justify;
+  padding: 1em;
+  box-sizing: border-box;
+  margin-left: 0;
+  margin-right: 0; }
+  .thirds p {
+    padding: 0;
+    margin: 0;
+    vertical-align: top;
+    width: 100%; }
+  .thirds h3 {
+    margin: 0 auto;
+    font-size: 2.2em; }
 
 .feature {
   display: block;
@@ -518,9 +555,49 @@ p {
     -webkit-transform: translateY(0);
             transform: translateY(0); }
 
+.innerModal {
+  display: block;
+  margin: 0 auto;
+  position: relative;
+  padding: 0.5em;
+  box-sizing: border-box;
+  width: 90%;
+  max-width: 600px;
+  border-radius: 4px;
+  box-shadow: 0 1.5px 4px rgba(0, 0, 0, 0.24), 0 1.5px 6px rgba(0, 0, 0, 0.12); }
+  .innerModal h1, .innerModal h2, .innerModal h3, .innerModal h4 {
+    margin: 0.2em; }
+
 .dark {
   background: #673AB7;
+  background-image: -webkit-linear-gradient(top left, #9575CD, #673AB7);
+  background-image: linear-gradient(to bottom right, #9575CD, #673AB7);
   color: #FFFFFF; }
+
+.grey {
+  background: #f1f1f1; }
+
+.animateScale {
+  -webkit-transform: scale(0);
+          transform: scale(0);
+  opacity: 0;
+  -webkit-transition: opacity 0.3s ease, -webkit-transform 0.3s ease;
+  transition: opacity 0.3s ease, -webkit-transform 0.3s ease;
+  transition: opacity 0.3s ease, transform 0.3s ease;
+  transition: opacity 0.3s ease, transform 0.3s ease, -webkit-transform 0.3s ease; }
+  .animateScale.active {
+    -webkit-transform: scale(1);
+            transform: scale(1);
+    opacity: 1; }
+
+.b-lazy {
+  -webkit-transition: opacity 500ms ease-in-out;
+  transition: opacity 500ms ease-in-out;
+  max-width: 100%;
+  opacity: 0; }
+
+.b-lazy.b-loaded {
+  opacity: 1; }
 
 /*! normalize.css v4.1.1 | MIT License | github.com/necolas/normalize.css */
 /**
@@ -889,7 +966,7 @@ textarea {
   /* 2 */ }
 
 body {
-  font-family: 'Josefin Sans', sans-serif;
+  font-family: "Josefin Sans", sans-serif;
   min-height: 100%;
   background: #F1ECD6;
   color: #212121;
@@ -927,13 +1004,24 @@ h2 {
     @media only screen and (min-width: 50em) {
       h2.main {
         font-size: 2em; } }
+  h2.funFont {
+    font-family: "Bad Script", sans-serif;
+    font-size: 3.2em;
+    margin: 0.2em auto;
+    letter-spacing: 0.05em; }
 
 h3 {
   font-size: 3em; }
+  h3.normalFont {
+    font-family: "Josefin Sans", sans-serif; }
 
 .subtleText {
   color: #757575;
   font-style: italic; }
+
+p.subtleText {
+  font-size: 1.4em;
+  margin: 0.5em auto 1em; }
 
 .textShadow {
   text-shadow: 1px 1px 0 rgba(0, 0, 0, 0.8); }
@@ -965,6 +1053,10 @@ button {
     color: #FFFFFF;
     outline: none; }
 
+.noTransition {
+  -webkit-transition: none;
+  transition: none; }
+
 header {
   position: relative;
   background: #9575CD;
@@ -986,12 +1078,19 @@ main {
   margin-bottom: 2em;
   background: #FFFFFF;
   border-radius: 3px;
-  overflow: hidden;
+  overflow-x: hidden;
   box-shadow: 0 1.5px 4px rgba(0, 0, 0, 0.24), 0 1.5px 6px rgba(0, 0, 0, 0.12); }
   main section {
     padding: 1em; }
 
-.funFont {
+section {
+  position: relative; }
+
+footer {
+  width: 100%;
+  margin: 2em 0 0; }
+
+span.funFont {
   font-family: "Bad Script", sans-serif;
   font-size: 1em;
   color: #673AB7; }
@@ -1003,8 +1102,10 @@ main {
   max-width: 1000px;
   margin: 0 auto;
   box-sizing: border-box; }
-  .container.padded {
-    padding: 1em; }
+
+.padded {
+  box-sizing: border-box;
+  padding: 0.5em; }
 
 p {
   width: 80%;
@@ -1016,8 +1117,21 @@ p {
   text-align: center; }
 
 .thirds {
-  width: 30.6666666667%;
-  margin-left: 4%; }
+  display: inline-block;
+  width: 32%;
+  text-align: justify;
+  padding: 1em;
+  box-sizing: border-box;
+  margin-left: 0;
+  margin-right: 0; }
+  .thirds p {
+    padding: 0;
+    margin: 0;
+    vertical-align: top;
+    width: 100%; }
+  .thirds h3 {
+    margin: 0 auto;
+    font-size: 2.2em; }
 
 .feature {
   display: block;
@@ -1042,9 +1156,49 @@ p {
     -webkit-transform: translateY(0);
             transform: translateY(0); }
 
+.innerModal {
+  display: block;
+  margin: 0 auto;
+  position: relative;
+  padding: 0.5em;
+  box-sizing: border-box;
+  width: 90%;
+  max-width: 600px;
+  border-radius: 4px;
+  box-shadow: 0 1.5px 4px rgba(0, 0, 0, 0.24), 0 1.5px 6px rgba(0, 0, 0, 0.12); }
+  .innerModal h1, .innerModal h2, .innerModal h3, .innerModal h4 {
+    margin: 0.2em; }
+
 .dark {
   background: #673AB7;
+  background-image: -webkit-linear-gradient(top left, #9575CD, #673AB7);
+  background-image: linear-gradient(to bottom right, #9575CD, #673AB7);
   color: #FFFFFF; }
+
+.grey {
+  background: #f1f1f1; }
+
+.animateScale {
+  -webkit-transform: scale(0);
+          transform: scale(0);
+  opacity: 0;
+  -webkit-transition: opacity 0.3s ease, -webkit-transform 0.3s ease;
+  transition: opacity 0.3s ease, -webkit-transform 0.3s ease;
+  transition: opacity 0.3s ease, transform 0.3s ease;
+  transition: opacity 0.3s ease, transform 0.3s ease, -webkit-transform 0.3s ease; }
+  .animateScale.active {
+    -webkit-transform: scale(1);
+            transform: scale(1);
+    opacity: 1; }
+
+.b-lazy {
+  -webkit-transition: opacity 500ms ease-in-out;
+  transition: opacity 500ms ease-in-out;
+  max-width: 100%;
+  opacity: 0; }
+
+.b-lazy.b-loaded {
+  opacity: 1; }
 
 .imageViewer {
   display: block;
@@ -1068,7 +1222,7 @@ p {
     .imageViewer button.imgRight {
       right: 0; }
   .imageViewer img.b-lazy {
-    display: block;
+    display: none;
     position: absolute;
     top: 50%;
     -webkit-transform: translateY(-50%);
@@ -1086,9 +1240,11 @@ p {
     -webkit-transition: all 0.3s ease;
     transition: all 0.3s ease; }
     .imageViewer img.b-lazy.active {
+      display: block;
       visibility: visible;
       opacity: 1; }
     .imageViewer img.b-lazy.left, .imageViewer img.b-lazy.right {
+      display: block;
       opacity: 0.5;
       -webkit-transform: translateY(-30%) scale(0.7);
               transform: translateY(-30%) scale(0.7);
@@ -1121,64 +1277,65 @@ header {
 section.first {
   padding-bottom: 0; }
 
+h1.main {
+  margin-top: 0.4em;
+  margin-bottom: 0; }
+
+h2.main {
+  margin: 0.2em auto 1em; }
+
 .flowerGroup {
   position: absolute;
   display: inline-block;
-  margin: 0;
-  padding: 0; }
+  margin: 0 auto;
+  padding: 0;
+  top: -0.5em;
+  left: 0;
+  right: 0; }
   .flowerGroup img {
     opacity: 0;
-    -webkit-transform: scaleX(0) scaleY(0);
-            transform: scaleX(0) scaleY(0);
-    -webkit-transition: all 1s ease;
-    transition: all 1s ease; }
-  .flowerGroup.top {
-    top: 2em;
-    left: 2em; }
-    .flowerGroup.top img.two {
-      position: relative;
-      top: -3.2em;
-      left: -1.9em;
-      -webkit-transition-delay: 0.3s;
-              transition-delay: 0.3s;
-      -webkit-transition-duration: 1.2s;
-              transition-duration: 1.2s; }
-    .flowerGroup.top img.three {
-      position: relative;
-      top: 0.2em;
-      left: -10em;
+    -webkit-transform: scale(0) rotate(0deg);
+            transform: scale(0) rotate(0deg);
+    -webkit-transition: opacity 1s ease, -webkit-transform 1s ease;
+    transition: opacity 1s ease, -webkit-transform 1s ease;
+    transition: opacity 1s ease, transform 1s ease;
+    transition: opacity 1s ease, transform 1s ease, -webkit-transform 1s ease; }
+    .flowerGroup img.one {
+      -webkit-transition-delay: 0.2s;
+              transition-delay: 0.2s; }
+    .flowerGroup img.two {
       -webkit-transition-delay: 0.5s;
-              transition-delay: 0.5s;
-      -webkit-transition-duration: .8s;
-              transition-duration: .8s; }
-  .flowerGroup.bottom {
-    bottom: 0;
-    right: 2em; }
-    .flowerGroup.bottom img.two {
-      position: relative;
-      bottom: -2.5em;
-      right: -2em;
-      -webkit-transition-delay: 0.8s;
-              transition-delay: 0.8s;
-      -webkit-transition-duration: .5s;
-              transition-duration: .5s; }
-    .flowerGroup.bottom img.three {
-      position: relative;
-      bottom: -0.2em;
-      right: -10em;
-      -webkit-transition-delay: 0.6s;
-              transition-delay: 0.6s;
-      -webkit-transition-duration: 1s;
-              transition-duration: 1s; }
+              transition-delay: 0.5s; }
+    .flowerGroup img.three {
+      -webkit-transition-delay: 0.7s;
+              transition-delay: 0.7s; }
+
+img.topLeft {
+  position: absolute;
+  top: 1.5em;
+  left: 1.5em; }
+
+img.bottomRight {
+  position: absolute;
+  bottom: 1.5em;
+  right: 1.5em; }
 
 .active .flowerGroup img {
   opacity: 1;
-  -webkit-transform: scaleY(1) scaleX(1);
-          transform: scaleY(1) scaleX(1); }
-.active .flowerGroup.bottom img {
-  -webkit-transform: scaleY(1) scaleX(-1);
-          transform: scaleY(1) scaleX(-1); }
+  -webkit-transform: scale(1) rotate(0deg);
+          transform: scale(1) rotate(0deg); }
+  .active .flowerGroup img.one {
+    -webkit-transform: scale(1) rotate(-55deg);
+            transform: scale(1) rotate(-55deg); }
 
 .second {
-  padding-top: 2em;
-  padding-bottom: 5em; }
+  padding-top: 1em;
+  padding-bottom: 3em; }
+
+.third {
+  padding-bottom: 2.5em; }
+  .third h3 {
+    margin-bottom: 0.1em; }
+
+.fourth h2 {
+  margin-bottom: 0.1em; }
