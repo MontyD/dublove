@@ -1,8 +1,8 @@
 @import "normalize"; // font
 //Variables
-$colorMain: #673AB7;
-$colorDark: #240D72;
-$colorLightMain: #9575CD;
+$colorMain: #4527A0;
+$colorDark: #311B92;
+$colorLightMain: #5E35B1;
 $colorSubtle: #2B52A4;
 $colorHighlight: #F5D32C;
 $colorAccent: #F5B12C;
@@ -15,6 +15,9 @@ $colorBlack: #212121;
 $containerWidth: 1000px;
 $funFont: 'Bad Script', sans-serif;
 $normalFont: 'Josefin Sans', sans-serif;
+$largeBP: 1100px;
+$mediumBP: 800px;
+$smallBP: 650px;
 @function top-shadow($depth) {
     $primary-offset: nth(1.5 3 10 14 19, $depth) * 1px;
     $blur          : nth(1.5 3 10 14 19, $depth) * 4px;
@@ -43,21 +46,6 @@ $normalFont: 'Josefin Sans', sans-serif;
         box-shadow: bottom-shadow($depth), top-shadow($depth);
     }
 }
-@mixin media-large {
-     @media only screen and (min-width: 50em){
-        @content;
-    }
-}
-@mixin media-medium {
-     @media only screen and (max-width: 50em){
-        @content;
-    }
-}
-@mixin media-small {
-     @media only screen and (max-width: 35em){
-        @content;
-    }
-}
 @mixin darkShadow {
     text-shadow: 1px 1px 0 rgba(0, 0, 0, 0.8);
 }
@@ -65,6 +53,7 @@ body {
     font-family            : $normalFont;
     min-height             : 100%;
     background             : $colorBackground;
+    background-image       : url('../images/background.png');
     color                  : $colorBlack;
     -webkit-font-smoothing : antialiased;
     -moz-osx-font-smoothing: grayscale;
@@ -83,11 +72,11 @@ h1 {
         letter-spacing: 3px;
         font-size     : 4em;
         @include darkShadow;
-        @include media-large {
-            font-size: 7em;
-        }
-        @include media-medium {
+        @media(min-width: $mediumBP) {
             font-size: 5.5em;
+        }
+        @media(min-width: $largeBP) {
+            font-size: 7.5em;
         }
     }
 }
@@ -98,7 +87,7 @@ h2 {
     &.main {
         font-size: 3em;
         @include darkShadow;
-        @include media-large {
+        @media(min-width: $largeBP) {
             font-size: 2em;
         }
     }
@@ -193,16 +182,14 @@ footer {
     width     : 100%;
     margin    : 2em 0 0;
     box-sizing: border-box;
-
     h3 {
-      padding-top: 0.2em;
-      margin-bottom: 0.2em;
+        padding-top  : 0.2em;
+        margin-bottom: 0.2em;
     }
-
     .subtleText {
-      color: $colorWhite;
-      margin: 0 auto;
-      padding: 0.5em;
+        color  : $colorWhite;
+        margin : 0 auto;
+        padding: 0.5em;
     }
 }
 span.funFont {
@@ -288,8 +275,8 @@ p {
     }
 }
 .light {
-  background: $colorBackground;
-  color: $colorBlack;
+    background: $colorBackground;
+    color     : $colorBlack;
 }
 .dark {
     background      : $colorMain;

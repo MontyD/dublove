@@ -368,6 +368,7 @@ body {
   font-family: "Josefin Sans", sans-serif;
   min-height: 100%;
   background: #F1ECD6;
+  background-image: url("../images/background.png");
   color: #212121;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale; }
@@ -386,12 +387,12 @@ h1 {
     letter-spacing: 3px;
     font-size: 4em;
     text-shadow: 1px 1px 0 rgba(0, 0, 0, 0.8); }
-    @media only screen and (min-width: 50em) {
-      h1.main {
-        font-size: 7em; } }
-    @media only screen and (max-width: 50em) {
+    @media (min-width: 800px) {
       h1.main {
         font-size: 5.5em; } }
+    @media (min-width: 1100px) {
+      h1.main {
+        font-size: 7.5em; } }
 
 h2 {
   font-weight: normal;
@@ -400,7 +401,7 @@ h2 {
   h2.main {
     font-size: 3em;
     text-shadow: 1px 1px 0 rgba(0, 0, 0, 0.8); }
-    @media only screen and (min-width: 50em) {
+    @media (min-width: 1100px) {
       h2.main {
         font-size: 2em; } }
   h2.funFont {
@@ -430,7 +431,7 @@ button,
 input[type="button"],
 input[type="submit"] {
   display: inline-block;
-  background: #673AB7;
+  background: #4527A0;
   padding: 0.6em 1.6em 0.5em;
   margin: 0.5em auto;
   border: none;
@@ -471,7 +472,7 @@ input[type="submit"] {
 
 header {
   position: relative;
-  background: #9575CD;
+  background: #5E35B1;
   color: #FFFFFF;
   height: 200px;
   box-sizing: border-box;
@@ -513,7 +514,7 @@ footer {
 span.funFont {
   font-family: "Bad Script", sans-serif;
   font-size: 1em;
-  color: #673AB7; }
+  color: #4527A0; }
 
 .container {
   display: block;
@@ -597,16 +598,16 @@ p {
   color: #212121; }
 
 .dark {
-  background: #673AB7;
-  background-image: -webkit-linear-gradient(top left, #9575CD, #673AB7);
-  background-image: linear-gradient(to bottom right, #9575CD, #673AB7);
+  background: #4527A0;
+  background-image: -webkit-linear-gradient(top left, #5E35B1, #4527A0);
+  background-image: linear-gradient(to bottom right, #5E35B1, #4527A0);
   color: #FFFFFF; }
 
 .grey {
   background: #f1f1f1; }
 
 .darkBlue {
-  background: #240D72;
+  background: #311B92;
   color: #FFFFFF; }
 
 .animateScale {
@@ -1001,6 +1002,7 @@ body {
   font-family: "Josefin Sans", sans-serif;
   min-height: 100%;
   background: #F1ECD6;
+  background-image: url("../images/background.png");
   color: #212121;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale; }
@@ -1019,12 +1021,12 @@ h1 {
     letter-spacing: 3px;
     font-size: 4em;
     text-shadow: 1px 1px 0 rgba(0, 0, 0, 0.8); }
-    @media only screen and (min-width: 50em) {
-      h1.main {
-        font-size: 7em; } }
-    @media only screen and (max-width: 50em) {
+    @media (min-width: 800px) {
       h1.main {
         font-size: 5.5em; } }
+    @media (min-width: 1100px) {
+      h1.main {
+        font-size: 7.5em; } }
 
 h2 {
   font-weight: normal;
@@ -1033,7 +1035,7 @@ h2 {
   h2.main {
     font-size: 3em;
     text-shadow: 1px 1px 0 rgba(0, 0, 0, 0.8); }
-    @media only screen and (min-width: 50em) {
+    @media (min-width: 1100px) {
       h2.main {
         font-size: 2em; } }
   h2.funFont {
@@ -1063,7 +1065,7 @@ button,
 input[type="button"],
 input[type="submit"] {
   display: inline-block;
-  background: #673AB7;
+  background: #4527A0;
   padding: 0.6em 1.6em 0.5em;
   margin: 0.5em auto;
   border: none;
@@ -1104,7 +1106,7 @@ input[type="submit"] {
 
 header {
   position: relative;
-  background: #9575CD;
+  background: #5E35B1;
   color: #FFFFFF;
   height: 200px;
   box-sizing: border-box;
@@ -1146,7 +1148,7 @@ footer {
 span.funFont {
   font-family: "Bad Script", sans-serif;
   font-size: 1em;
-  color: #673AB7; }
+  color: #4527A0; }
 
 .container {
   display: block;
@@ -1230,16 +1232,16 @@ p {
   color: #212121; }
 
 .dark {
-  background: #673AB7;
-  background-image: -webkit-linear-gradient(top left, #9575CD, #673AB7);
-  background-image: linear-gradient(to bottom right, #9575CD, #673AB7);
+  background: #4527A0;
+  background-image: -webkit-linear-gradient(top left, #5E35B1, #4527A0);
+  background-image: linear-gradient(to bottom right, #5E35B1, #4527A0);
   color: #FFFFFF; }
 
 .grey {
   background: #f1f1f1; }
 
 .darkBlue {
-  background: #240D72;
+  background: #311B92;
   color: #FFFFFF; }
 
 .animateScale {
@@ -1270,7 +1272,7 @@ p {
   width: 100%;
   margin: 0 auto;
   padding: 0.5em;
-  height: 400px; }
+  height: 300px; }
   .imageViewer button {
     position: absolute;
     top: 0;
@@ -1315,11 +1317,11 @@ p {
       cursor: pointer;
       visibility: visible; }
     .imageViewer img.b-lazy.left {
-      -webkit-transform: translateY(-50%) translateX(-100%) scale(0.7);
-              transform: translateY(-50%) translateX(-100%) scale(0.7); }
+      -webkit-transform: translateY(-50%) translateX(-110%) scale(0.7);
+              transform: translateY(-50%) translateX(-110%) scale(0.7); }
     .imageViewer img.b-lazy.right {
-      -webkit-transform: translateY(-50%) translateX(100%) scale(0.7);
-              transform: translateY(-50%) translateX(100%) scale(0.7); }
+      -webkit-transform: translateY(-50%) translateX(110%) scale(0.7);
+              transform: translateY(-50%) translateX(110%) scale(0.7); }
 
 input[type="text"],
 input[type="email"],
@@ -1349,7 +1351,7 @@ label {
 
 header {
   height: 600px;
-  background: rgba(103, 58, 183, 0.6); }
+  background: rgba(69, 39, 160, 0.6); }
   header:before {
     content: ' ';
     display: block;
@@ -1368,7 +1370,7 @@ section.first {
   padding-bottom: 0; }
 
 h1.main {
-  margin-top: 0.4em;
+  margin-top: 0.6em;
   margin-bottom: 0; }
 
 h2.main {
@@ -1384,10 +1386,9 @@ h2.main {
   right: 0; }
   .flowerGroup img {
     opacity: 0;
-    -webkit-transform: scale(0) rotate(0deg) translateZ(0) scale(1, 1);
-            transform: scale(0) rotate(0deg) translateZ(0) scale(1, 1);
+    -webkit-transform: scale(0) rotate(0deg) translateZ(0);
+            transform: scale(0) rotate(0deg) translateZ(0);
     -webkit-backface-visibility: hidden;
-    -webkit-transform: translateZ(0) scale(1, 1);
     -webkit-transition: opacity 1s ease, -webkit-transform 1s ease;
     transition: opacity 1s ease, -webkit-transform 1s ease;
     transition: opacity 1s ease, transform 1s ease;
@@ -1414,11 +1415,11 @@ img.bottomRight {
 
 .active .flowerGroup img {
   opacity: 1;
-  -webkit-transform: scale(1) rotate(0deg) translateZ(0) scale(1, 1);
-          transform: scale(1) rotate(0deg) translateZ(0) scale(1, 1); }
+  -webkit-transform: scale(1) rotate(0deg) translateZ(0);
+          transform: scale(1) rotate(0deg) translateZ(0); }
   .active .flowerGroup img.one {
-    -webkit-transform: scale(1) rotate(-55deg) translateZ(0) scale(1, 1);
-            transform: scale(1) rotate(-55deg) translateZ(0) scale(1, 1); }
+    -webkit-transform: scale(1) rotate(-55deg) translateZ(0);
+            transform: scale(1) rotate(-55deg) translateZ(0); }
 
 .second {
   padding-top: 1em;
@@ -1432,7 +1433,7 @@ img.bottomRight {
 .fourth h2 {
   margin-bottom: 0.1em; }
 .fourth .innerModal {
-  border: 1px solid #673AB7;
+  border: 1px solid #4527A0;
   padding-bottom: 2em; }
   .fourth .innerModal textarea {
     resize: none;
