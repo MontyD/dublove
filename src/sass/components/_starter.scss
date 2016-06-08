@@ -103,16 +103,16 @@ h2 {
         }
     }
     &.funFont {
-      font-family: $funFont;
-      font-size: 3.2em;
-      margin: 0.2em auto;
-      letter-spacing: 0.05em;
+        font-family   : $funFont;
+        font-size     : 3.2em;
+        margin        : 0.2em auto;
+        letter-spacing: 0.05em;
     }
 }
 h3 {
     font-size: 3em;
     &.normalFont {
-      font-family: $normalFont;
+        font-family: $normalFont;
     }
 }
 .subtleText {
@@ -120,14 +120,16 @@ h3 {
     font-style: italic;
 }
 p.subtleText {
-  font-size: 1.4em;
-  margin: 0.5em auto 1em;
+    font-size: 1.4em;
+    margin   : 0.5em auto 1em;
 }
 .textShadow {
     @include darkShadow;
 }
 .likeButton,
-button {
+button,
+input[type="button"],
+input[type="submit"] {
     display        : inline-block;
     background     : $colorMain;
     padding        : 0.6em 1.6em 0.5em;
@@ -139,6 +141,7 @@ button {
     font-size      : 1.4em;
     @include shadow(1);
     transition     : box-shadow 0.2s ease;
+    cursor         : pointer;
     &.primary {
         background: $colorAccent;
     }
@@ -177,7 +180,7 @@ main {
     margin-bottom: 2em;
     background   : $colorWhite;
     border-radius: 3px;
-    overflow-x     : hidden;
+    overflow-x   : hidden;
     @include shadow(1);
     section {
         padding: 1em;
@@ -187,8 +190,20 @@ section {
     position: relative;
 }
 footer {
-  width: 100%;
-  margin: 2em 0 0;
+    width     : 100%;
+    margin    : 2em 0 0;
+    box-sizing: border-box;
+
+    h3 {
+      padding-top: 0.2em;
+      margin-bottom: 0.2em;
+    }
+
+    .subtleText {
+      color: $colorWhite;
+      margin: 0 auto;
+      padding: 0.5em;
+    }
 }
 span.funFont {
     font-family: $funFont;
@@ -204,8 +219,8 @@ span.funFont {
     box-sizing: border-box;
 }
 .padded {
-  box-sizing: border-box;
-    padding: 0.5em;
+    box-sizing: border-box;
+    padding   : 0.5em;
 }
 p {
     width      : 80%;
@@ -217,22 +232,22 @@ p {
     text-align: center;
 }
 .thirds {
-    display   : inline-block;
-    width     : 32%;
-    text-align: justify;
-    padding   : 1em;
-    box-sizing: border-box;
-    margin-left: 0;
+    display     : inline-block;
+    width       : 32%;
+    text-align  : justify;
+    padding     : 1em;
+    box-sizing  : border-box;
+    margin-left : 0;
     margin-right: 0;
     p {
-      padding: 0;
-      margin: 0;
-      vertical-align: top;
-      width: 100%;
+        padding       : 0;
+        margin        : 0;
+        vertical-align: top;
+        width         : 100%;
     }
     h3 {
-      margin: 0 auto;
-      font-size: 2.2em;
+        margin   : 0 auto;
+        font-size: 2.2em;
     }
 }
 .feature {
@@ -256,27 +271,37 @@ p {
     }
 }
 .innerModal {
-  display: block;
-  margin: 0 auto;
-  position: relative;
-  padding: 0.5em;
-  box-sizing: border-box;
-  width: 90%;
-  max-width: 600px;
-  border-radius: 4px;
-  @include shadow(1);
-
-  h1,h2,h3,h4 {
-    margin: 0.2em;
-  }
+    display      : block;
+    margin       : 0 auto;
+    position     : relative;
+    padding      : 0.5em;
+    box-sizing   : border-box;
+    width        : 90%;
+    max-width    : 600px;
+    border-radius: 4px;
+    @include shadow(1);
+    h1,
+    h2,
+    h3,
+    h4 {
+        margin: 0.2em;
+    }
+}
+.light {
+  background: $colorBackground;
+  color: $colorBlack;
 }
 .dark {
-    background: $colorMain;
+    background      : $colorMain;
     background-image: linear-gradient(to bottom right, $colorLightMain, $colorMain);
-    color     : $colorWhite;
+    color           : $colorWhite;
 }
 .grey {
-  background: $colorLightGrey;
+    background: $colorLightGrey;
+}
+.darkBlue {
+    background: $colorDark;
+    color     : $colorWhite;
 }
 .animateScale {
     transform : scale(0);

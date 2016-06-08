@@ -45,14 +45,14 @@ function addEvent(evnt, elem, func) {
   //   addEvent('click', mobileNavClickElements[i], toggleMobileNav);
   // }
 
-  //*********************
-  //** Add date year to footer
-  //*********************
-  // var dateElement = document.getElementById('dateNow');
-  // if (dateElement) {
-  //   var tempDate = new Date();
-  //   dateElement.innerHTML = tempDate.getFullYear();
-  // }
+  // *********************
+  // ** Add date year to footer
+  // *********************
+  var dateElement = document.getElementById('dateNow');
+  if (dateElement) {
+    var tempDate = new Date();
+    dateElement.innerHTML = tempDate.getFullYear();
+  }
   window.setTimeout(function(){
     document.getElementsByTagName('body')[0].className = 'active';
   },100);

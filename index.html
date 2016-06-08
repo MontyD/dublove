@@ -21,9 +21,9 @@
             <h2 class="main">Wedding Campervan Hire</h2>
             <a href="./contact.html" title="Book now!" class="likeButton primary">Book now!</a>
             <div class="flowerGroup top">
-                <img class="two" src="./dublove/images/plant rev.png" alt=" " />
+                <img class="two" src="./dublove/images/plant%20rev.png" alt=" " />
                 <img class="one" src="./dublove/images/plant.png" alt=" " />
-                <img class="three" src="./dublove/images/plant small.png" alt=" " />
+                <img class="three" src="./dublove/images/plant%20small.png" alt=" " />
             </div>
         </section>
     </header>
@@ -37,9 +37,9 @@
             </div>
         </section>
         <section class="dark second centerAlign">
-            <img class="topLeft animate animateScale" src="./dublove/images/plant small.png" alt=" " />
+            <img class="topLeft animate animateScale" src="./dublove/images/plant%20small.png" alt=" " />
             <h2 class="textShadow funFont">A Retro-Chic Ride</h2>
-            <article class="imageViewer" id="imageViewer">
+            <div class="imageViewer" id="imageViewer">
                 <button id="imgLeft" class="imgLeft"><img src="./dublove/images/left.png" alt="Left" /></button>
                 <img class="b-lazy" src="data:image/gif;base64,R0lGODlhAQABAAAAACH5BAEKAAEALAAAAAABAAEAAAICTAEAOw==" data-src="./dublove/images/1.jpg" alt=" ">
                 <img class="b-lazy" src="data:image/gif;base64,R0lGODlhAQABAAAAACH5BAEKAAEALAAAAAABAAEAAAICTAEAOw==" data-src="./dublove/images/2.jpg" alt=" ">
@@ -49,12 +49,12 @@
                 <img class="b-lazy" src="data:image/gif;base64,R0lGODlhAQABAAAAACH5BAEKAAEALAAAAAABAAEAAAICTAEAOw==" data-src="./dublove/images/6.jpg" alt=" ">
                 <img class="b-lazy" src="data:image/gif;base64,R0lGODlhAQABAAAAACH5BAEKAAEALAAAAAABAAEAAAICTAEAOw==" data-src="./dublove/images/7.gif" alt=" ">
                 <button id="imgRight" class="imgRight"><img src="./dublove/images/right.png" alt="Right" /></button>
-            </article>
+            </div>
             <a href="./photos.html" title="Book now!" class="likeButton primary">View more photos!</a>
-            <img class="bottomRight animate animateScale" src="./dublove/images/plant rev.png" alt=" " />
+            <img class="bottomRight animate animateScale" src="./dublove/images/plant%20rev.png" alt=" " />
         </section>
         <section class="third centerAlign">
-            <h2 class="subtleText"></h2>
+            <h2 class="subtleText">Have an amazing wedding day!</h2>
             <article class="thirds"><h3>Worry free</h3>
                 <p>Corrupti inventore veniam quidem magni ad, culpa, ipsa quod illum recusandae placeat ratione impedit facere assumenda similique explicabo iusto pariatur dolorum quia.</p>
             </article>
@@ -71,17 +71,25 @@
             <p class="subtleText">We're really excited to hear from you!</p>
             <article class="innerModal dark">
               <h3>Get in contact</h3>
-
-
+              <form name="contactForm" id="contactForm" action="">
+                <label for="name">Name</label>
+                <input type="text" required="required" autofocus="autofocus" id="name" name="name" />
+                <label for="email">Email Address</label>
+                <input type="email" required="required" id="email" name="email" />
+                <label for="number">Telephone number</label>
+                <input type="text" id="number" name="number" />
+                <label for="enquiry">What are you looking for?</label>
+                <textarea type="text" class="bigField" required="required" id="enquiry" name="enquiry"></textarea>
+                <input type="submit" class="primary" value="Send" />
+              </form>
             </article>
-
-
         </section>
     </main>
-    <footer>
+    <footer class="darkBlue centerAlign">
       <h3>DubLove</h3>
-      <form name="contactForm" id="contactForm"
-
+      <p class="subtleText">Any aditional information goes here</p>
+      <p class="subtleText">Contact details</p>
+      <p class="subtleText">DubLove <span id="dateNow"></span></p>
     </footer>
     <script type="text/javascript" src="./dublove/javascript/blazy.min.js"></script>
     <script type="text/javascript" src="./dublove/javascript/client.js"></script>

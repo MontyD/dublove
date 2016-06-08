@@ -426,7 +426,9 @@ p.subtleText {
   text-shadow: 1px 1px 0 rgba(0, 0, 0, 0.8); }
 
 .likeButton,
-button {
+button,
+input[type="button"],
+input[type="submit"] {
   display: inline-block;
   background: #673AB7;
   padding: 0.6em 1.6em 0.5em;
@@ -438,17 +440,28 @@ button {
   font-size: 1.4em;
   box-shadow: 0 1.5px 4px rgba(0, 0, 0, 0.24), 0 1.5px 6px rgba(0, 0, 0, 0.12);
   -webkit-transition: box-shadow 0.2s ease;
-  transition: box-shadow 0.2s ease; }
+  transition: box-shadow 0.2s ease;
+  cursor: pointer; }
   .likeButton.primary,
-  button.primary {
+  button.primary,
+  input[type="button"].primary,
+  input[type="submit"].primary {
     background: #F5B12C; }
   .likeButton:hover,
-  button:hover {
+  button:hover,
+  input[type="button"]:hover,
+  input[type="submit"]:hover {
     box-shadow: 0 3px 12px rgba(0, 0, 0, 0.23), 0 3px 12px rgba(0, 0, 0, 0.16); }
   .likeButton:active, .likeButton:focus, .likeButton:visited,
   button:active,
   button:focus,
-  button:visited {
+  button:visited,
+  input[type="button"]:active,
+  input[type="button"]:focus,
+  input[type="button"]:visited,
+  input[type="submit"]:active,
+  input[type="submit"]:focus,
+  input[type="submit"]:visited {
     color: #FFFFFF;
     outline: none; }
 
@@ -487,7 +500,15 @@ section {
 
 footer {
   width: 100%;
-  margin: 2em 0 0; }
+  margin: 2em 0 0;
+  box-sizing: border-box; }
+  footer h3 {
+    padding-top: 0.2em;
+    margin-bottom: 0.2em; }
+  footer .subtleText {
+    color: #FFFFFF;
+    margin: 0 auto;
+    padding: 0.5em; }
 
 span.funFont {
   font-family: "Bad Script", sans-serif;
@@ -565,8 +586,15 @@ p {
   max-width: 600px;
   border-radius: 4px;
   box-shadow: 0 1.5px 4px rgba(0, 0, 0, 0.24), 0 1.5px 6px rgba(0, 0, 0, 0.12); }
-  .innerModal h1, .innerModal h2, .innerModal h3, .innerModal h4 {
+  .innerModal h1,
+  .innerModal h2,
+  .innerModal h3,
+  .innerModal h4 {
     margin: 0.2em; }
+
+.light {
+  background: #F1ECD6;
+  color: #212121; }
 
 .dark {
   background: #673AB7;
@@ -576,6 +604,10 @@ p {
 
 .grey {
   background: #f1f1f1; }
+
+.darkBlue {
+  background: #240D72;
+  color: #FFFFFF; }
 
 .animateScale {
   -webkit-transform: scale(0);
@@ -1027,7 +1059,9 @@ p.subtleText {
   text-shadow: 1px 1px 0 rgba(0, 0, 0, 0.8); }
 
 .likeButton,
-button {
+button,
+input[type="button"],
+input[type="submit"] {
   display: inline-block;
   background: #673AB7;
   padding: 0.6em 1.6em 0.5em;
@@ -1039,17 +1073,28 @@ button {
   font-size: 1.4em;
   box-shadow: 0 1.5px 4px rgba(0, 0, 0, 0.24), 0 1.5px 6px rgba(0, 0, 0, 0.12);
   -webkit-transition: box-shadow 0.2s ease;
-  transition: box-shadow 0.2s ease; }
+  transition: box-shadow 0.2s ease;
+  cursor: pointer; }
   .likeButton.primary,
-  button.primary {
+  button.primary,
+  input[type="button"].primary,
+  input[type="submit"].primary {
     background: #F5B12C; }
   .likeButton:hover,
-  button:hover {
+  button:hover,
+  input[type="button"]:hover,
+  input[type="submit"]:hover {
     box-shadow: 0 3px 12px rgba(0, 0, 0, 0.23), 0 3px 12px rgba(0, 0, 0, 0.16); }
   .likeButton:active, .likeButton:focus, .likeButton:visited,
   button:active,
   button:focus,
-  button:visited {
+  button:visited,
+  input[type="button"]:active,
+  input[type="button"]:focus,
+  input[type="button"]:visited,
+  input[type="submit"]:active,
+  input[type="submit"]:focus,
+  input[type="submit"]:visited {
     color: #FFFFFF;
     outline: none; }
 
@@ -1088,7 +1133,15 @@ section {
 
 footer {
   width: 100%;
-  margin: 2em 0 0; }
+  margin: 2em 0 0;
+  box-sizing: border-box; }
+  footer h3 {
+    padding-top: 0.2em;
+    margin-bottom: 0.2em; }
+  footer .subtleText {
+    color: #FFFFFF;
+    margin: 0 auto;
+    padding: 0.5em; }
 
 span.funFont {
   font-family: "Bad Script", sans-serif;
@@ -1166,8 +1219,15 @@ p {
   max-width: 600px;
   border-radius: 4px;
   box-shadow: 0 1.5px 4px rgba(0, 0, 0, 0.24), 0 1.5px 6px rgba(0, 0, 0, 0.12); }
-  .innerModal h1, .innerModal h2, .innerModal h3, .innerModal h4 {
+  .innerModal h1,
+  .innerModal h2,
+  .innerModal h3,
+  .innerModal h4 {
     margin: 0.2em; }
+
+.light {
+  background: #F1ECD6;
+  color: #212121; }
 
 .dark {
   background: #673AB7;
@@ -1177,6 +1237,10 @@ p {
 
 .grey {
   background: #f1f1f1; }
+
+.darkBlue {
+  background: #240D72;
+  color: #FFFFFF; }
 
 .animateScale {
   -webkit-transform: scale(0);
@@ -1257,6 +1321,32 @@ p {
       -webkit-transform: translateY(-50%) translateX(100%) scale(0.7);
               transform: translateY(-50%) translateX(100%) scale(0.7); }
 
+input[type="text"],
+input[type="email"],
+textarea {
+  display: block;
+  margin: 0 auto 0.2em;
+  width: 90%;
+  padding: 0.4em;
+  background: transparent;
+  border: 1px solid #FFFFFF;
+  border-bottom-width: 2px;
+  color: inherit;
+  border-radius: 3px;
+  font-size: 1.5em;
+  -webkit-transition: background 0.2s ease;
+  transition: background 0.2s ease; }
+  input[type="text"]:focus,
+  input[type="email"]:focus,
+  textarea:focus {
+    outline: none;
+    background: rgba(255, 255, 255, 0.1); }
+
+label {
+  display: block;
+  margin: 1em auto 0.1em;
+  font-size: 1.5em; }
+
 header {
   height: 600px;
   background: rgba(103, 58, 183, 0.6); }
@@ -1294,8 +1384,10 @@ h2.main {
   right: 0; }
   .flowerGroup img {
     opacity: 0;
-    -webkit-transform: scale(0) rotate(0deg);
-            transform: scale(0) rotate(0deg);
+    -webkit-transform: scale(0) rotate(0deg) translateZ(0) scale(1, 1);
+            transform: scale(0) rotate(0deg) translateZ(0) scale(1, 1);
+    -webkit-backface-visibility: hidden;
+    -webkit-transform: translateZ(0) scale(1, 1);
     -webkit-transition: opacity 1s ease, -webkit-transform 1s ease;
     transition: opacity 1s ease, -webkit-transform 1s ease;
     transition: opacity 1s ease, transform 1s ease;
@@ -1322,11 +1414,11 @@ img.bottomRight {
 
 .active .flowerGroup img {
   opacity: 1;
-  -webkit-transform: scale(1) rotate(0deg);
-          transform: scale(1) rotate(0deg); }
+  -webkit-transform: scale(1) rotate(0deg) translateZ(0) scale(1, 1);
+          transform: scale(1) rotate(0deg) translateZ(0) scale(1, 1); }
   .active .flowerGroup img.one {
-    -webkit-transform: scale(1) rotate(-55deg);
-            transform: scale(1) rotate(-55deg); }
+    -webkit-transform: scale(1) rotate(-55deg) translateZ(0) scale(1, 1);
+            transform: scale(1) rotate(-55deg) translateZ(0) scale(1, 1); }
 
 .second {
   padding-top: 1em;
@@ -1339,3 +1431,9 @@ img.bottomRight {
 
 .fourth h2 {
   margin-bottom: 0.1em; }
+.fourth .innerModal {
+  border: 1px solid #673AB7;
+  padding-bottom: 2em; }
+  .fourth .innerModal textarea {
+    resize: none;
+    height: 7em; }
