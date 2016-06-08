@@ -1,7 +1,7 @@
 @import "normalize"; // font
 //Variables
-$colorMain: #4527A0;
-$colorDark: #311B92;
+$colorMain: #5f368e;
+$colorDark: #413978;
 $colorLightMain: #5E35B1;
 $colorSubtle: #2B52A4;
 $colorHighlight: #F5D32C;
@@ -167,16 +167,18 @@ main {
     margin-left  : auto;
     margin-right : auto;
     margin-bottom: 2em;
-    background   : $colorWhite;
-    border-radius: 3px;
     overflow-x   : hidden;
-    @include shadow(1);
     section {
         padding: 1em;
+        margin: 2em auto;
+        position: relative;
+        background: $colorLightGrey;
+        border-radius: 3px;
+        @include shadow(1);
     }
 }
 section {
-    position: relative;
+  position: relative;
 }
 footer {
     width     : 100%;
@@ -240,8 +242,8 @@ p {
 .feature {
     display   : block;
     width     : 60%;
-    margin    : 1em auto 0;
-    padding   : 0.8em 2em 0;
+    margin    : 0 auto;
+    padding   : 0 2em;
     overflow-y: hidden;
     & * {
         display   : block;
@@ -279,8 +281,7 @@ p {
     color     : $colorBlack;
 }
 .dark {
-    background      : $colorMain;
-    background-image: linear-gradient(to bottom right, $colorLightMain, $colorMain);
+    background      : rgba(53, 28, 104, 0.72);;
     color           : $colorWhite;
 }
 .grey {

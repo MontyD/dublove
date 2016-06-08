@@ -431,7 +431,7 @@ button,
 input[type="button"],
 input[type="submit"] {
   display: inline-block;
-  background: #4527A0;
+  background: #5f368e;
   padding: 0.6em 1.6em 0.5em;
   margin: 0.5em auto;
   border: none;
@@ -489,12 +489,14 @@ main {
   margin-left: auto;
   margin-right: auto;
   margin-bottom: 2em;
-  background: #FFFFFF;
-  border-radius: 3px;
-  overflow-x: hidden;
-  box-shadow: 0 1.5px 4px rgba(0, 0, 0, 0.24), 0 1.5px 6px rgba(0, 0, 0, 0.12); }
+  overflow-x: hidden; }
   main section {
-    padding: 1em; }
+    padding: 1em;
+    margin: 2em auto;
+    position: relative;
+    background: #f1f1f1;
+    border-radius: 3px;
+    box-shadow: 0 1.5px 4px rgba(0, 0, 0, 0.24), 0 1.5px 6px rgba(0, 0, 0, 0.12); }
 
 section {
   position: relative; }
@@ -514,7 +516,7 @@ footer {
 span.funFont {
   font-family: "Bad Script", sans-serif;
   font-size: 1em;
-  color: #4527A0; }
+  color: #5f368e; }
 
 .container {
   display: block;
@@ -557,8 +559,8 @@ p {
 .feature {
   display: block;
   width: 60%;
-  margin: 1em auto 0;
-  padding: 0.8em 2em 0;
+  margin: 0 auto;
+  padding: 0 2em;
   overflow-y: hidden; }
   .feature * {
     display: block;
@@ -598,16 +600,14 @@ p {
   color: #212121; }
 
 .dark {
-  background: #4527A0;
-  background-image: -webkit-linear-gradient(top left, #5E35B1, #4527A0);
-  background-image: linear-gradient(to bottom right, #5E35B1, #4527A0);
+  background: rgba(53, 28, 104, 0.72);
   color: #FFFFFF; }
 
 .grey {
   background: #f1f1f1; }
 
 .darkBlue {
-  background: #311B92;
+  background: #413978;
   color: #FFFFFF; }
 
 .animateScale {
@@ -1065,7 +1065,7 @@ button,
 input[type="button"],
 input[type="submit"] {
   display: inline-block;
-  background: #4527A0;
+  background: #5f368e;
   padding: 0.6em 1.6em 0.5em;
   margin: 0.5em auto;
   border: none;
@@ -1123,12 +1123,14 @@ main {
   margin-left: auto;
   margin-right: auto;
   margin-bottom: 2em;
-  background: #FFFFFF;
-  border-radius: 3px;
-  overflow-x: hidden;
-  box-shadow: 0 1.5px 4px rgba(0, 0, 0, 0.24), 0 1.5px 6px rgba(0, 0, 0, 0.12); }
+  overflow-x: hidden; }
   main section {
-    padding: 1em; }
+    padding: 1em;
+    margin: 2em auto;
+    position: relative;
+    background: #f1f1f1;
+    border-radius: 3px;
+    box-shadow: 0 1.5px 4px rgba(0, 0, 0, 0.24), 0 1.5px 6px rgba(0, 0, 0, 0.12); }
 
 section {
   position: relative; }
@@ -1148,7 +1150,7 @@ footer {
 span.funFont {
   font-family: "Bad Script", sans-serif;
   font-size: 1em;
-  color: #4527A0; }
+  color: #5f368e; }
 
 .container {
   display: block;
@@ -1191,8 +1193,8 @@ p {
 .feature {
   display: block;
   width: 60%;
-  margin: 1em auto 0;
-  padding: 0.8em 2em 0;
+  margin: 0 auto;
+  padding: 0 2em;
   overflow-y: hidden; }
   .feature * {
     display: block;
@@ -1232,16 +1234,14 @@ p {
   color: #212121; }
 
 .dark {
-  background: #4527A0;
-  background-image: -webkit-linear-gradient(top left, #5E35B1, #4527A0);
-  background-image: linear-gradient(to bottom right, #5E35B1, #4527A0);
+  background: rgba(53, 28, 104, 0.72);
   color: #FFFFFF; }
 
 .grey {
   background: #f1f1f1; }
 
 .darkBlue {
-  background: #311B92;
+  background: #413978;
   color: #FFFFFF; }
 
 .animateScale {
@@ -1351,7 +1351,7 @@ label {
 
 header {
   height: 600px;
-  background: rgba(69, 39, 160, 0.6); }
+  background: rgba(76, 41, 146, 0.6); }
   header:before {
     content: ' ';
     display: block;
@@ -1433,7 +1433,7 @@ img.bottomRight {
 .fourth h2 {
   margin-bottom: 0.1em; }
 .fourth .innerModal {
-  border: 1px solid #4527A0;
+  border: 1px solid #5f368e;
   padding-bottom: 2em; }
   .fourth .innerModal textarea {
     resize: none;

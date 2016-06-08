@@ -3,7 +3,7 @@
 @import "components/_forms";
 header {
     height    : 600px;
-    background: transparentize($colorMain, 0.4);
+    background: rgba(76, 41, 146, 0.6);
     &:before {
         content          : ' ';
         display          : block;
