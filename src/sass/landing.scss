@@ -33,7 +33,7 @@ section.first {
     }
     &.top {
         top : 2em;
-        left: 0;
+        left: 2em;
         img.two {
             position: relative;
             top     : -3.2em;
@@ -51,7 +51,7 @@ section.first {
     }
     &.bottom {
         bottom: 0;
-        right : 0;
+        right : 2em;
         img.two {
             position: relative;
             bottom: -2.5em;

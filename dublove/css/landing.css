@@ -1134,7 +1134,7 @@ section.first {
     transition: all 1s ease; }
   .flowerGroup.top {
     top: 2em;
-    left: 0; }
+    left: 2em; }
     .flowerGroup.top img.two {
       position: relative;
       top: -3.2em;
@@ -1153,7 +1153,7 @@ section.first {
               transition-duration: .8s; }
   .flowerGroup.bottom {
     bottom: 0;
-    right: 0; }
+    right: 2em; }
     .flowerGroup.bottom img.two {
       position: relative;
       bottom: -2.5em;
