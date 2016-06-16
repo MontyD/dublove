@@ -440,7 +440,6 @@ input[type="submit"] {
   text-decoration: none;
   font-size: 1.4em;
   box-shadow: 0 1.5px 4px rgba(0, 0, 0, 0.24), 0 1.5px 6px rgba(0, 0, 0, 0.12);
-  -webkit-transition: box-shadow 0.2s ease;
   transition: box-shadow 0.2s ease;
   cursor: pointer; }
   .likeButton.primary,
@@ -467,7 +466,6 @@ input[type="submit"] {
     outline: none; }
 
 .noTransition {
-  -webkit-transition: none;
   transition: none; }
 
 header {
@@ -568,16 +566,11 @@ p {
     padding: 0;
     max-width: 70%;
     opacity: 0;
-    -webkit-transform: translateY(100px);
-            transform: translateY(100px);
-    -webkit-transition: opacity 0.6s ease, -webkit-transform 1s ease;
-    transition: opacity 0.6s ease, -webkit-transform 1s ease;
-    transition: opacity 0.6s ease, transform 1s ease;
-    transition: opacity 0.6s ease, transform 1s ease, -webkit-transform 1s ease; }
+    transform: translateY(100px);
+    transition: opacity 0.6s ease, transform 1s ease; }
   .feature.active * {
     opacity: 1;
-    -webkit-transform: translateY(0);
-            transform: translateY(0); }
+    transform: translateY(0); }
 
 .innerModal {
   display: block;
@@ -611,20 +604,14 @@ p {
   color: #FFFFFF; }
 
 .animateScale {
-  -webkit-transform: scale(0);
-          transform: scale(0);
+  transform: scale(0);
   opacity: 0;
-  -webkit-transition: opacity 0.3s ease, -webkit-transform 0.3s ease;
-  transition: opacity 0.3s ease, -webkit-transform 0.3s ease;
-  transition: opacity 0.3s ease, transform 0.3s ease;
-  transition: opacity 0.3s ease, transform 0.3s ease, -webkit-transform 0.3s ease; }
+  transition: opacity 0.3s ease, transform 0.3s ease; }
   .animateScale.active {
-    -webkit-transform: scale(1);
-            transform: scale(1);
+    transform: scale(1);
     opacity: 1; }
 
 .b-lazy {
-  -webkit-transition: opacity 500ms ease-in-out;
   transition: opacity 500ms ease-in-out;
   max-width: 100%;
   opacity: 0; }
@@ -1074,7 +1061,6 @@ input[type="submit"] {
   text-decoration: none;
   font-size: 1.4em;
   box-shadow: 0 1.5px 4px rgba(0, 0, 0, 0.24), 0 1.5px 6px rgba(0, 0, 0, 0.12);
-  -webkit-transition: box-shadow 0.2s ease;
   transition: box-shadow 0.2s ease;
   cursor: pointer; }
   .likeButton.primary,
@@ -1101,7 +1087,6 @@ input[type="submit"] {
     outline: none; }
 
 .noTransition {
-  -webkit-transition: none;
   transition: none; }
 
 header {
@@ -1202,16 +1187,11 @@ p {
     padding: 0;
     max-width: 70%;
     opacity: 0;
-    -webkit-transform: translateY(100px);
-            transform: translateY(100px);
-    -webkit-transition: opacity 0.6s ease, -webkit-transform 1s ease;
-    transition: opacity 0.6s ease, -webkit-transform 1s ease;
-    transition: opacity 0.6s ease, transform 1s ease;
-    transition: opacity 0.6s ease, transform 1s ease, -webkit-transform 1s ease; }
+    transform: translateY(100px);
+    transition: opacity 0.6s ease, transform 1s ease; }
   .feature.active * {
     opacity: 1;
-    -webkit-transform: translateY(0);
-            transform: translateY(0); }
+    transform: translateY(0); }
 
 .innerModal {
   display: block;
@@ -1245,20 +1225,14 @@ p {
   color: #FFFFFF; }
 
 .animateScale {
-  -webkit-transform: scale(0);
-          transform: scale(0);
+  transform: scale(0);
   opacity: 0;
-  -webkit-transition: opacity 0.3s ease, -webkit-transform 0.3s ease;
-  transition: opacity 0.3s ease, -webkit-transform 0.3s ease;
-  transition: opacity 0.3s ease, transform 0.3s ease;
-  transition: opacity 0.3s ease, transform 0.3s ease, -webkit-transform 0.3s ease; }
+  transition: opacity 0.3s ease, transform 0.3s ease; }
   .animateScale.active {
-    -webkit-transform: scale(1);
-            transform: scale(1);
+    transform: scale(1);
     opacity: 1; }
 
 .b-lazy {
-  -webkit-transition: opacity 500ms ease-in-out;
   transition: opacity 500ms ease-in-out;
   max-width: 100%;
   opacity: 0; }
@@ -1291,8 +1265,7 @@ p {
     display: none;
     position: absolute;
     top: 50%;
-    -webkit-transform: translateY(-50%);
-            transform: translateY(-50%);
+    transform: translateY(-50%);
     left: 0;
     right: 0;
     margin: 0 auto;
@@ -1303,7 +1276,6 @@ p {
     visibility: hidden;
     max-height: 90%;
     box-shadow: 0 1.5px 4px rgba(0, 0, 0, 0.24), 0 1.5px 6px rgba(0, 0, 0, 0.12);
-    -webkit-transition: all 0.3s ease;
     transition: all 0.3s ease; }
     .imageViewer img.b-lazy.active {
       display: block;
@@ -1312,16 +1284,13 @@ p {
     .imageViewer img.b-lazy.left, .imageViewer img.b-lazy.right {
       display: block;
       opacity: 0.5;
-      -webkit-transform: translateY(-30%) scale(0.7);
-              transform: translateY(-30%) scale(0.7);
+      transform: translateY(-30%) scale(0.7);
       cursor: pointer;
       visibility: visible; }
     .imageViewer img.b-lazy.left {
-      -webkit-transform: translateY(-50%) translateX(-110%) scale(0.7);
-              transform: translateY(-50%) translateX(-110%) scale(0.7); }
+      transform: translateY(-50%) translateX(-110%) scale(0.7); }
     .imageViewer img.b-lazy.right {
-      -webkit-transform: translateY(-50%) translateX(110%) scale(0.7);
-              transform: translateY(-50%) translateX(110%) scale(0.7); }
+      transform: translateY(-50%) translateX(110%) scale(0.7); }
 
 input[type="text"],
 input[type="email"],
@@ -1336,7 +1305,6 @@ textarea {
   color: inherit;
   border-radius: 3px;
   font-size: 1.5em;
-  -webkit-transition: background 0.2s ease;
   transition: background 0.2s ease; }
   input[type="text"]:focus,
   input[type="email"]:focus,
@@ -1386,22 +1354,15 @@ h2.main {
   right: 0; }
   .flowerGroup img {
     opacity: 0;
-    -webkit-transform: scale(0) rotate(0deg) translateZ(0);
-            transform: scale(0) rotate(0deg) translateZ(0);
+    transform: scale(0) rotate(0deg) translateZ(0);
     -webkit-backface-visibility: hidden;
-    -webkit-transition: opacity 1s ease, -webkit-transform 1s ease;
-    transition: opacity 1s ease, -webkit-transform 1s ease;
-    transition: opacity 1s ease, transform 1s ease;
-    transition: opacity 1s ease, transform 1s ease, -webkit-transform 1s ease; }
+    transition: opacity 1s ease, transform 1s ease; }
     .flowerGroup img.one {
-      -webkit-transition-delay: 0.2s;
-              transition-delay: 0.2s; }
+      transition-delay: 0.2s; }
     .flowerGroup img.two {
-      -webkit-transition-delay: 0.5s;
-              transition-delay: 0.5s; }
+      transition-delay: 0.5s; }
     .flowerGroup img.three {
-      -webkit-transition-delay: 0.7s;
-              transition-delay: 0.7s; }
+      transition-delay: 0.7s; }
 
 img.topLeft {
   position: absolute;
@@ -1415,11 +1376,9 @@ img.bottomRight {
 
 .active .flowerGroup img {
   opacity: 1;
-  -webkit-transform: scale(1) rotate(0deg) translateZ(0);
-          transform: scale(1) rotate(0deg) translateZ(0); }
+  transform: scale(1) rotate(0deg) translateZ(0); }
   .active .flowerGroup img.one {
-    -webkit-transform: scale(1) rotate(-55deg) translateZ(0);
-            transform: scale(1) rotate(-55deg) translateZ(0); }
+    transform: scale(1) rotate(-55deg) translateZ(0); }
 
 .second {
   padding-top: 1em;
@@ -1438,3 +1397,5 @@ img.bottomRight {
   .fourth .innerModal textarea {
     resize: none;
     height: 7em; }
+
+/*# sourceMappingURL=landing.css.map */
