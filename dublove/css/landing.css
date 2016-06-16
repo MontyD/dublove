@@ -468,6 +468,9 @@ input[type="submit"] {
 .noTransition {
   transition: none; }
 
+.hidden {
+  display: none; }
+
 header {
   position: relative;
   background: #5E35B1;
@@ -1088,6 +1091,9 @@ input[type="submit"] {
 
 .noTransition {
   transition: none; }
+
+.hidden {
+  display: none; }
 
 header {
   position: relative;

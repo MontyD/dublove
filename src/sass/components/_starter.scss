@@ -147,6 +147,9 @@ input[type="submit"] {
 .noTransition {
     transition: none;
 }
+.hidden {
+  display: none;
+}
 header {
     position  : relative;
     background: $colorLightMain;
