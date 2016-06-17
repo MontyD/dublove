@@ -590,6 +590,8 @@ p {
     opacity: 1;
     -webkit-transform: translateY(0);
             transform: translateY(0); }
+  .feature img {
+    height: 100%; }
 
 .innerModal {
   display: block;
@@ -1227,6 +1229,8 @@ p {
     opacity: 1;
     -webkit-transform: translateY(0);
             transform: translateY(0); }
+  .feature img {
+    height: 100%; }
 
 .innerModal {
   display: block;
@@ -1328,6 +1332,12 @@ p {
     .imageViewer img.b-lazy.right {
       -webkit-transform: translateY(-50%) translateX(110%) scale(0.7);
               transform: translateY(-50%) translateX(110%) scale(0.7); }
+
+.icon-Hibiscus-2 {
+  display: inline-block;
+  width: 200px;
+  height: 200px;
+  background-size: 100%; }
 
 header {
   height: 600px;

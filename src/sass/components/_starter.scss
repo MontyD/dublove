@@ -269,6 +269,9 @@ p {
         opacity  : 1;
         transform: translateY(0);
     }
+    img {
+      height: 100%;
+    }
 }
 .innerModal {
     display      : block;
