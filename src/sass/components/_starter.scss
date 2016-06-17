@@ -144,6 +144,14 @@ input[type="submit"] {
         outline: none;
     }
 }
+.b-lazy {
+    transition: opacity 500ms ease-in-out;
+    max-width : 100%;
+    opacity   : 0;
+}
+.b-loaded {
+    opacity: 1;
+}
 .noTransition {
     transition: none;
 }
@@ -302,12 +310,4 @@ p {
         transform: scale(1);
         opacity  : 1;
     }
-}
-.b-lazy {
-    transition: opacity 500ms ease-in-out;
-    max-width : 100%;
-    opacity   : 0;
-}
-.b-lazy.b-loaded {
-    opacity: 1;
 }
