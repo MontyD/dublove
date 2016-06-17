@@ -58,6 +58,22 @@ body {
     -webkit-font-smoothing : antialiased;
     -moz-osx-font-smoothing: grayscale;
 }
+.left {
+  left: 0;
+  right: auto;
+}
+.right {
+  right: 0;
+  left: auto;
+}
+.top {
+  top: 0;
+  bottom: auto;
+}
+.bottom {
+  bottom: 0;
+  top: auto;
+}
 h1,
 h3,
 h5 {

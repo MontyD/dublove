@@ -3,4 +3,13 @@
   width: 200px;
   height: 200px;
   background-size: 100%;
+
+  &.small {
+    width: 100px;
+    height: 100px;
+  }
+  &.v-small {
+    width: 70px;
+    height: 70px;
+  }
 }

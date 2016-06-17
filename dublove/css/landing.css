@@ -373,6 +373,22 @@ body {
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale; }
 
+.left {
+  left: 0;
+  right: auto; }
+
+.right {
+  right: 0;
+  left: auto; }
+
+.top {
+  top: 0;
+  bottom: auto; }
+
+.bottom {
+  bottom: 0;
+  top: auto; }
+
 h1,
 h3,
 h5 {
@@ -1012,6 +1028,22 @@ body {
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale; }
 
+.left {
+  left: 0;
+  right: auto; }
+
+.right {
+  right: 0;
+  left: auto; }
+
+.top {
+  top: 0;
+  bottom: auto; }
+
+.bottom {
+  bottom: 0;
+  top: auto; }
+
 h1,
 h3,
 h5 {
@@ -1338,6 +1370,12 @@ p {
   width: 200px;
   height: 200px;
   background-size: 100%; }
+  .icon-Hibiscus-2.small {
+    width: 100px;
+    height: 100px; }
+  .icon-Hibiscus-2.v-small {
+    width: 70px;
+    height: 70px; }
 
 header {
   height: 600px;
@@ -1369,11 +1407,7 @@ h2.main {
 .flowerGroup {
   position: absolute;
   display: inline-block;
-  margin: 0 auto;
-  padding: 0;
-  top: -0.5em;
-  left: 0;
-  right: 0; }
+  margin: 0 auto; }
   .flowerGroup img {
     opacity: 0;
     -webkit-transform: scale(0) rotate(0deg) translateZ(0);
@@ -1383,15 +1417,6 @@ h2.main {
     transition: opacity 1s ease, -webkit-transform 1s ease;
     transition: opacity 1s ease, transform 1s ease;
     transition: opacity 1s ease, transform 1s ease, -webkit-transform 1s ease; }
-    .flowerGroup img.one {
-      -webkit-transition-delay: 0.2s;
-              transition-delay: 0.2s; }
-    .flowerGroup img.two {
-      -webkit-transition-delay: 0.5s;
-              transition-delay: 0.5s; }
-    .flowerGroup img.three {
-      -webkit-transition-delay: 0.7s;
-              transition-delay: 0.7s; }
 
 img.topLeft {
   position: absolute;

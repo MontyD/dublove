@@ -33,24 +33,11 @@ h2.main {
     position: absolute;
     display : inline-block;
     margin  : 0 auto;
-    padding : 0;
-    top     : -0.5em;
-    left    : 0;
-    right   : 0;
     img {
         opacity                    : 0;
         transform                  : scale(0) rotate(0deg) translateZ(0);
         -webkit-backface-visibility: hidden;
         transition                 : opacity 1s ease, transform 1s ease;
-        &.one {
-            transition-delay: 0.2s;
-        }
-        &.two {
-            transition-delay: 0.5s;
-        }
-        &.three {
-            transition-delay: 0.7s;
-        }
     }
 }
 img.topLeft {
