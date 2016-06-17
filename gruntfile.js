@@ -55,11 +55,32 @@ module.exports = function(grunt) {
                 }]
             }
         },
+        svgmin: {
+            options: {
+                plugins: [{
+                    removeViewBox: false
+                }, {
+                    removeUselessStrokeAndFill: false
+                }, {
+                    removeAttrs: {
+                        attrs: ['xmlns']
+                    }
+                }]
+            },
+            dist: {
+                files: [{
+                    expand: true,
+                    cwd: 'src/svg',
+                    src: ['*.svg'],
+                    dest: "dublove/images"
+                }],
+            }
+        },
         grunticon: {
             icons: {
                 files: [{
                     expand: true,
-                    cwd: 'src/svg',
+                    cwd: 'dublove/images',
                     src: ['*.svg'],
                     dest: "dublove/icons"
                 }],
@@ -82,7 +103,7 @@ module.exports = function(grunt) {
             },
             svg: {
                 files: ['src/svg/*.svg'],
-                tasks: ['grunticon'],
+                tasks: ['svgmin', 'grunticon'],
                 options: {
                     livereload: true
                 }
@@ -109,9 +130,10 @@ module.exports = function(grunt) {
     grunt.loadNpmTasks('grunt-contrib-watch');
     grunt.loadNpmTasks('grunt-concurrent');
     grunt.loadNpmTasks('grunt-postcss');
+    grunt.loadNpmTasks('grunt-svgmin');
     grunt.loadNpmTasks('grunt-grunticon');
     grunt.loadNpmTasks('grunt-notify');
 
-    grunt.registerTask('default', ['sass', 'cssmin', 'jshint', 'uglify', 'grunticon', 'concurrent']);
+    grunt.registerTask('default', ['sass', 'cssmin', 'jshint', 'uglify', 'svgmin', 'grunticon', 'concurrent']);
 
 };
