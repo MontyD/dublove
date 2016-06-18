@@ -1,8 +1,27 @@
 // Gruntfile.js
 module.exports = function(grunt) {
     grunt.initConfig({
-        jshint: {
-            all: ['src/js/*.js']
+        webpack: {
+            initial: {
+                entry: {
+                  homePage: 'src/js/homePage.js'
+                },
+                output: {
+                    filename: '[name].js',
+                    path: 'dublove/javascript'
+                },
+                stats: {
+                    // Configure the console output
+                    colors: false,
+                    modules: true,
+                    reasons: true
+                },
+                plugins: [
+                    // new Webpack.optimize.UglifyJsPlugin({
+                    //     minimize: true
+                    // })
+                ]
+            }
         },
         sass: {
             build: {
@@ -42,16 +61,6 @@ module.exports = function(grunt) {
                     src: ['*.css', '!*.min.css'],
                     dest: 'dublove/css',
                     ext: '.min.css'
-                }]
-            }
-        },
-        uglify: {
-            build: {
-                files: [{
-                    expand: true,
-                    cwd: 'src/js',
-                    src: ['**/*.js'],
-                    dest: 'dublove/javascript'
                 }]
             }
         },
@@ -118,9 +127,7 @@ module.exports = function(grunt) {
             tasks: ['watch']
         }
     });
-
-    grunt.loadNpmTasks('grunt-contrib-jshint');
-    grunt.loadNpmTasks('grunt-contrib-uglify');
+    grunt.loadNpmTasks('grunt-webpack');
     grunt.loadNpmTasks('grunt-contrib-sass');
     grunt.loadNpmTasks('grunt-contrib-cssmin');
     grunt.loadNpmTasks('grunt-contrib-watch');
@@ -130,6 +137,6 @@ module.exports = function(grunt) {
     grunt.loadNpmTasks('grunt-grunticon');
     grunt.loadNpmTasks('grunt-notify');
 
-    grunt.registerTask('default', ['sass', 'cssmin', 'jshint', 'uglify', 'svgmin', 'grunticon', 'concurrent']);
+    grunt.registerTask('default', ['webpack', 'sass', 'cssmin', 'svgmin', 'grunticon', 'concurrent']);
 
 };
