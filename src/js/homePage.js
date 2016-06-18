@@ -5,16 +5,10 @@ var imgViewer = require('./components/_imgViewer');
 var addDateToFooter = require('./components/_addDateToFooter');
 var setActive = require('./components/_setActive');
 var Blazy = require('./vendor/blazy.min');
-var grunticonLoader = require('./vendor/grunticon.loader');
 
 var homePage = (function() {
 
   setActive();
-
-  grunticonLoader();
-
-  grunticon(["dublove/icons/icons.data.svg.css", "dublove/icons/icons.data.png.css", "dublove/icons/icons.fallback.css"], grunticon.svgLoadedCallback);
-
 
   var bLazy = new Blazy({
       offset: 500

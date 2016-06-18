@@ -1334,15 +1334,15 @@ p {
     .imageViewer img.b-lazy.right {
       transform: translateY(-50%) translateX(110%) scale(0.7); }
 
-.icon-Hibiscus-2 {
+.icon-Hibiscus {
   display: inline-block;
   width: 200px;
   height: 200px;
   background-size: 100%; }
-  .icon-Hibiscus-2.small {
+  .icon-Hibiscus.small {
     width: 100px;
     height: 100px; }
-  .icon-Hibiscus-2.v-small {
+  .icon-Hibiscus.v-small {
     width: 70px;
     height: 70px; }
 
