@@ -1,4 +1,4 @@
-
+var animatationEls = document.getElementsByClassName('animate');
 
 var scrollAnimations = function(top) {
   for (var i = 0; i < animatationEls.length; i++) {
