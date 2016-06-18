@@ -17,6 +17,22 @@ header {
         background-image : url('../images/background.jpg');
         background-repeat: no-repeat;
         background-size  : cover;
+
+        @media(min-width: 1300px) {
+          background-image: url('../images/background-1300.jpg');
+        }
+        @media(max-width: 900px) {
+          background-image: url('../images/background-900.jpg');
+        }
+        @media(max-width: 700px) {
+          background-image: url('../images/background-700.jpg');
+        }
+        @media(max-width: 500px) {
+          background-image: url('../images/background-500.jpg');
+        }
+        @media(max-width: 350px) {
+          background-image: url('../images/background-350.jpg');
+        }
     }
     section.container {
         height: 95%;
