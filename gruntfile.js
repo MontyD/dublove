@@ -1,25 +1,27 @@
 // Gruntfile.js
+var Webpack = require('webpack');
+var path = require('path');
+
 module.exports = function(grunt) {
     grunt.initConfig({
         webpack: {
             initial: {
                 entry: {
-                  homePage: 'src/js/homePage.js'
+                  homePage: path.resolve(__dirname, 'src', 'js', 'homePage.js')
                 },
                 output: {
                     filename: '[name].js',
                     path: 'dublove/javascript'
                 },
                 stats: {
-                    // Configure the console output
                     colors: false,
                     modules: true,
                     reasons: true
                 },
                 plugins: [
-                    // new Webpack.optimize.UglifyJsPlugin({
-                    //     minimize: true
-                    // })
+                    new Webpack.optimize.UglifyJsPlugin({
+                      minimize: true
+                   })
                 ]
             }
         },
@@ -101,7 +103,7 @@ module.exports = function(grunt) {
             },
             js: {
                 files: ['src/js/*.js'],
-                tasks: ['jshint', 'uglify'],
+                tasks: ['webpack'],
                 options: {
                     livereload: true
                 }
