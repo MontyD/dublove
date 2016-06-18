@@ -17,33 +17,61 @@ header {
         background-image : url('../images/background.jpg');
         background-repeat: no-repeat;
         background-size  : cover;
-
         @media(min-width: 1300px) {
-          background-image: url('../images/background-1300.jpg');
+            background-image: url('../images/background-1300.jpg');
         }
         @media(max-width: 900px) {
-          background-image: url('../images/background-900.jpg');
+            background-image: url('../images/background-900.jpg');
         }
         @media(max-width: 700px) {
-          background-image: url('../images/background-700.jpg');
+            background-image: url('../images/background-700.jpg');
         }
         @media(max-width: 500px) {
-          background-image: url('../images/background-500.jpg');
+            background-image: url('../images/background-500.jpg');
         }
         @media(max-width: 350px) {
-          background-image: url('../images/background-350.jpg');
+            background-image: url('../images/background-350.jpg');
         }
     }
     section.container {
         height: 95%;
+    }
+    .flowerGroup {
+        @media(max-width: $smallBP) {
+            &.bottom {
+                display: none;
+            }
+            &.top {
+                left  : 0;
+                right : 0;
+                margin: 0 auto;
+                i.two, i.one, i.three {
+                    display : inline-block;
+                    position: relative;
+                    width   : 3em;
+                    height  : 3em;
+                    top: auto;
+                    left: auto;
+                    right: auto;
+                    &.small,
+                    &.v-small {
+                        width : 2em;
+                        height: 2em;
+                    }
+                }
+            }
+        }
     }
 }
 section.first {
     padding-bottom: 0;
 }
 h1.main {
-    margin-top   : 0;
+    margin-top   : 0.7em;
     margin-bottom: 0;
+    @media(min-width: $largeBP) {
+        margin-top: 0;
+    }
 }
 h2.main {
     margin: 0.2em auto 1em;

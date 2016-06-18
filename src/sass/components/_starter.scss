@@ -59,24 +59,24 @@ body {
     -moz-osx-font-smoothing: grayscale;
 }
 .left {
-  position: absolute;
-  left: 1.2em;
-  right: auto;
+    position: absolute;
+    left    : 1.2em;
+    right   : auto;
 }
 .right {
-  position: absolute;
-  right: 1.2em;
-  left: auto;
+    position: absolute;
+    right   : 1.2em;
+    left    : auto;
 }
 .top {
-  position: absolute;
-  top: 1.2em;
-  bottom: auto;
+    position: absolute;
+    top     : 1.2em;
+    bottom  : auto;
 }
 .bottom {
-  position: absolute;
-  bottom: 1.2em;
-  top: auto;
+    position: absolute;
+    bottom  : 1.2em;
+    top     : auto;
 }
 h1,
 h3,
@@ -90,7 +90,7 @@ h1 {
     margin   : 0.2em auto;
     &.main {
         letter-spacing: 3px;
-        font-size     : 4em;
+        font-size     : 5em;
         @include darkShadow;
         @media(min-width: $mediumBP) {
             font-size: 5.5em;
@@ -103,12 +103,12 @@ h1 {
 h2 {
     font-weight: normal;
     text-align : center;
-    font-size  : 2.5em;
+    font-size  : 1.8em;
     &.main {
-        font-size: 3em;
+        font-size: 2em;
         @include darkShadow;
         @media(min-width: $largeBP) {
-            font-size: 2em;
+            font-size: 3em;
         }
     }
     &.funFont {
@@ -176,7 +176,7 @@ input[type="submit"] {
     transition: none;
 }
 .hidden {
-  display: none;
+    display: none;
 }
 header {
     position  : relative;
@@ -200,16 +200,16 @@ main {
     margin-bottom: 2em;
     overflow-x   : hidden;
     section {
-        padding: 1em;
-        margin: 2em auto;
-        position: relative;
-        background: $colorLightGrey;
+        padding      : 1em;
+        margin       : 2em auto;
+        position     : relative;
+        background   : $colorLightGrey;
         border-radius: 3px;
         @include shadow(1);
     }
 }
 section {
-  position: relative;
+    position: relative;
 }
 footer {
     width     : 100%;
@@ -272,15 +272,18 @@ p {
 }
 .feature {
     display   : block;
-    width     : 60%;
+    width     : 40%;
     margin    : 0 auto;
-    padding   : 0 2em;
     overflow-y: hidden;
+    min-width: 300px;
+    @media(max-width: $mediumBP) {
+        width: 70%;
+    }
     & * {
         display   : block;
         margin    : 0 auto;
         padding   : 0;
-        max-width : 70%;
+        width     : 100%;
         opacity   : 0;
         transform : translateY(100px);
         transition: opacity 0.6s ease, transform 1s ease;
@@ -288,9 +291,6 @@ p {
     &.active * {
         opacity  : 1;
         transform: translateY(0);
-    }
-    img {
-      height: 100%;
     }
 }
 .innerModal {
@@ -311,16 +311,16 @@ p {
     }
 }
 .childCentered * {
-  display: block;
-  margin: 0.2em auto;
+    display: block;
+    margin : 0.2em auto;
 }
 .light {
     background: $colorBackground;
     color     : $colorBlack;
 }
 .dark {
-    background      : rgba(53, 28, 104, 0.72);;
-    color           : $colorWhite;
+    background: rgba(53, 28, 104, 0.72);
+    color     : $colorWhite;
 }
 .grey {
     background: $colorLightGrey;

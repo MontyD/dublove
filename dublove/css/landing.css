@@ -405,7 +405,7 @@ h1 {
   margin: 0.2em auto; }
   h1.main {
     letter-spacing: 3px;
-    font-size: 4em;
+    font-size: 5em;
     text-shadow: 1px 1px 0 rgba(0, 0, 0, 0.8); }
     @media (min-width: 800px) {
       h1.main {
@@ -417,13 +417,13 @@ h1 {
 h2 {
   font-weight: normal;
   text-align: center;
-  font-size: 2.5em; }
+  font-size: 1.8em; }
   h2.main {
-    font-size: 3em;
+    font-size: 2em;
     text-shadow: 1px 1px 0 rgba(0, 0, 0, 0.8); }
     @media (min-width: 1100px) {
       h2.main {
-        font-size: 2em; } }
+        font-size: 3em; } }
   h2.funFont {
     font-family: "Bad Script", sans-serif;
     font-size: 3.2em;
@@ -460,6 +460,7 @@ input[type="submit"] {
   text-decoration: none;
   font-size: 1.4em;
   box-shadow: 0 1.5px 4px rgba(0, 0, 0, 0.24), 0 1.5px 6px rgba(0, 0, 0, 0.12);
+  -webkit-transition: box-shadow 0.2s ease;
   transition: box-shadow 0.2s ease;
   cursor: pointer; }
   .likeButton.primary,
@@ -486,6 +487,7 @@ input[type="submit"] {
     outline: none; }
 
 .b-lazy {
+  -webkit-transition: opacity 500ms ease-in-out;
   transition: opacity 500ms ease-in-out;
   max-width: 100%;
   opacity: 0; }
@@ -494,6 +496,7 @@ input[type="submit"] {
   opacity: 1; }
 
 .noTransition {
+  -webkit-transition: none;
   transition: none; }
 
 .hidden {
@@ -587,23 +590,29 @@ p {
 
 .feature {
   display: block;
-  width: 60%;
+  width: 40%;
   margin: 0 auto;
-  padding: 0 2em;
-  overflow-y: hidden; }
+  overflow-y: hidden;
+  min-width: 300px; }
+  @media (max-width: 800px) {
+    .feature {
+      width: 70%; } }
   .feature * {
     display: block;
     margin: 0 auto;
     padding: 0;
-    max-width: 70%;
+    width: 100%;
     opacity: 0;
-    transform: translateY(100px);
-    transition: opacity 0.6s ease, transform 1s ease; }
+    -webkit-transform: translateY(100px);
+            transform: translateY(100px);
+    -webkit-transition: opacity 0.6s ease, -webkit-transform 1s ease;
+    transition: opacity 0.6s ease, -webkit-transform 1s ease;
+    transition: opacity 0.6s ease, transform 1s ease;
+    transition: opacity 0.6s ease, transform 1s ease, -webkit-transform 1s ease; }
   .feature.active * {
     opacity: 1;
-    transform: translateY(0); }
-  .feature img {
-    height: 100%; }
+    -webkit-transform: translateY(0);
+            transform: translateY(0); }
 
 .innerModal {
   display: block;
@@ -641,11 +650,16 @@ p {
   color: #FFFFFF; }
 
 .animateScale {
-  transform: scale(0);
+  -webkit-transform: scale(0);
+          transform: scale(0);
   opacity: 0;
-  transition: opacity 0.8s ease, transform 1.2s ease; }
+  -webkit-transition: opacity 0.8s ease, -webkit-transform 1.2s ease;
+  transition: opacity 0.8s ease, -webkit-transform 1.2s ease;
+  transition: opacity 0.8s ease, transform 1.2s ease;
+  transition: opacity 0.8s ease, transform 1.2s ease, -webkit-transform 1.2s ease; }
   .animateScale.active {
-    transform: scale(1);
+    -webkit-transform: scale(1);
+            transform: scale(1);
     opacity: 1; }
 
 /*! normalize.css v4.1.1 | MIT License | github.com/necolas/normalize.css */
@@ -1055,7 +1069,7 @@ h1 {
   margin: 0.2em auto; }
   h1.main {
     letter-spacing: 3px;
-    font-size: 4em;
+    font-size: 5em;
     text-shadow: 1px 1px 0 rgba(0, 0, 0, 0.8); }
     @media (min-width: 800px) {
       h1.main {
@@ -1067,13 +1081,13 @@ h1 {
 h2 {
   font-weight: normal;
   text-align: center;
-  font-size: 2.5em; }
+  font-size: 1.8em; }
   h2.main {
-    font-size: 3em;
+    font-size: 2em;
     text-shadow: 1px 1px 0 rgba(0, 0, 0, 0.8); }
     @media (min-width: 1100px) {
       h2.main {
-        font-size: 2em; } }
+        font-size: 3em; } }
   h2.funFont {
     font-family: "Bad Script", sans-serif;
     font-size: 3.2em;
@@ -1110,6 +1124,7 @@ input[type="submit"] {
   text-decoration: none;
   font-size: 1.4em;
   box-shadow: 0 1.5px 4px rgba(0, 0, 0, 0.24), 0 1.5px 6px rgba(0, 0, 0, 0.12);
+  -webkit-transition: box-shadow 0.2s ease;
   transition: box-shadow 0.2s ease;
   cursor: pointer; }
   .likeButton.primary,
@@ -1136,6 +1151,7 @@ input[type="submit"] {
     outline: none; }
 
 .b-lazy {
+  -webkit-transition: opacity 500ms ease-in-out;
   transition: opacity 500ms ease-in-out;
   max-width: 100%;
   opacity: 0; }
@@ -1144,6 +1160,7 @@ input[type="submit"] {
   opacity: 1; }
 
 .noTransition {
+  -webkit-transition: none;
   transition: none; }
 
 .hidden {
@@ -1237,23 +1254,29 @@ p {
 
 .feature {
   display: block;
-  width: 60%;
+  width: 40%;
   margin: 0 auto;
-  padding: 0 2em;
-  overflow-y: hidden; }
+  overflow-y: hidden;
+  min-width: 300px; }
+  @media (max-width: 800px) {
+    .feature {
+      width: 70%; } }
   .feature * {
     display: block;
     margin: 0 auto;
     padding: 0;
-    max-width: 70%;
+    width: 100%;
     opacity: 0;
-    transform: translateY(100px);
-    transition: opacity 0.6s ease, transform 1s ease; }
+    -webkit-transform: translateY(100px);
+            transform: translateY(100px);
+    -webkit-transition: opacity 0.6s ease, -webkit-transform 1s ease;
+    transition: opacity 0.6s ease, -webkit-transform 1s ease;
+    transition: opacity 0.6s ease, transform 1s ease;
+    transition: opacity 0.6s ease, transform 1s ease, -webkit-transform 1s ease; }
   .feature.active * {
     opacity: 1;
-    transform: translateY(0); }
-  .feature img {
-    height: 100%; }
+    -webkit-transform: translateY(0);
+            transform: translateY(0); }
 
 .innerModal {
   display: block;
@@ -1291,11 +1314,16 @@ p {
   color: #FFFFFF; }
 
 .animateScale {
-  transform: scale(0);
+  -webkit-transform: scale(0);
+          transform: scale(0);
   opacity: 0;
-  transition: opacity 0.8s ease, transform 1.2s ease; }
+  -webkit-transition: opacity 0.8s ease, -webkit-transform 1.2s ease;
+  transition: opacity 0.8s ease, -webkit-transform 1.2s ease;
+  transition: opacity 0.8s ease, transform 1.2s ease;
+  transition: opacity 0.8s ease, transform 1.2s ease, -webkit-transform 1.2s ease; }
   .animateScale.active {
-    transform: scale(1);
+    -webkit-transform: scale(1);
+            transform: scale(1);
     opacity: 1; }
 
 .imageViewer {
@@ -1323,7 +1351,8 @@ p {
     display: none;
     position: absolute;
     top: 50%;
-    transform: translateY(-50%);
+    -webkit-transform: translateY(-50%);
+            transform: translateY(-50%);
     left: 0;
     right: 0;
     margin: 0 auto;
@@ -1334,6 +1363,7 @@ p {
     visibility: hidden;
     max-height: 90%;
     box-shadow: 0 1.5px 4px rgba(0, 0, 0, 0.24), 0 1.5px 6px rgba(0, 0, 0, 0.12);
+    -webkit-transition: all 0.3s ease;
     transition: all 0.3s ease; }
     .imageViewer img.b-lazy.active {
       display: block;
@@ -1342,13 +1372,16 @@ p {
     .imageViewer img.b-lazy.left, .imageViewer img.b-lazy.right {
       display: block;
       opacity: 0.5;
-      transform: translateY(-30%) scale(0.7);
+      -webkit-transform: translateY(-30%) scale(0.7);
+              transform: translateY(-30%) scale(0.7);
       cursor: pointer;
       visibility: visible; }
     .imageViewer img.b-lazy.left {
-      transform: translateY(-50%) translateX(-110%) scale(0.7); }
+      -webkit-transform: translateY(-50%) translateX(-110%) scale(0.7);
+              transform: translateY(-50%) translateX(-110%) scale(0.7); }
     .imageViewer img.b-lazy.right {
-      transform: translateY(-50%) translateX(110%) scale(0.7); }
+      -webkit-transform: translateY(-50%) translateX(110%) scale(0.7);
+              transform: translateY(-50%) translateX(110%) scale(0.7); }
 
 .icon-Hibiscus, .icon-Hibiscus-flip, .icon-Hibiscus-center,
 .icon-Hibiscus-p, .icon-Hibiscus-flip-p, .icon-Hibiscus-center-p {
@@ -1404,13 +1437,34 @@ header {
         background-image: url("../images/background-350.jpg"); } }
   header section.container {
     height: 95%; }
+  @media (max-width: 650px) {
+    header .flowerGroup.bottom {
+      display: none; }
+    header .flowerGroup.top {
+      left: 0;
+      right: 0;
+      margin: 0 auto; }
+      header .flowerGroup.top i.two, header .flowerGroup.top i.one, header .flowerGroup.top i.three {
+        display: inline-block;
+        position: relative;
+        width: 3em;
+        height: 3em;
+        top: auto;
+        left: auto;
+        right: auto; }
+        header .flowerGroup.top i.two.small, header .flowerGroup.top i.two.v-small, header .flowerGroup.top i.one.small, header .flowerGroup.top i.one.v-small, header .flowerGroup.top i.three.small, header .flowerGroup.top i.three.v-small {
+          width: 2em;
+          height: 2em; } }
 
 section.first {
   padding-bottom: 0; }
 
 h1.main {
-  margin-top: 0;
+  margin-top: 0.7em;
   margin-bottom: 0; }
+  @media (min-width: 1100px) {
+    h1.main {
+      margin-top: 0; } }
 
 h2.main {
   margin: 0.2em auto 1em; }
@@ -1422,39 +1476,51 @@ h2.main {
   .flowerGroup.top {
     margin-top: 1em; }
     .flowerGroup.top i {
-      transition-delay: 0.4s;
-      transition-duration: 2s; }
+      -webkit-transition-delay: 0.4s;
+              transition-delay: 0.4s;
+      -webkit-transition-duration: 2s;
+              transition-duration: 2s; }
     .flowerGroup.top .one {
       display: inline-block; }
     .flowerGroup.top .two {
       position: absolute;
       top: 0;
       left: 5.8em;
-      transition-delay: 0.6s;
-      transition-duration: 1.2s; }
+      -webkit-transition-delay: 0.6s;
+              transition-delay: 0.6s;
+      -webkit-transition-duration: 1.2s;
+              transition-duration: 1.2s; }
     .flowerGroup.top .three {
       position: absolute;
       top: -1em;
       left: 4.5em;
-      transition-delay: 1s;
-      transition-duration: 1s; }
+      -webkit-transition-delay: 1s;
+              transition-delay: 1s;
+      -webkit-transition-duration: 1s;
+              transition-duration: 1s; }
   .flowerGroup.bottom i {
-    transition-delay: 1.2s;
-    transition-duration: 2s; }
+    -webkit-transition-delay: 1.2s;
+            transition-delay: 1.2s;
+    -webkit-transition-duration: 2s;
+            transition-duration: 2s; }
   .flowerGroup.bottom .one {
     display: inline-block; }
   .flowerGroup.bottom .two {
     position: absolute;
     top: 1em;
     left: -3.7em;
-    transition-delay: 1.3s;
-    transition-duration: 1s; }
+    -webkit-transition-delay: 1.3s;
+            transition-delay: 1.3s;
+    -webkit-transition-duration: 1s;
+            transition-duration: 1s; }
   .flowerGroup.bottom .three {
     position: absolute;
     top: -0.5em;
     left: -1em;
-    transition-delay: 1.4s;
-    transition-duration: 0.8s; }
+    -webkit-transition-delay: 1.4s;
+            transition-delay: 1.4s;
+    -webkit-transition-duration: 0.8s;
+            transition-duration: 0.8s; }
 
 img.topLeft {
   position: absolute;
@@ -1468,7 +1534,8 @@ img.bottomRight {
 
 .active .flowerGroup i {
   opacity: 1;
-  transform: scale(1); }
+  -webkit-transform: scale(1);
+          transform: scale(1); }
 
 .second {
   padding-top: 1em;
@@ -1487,5 +1554,3 @@ img.bottomRight {
   .fourth .innerModal textarea {
     resize: none;
     height: 7em; }
-
-/*# sourceMappingURL=landing.css.map */
