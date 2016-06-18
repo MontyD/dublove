@@ -18,12 +18,15 @@ header {
         background-repeat: no-repeat;
         background-size  : cover;
     }
+    section.container {
+        margin-top: 2em;
+    }
 }
 section.first {
     padding-bottom: 0;
 }
 h1.main {
-    margin-top   : 0.6em;
+    margin-top   : 0;
     margin-bottom: 0;
 }
 h2.main {
@@ -33,11 +36,45 @@ h2.main {
     position: absolute;
     display : inline-block;
     margin  : 0 auto;
-    img {
-        opacity                    : 0;
-        transform                  : scale(0) rotate(0deg) translateZ(0);
-        -webkit-backface-visibility: hidden;
-        transition                 : opacity 1s ease, transform 1s ease;
+    &.top {
+      i {
+          transition-delay   : 0.4s;
+          transition-duration: 2s;
+      }
+        .one {
+            position           : absolute;
+            top                : 0;
+            left               : 5.8em;
+            transition-delay   : 0.6s;
+            transition-duration: 1.2s;
+        }
+        .two {
+            position           : absolute;
+            top                : -1em;
+            left               : 4.5em;
+            transition-delay   : 1s;
+            transition-duration: 1s;
+        }
+    }
+    &.bottom {
+      i {
+          transition-delay   : 1.2s;
+          transition-duration: 2s;
+      }
+        .one {
+            position           : absolute;
+            top                : 1em;
+            left               : -3.7em;
+            transition-delay   : 1.3s;
+            transition-duration: 1s;
+        }
+        .two {
+            position           : absolute;
+            top                : -0.5em;
+            left               : -1em;
+            transition-delay   : 1.4s;
+            transition-duration: 0.8s;
+        }
     }
 }
 img.topLeft {
@@ -52,12 +89,9 @@ img.bottomRight {
 }
 .active {
     .flowerGroup {
-        img {
+        i {
             opacity  : 1;
-            transform: scale(1) rotate(0deg) translateZ(0);
-            &.one {
-                transform: scale(1) rotate(-55deg) translateZ(0);
-            }
+            transform: scale(1);
         }
     }
 }

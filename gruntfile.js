@@ -19,9 +19,9 @@ module.exports = function(grunt) {
                     reasons: true
                 },
                 plugins: [
-                  //   new Webpack.optimize.UglifyJsPlugin({
-                  //     minimize: true
-                  //  })
+                    new Webpack.optimize.UglifyJsPlugin({
+                      minimize: true
+                   })
                 ]
             }
         },

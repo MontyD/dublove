@@ -1,15 +1,23 @@
-.icon-Hibiscus {
+.icon-Hibiscus, .icon-Hibiscus-flip, .icon-Hibiscus-center {
   display: inline-block;
-  width: 200px;
-  height: 200px;
   background-size: 100%;
-
+  width: 5.5em;
+  height: 5.5em;
   &.small {
-    width: 100px;
-    height: 100px;
+    width: 3.5em;
+    height: 3.5em;
   }
   &.v-small {
-    width: 70px;
-    height: 70px;
+    width: 1.8em;
+    height: 1.8em;
+  }
+}
+.active {
+  .icon-Hibiscus, .icon-Hibiscus-flip, .icon-Hibiscus-center {
+    opacity: 1;
+
+    &.transparent {
+      opacity: 0.4;
+    }
   }
 }

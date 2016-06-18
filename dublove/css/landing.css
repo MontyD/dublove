@@ -1334,17 +1334,22 @@ p {
     .imageViewer img.b-lazy.right {
       transform: translateY(-50%) translateX(110%) scale(0.7); }
 
-.icon-Hibiscus {
+.icon-Hibiscus, .icon-Hibiscus-flip, .icon-Hibiscus-center {
   display: inline-block;
-  width: 200px;
-  height: 200px;
-  background-size: 100%; }
-  .icon-Hibiscus.small {
-    width: 100px;
-    height: 100px; }
-  .icon-Hibiscus.v-small {
-    width: 70px;
-    height: 70px; }
+  background-size: 100%;
+  width: 5.5em;
+  height: 5.5em; }
+  .icon-Hibiscus.small, .icon-Hibiscus-flip.small, .icon-Hibiscus-center.small {
+    width: 3.5em;
+    height: 3.5em; }
+  .icon-Hibiscus.v-small, .icon-Hibiscus-flip.v-small, .icon-Hibiscus-center.v-small {
+    width: 1.8em;
+    height: 1.8em; }
+
+.active .icon-Hibiscus, .active .icon-Hibiscus-flip, .active .icon-Hibiscus-center {
+  opacity: 1; }
+  .active .icon-Hibiscus.transparent, .active .icon-Hibiscus-flip.transparent, .active .icon-Hibiscus-center.transparent {
+    opacity: 0.4; }
 
 header {
   height: 600px;
@@ -1362,12 +1367,14 @@ header {
     background-image: url("../images/background.jpg");
     background-repeat: no-repeat;
     background-size: cover; }
+  header section.container {
+    margin-top: 2em; }
 
 section.first {
   padding-bottom: 0; }
 
 h1.main {
-  margin-top: 0.6em;
+  margin-top: 0;
   margin-bottom: 0; }
 
 h2.main {
@@ -1377,11 +1384,36 @@ h2.main {
   position: absolute;
   display: inline-block;
   margin: 0 auto; }
-  .flowerGroup img {
-    opacity: 0;
-    transform: scale(0) rotate(0deg) translateZ(0);
-    -webkit-backface-visibility: hidden;
-    transition: opacity 1s ease, transform 1s ease; }
+  .flowerGroup.top i {
+    transition-delay: 0.4s;
+    transition-duration: 2s; }
+  .flowerGroup.top .one {
+    position: absolute;
+    top: 0;
+    left: 5.8em;
+    transition-delay: 0.6s;
+    transition-duration: 1.2s; }
+  .flowerGroup.top .two {
+    position: absolute;
+    top: -1em;
+    left: 4.5em;
+    transition-delay: 1s;
+    transition-duration: 1s; }
+  .flowerGroup.bottom i {
+    transition-delay: 1.2s;
+    transition-duration: 2s; }
+  .flowerGroup.bottom .one {
+    position: absolute;
+    top: 1em;
+    left: -3.7em;
+    transition-delay: 1.3s;
+    transition-duration: 1s; }
+  .flowerGroup.bottom .two {
+    position: absolute;
+    top: -0.5em;
+    left: -1em;
+    transition-delay: 1.4s;
+    transition-duration: 0.8s; }
 
 img.topLeft {
   position: absolute;
@@ -1393,11 +1425,9 @@ img.bottomRight {
   bottom: 1.5em;
   right: 1.5em; }
 
-.active .flowerGroup img {
+.active .flowerGroup i {
   opacity: 1;
-  transform: scale(1) rotate(0deg) translateZ(0); }
-  .active .flowerGroup img.one {
-    transform: scale(1) rotate(-55deg) translateZ(0); }
+  transform: scale(1); }
 
 .second {
   padding-top: 1em;
