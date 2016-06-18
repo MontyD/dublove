@@ -59,18 +59,22 @@ body {
     -moz-osx-font-smoothing: grayscale;
 }
 .left {
+  position: absolute;
   left: 1.2em;
   right: auto;
 }
 .right {
+  position: absolute;
   right: 1.2em;
   left: auto;
 }
 .top {
+  position: absolute;
   top: 1.2em;
   bottom: auto;
 }
 .bottom {
+  position: absolute;
   bottom: 1.2em;
   top: auto;
 }

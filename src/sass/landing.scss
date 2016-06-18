@@ -19,7 +19,7 @@ header {
         background-size  : cover;
     }
     section.container {
-        margin-top: 2em;
+        height: 95%;
     }
 }
 section.first {
@@ -37,14 +37,14 @@ h2.main {
     display : inline-block;
     margin  : 0 auto;
     &.top {
-      margin-top: 0.5em;
-      i {
-          transition-delay   : 0.4s;
-          transition-duration: 2s;
-      }
-      .one {
-        display: inline-block;
-      }
+        margin-top: 1em;
+        i {
+            transition-delay   : 0.4s;
+            transition-duration: 2s;
+        }
+        .one {
+            display: inline-block;
+        }
         .two {
             position           : absolute;
             top                : 0;
@@ -61,12 +61,12 @@ h2.main {
         }
     }
     &.bottom {
-      i {
-          transition-delay   : 1.2s;
-          transition-duration: 2s;
-      }
+        i {
+            transition-delay   : 1.2s;
+            transition-duration: 2s;
+        }
         .one {
-          display: inline-block;
+            display: inline-block;
         }
         .two {
             position           : absolute;

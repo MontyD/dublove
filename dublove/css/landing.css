@@ -374,18 +374,22 @@ body {
   -moz-osx-font-smoothing: grayscale; }
 
 .left {
+  position: absolute;
   left: 1.2em;
   right: auto; }
 
 .right {
+  position: absolute;
   right: 1.2em;
   left: auto; }
 
 .top {
+  position: absolute;
   top: 1.2em;
   bottom: auto; }
 
 .bottom {
+  position: absolute;
   bottom: 1.2em;
   top: auto; }
 
@@ -1033,18 +1037,22 @@ body {
   -moz-osx-font-smoothing: grayscale; }
 
 .left {
+  position: absolute;
   left: 1.2em;
   right: auto; }
 
 .right {
+  position: absolute;
   right: 1.2em;
   left: auto; }
 
 .top {
+  position: absolute;
   top: 1.2em;
   bottom: auto; }
 
 .bottom {
+  position: absolute;
   bottom: 1.2em;
   top: auto; }
 
@@ -1411,7 +1419,7 @@ header {
     background-repeat: no-repeat;
     background-size: cover; }
   header section.container {
-    margin-top: 2em; }
+    height: 95%; }
 
 section.first {
   padding-bottom: 0; }
@@ -1428,7 +1436,7 @@ h2.main {
   display: inline-block;
   margin: 0 auto; }
   .flowerGroup.top {
-    margin-top: 0.5em; }
+    margin-top: 1em; }
     .flowerGroup.top i {
       -webkit-transition-delay: 0.4s;
               transition-delay: 0.4s;

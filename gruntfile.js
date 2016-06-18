@@ -7,7 +7,7 @@ module.exports = function(grunt) {
         webpack: {
             initial: {
                 entry: {
-                  homePage: path.resolve(__dirname, 'src', 'js', 'homePage.js')
+                    homePage: path.resolve(__dirname, 'src', 'js', 'homePage.js')
                 },
                 output: {
                     filename: '[name].js',
@@ -20,8 +20,8 @@ module.exports = function(grunt) {
                 },
                 plugins: [
                     new Webpack.optimize.UglifyJsPlugin({
-                      minimize: true
-                   })
+                        minimize: true
+                    })
                 ]
             }
         },
@@ -127,6 +127,16 @@ module.exports = function(grunt) {
                 logConcurrentOutput: true
             },
             tasks: ['watch']
+        },
+        imagemin: {
+            dynamic: {
+                files: [{
+                    expand: true,
+                    cwd: 'src/images',
+                    src: ['**/*.{png,jpg,gif}'],
+                    dest: 'dublove/images'
+                }]
+            }
         }
     });
     grunt.loadNpmTasks('grunt-webpack');
@@ -138,7 +148,8 @@ module.exports = function(grunt) {
     grunt.loadNpmTasks('grunt-svgmin');
     grunt.loadNpmTasks('grunt-grunticon');
     grunt.loadNpmTasks('grunt-notify');
+    grunt.loadNpmTasks('grunt-contrib-imagemin');
 
-    grunt.registerTask('default', ['webpack', 'sass', 'cssmin', 'svgmin', 'grunticon', 'concurrent']);
+    grunt.registerTask('default', ['imagemin', 'webpack', 'sass', 'cssmin', 'svgmin', 'grunticon', 'concurrent']);
 
 };
