@@ -102,7 +102,7 @@ module.exports = function(grunt) {
                 }
             },
             js: {
-                files: ['src/js/*.js'],
+                files: ['src/js/**/*.js'],
                 tasks: ['webpack'],
                 options: {
                     livereload: true
