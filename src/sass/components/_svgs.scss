@@ -1,5 +1,5 @@
-.icon-Hibiscus, .icon-Hibiscus-flip, .icon-Hibiscus-center {
-  display: inline-block;
+.icon-Hibiscus, .icon-Hibiscus-flip, .icon-Hibiscus-center,
+.icon-Hibiscus-p, .icon-Hibiscus-flip-p, .icon-Hibiscus-center-p {
   background-size: 100%;
   width: 5.5em;
   height: 5.5em;
@@ -13,7 +13,8 @@
   }
 }
 .active {
-  .icon-Hibiscus, .icon-Hibiscus-flip, .icon-Hibiscus-center {
+  .icon-Hibiscus, .icon-Hibiscus-flip, .icon-Hibiscus-center,
+  .icon-Hibiscus-p, .icon-Hibiscus-flip-p, .icon-Hibiscus-center-p {
     opacity: 1;
 
     &.transparent {

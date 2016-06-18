@@ -59,19 +59,19 @@ body {
     -moz-osx-font-smoothing: grayscale;
 }
 .left {
-  left: 0;
+  left: 1.2em;
   right: auto;
 }
 .right {
-  right: 0;
+  right: 1.2em;
   left: auto;
 }
 .top {
-  top: 0;
+  top: 1.2em;
   bottom: auto;
 }
 .bottom {
-  bottom: 0;
+  bottom: 1.2em;
   top: auto;
 }
 h1,
@@ -306,6 +306,10 @@ p {
         margin: 0.2em;
     }
 }
+.childCentered * {
+  display: block;
+  margin: 0.2em auto;
+}
 .light {
     background: $colorBackground;
     color     : $colorBlack;
@@ -324,7 +328,7 @@ p {
 .animateScale {
     transform : scale(0);
     opacity   : 0;
-    transition: opacity 0.3s ease, transform 0.3s ease;
+    transition: opacity 0.8s ease, transform 1.2s ease;
     &.active {
         transform: scale(1);
         opacity  : 1;
