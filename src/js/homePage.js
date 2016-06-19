@@ -19,7 +19,7 @@ var homePage = (function() {
   addDateToFooter();
 
   window.addEventListener('scroll', function() {
-    debounce(scrollEvents(scrollAnimations), 30);
+    debounce(scrollEvents(scrollAnimations), 50);
   }, false);
 
 
