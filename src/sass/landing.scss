@@ -160,11 +160,23 @@ img.bottomRight {
         height: 4em;
       }
     }
+    h2 {
+      @media(max-width: $smallBP) {
+        font-size: 2.2em;
+      }
+    }
 }
 .third {
     padding-bottom: 2.5em;
     h3 {
         margin-bottom: 0.1em;
+    }
+    i {
+      @media(max-width: $smallBP) {
+        width: 3em;
+        height: 3em;
+        opacity: 0.3;
+      }
     }
 }
 .fourth {

@@ -6,6 +6,9 @@
     margin  : 0 auto;
     padding : 0.5em;
     height  : 300px;
+    @media(max-width: $smallBP) {
+      height: 270px;
+    }
     button {
         position  : absolute;
         top       : 0;
@@ -37,26 +40,42 @@
         opacity      : 0;
         visibility   : hidden;
         max-height   : 90%;
+        max-width    : 550px;
         @include shadow(1);
         transition   : all 0.3s ease;
+        @media(max-width: $mediumBP) {
+            max-width: 350px;
+        }
+        @media(max-width: $smallBP) {
+            max-width: 70%;
+        }
         &.active {
-            display: block;
+            display   : block;
             visibility: visible;
             opacity   : 1;
         }
         &.left,
         &.right {
-            display: block;
+            display   : block;
             opacity   : 0.5;
             transform : translateY(-30%) scale(0.7);
             cursor    : pointer;
             visibility: visible;
+            @media(max-width: $smallBP) {
+              opacity: 0.3;
+            }
         }
         &.left {
             transform: translateY(-50%) translateX(-110%) scale(0.7);
+            @media(max-width: $mediumBP) {
+                transform: translateY(-50%) translateX(-90%) scale(0.7);
+            }
         }
         &.right {
             transform: translateY(-50%) translateX(110%) scale(0.7);
+            @media(max-width: $mediumBP) {
+                transform: translateY(-50%) translateX(90%) scale(0.7);
+            }
         }
     }
 }

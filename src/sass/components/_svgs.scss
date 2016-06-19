@@ -1,26 +1,23 @@
-.icon-Hibiscus, .icon-Hibiscus-flip, .icon-Hibiscus-center,
-.icon-Hibiscus-p, .icon-Hibiscus-flip-p, .icon-Hibiscus-center-p {
-  background-size: 100%;
-  width: 5.5em;
-  height: 5.5em;
-
-  &.small {
-    width: 3.5em;
-    height: 3.5em;
-
-  }
-  &.v-small {
-    width: 1.8em;
-    height: 1.8em;
-  }
+.icon-Hibiscus,
+.icon-Hibiscus-center,
+.icon-Hibiscus-center-p,
+.icon-Hibiscus-flip,
+.icon-Hibiscus-flip-p,
+.icon-Hibiscus-p {
+    background-size: 100%;
+    width          : 5.5em;
+    height         : 5.5em;
+    &.small {
+        width : 3.5em;
+        height: 3.5em;
+    }
+    &.v-small {
+        width : 1.8em;
+        height: 1.8em;
+    }
 }
 .active {
-  .icon-Hibiscus, .icon-Hibiscus-flip, .icon-Hibiscus-center,
-  .icon-Hibiscus-p, .icon-Hibiscus-flip-p, .icon-Hibiscus-center-p {
-    opacity: 1;
-
     &.transparent {
-      opacity: 0.4;
+        opacity: 0.4;
     }
-  }
 }

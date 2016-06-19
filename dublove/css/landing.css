@@ -459,6 +459,7 @@ input[type="submit"] {
   color: #FFFFFF;
   text-decoration: none;
   font-size: 1.4em;
+  z-index: 10;
   box-shadow: 0 1.5px 4px rgba(0, 0, 0, 0.24), 0 1.5px 6px rgba(0, 0, 0, 0.12);
   -webkit-transition: box-shadow 0.2s ease;
   transition: box-shadow 0.2s ease;
@@ -578,7 +579,8 @@ p {
   padding: 1em;
   box-sizing: border-box;
   margin-left: 0;
-  margin-right: 0; }
+  margin-right: 0;
+  vertical-align: top; }
   .thirds p {
     padding: 0;
     margin: 0;
@@ -587,6 +589,11 @@ p {
   .thirds h3 {
     margin: 0 auto;
     font-size: 2.2em; }
+  @media (max-width: 800px) {
+    .thirds {
+      display: block;
+      width: 90%;
+      margin: 0.5em auto; } }
 
 .feature {
   display: block;
@@ -1123,6 +1130,7 @@ input[type="submit"] {
   color: #FFFFFF;
   text-decoration: none;
   font-size: 1.4em;
+  z-index: 10;
   box-shadow: 0 1.5px 4px rgba(0, 0, 0, 0.24), 0 1.5px 6px rgba(0, 0, 0, 0.12);
   -webkit-transition: box-shadow 0.2s ease;
   transition: box-shadow 0.2s ease;
@@ -1242,7 +1250,8 @@ p {
   padding: 1em;
   box-sizing: border-box;
   margin-left: 0;
-  margin-right: 0; }
+  margin-right: 0;
+  vertical-align: top; }
   .thirds p {
     padding: 0;
     margin: 0;
@@ -1251,6 +1260,11 @@ p {
   .thirds h3 {
     margin: 0 auto;
     font-size: 2.2em; }
+  @media (max-width: 800px) {
+    .thirds {
+      display: block;
+      width: 90%;
+      margin: 0.5em auto; } }
 
 .feature {
   display: block;
@@ -1333,6 +1347,9 @@ p {
   margin: 0 auto;
   padding: 0.5em;
   height: 300px; }
+  @media (max-width: 650px) {
+    .imageViewer {
+      height: 270px; } }
   .imageViewer button {
     position: absolute;
     top: 0;
@@ -1362,9 +1379,16 @@ p {
     opacity: 0;
     visibility: hidden;
     max-height: 90%;
+    max-width: 550px;
     box-shadow: 0 1.5px 4px rgba(0, 0, 0, 0.24), 0 1.5px 6px rgba(0, 0, 0, 0.12);
     -webkit-transition: all 0.3s ease;
     transition: all 0.3s ease; }
+    @media (max-width: 800px) {
+      .imageViewer img.b-lazy {
+        max-width: 350px; } }
+    @media (max-width: 650px) {
+      .imageViewer img.b-lazy {
+        max-width: 70%; } }
     .imageViewer img.b-lazy.active {
       display: block;
       visibility: visible;
@@ -1376,33 +1400,52 @@ p {
               transform: translateY(-30%) scale(0.7);
       cursor: pointer;
       visibility: visible; }
+      @media (max-width: 650px) {
+        .imageViewer img.b-lazy.left, .imageViewer img.b-lazy.right {
+          opacity: 0.3; } }
     .imageViewer img.b-lazy.left {
       -webkit-transform: translateY(-50%) translateX(-110%) scale(0.7);
               transform: translateY(-50%) translateX(-110%) scale(0.7); }
+      @media (max-width: 800px) {
+        .imageViewer img.b-lazy.left {
+          -webkit-transform: translateY(-50%) translateX(-90%) scale(0.7);
+                  transform: translateY(-50%) translateX(-90%) scale(0.7); } }
     .imageViewer img.b-lazy.right {
       -webkit-transform: translateY(-50%) translateX(110%) scale(0.7);
               transform: translateY(-50%) translateX(110%) scale(0.7); }
+      @media (max-width: 800px) {
+        .imageViewer img.b-lazy.right {
+          -webkit-transform: translateY(-50%) translateX(90%) scale(0.7);
+                  transform: translateY(-50%) translateX(90%) scale(0.7); } }
 
-.icon-Hibiscus, .icon-Hibiscus-flip, .icon-Hibiscus-center,
-.icon-Hibiscus-p, .icon-Hibiscus-flip-p, .icon-Hibiscus-center-p {
+.icon-Hibiscus,
+.icon-Hibiscus-center,
+.icon-Hibiscus-center-p,
+.icon-Hibiscus-flip,
+.icon-Hibiscus-flip-p,
+.icon-Hibiscus-p {
   background-size: 100%;
   width: 5.5em;
   height: 5.5em; }
-  .icon-Hibiscus.small, .icon-Hibiscus-flip.small, .icon-Hibiscus-center.small,
-  .icon-Hibiscus-p.small, .icon-Hibiscus-flip-p.small, .icon-Hibiscus-center-p.small {
+  .icon-Hibiscus.small,
+  .icon-Hibiscus-center.small,
+  .icon-Hibiscus-center-p.small,
+  .icon-Hibiscus-flip.small,
+  .icon-Hibiscus-flip-p.small,
+  .icon-Hibiscus-p.small {
     width: 3.5em;
     height: 3.5em; }
-  .icon-Hibiscus.v-small, .icon-Hibiscus-flip.v-small, .icon-Hibiscus-center.v-small,
-  .icon-Hibiscus-p.v-small, .icon-Hibiscus-flip-p.v-small, .icon-Hibiscus-center-p.v-small {
+  .icon-Hibiscus.v-small,
+  .icon-Hibiscus-center.v-small,
+  .icon-Hibiscus-center-p.v-small,
+  .icon-Hibiscus-flip.v-small,
+  .icon-Hibiscus-flip-p.v-small,
+  .icon-Hibiscus-p.v-small {
     width: 1.8em;
     height: 1.8em; }
 
-.active .icon-Hibiscus, .active .icon-Hibiscus-flip, .active .icon-Hibiscus-center,
-.active .icon-Hibiscus-p, .active .icon-Hibiscus-flip-p, .active .icon-Hibiscus-center-p {
-  opacity: 1; }
-  .active .icon-Hibiscus.transparent, .active .icon-Hibiscus-flip.transparent, .active .icon-Hibiscus-center.transparent,
-  .active .icon-Hibiscus-p.transparent, .active .icon-Hibiscus-flip-p.transparent, .active .icon-Hibiscus-center-p.transparent {
-    opacity: 0.4; }
+.active.transparent {
+  opacity: 0.4; }
 
 header {
   height: 600px;
@@ -1554,11 +1597,19 @@ img.bottomRight {
       display: none;
       width: 4em;
       height: 4em; } }
+  @media (max-width: 650px) {
+    .second h2 {
+      font-size: 2.2em; } }
 
 .third {
   padding-bottom: 2.5em; }
   .third h3 {
     margin-bottom: 0.1em; }
+  @media (max-width: 650px) {
+    .third i {
+      width: 3em;
+      height: 3em;
+      opacity: 0.3; } }
 
 .fourth h2 {
   margin-bottom: 0.1em; }
