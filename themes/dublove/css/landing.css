@@ -1364,7 +1364,7 @@ p {
       left: 0; }
     .imageViewer button.imgRight {
       right: 0; }
-  .imageViewer img.b-lazy.b-loaded {
+  .imageViewer img.imgFeature {
     display: none;
     position: absolute;
     top: 50%;
@@ -1384,16 +1384,16 @@ p {
     -webkit-transition: all 0.3s ease;
     transition: all 0.3s ease; }
     @media (max-width: 800px) {
-      .imageViewer img.b-lazy.b-loaded {
+      .imageViewer img.imgFeature {
         max-width: 350px; } }
     @media (max-width: 650px) {
-      .imageViewer img.b-lazy.b-loaded {
+      .imageViewer img.imgFeature {
         max-width: 70%; } }
-    .imageViewer img.b-lazy.b-loaded.active {
+    .imageViewer img.imgFeature.active {
       display: block;
       visibility: visible;
       opacity: 1; }
-    .imageViewer img.b-lazy.b-loaded.left, .imageViewer img.b-lazy.b-loaded.right {
+    .imageViewer img.imgFeature.left, .imageViewer img.imgFeature.right {
       display: block;
       opacity: 0.5;
       -webkit-transform: translateY(-30%) scale(0.7);
@@ -1401,20 +1401,20 @@ p {
       cursor: pointer;
       visibility: visible; }
       @media (max-width: 650px) {
-        .imageViewer img.b-lazy.b-loaded.left, .imageViewer img.b-lazy.b-loaded.right {
+        .imageViewer img.imgFeature.left, .imageViewer img.imgFeature.right {
           opacity: 0.3; } }
-    .imageViewer img.b-lazy.b-loaded.left {
+    .imageViewer img.imgFeature.left {
       -webkit-transform: translateY(-50%) translateX(-110%) scale(0.7);
               transform: translateY(-50%) translateX(-110%) scale(0.7); }
       @media (max-width: 800px) {
-        .imageViewer img.b-lazy.b-loaded.left {
+        .imageViewer img.imgFeature.left {
           -webkit-transform: translateY(-50%) translateX(-90%) scale(0.7);
                   transform: translateY(-50%) translateX(-90%) scale(0.7); } }
-    .imageViewer img.b-lazy.b-loaded.right {
+    .imageViewer img.imgFeature.right {
       -webkit-transform: translateY(-50%) translateX(110%) scale(0.7);
               transform: translateY(-50%) translateX(110%) scale(0.7); }
       @media (max-width: 800px) {
-        .imageViewer img.b-lazy.b-loaded.right {
+        .imageViewer img.imgFeature.right {
           -webkit-transform: translateY(-50%) translateX(90%) scale(0.7);
                   transform: translateY(-50%) translateX(90%) scale(0.7); } }
 

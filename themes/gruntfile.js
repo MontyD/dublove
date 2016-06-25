@@ -97,29 +97,17 @@ module.exports = function(grunt) {
             css: {
                 files: ['src/sass/**/*.scss'],
                 tasks: ['sass', 'postcss', 'cssmin'],
-                options: {
-                    livereload: true
-                }
             },
             js: {
                 files: ['src/js/**/*.js'],
                 tasks: ['webpack'],
-                options: {
-                    livereload: true
-                }
             },
             svg: {
                 files: ['src/svg/*.svg'],
                 tasks: ['svgmin', 'grunticon'],
-                options: {
-                    livereload: true
-                }
             },
             html: {
                 files: ['*.html'],
-                options: {
-                    livereload: true
-                }
             }
         },
         concurrent: {
