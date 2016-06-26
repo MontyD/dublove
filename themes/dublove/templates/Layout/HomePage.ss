@@ -23,8 +23,8 @@
       </article>
       <img class="thirds boxed b-lazy" src="data:image/gif;base64,R0lGODlhAQABAAAAACH5BAEKAAEALAAAAAABAAEAAAICTAEAOw==" data-src="$sectionOneImage.SetWidth(600).URL" alt="Campervan" />
     </section>
-    <section class="centerAlign second">
-      <h2 class="subtleText">Our Dubs</h2>
+    <section class="centerAlign second emphasis">
+      <h2 class="funFont">Our Dubs</h2>
       <% if $getCarPages() %>
         <% loop $getCarPages() %>
           <article class="halves centerAlign">

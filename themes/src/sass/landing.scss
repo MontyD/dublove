@@ -129,24 +129,10 @@ img.bottomRight {
     }
 }
 .second {
-    padding-top   : 1em;
-    padding-bottom: 3em;
-
-    &.active i {
-      @media(max-width: $mediumBP) {
-        opacity: 0.2;
-      }
-      @media(max-width: $smallBP) {
-        display: none;
-        width: 4em;
-        height: 4em;
-      }
-    }
-    h2 {
-      @media(max-width: $smallBP) {
-        font-size: 2.2em;
-      }
-    }
+  h2 {
+    marign-bottom: -0.1em;
+    @include darkShadow;
+  }
 }
 .third {
     padding-bottom: 2.5em;

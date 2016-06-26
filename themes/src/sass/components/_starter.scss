@@ -208,22 +208,27 @@ main {
 	margin       : 1em auto 2em;
 	border-radius: 0.3em;
 	@include shadow(1);
-	overflow-x   : hidden;
 	section {
 		padding : 1em;
 		margin  : 0.5em auto 1em;
 		position: relative;
-
 		&.emphasis {
+			z-index : 1;
+			overflow: hidden;
+			color   : $colorWhite;
+			padding-top: 2em;
+			padding-bottom: 2em;
 			&::after {
-				display: block;
-				content: ' ';
-				position: absolute;
-				left: -5em;
-				top: -1em;
-				height: 110%;
-				width: 110%;
-				background: transparentize($colorMain, 0.2);
+				display   : block;
+				content   : ' ';
+				position  : absolute;
+				left      : -5em;
+				top       : 2em;
+				height    : 95%;
+				width     : 140%;
+				background-image: linear-gradient(to bottom right, rgba(120, 68, 179, 0.9), rgba(74, 119, 235, 0.6));
+				z-index   : -1;
+				transform: rotate(-3deg);
 			}
 		}
 	}
@@ -374,29 +379,31 @@ p {
 	background: $colorDark;
 	color     : $colorWhite;
 }
-.flowerGroup {
-	@media(max-width: $smallBP) {
-		&.bottom {
-			display: none;
-		}
-		&.top {
-			left  : 0;
-			right : 0;
-			margin: 0 auto;
-			i.one,
-			i.three,
-			i.two {
-				display : inline-block;
-				position: relative;
-				width   : 3em;
-				height  : 3em;
-				top     : auto;
-				left    : auto;
-				right   : auto;
-				&.small,
-				&.v-small {
-					width : 2em;
-					height: 2em;
+header {
+	.flowerGroup {
+		@media(max-width: $smallBP) {
+			&.bottom {
+				display: none;
+			}
+			&.top {
+				left  : 0;
+				right : 0;
+				margin: 0 auto;
+				i.one,
+				i.three,
+				i.two {
+					display : inline-block;
+					position: relative;
+					width   : 3em;
+					height  : 3em;
+					top     : auto;
+					left    : auto;
+					right   : auto;
+					&.small,
+					&.v-small {
+						width : 2em;
+						height: 2em;
+					}
 				}
 			}
 		}
