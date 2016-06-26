@@ -166,7 +166,7 @@ main {
 		padding : 1em;
 		margin  : 0.5em auto 1em;
 		position: relative;
-		&.emphasis {
+		&.emphasis, &.emphasis__odd {
 			z-index       : 1;
 			overflow      : hidden;
 			padding-top   : 2em;

@@ -164,24 +164,42 @@ main {
 	background   : $colorWhite;
 	max-width    : $containerWidth;
 	border-radius: 0.3em;
-	overflow: hidden;
+	overflow     : hidden;
 	@include shadow(1);
 	section {
 		padding : 1em;
 		margin  : 0.5em auto 1em;
 		position: relative;
-		&.emphasis::after {
-			display                    : block;
-			content                    : ' ';
-			position                   : absolute;
-			left                       : -5em;
-			top                        : 2em;
-			height                     : 90%;
-			width                      : 140%;
-			background                 : $colorBackground;
-			z-index                    : -1;
-			transform                  : rotate(-3deg) translate3d( 0, 0, 0);
-			-webkit-backface-visibility: hidden;
+		&.emphasis {
+			&::after {
+				display                    : block;
+				content                    : ' ';
+				position                   : absolute;
+				left                       : -5em;
+				top                        : 2em;
+				height                     : 90%;
+				width                      : 140%;
+				background                 : $colorBackground;
+				z-index                    : -1;
+				transform                  : rotate(-3deg) translate3d( 0, 0, 0);
+				-webkit-backface-visibility: hidden;
+			}
+			&__odd {
+				&::after {
+					display                    : block;
+					content                    : ' ';
+					position                   : absolute;
+					left                       : -5em;
+					top                        : 2em;
+					height                     : 90%;
+					width                      : 140%;
+					background                 : $colorBackground;
+					z-index                    : -1;
+					-webkit-backface-visibility: hidden;
+					transform: rotate(3deg) translate3d( 0, 0, 0);
+					background: rgba(53, 28, 104, 0.72);
+				}
+			}
 		}
 	}
 }
@@ -219,12 +237,12 @@ header {
 		a {
 			color          : $colorWhite;
 			text-decoration: none;
-			transition: background 0.3s ease;
-			border-radius: 0.1em;
+			transition     : background 0.3s ease;
+			border-radius  : 0.1em;
 			@include darkShadow;
 			&.home {
-				font-family    : $funFont;
-				font-size      : 3em;
+				font-family: $funFont;
+				font-size  : 3em;
 			}
 		}
 		ul a {
