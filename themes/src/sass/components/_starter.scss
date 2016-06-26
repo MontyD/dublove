@@ -7,7 +7,7 @@ $colorSubtle: #2B52A4;
 $colorHighlight: #F5D32C;
 $colorAccent: #F5B12C;
 $colorLight: #FFE154;
-$colorBackground: #F1ECD6;
+$colorBackground: #e9e5cf;
 $colorGrey: #757575;
 $colorWhite: #FFFFFF;
 $colorLightGrey: #f1f1f1;
@@ -48,6 +48,9 @@ $smallBP: 650px;
 }
 @mixin darkShadow {
 	text-shadow: 1px 1px 0 rgba(0, 0, 0, 0.8);
+}
+@mixin lightShadow {
+	text-shadow: 1px 1px 0 rgba(255, 255, 255, 0.8);
 }
 body {
 	font-family            : $normalFont;
@@ -107,7 +110,7 @@ h2 {
 	font-size  : 2.8em;
 	&.funFont {
 		font-family   : $funFont;
-		font-size     : 3.2em;
+		font-size     : 3.6em;
 		margin        : 0.2em auto;
 		letter-spacing: 0.05em;
 	}
@@ -125,6 +128,9 @@ h3 {
 	&.normalFont {
 		font-family: $normalFont;
 	}
+}
+img {
+	max-width: 90%;
 }
 .subtleText {
 	color     : $colorGrey;
@@ -169,7 +175,7 @@ input[type="submit"] {
 }
 img.boxed {
 	padding      : 0.4em;
-	background   : $colorBackground;
+	background   : $colorWhite;
 	border-radius: 3px;
 	@include shadow(1);
 }
@@ -213,22 +219,22 @@ main {
 		margin  : 0.5em auto 1em;
 		position: relative;
 		&.emphasis {
-			z-index : 1;
-			overflow: hidden;
-			color   : $colorWhite;
-			padding-top: 2em;
-			padding-bottom: 2em;
+			z-index       : 1;
+			overflow      : hidden;
+			padding-top   : 2em;
+			padding-bottom: 3em;
 			&::after {
-				display   : block;
-				content   : ' ';
-				position  : absolute;
-				left      : -5em;
-				top       : 2em;
-				height    : 95%;
-				width     : 140%;
-				background-image: linear-gradient(to bottom right, rgba(120, 68, 179, 0.9), rgba(74, 119, 235, 0.6));
-				z-index   : -1;
-				transform: rotate(-3deg);
+				display                    : block;
+				content                    : ' ';
+				position                   : absolute;
+				left                       : -5em;
+				top                        : 2em;
+				height                     : 95%;
+				width                      : 140%;
+				background                 : $colorBackground;
+				z-index                    : -1;
+				transform                  : rotate(-3deg) translate3d( 0, 0, 0);
+				-webkit-backface-visibility: hidden;
 			}
 		}
 	}
@@ -286,7 +292,7 @@ p {
 	box-sizing    : border-box;
 	margin-left   : 0;
 	margin-right  : 0;
-	vertical-align: middle;
+	vertical-align: top;
 	p {
 		padding       : 0;
 		margin        : 1em auto;
@@ -296,9 +302,6 @@ p {
 	h3 {
 		margin   : 0 auto;
 		font-size: 2.2em;
-	}
-	img {
-		max-width: 400px;
 	}
 	@media(max-width: $mediumBP) {
 		display: block;
