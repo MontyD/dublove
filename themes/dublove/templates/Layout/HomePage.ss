@@ -24,9 +24,24 @@
       <img class="thirds boxed b-lazy" src="data:image/gif;base64,R0lGODlhAQABAAAAACH5BAEKAAEALAAAAAABAAEAAAICTAEAOw==" data-src="$sectionOneImage.SetWidth(600).URL" alt="Campervan" />
     </section>
     <div class="flowerGroupHr animate">
-      <i class="icon-Hibiscus-flip-p animateScale"></i>
+      <i class="icon-Hibiscus-flip-p small animateScale left"></i>
       <hr class="animateScale">
-      <i class="icon-Hibiscus-p animateScale"></i>
+      <i class="icon-Hibiscus-p small animateScale right"></i>
     </div>
-    <% include feataureImageViewer %>
+    <section class="centerAlign second">
+      <h2 class="subtleText">Our Dubs</h2>
+      <article class="halves">
+        <h3>Frank</h3>
+        <p>
+          Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
+        </p>
+      </article>
+      <article class="halves">
+        <h3>Frannie</h3>
+        <p>
+          Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
+        </p>
+      </article>
+
+    </section>
 </main>

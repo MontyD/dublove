@@ -581,6 +581,24 @@ p {
 .justify {
   text-align: justify; }
 
+.halves {
+  display: inline-block;
+  width: 49%;
+  text-align: justify;
+  padding: 0 1em;
+  box-sizing: border-box;
+  margin-left: 0;
+  margin-right: 0;
+  vertical-align: middle; }
+  .halves p {
+    padding: 0;
+    margin: 1em auto;
+    vertical-align: top;
+    width: 100%; }
+  .halves h3 {
+    margin: 0 auto;
+    font-size: 2.2em; }
+
 .thirds {
   display: inline-block;
   width: 32%;
@@ -612,32 +630,6 @@ p {
   img.thirds {
     max-width: 400px;
     width: 80%; } }
-.feature {
-  display: block;
-  width: 40%;
-  margin: 0 auto;
-  overflow-y: hidden;
-  min-width: 300px; }
-  @media (max-width: 900px) {
-    .feature {
-      width: 60%; } }
-  .feature * {
-    display: block;
-    margin: 0 auto;
-    padding: 0;
-    width: 100%;
-    opacity: 0;
-    -webkit-transform: translateY(100px);
-            transform: translateY(100px);
-    -webkit-transition: opacity 0.6s ease, -webkit-transform 1s ease;
-    transition: opacity 0.6s ease, -webkit-transform 1s ease;
-    transition: opacity 0.6s ease, transform 1s ease;
-    transition: opacity 0.6s ease, transform 1s ease, -webkit-transform 1s ease; }
-  .feature.active * {
-    opacity: 1;
-    -webkit-transform: translateY(0);
-            transform: translateY(0); }
-
 .innerModal {
   display: block;
   margin: 0 auto;
@@ -700,17 +692,18 @@ p {
 
 .flowerGroupHr {
   display: block;
-  padding: 2em 0;
+  position: relative;
   width: 90%;
-  max-width: 800px;
-  margin: 1em auto;
+  max-width: 600px;
+  margin: 1.5em auto 0.1em;
   text-align: center; }
   .flowerGroupHr hr {
     display: inline-block;
     vertical-align: middle;
     border: none;
-    border-top: 1px solid #5f368e;
-    width: 80%; }
+    border-top: 1px solid #2B52A4;
+    width: 60%;
+    margin: 1.5em auto; }
   .flowerGroupHr i {
     display: inline-block; }
 
@@ -726,6 +719,11 @@ p {
     -webkit-transform: scale(1);
             transform: scale(1);
     opacity: 1; }
+
+.active .animateScale {
+  -webkit-transform: scale(1);
+          transform: scale(1);
+  opacity: 1; }
 
 /*! normalize.css v4.1.1 | MIT License | github.com/necolas/normalize.css */
 /**
@@ -1310,6 +1308,24 @@ p {
 .justify {
   text-align: justify; }
 
+.halves {
+  display: inline-block;
+  width: 49%;
+  text-align: justify;
+  padding: 0 1em;
+  box-sizing: border-box;
+  margin-left: 0;
+  margin-right: 0;
+  vertical-align: middle; }
+  .halves p {
+    padding: 0;
+    margin: 1em auto;
+    vertical-align: top;
+    width: 100%; }
+  .halves h3 {
+    margin: 0 auto;
+    font-size: 2.2em; }
+
 .thirds {
   display: inline-block;
   width: 32%;
@@ -1341,32 +1357,6 @@ p {
   img.thirds {
     max-width: 400px;
     width: 80%; } }
-.feature {
-  display: block;
-  width: 40%;
-  margin: 0 auto;
-  overflow-y: hidden;
-  min-width: 300px; }
-  @media (max-width: 900px) {
-    .feature {
-      width: 60%; } }
-  .feature * {
-    display: block;
-    margin: 0 auto;
-    padding: 0;
-    width: 100%;
-    opacity: 0;
-    -webkit-transform: translateY(100px);
-            transform: translateY(100px);
-    -webkit-transition: opacity 0.6s ease, -webkit-transform 1s ease;
-    transition: opacity 0.6s ease, -webkit-transform 1s ease;
-    transition: opacity 0.6s ease, transform 1s ease;
-    transition: opacity 0.6s ease, transform 1s ease, -webkit-transform 1s ease; }
-  .feature.active * {
-    opacity: 1;
-    -webkit-transform: translateY(0);
-            transform: translateY(0); }
-
 .innerModal {
   display: block;
   margin: 0 auto;
@@ -1429,17 +1419,18 @@ p {
 
 .flowerGroupHr {
   display: block;
-  padding: 2em 0;
+  position: relative;
   width: 90%;
-  max-width: 800px;
-  margin: 1em auto;
+  max-width: 600px;
+  margin: 1.5em auto 0.1em;
   text-align: center; }
   .flowerGroupHr hr {
     display: inline-block;
     vertical-align: middle;
     border: none;
-    border-top: 1px solid #5f368e;
-    width: 80%; }
+    border-top: 1px solid #2B52A4;
+    width: 60%;
+    margin: 1.5em auto; }
   .flowerGroupHr i {
     display: inline-block; }
 
@@ -1455,6 +1446,11 @@ p {
     -webkit-transform: scale(1);
             transform: scale(1);
     opacity: 1; }
+
+.active .animateScale {
+  -webkit-transform: scale(1);
+          transform: scale(1);
+  opacity: 1; }
 
 .imageViewer {
   display: block;

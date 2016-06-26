@@ -14,8 +14,6 @@ var homePage = (function() {
       offset: 500
   });
 
-  imgViewer(bLazy);
-
   addDateToFooter();
 
   window.addEventListener('scroll', function() {

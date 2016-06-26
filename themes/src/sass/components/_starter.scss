@@ -261,6 +261,26 @@ p {
 .justify {
 	text-align: justify;
 }
+.halves {
+	display       : inline-block;
+	width         : 49%;
+	text-align    : justify;
+	padding       : 0 1em;
+	box-sizing    : border-box;
+	margin-left   : 0;
+	margin-right  : 0;
+	vertical-align: middle;
+	p {
+		padding       : 0;
+		margin        : 1em auto;
+		vertical-align: top;
+		width         : 100%;
+	}
+	h3 {
+		margin   : 0 auto;
+		font-size: 2.2em;
+	}
+}
 .thirds {
 	display       : inline-block;
 	width         : 32%;
@@ -295,30 +315,7 @@ p {
 @media(max-width: $mediumBP) {
 	img.thirds {
 		max-width: 400px;
-		width: 80%;
-	}
-}
-.feature {
-	display   : block;
-	width     : 40%;
-	margin    : 0 auto;
-	overflow-y: hidden;
-	min-width : 300px;
-	@media(max-width: $mediumBP) {
-		width: 60%;
-	}
-	& * {
-		display   : block;
-		margin    : 0 auto;
-		padding   : 0;
-		width     : 100%;
-		opacity   : 0;
-		transform : translateY(100px);
-		transition: opacity 0.6s ease, transform 1s ease;
-	}
-	&.active * {
-		opacity  : 1;
-		transform: translateY(0);
+		width    : 80%;
 	}
 }
 .innerModal {
@@ -358,46 +355,47 @@ p {
 	color     : $colorWhite;
 }
 .flowerGroup {
-		@media(max-width: $smallBP) {
-				&.bottom {
-						display: none;
-				}
-				&.top {
-						left  : 0;
-						right : 0;
-						margin: 0 auto;
-						i.one,
-						i.three,
-						i.two {
-								display : inline-block;
-								position: relative;
-								width   : 3em;
-								height  : 3em;
-								top     : auto;
-								left    : auto;
-								right   : auto;
-								&.small,
-								&.v-small {
-										width : 2em;
-										height: 2em;
-								}
-						}
-				}
+	@media(max-width: $smallBP) {
+		&.bottom {
+			display: none;
 		}
+		&.top {
+			left  : 0;
+			right : 0;
+			margin: 0 auto;
+			i.one,
+			i.three,
+			i.two {
+				display : inline-block;
+				position: relative;
+				width   : 3em;
+				height  : 3em;
+				top     : auto;
+				left    : auto;
+				right   : auto;
+				&.small,
+				&.v-small {
+					width : 2em;
+					height: 2em;
+				}
+			}
+		}
+	}
 }
 .flowerGroupHr {
-	display: block;
-	padding: 2em 0;
-	width: 90%;
-	max-width: 800px;
-	margin: 1em auto;
+	display   : block;
+	position  : relative;
+	width     : 90%;
+	max-width : 600px;
+	margin    : 1.5em auto 0.1em;
 	text-align: center;
 	hr {
-		display: inline-block;
+		display       : inline-block;
 		vertical-align: middle;
-		border: none;
-		border-top: 1px solid $colorMain;
-		width: 80%;
+		border        : none;
+		border-top    : 1px solid $colorSubtle;
+		width         : 60%;
+		margin        : 1.5em auto;
 	}
 	i {
 		display: inline-block;
@@ -408,6 +406,12 @@ p {
 	opacity   : 0;
 	transition: opacity 0.8s ease, transform 1.2s ease;
 	&.active {
+		transform: scale(1);
+		opacity  : 1;
+	}
+}
+.active {
+	.animateScale {
 		transform: scale(1);
 		opacity  : 1;
 	}
