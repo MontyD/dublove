@@ -1,10 +1,9 @@
 <% include header %>
+
 <main>
-
-<h1>This is page</h1>
-$Form
-$Content
-
+  <h2>This is a car page</h2>
+  $content
 </main>
+
 
 <% include footer %>

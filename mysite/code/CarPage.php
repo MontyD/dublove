@@ -8,7 +8,7 @@ class CarPage extends Page {
 	);
 
 	private static $has_one = array(
-	  "mainImage" => "Image",
+	  "mainImage" => "Image"
 	);
 
 	public function getCMSFields() {

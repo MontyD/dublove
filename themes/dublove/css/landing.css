@@ -536,6 +536,15 @@ main {
     padding: 1em;
     margin: 0.5em auto 1em;
     position: relative; }
+    main section.emphasis::after {
+      display: block;
+      content: ' ';
+      position: absolute;
+      left: -5em;
+      top: -1em;
+      height: 110%;
+      width: 110%;
+      background: rgba(95, 54, 142, 0.8); }
 
 section {
   position: relative; }
@@ -584,7 +593,6 @@ p {
 .halves {
   display: inline-block;
   width: 49%;
-  text-align: justify;
   padding: 0 1em;
   box-sizing: border-box;
   margin-left: 0;
@@ -598,6 +606,13 @@ p {
   .halves h3 {
     margin: 0 auto;
     font-size: 2.2em; }
+  .halves img {
+    max-width: 400px; }
+  @media (max-width: 900px) {
+    .halves {
+      display: block;
+      width: 90%;
+      margin: 0.5em auto; } }
 
 .thirds {
   display: inline-block;
@@ -1263,6 +1278,15 @@ main {
     padding: 1em;
     margin: 0.5em auto 1em;
     position: relative; }
+    main section.emphasis::after {
+      display: block;
+      content: ' ';
+      position: absolute;
+      left: -5em;
+      top: -1em;
+      height: 110%;
+      width: 110%;
+      background: rgba(95, 54, 142, 0.8); }
 
 section {
   position: relative; }
@@ -1311,7 +1335,6 @@ p {
 .halves {
   display: inline-block;
   width: 49%;
-  text-align: justify;
   padding: 0 1em;
   box-sizing: border-box;
   margin-left: 0;
@@ -1325,6 +1348,13 @@ p {
   .halves h3 {
     margin: 0 auto;
     font-size: 2.2em; }
+  .halves img {
+    max-width: 400px; }
+  @media (max-width: 900px) {
+    .halves {
+      display: block;
+      width: 90%;
+      margin: 0.5em auto; } }
 
 .thirds {
   display: inline-block;

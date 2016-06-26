@@ -12,7 +12,7 @@ class HomePage extends Page {
 	);
 
 	private static $has_many = array(
-		"FeatureImage" => "FeatureImage"
+		"FeatureImages" => "FeatureImage"
 	);
 
 	public function getCMSFields() {
@@ -29,9 +29,9 @@ class HomePage extends Page {
 		$fields->addFieldToTab("Root.Images", UploadField::create("sectionOneImage", "Section One Image"));
 
 		$fields->addFieldToTab("Root.Images", GridField::create(
-			"FeatureImage",
+			"FeatureImages",
 			"Images for section two",
-			$this->FeatureImage(),
+			$this->FeatureImages(),
 			GridFieldConfig_RecordEditor::create()
 		));
 
@@ -45,6 +45,11 @@ class HomePage_Controller extends Page_Controller {
 
 	private static $allowed_actions = array (
 	);
+
+	public function getCarPages() {
+		$carPages = CarPage::get();
+		return $carPages->count() ? $carPages : false;
+	}
 
 	public function init() {
 		parent::init();
