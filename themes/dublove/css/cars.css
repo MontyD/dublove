@@ -421,7 +421,7 @@ img {
 .image.fullWidth {
   height: 400px;
   background-repeat: no-repeat;
-  background-size: contain;
+  background-size: auto;
   width: 100%; }
 
 .halves {
@@ -512,7 +512,7 @@ main {
       z-index: 1;
       overflow: hidden;
       padding-top: 2em;
-      padding-bottom: 3em; }
+      padding-bottom: 4.5em; }
 
 footer {
   width: 100%;
@@ -664,7 +664,7 @@ main {
       position: absolute;
       left: -5em;
       top: 2em;
-      height: 95%;
+      height: 90%;
       width: 140%;
       background: #e5e7da;
       z-index: -1;

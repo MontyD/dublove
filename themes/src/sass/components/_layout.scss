@@ -62,7 +62,7 @@ img {
   &.fullWidth {
     height: 400px;
     background-repeat: no-repeat;
-    background-size:contain;
+    background-size: auto;
     width: 100%;
   }
 }
@@ -170,7 +170,7 @@ main {
 			z-index       : 1;
 			overflow      : hidden;
 			padding-top   : 2em;
-			padding-bottom: 3em;
+			padding-bottom: 4.5em;
 		}
 	}
 }
