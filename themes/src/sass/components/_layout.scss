@@ -1,0 +1,152 @@
+@import "normalize"; 
+$containerWidth: 1200px;
+$largeBP: 1100px;
+$mediumBP: 900px;
+$smallBP: 650px;
+
+
+.leftA {
+	position: absolute;
+	left    : 1.2em;
+	right   : auto;
+}
+.rightA {
+	position: absolute;
+	right   : 1.2em;
+	left    : auto;
+}
+.topA {
+	position: absolute;
+	top     : 1.2em;
+	bottom  : auto;
+}
+.bottomA {
+	position: absolute;
+	bottom  : 1.2em;
+	top     : auto;
+}
+.noTransition {
+	transition: none;
+}
+.hidden {
+	display: none;
+}
+.container {
+	display   : block;
+	position  : relative;
+	width     : 100%;
+	max-width : $containerWidth;
+	margin    : 0 auto;
+	box-sizing: border-box;
+}
+p {
+	width      : 80%;
+	margin     : 0.5em auto 1em;
+	line-height: 150%;
+	font-size  : 1.2em;
+}
+.centerAlign {
+	text-align: center;
+	p {
+		text-align: center;
+	}
+}
+.justify {
+	text-align: justify;
+}
+.halves {
+	display       : inline-block;
+	width         : 49%;
+	padding       : 0 1em;
+	box-sizing    : border-box;
+	margin-left   : 0;
+	margin-right  : 0;
+	vertical-align: top;
+	p {
+		padding       : 0;
+		margin        : 1em auto;
+		vertical-align: top;
+		width         : 100%;
+	}
+	h3 {
+		margin-top: 0;
+		font-size: 2.2em;
+	}
+	@media(max-width: $mediumBP) {
+		display: block;
+		width  : 90%;
+		margin: 1em auto 3.5em;
+	}
+}
+.thirds {
+	display       : inline-block;
+	width         : 32%;
+	text-align    : justify;
+	padding       : 0 1em;
+	box-sizing    : border-box;
+	margin-left   : 0;
+	margin-right  : 0;
+	vertical-align: middle;
+	&.two {
+		width: 65%;
+	}
+	p {
+		padding       : 0;
+		margin        : 1em auto;
+		vertical-align: top;
+		width         : 100%;
+	}
+	h3 {
+		margin   : 0 auto;
+		font-size: 2.2em;
+	}
+	@media(max-width: $mediumBP) {
+		&.two {
+			width: 90%;
+		}
+		display: block;
+		width  : 90%;
+		margin : 0.5em auto;
+	}
+}
+@media(max-width: $mediumBP) {
+	img.thirds {
+		max-width: 400px;
+		width    : 80%;
+	}
+}
+
+main {
+	position     : relative;
+	width        : 95%;
+  box-sizing   : border-box;
+  margin       : 1em auto 2em;
+
+  &.overlap {
+    margin-top: -3em;
+  }
+
+  section {
+    position: relative;
+    padding : 1em;
+    margin  : 0.5em auto 1em;
+    position: relative;
+
+    &.emphasis {
+      z-index       : 1;
+      overflow      : hidden;
+      padding-top   : 2em;
+      padding-bottom: 3em;
+    }
+  }
+}
+
+footer {
+	width     : 100%;
+	margin    : 2em 0 0;
+	box-sizing: border-box;
+	h3 {
+		padding-top  : 0.2em;
+		margin-bottom: 0.2em;
+	}
+}

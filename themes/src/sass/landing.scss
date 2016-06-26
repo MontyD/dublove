@@ -1,5 +1,5 @@
-@import "components/_starter";
-@import "components/_imageViewer";
+@import "components/_layout";
+@import "components/_styling";
 @import "components/_svgs";
 header {
 	height    : 600px;
@@ -14,24 +14,24 @@ header {
 		height           : 100%;
 		z-index          : -1;
 		opacity          : 0.6;
-		background-image : url('../images/van real.jpg');
+		background-image : url('../images/background.jpg');
 		background-repeat: no-repeat;
 		background-size  : cover;
-		// @media(min-width: 1300px) {
-		//     background-image: url('../images/background-1300.jpg');
-		// }
-		// @media(max-width: 900px) {
-		//     background-image: url('../images/background-900.jpg');
-		// }
-		// @media(max-width: 700px) {
-		//     background-image: url('../images/background-700.jpg');
-		// }
-		// @media(max-width: 500px) {
-		//     background-image: url('../images/background-500.jpg');
-		// }
-		// @media(max-width: 350px) {
-		//     background-image: url('../images/background-350.jpg');
-		// }
+		@media(min-width: 1300px) {
+		    background-image: url('../images/background-1300.jpg');
+		}
+		@media(max-width: 900px) {
+		    background-image: url('../images/background-900.jpg');
+		}
+		@media(max-width: 700px) {
+		    background-image: url('../images/background-700.jpg');
+		}
+		@media(max-width: 500px) {
+		    background-image: url('../images/background-500.jpg');
+		}
+		@media(max-width: 350px) {
+		    background-image: url('../images/background-350.jpg');
+		}
 	}
 	section.container {
 		height: 95%;
@@ -64,7 +64,7 @@ h2.main {
 	position: absolute;
 	display : inline-block;
 	margin  : 0 auto;
-	&.top {
+	&.topA {
 		margin-top: 1em;
 		i {
 			transition-delay   : 0.4s;
@@ -88,7 +88,7 @@ h2.main {
 			transition-duration: 1s;
 		}
 	}
-	&.bottom {
+	&.bottomA {
 		i {
 			transition-delay   : 1.2s;
 			transition-duration: 2s;
