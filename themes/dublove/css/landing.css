@@ -407,7 +407,7 @@ h1 {
     letter-spacing: 3px;
     font-size: 5em;
     text-shadow: 1px 1px 0 rgba(0, 0, 0, 0.8); }
-    @media (min-width: 800px) {
+    @media (min-width: 900px) {
       h1.main {
         font-size: 5.5em; } }
     @media (min-width: 1100px) {
@@ -417,18 +417,20 @@ h1 {
 h2 {
   font-weight: normal;
   text-align: center;
-  font-size: 1.8em; }
-  h2.main {
-    font-size: 2em;
-    text-shadow: 1px 1px 0 rgba(0, 0, 0, 0.8); }
-    @media (min-width: 1100px) {
-      h2.main {
-        font-size: 3em; } }
+  font-family: "Josefin Sans", sans-serif;
+  font-size: 2.8em; }
   h2.funFont {
     font-family: "Bad Script", sans-serif;
     font-size: 3.2em;
     margin: 0.2em auto;
     letter-spacing: 0.05em; }
+  h2.main {
+    font-size: 2em;
+    font-family: "Josefin Sans", sans-serif;
+    text-shadow: 1px 1px 0 rgba(0, 0, 0, 0.8); }
+    @media (min-width: 1100px) {
+      h2.main {
+        font-size: 3em; } }
 
 h3 {
   font-size: 3em; }
@@ -452,7 +454,7 @@ input[type="button"],
 input[type="submit"] {
   display: inline-block;
   background: #5f368e;
-  padding: 0.5em 1.6em 0.5em;
+  padding: 0.5em 1.6em;
   margin: 0.5em auto;
   border: none;
   border-radius: 3px;
@@ -487,6 +489,12 @@ input[type="submit"] {
     color: #FFFFFF;
     outline: none; }
 
+img.boxed {
+  padding: 0.4em;
+  background: #F1ECD6;
+  border-radius: 3px;
+  box-shadow: 0 1.5px 4px rgba(0, 0, 0, 0.24), 0 1.5px 6px rgba(0, 0, 0, 0.12); }
+
 .b-lazy {
   -webkit-transition: opacity 500ms ease-in-out;
   transition: opacity 500ms ease-in-out;
@@ -517,7 +525,7 @@ header {
 main {
   position: relative;
   width: 95%;
-  max-width: 1000px;
+  max-width: 1200px;
   box-sizing: border-box;
   margin-left: auto;
   margin-right: auto;
@@ -555,7 +563,7 @@ span.funFont {
   display: block;
   position: relative;
   width: 100%;
-  max-width: 1000px;
+  max-width: 1200px;
   margin: 0 auto;
   box-sizing: border-box; }
 
@@ -565,43 +573,53 @@ span.funFont {
 
 p {
   width: 80%;
-  margin: 2em auto;
+  margin: 0.5em auto 1em;
   line-height: 150%;
   font-size: 1.2em; }
 
 .centerAlign {
   text-align: center; }
 
+.justify {
+  text-align: justify; }
+
 .thirds {
   display: inline-block;
   width: 32%;
   text-align: justify;
-  padding: 1em;
+  padding: 0 1em;
   box-sizing: border-box;
   margin-left: 0;
   margin-right: 0;
-  vertical-align: top; }
+  vertical-align: middle; }
+  .thirds.two {
+    width: 65%; }
   .thirds p {
     padding: 0;
-    margin: 0;
+    margin: 1em auto;
     vertical-align: top;
     width: 100%; }
   .thirds h3 {
     margin: 0 auto;
     font-size: 2.2em; }
-  @media (max-width: 800px) {
+  @media (max-width: 900px) {
     .thirds {
       display: block;
       width: 90%;
-      margin: 0.5em auto; } }
+      margin: 0.5em auto; }
+      .thirds.two {
+        width: 90%; } }
 
+@media (max-width: 900px) {
+  img.thirds {
+    max-width: 500px; } }
 .feature {
   display: block;
   width: 40%;
   margin: 0 auto;
   overflow-y: hidden;
   min-width: 300px; }
-  @media (max-width: 800px) {
+  @media (max-width: 900px) {
     .feature {
       width: 60%; } }
   .feature * {
@@ -1078,7 +1096,7 @@ h1 {
     letter-spacing: 3px;
     font-size: 5em;
     text-shadow: 1px 1px 0 rgba(0, 0, 0, 0.8); }
-    @media (min-width: 800px) {
+    @media (min-width: 900px) {
       h1.main {
         font-size: 5.5em; } }
     @media (min-width: 1100px) {
@@ -1088,18 +1106,20 @@ h1 {
 h2 {
   font-weight: normal;
   text-align: center;
-  font-size: 1.8em; }
-  h2.main {
-    font-size: 2em;
-    text-shadow: 1px 1px 0 rgba(0, 0, 0, 0.8); }
-    @media (min-width: 1100px) {
-      h2.main {
-        font-size: 3em; } }
+  font-family: "Josefin Sans", sans-serif;
+  font-size: 2.8em; }
   h2.funFont {
     font-family: "Bad Script", sans-serif;
     font-size: 3.2em;
     margin: 0.2em auto;
     letter-spacing: 0.05em; }
+  h2.main {
+    font-size: 2em;
+    font-family: "Josefin Sans", sans-serif;
+    text-shadow: 1px 1px 0 rgba(0, 0, 0, 0.8); }
+    @media (min-width: 1100px) {
+      h2.main {
+        font-size: 3em; } }
 
 h3 {
   font-size: 3em; }
@@ -1123,7 +1143,7 @@ input[type="button"],
 input[type="submit"] {
   display: inline-block;
   background: #5f368e;
-  padding: 0.5em 1.6em 0.5em;
+  padding: 0.5em 1.6em;
   margin: 0.5em auto;
   border: none;
   border-radius: 3px;
@@ -1158,6 +1178,12 @@ input[type="submit"] {
     color: #FFFFFF;
     outline: none; }
 
+img.boxed {
+  padding: 0.4em;
+  background: #F1ECD6;
+  border-radius: 3px;
+  box-shadow: 0 1.5px 4px rgba(0, 0, 0, 0.24), 0 1.5px 6px rgba(0, 0, 0, 0.12); }
+
 .b-lazy {
   -webkit-transition: opacity 500ms ease-in-out;
   transition: opacity 500ms ease-in-out;
@@ -1188,7 +1214,7 @@ header {
 main {
   position: relative;
   width: 95%;
-  max-width: 1000px;
+  max-width: 1200px;
   box-sizing: border-box;
   margin-left: auto;
   margin-right: auto;
@@ -1226,7 +1252,7 @@ span.funFont {
   display: block;
   position: relative;
   width: 100%;
-  max-width: 1000px;
+  max-width: 1200px;
   margin: 0 auto;
   box-sizing: border-box; }
 
@@ -1236,43 +1262,53 @@ span.funFont {
 
 p {
   width: 80%;
-  margin: 2em auto;
+  margin: 0.5em auto 1em;
   line-height: 150%;
   font-size: 1.2em; }
 
 .centerAlign {
   text-align: center; }
 
+.justify {
+  text-align: justify; }
+
 .thirds {
   display: inline-block;
   width: 32%;
   text-align: justify;
-  padding: 1em;
+  padding: 0 1em;
   box-sizing: border-box;
   margin-left: 0;
   margin-right: 0;
-  vertical-align: top; }
+  vertical-align: middle; }
+  .thirds.two {
+    width: 65%; }
   .thirds p {
     padding: 0;
-    margin: 0;
+    margin: 1em auto;
     vertical-align: top;
     width: 100%; }
   .thirds h3 {
     margin: 0 auto;
     font-size: 2.2em; }
-  @media (max-width: 800px) {
+  @media (max-width: 900px) {
     .thirds {
       display: block;
       width: 90%;
-      margin: 0.5em auto; } }
+      margin: 0.5em auto; }
+      .thirds.two {
+        width: 90%; } }
 
+@media (max-width: 900px) {
+  img.thirds {
+    max-width: 500px; } }
 .feature {
   display: block;
   width: 40%;
   margin: 0 auto;
   overflow-y: hidden;
   min-width: 300px; }
-  @media (max-width: 800px) {
+  @media (max-width: 900px) {
     .feature {
       width: 60%; } }
   .feature * {
@@ -1383,7 +1419,7 @@ p {
     box-shadow: 0 1.5px 4px rgba(0, 0, 0, 0.24), 0 1.5px 6px rgba(0, 0, 0, 0.12);
     -webkit-transition: all 0.3s ease;
     transition: all 0.3s ease; }
-    @media (max-width: 800px) {
+    @media (max-width: 900px) {
       .imageViewer img.imgFeature {
         max-width: 350px; } }
     @media (max-width: 650px) {
@@ -1406,14 +1442,14 @@ p {
     .imageViewer img.imgFeature.left {
       -webkit-transform: translateY(-50%) translateX(-110%) scale(0.7);
               transform: translateY(-50%) translateX(-110%) scale(0.7); }
-      @media (max-width: 800px) {
+      @media (max-width: 900px) {
         .imageViewer img.imgFeature.left {
           -webkit-transform: translateY(-50%) translateX(-90%) scale(0.7);
                   transform: translateY(-50%) translateX(-90%) scale(0.7); } }
     .imageViewer img.imgFeature.right {
       -webkit-transform: translateY(-50%) translateX(110%) scale(0.7);
               transform: translateY(-50%) translateX(110%) scale(0.7); }
-      @media (max-width: 800px) {
+      @media (max-width: 900px) {
         .imageViewer img.imgFeature.right {
           -webkit-transform: translateY(-50%) translateX(90%) scale(0.7);
                   transform: translateY(-50%) translateX(90%) scale(0.7); } }
@@ -1506,7 +1542,15 @@ header {
           height: 2em; } }
 
 section.first {
+  padding-top: 0;
   padding-bottom: 0; }
+  section.first .thirds.two {
+    margin-bottom: 2em; }
+  @media (max-width: 900px) {
+    section.first {
+      padding: 0.1em 0 2em; }
+      section.first .thirds.two {
+        margin-bottom: 0; } }
 
 h1.main {
   margin-top: 0.7em;
@@ -1589,7 +1633,7 @@ img.bottomRight {
 .second {
   padding-top: 1em;
   padding-bottom: 3em; }
-  @media (max-width: 800px) {
+  @media (max-width: 900px) {
     .second.active i {
       opacity: 0.2; } }
   @media (max-width: 650px) {

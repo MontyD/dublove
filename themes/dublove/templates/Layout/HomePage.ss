@@ -2,7 +2,7 @@
   <section class="container padded">
       <h1 class="main">$SiteConfig.Title</h1>
       <h2 class="main">$tagLine</h2>
-      <a href="/contact" title="Book now!" class="likeButton primary">Book now</a>
+      <a href="contact" title="Book now!" class="likeButton primary">Book now</a>
       <div class="flowerGroup left top">
           <i class="icon-Hibiscus-flip small two animateScale"></i>
           <i class="icon-Hibiscus one animateScale"></i>
@@ -17,11 +17,11 @@
 </header>
 <main class="overlap">
     <section class="centerAlign first">
-        <h2 class="subtleText">$sectionOneHeading</h2>
-        <p class="centerAlign">$sectionOneText</p>
-        <div class="feature animate animateUp">
-            <img src="$sectionOneImage.SetWidth(600).URL" alt="Campervan" />
+        <div class="thirds two">
+          <h2>$sectionOneHeading</h2>
+          $sectionOneText
         </div>
+        <img class="thirds boxed b-lazy" src="data:image/gif;base64,R0lGODlhAQABAAAAACH5BAEKAAEALAAAAAABAAEAAAICTAEAOw==" data-src="$sectionOneImage.SetWidth(600).URL" alt="Campervan" />
     </section>
     <section class="dark second centerAlign animate">
       <div class="flowerGroup left top">
@@ -42,6 +42,6 @@
             <% end_loop %>
             <button id="imgRight" class="imgRight"><img src="$ThemeDir/images/right.png" alt="Right" /></button>
         </div>
-        <a href="/photos" title="Book now!" class="likeButton primary">View more photos!</a>
+        <a href="photos" title="Book now!" class="likeButton primary">View more photos!</a>
     </section>
 </main>

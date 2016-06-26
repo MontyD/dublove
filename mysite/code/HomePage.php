@@ -4,7 +4,7 @@ class HomePage extends Page {
 	private static $db = array(
 		"tagLine" => "Varchar",
 		"sectionOneHeading" => "Varchar",
-		"sectionOneText" => "Text"
+		"sectionOneText" => "HTMLText"
 	);
 
 	private static $has_one = array(
@@ -24,7 +24,7 @@ class HomePage extends Page {
 
 		$fields->addFieldToTab("Root.Main", TextField::create("sectionOneHeading", "Section One Heading"), "Metadata");
 
-		$fields->addFieldToTab("Root.Main", TextareaField::create("sectionOneText", "Section One Text"), "Metadata");
+		$fields->addFieldToTab("Root.Main", HtmlEditorField::create("sectionOneText", "Section One Text"), "Metadata");
 
 		$fields->addFieldToTab("Root.Images", UploadField::create("sectionOneImage", "Section One Image"));
 
