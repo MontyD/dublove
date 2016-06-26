@@ -294,7 +294,8 @@ p {
 }
 @media(max-width: $mediumBP) {
 	img.thirds {
-		max-width: 500px;
+		max-width: 400px;
+		width: 80%;
 	}
 }
 .feature {
@@ -355,6 +356,52 @@ p {
 .darkBlue {
 	background: $colorDark;
 	color     : $colorWhite;
+}
+.flowerGroup {
+		@media(max-width: $smallBP) {
+				&.bottom {
+						display: none;
+				}
+				&.top {
+						left  : 0;
+						right : 0;
+						margin: 0 auto;
+						i.one,
+						i.three,
+						i.two {
+								display : inline-block;
+								position: relative;
+								width   : 3em;
+								height  : 3em;
+								top     : auto;
+								left    : auto;
+								right   : auto;
+								&.small,
+								&.v-small {
+										width : 2em;
+										height: 2em;
+								}
+						}
+				}
+		}
+}
+.flowerGroupHr {
+	display: block;
+	padding: 2em 0;
+	width: 90%;
+	max-width: 800px;
+	margin: 1em auto;
+	text-align: center;
+	hr {
+		display: inline-block;
+		vertical-align: middle;
+		border: none;
+		border-top: 1px solid $colorMain;
+		width: 80%;
+	}
+	i {
+		display: inline-block;
+	}
 }
 .animateScale {
 	transform : scale(0);

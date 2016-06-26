@@ -610,7 +610,8 @@ p {
 
 @media (max-width: 900px) {
   img.thirds {
-    max-width: 500px; } }
+    max-width: 400px;
+    width: 80%; } }
 .feature {
   display: block;
   width: 40%;
@@ -671,6 +672,47 @@ p {
 .darkBlue {
   background: #413978;
   color: #FFFFFF; }
+
+@media (max-width: 650px) {
+  .flowerGroup.bottom {
+    display: none; }
+  .flowerGroup.top {
+    left: 0;
+    right: 0;
+    margin: 0 auto; }
+    .flowerGroup.top i.one,
+    .flowerGroup.top i.three,
+    .flowerGroup.top i.two {
+      display: inline-block;
+      position: relative;
+      width: 3em;
+      height: 3em;
+      top: auto;
+      left: auto;
+      right: auto; }
+      .flowerGroup.top i.one.small, .flowerGroup.top i.one.v-small,
+      .flowerGroup.top i.three.small,
+      .flowerGroup.top i.three.v-small,
+      .flowerGroup.top i.two.small,
+      .flowerGroup.top i.two.v-small {
+        width: 2em;
+        height: 2em; } }
+
+.flowerGroupHr {
+  display: block;
+  padding: 2em 0;
+  width: 90%;
+  max-width: 800px;
+  margin: 1em auto;
+  text-align: center; }
+  .flowerGroupHr hr {
+    display: inline-block;
+    vertical-align: middle;
+    border: none;
+    border-top: 1px solid #5f368e;
+    width: 80%; }
+  .flowerGroupHr i {
+    display: inline-block; }
 
 .animateScale {
   -webkit-transform: scale(0);
@@ -1297,7 +1339,8 @@ p {
 
 @media (max-width: 900px) {
   img.thirds {
-    max-width: 500px; } }
+    max-width: 400px;
+    width: 80%; } }
 .feature {
   display: block;
   width: 40%;
@@ -1358,6 +1401,47 @@ p {
 .darkBlue {
   background: #413978;
   color: #FFFFFF; }
+
+@media (max-width: 650px) {
+  .flowerGroup.bottom {
+    display: none; }
+  .flowerGroup.top {
+    left: 0;
+    right: 0;
+    margin: 0 auto; }
+    .flowerGroup.top i.one,
+    .flowerGroup.top i.three,
+    .flowerGroup.top i.two {
+      display: inline-block;
+      position: relative;
+      width: 3em;
+      height: 3em;
+      top: auto;
+      left: auto;
+      right: auto; }
+      .flowerGroup.top i.one.small, .flowerGroup.top i.one.v-small,
+      .flowerGroup.top i.three.small,
+      .flowerGroup.top i.three.v-small,
+      .flowerGroup.top i.two.small,
+      .flowerGroup.top i.two.v-small {
+        width: 2em;
+        height: 2em; } }
+
+.flowerGroupHr {
+  display: block;
+  padding: 2em 0;
+  width: 90%;
+  max-width: 800px;
+  margin: 1em auto;
+  text-align: center; }
+  .flowerGroupHr hr {
+    display: inline-block;
+    vertical-align: middle;
+    border: none;
+    border-top: 1px solid #5f368e;
+    width: 80%; }
+  .flowerGroupHr i {
+    display: inline-block; }
 
 .animateScale {
   -webkit-transform: scale(0);
@@ -1492,50 +1576,11 @@ header {
     height: 100%;
     z-index: -1;
     opacity: 0.6;
-    background-image: url("../images/background.jpg");
+    background-image: url("../images/van real.jpg");
     background-repeat: no-repeat;
     background-size: cover; }
-    @media (min-width: 1300px) {
-      header:before {
-        background-image: url("../images/background-1300.jpg"); } }
-    @media (max-width: 900px) {
-      header:before {
-        background-image: url("../images/background-900.jpg"); } }
-    @media (max-width: 700px) {
-      header:before {
-        background-image: url("../images/background-700.jpg"); } }
-    @media (max-width: 500px) {
-      header:before {
-        background-image: url("../images/background-500.jpg"); } }
-    @media (max-width: 350px) {
-      header:before {
-        background-image: url("../images/background-350.jpg"); } }
   header section.container {
     height: 95%; }
-  @media (max-width: 650px) {
-    header .flowerGroup.bottom {
-      display: none; }
-    header .flowerGroup.top {
-      left: 0;
-      right: 0;
-      margin: 0 auto; }
-      header .flowerGroup.top i.one,
-      header .flowerGroup.top i.three,
-      header .flowerGroup.top i.two {
-        display: inline-block;
-        position: relative;
-        width: 3em;
-        height: 3em;
-        top: auto;
-        left: auto;
-        right: auto; }
-        header .flowerGroup.top i.one.small, header .flowerGroup.top i.one.v-small,
-        header .flowerGroup.top i.three.small,
-        header .flowerGroup.top i.three.v-small,
-        header .flowerGroup.top i.two.small,
-        header .flowerGroup.top i.two.v-small {
-          width: 2em;
-          height: 2em; } }
 
 section.first {
   padding-top: 0;
