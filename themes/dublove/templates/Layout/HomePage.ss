@@ -1,14 +1,14 @@
-<header>
+<header class="centerAlign">
   <section class="container padded">
       <h1 class="main">$SiteConfig.Title</h1>
       <h2 class="main">$tagLine</h2>
       <a href="contact" title="Book now!" class="likeButton primary">Book now</a>
-      <div class="flowerGroup leftA topA">
+      <div class="flowerGroup leftA down topA">
           <i class="icon-Hibiscus-flip small two animateScale"></i>
           <i class="icon-Hibiscus one animateScale"></i>
           <i class="icon-Hibiscus v-small three animateScale"></i>
       </div>
-      <div class="flowerGroup rightA bottomA">
+      <div class="flowerGroup rightA up bottomA">
         <i class="icon-Hibiscus-flip one animateScale"></i>
         <i class="icon-Hibiscus small two animateScale"></i>
         <i class="icon-Hibiscus-flip v-small three animateScale"></i>
@@ -24,6 +24,11 @@
       <img class="thirds boxed b-lazy" src="data:image/gif;base64,R0lGODlhAQABAAAAACH5BAEKAAEALAAAAAABAAEAAAICTAEAOw==" data-src="$sectionOneImage.SetWidth(600).URL" alt="Campervan" />
     </section>
     <section class="centerAlign second emphasis">
+      <div class="flowerGroup rightA topA up animate">
+        <i class="icon-Hibiscus-flip-p one animateScale"></i>
+        <i class="icon-Hibiscus-p small two animateScale"></i>
+        <i class="icon-Hibiscus-flip-p v-small three animateScale"></i>
+      </div>
       <h2 class="funFont">Our Dubs</h2>
       <% if $getCarPages() %>
         <% loop $getCarPages() %>
@@ -33,7 +38,7 @@
             <p>
               $mainDescription
             </p>
-            <a class="likeButton" href="$Link" title="$Name">More info</a>
+            <a class="likeButton" href="$Link" title="$Name">Meet $Name</a>
           </article>
         <% end_loop %>
       <% end_if %>

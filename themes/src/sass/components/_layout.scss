@@ -1,10 +1,8 @@
-@import "normalize"; 
+@import "normalize";
 $containerWidth: 1200px;
 $largeBP: 1100px;
 $mediumBP: 900px;
 $smallBP: 650px;
-
-
 .leftA {
 	position: absolute;
 	left    : 1.2em;
@@ -54,6 +52,20 @@ p {
 .justify {
 	text-align: justify;
 }
+img {
+  max-width: 90%;
+  &.fullWidth {
+    max-width: 100%;
+  }
+}
+.image {
+  &.fullWidth {
+    height: 400px;
+    background-repeat: no-repeat;
+    background-size:contain;
+    width: 100%;
+  }
+}
 .halves {
 	display       : inline-block;
 	width         : 49%;
@@ -70,12 +82,12 @@ p {
 	}
 	h3 {
 		margin-top: 0;
-		font-size: 2.2em;
+		font-size : 2.2em;
 	}
 	@media(max-width: $mediumBP) {
 		display: block;
 		width  : 90%;
-		margin: 1em auto 3.5em;
+		margin : 1em auto 3.5em;
 	}
 }
 .thirds {
@@ -115,32 +127,53 @@ p {
 		width    : 80%;
 	}
 }
-
-main {
-	position     : relative;
-	width        : 95%;
-  box-sizing   : border-box;
-  margin       : 1em auto 2em;
-
-  &.overlap {
-    margin-top: -3em;
-  }
-
-  section {
-    position: relative;
-    padding : 1em;
-    margin  : 0.5em auto 1em;
-    position: relative;
-
-    &.emphasis {
-      z-index       : 1;
-      overflow      : hidden;
-      padding-top   : 2em;
-      padding-bottom: 3em;
+header {
+	position  : relative;
+	box-sizing: border-box;
+	padding   : 0;
+	position  : relative;
+	top       : 0;
+	text-align: left;
+	nav {
+		@extend .container;
+    a.home {
+      margin-left: 0.5em;
     }
-  }
+		ul {
+			float     : right;
+			margin-top: 2.4em;
+			a {
+				padding: 0.4em 0.4em 0.3em;
+				margin : 0 0.1em;
+			}
+		}
+		li {
+			list-style: none;
+			display   : inline-block;
+		}
+	}
 }
-
+main {
+	position  : relative;
+	width     : 95%;
+	box-sizing: border-box;
+	margin    : 1em auto 2em;
+	&.overlap {
+		margin-top: -3em;
+	}
+	section {
+		position: relative;
+		padding : 1em;
+		margin  : 0.5em auto 1em;
+		position: relative;
+		&.emphasis {
+			z-index       : 1;
+			overflow      : hidden;
+			padding-top   : 2em;
+			padding-bottom: 3em;
+		}
+	}
+}
 footer {
 	width     : 100%;
 	margin    : 2em 0 0;
@@ -148,5 +181,11 @@ footer {
 	h3 {
 		padding-top  : 0.2em;
 		margin-bottom: 0.2em;
+	}
+}
+.active {
+	i {
+		opacity  : 1;
+		transform: scale(1);
 	}
 }

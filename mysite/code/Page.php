@@ -18,8 +18,6 @@ class Page_Controller extends ContentController {
 		parent::init();
 		Requirements::css("https://fonts.googleapis.com/css?family=Josefin+Sans:400,700");
 		Requirements::css("https://fonts.googleapis.com/css?family=Bad+Script");
-		Requirements::css($this->ThemeDir()."/css/landing.min.css");
-		Requirements::javascript($this->ThemeDir()."/javascript/homePage.js");
 	}
 
 }

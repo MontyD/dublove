@@ -8,7 +8,8 @@ class CarPage extends Page {
 	);
 
 	private static $has_one = array(
-	  "mainImage" => "Image"
+	  "mainImage" => "Image",
+		"featureImage" => "Image"
 	);
 
 	public function getCMSFields() {
@@ -23,6 +24,8 @@ class CarPage extends Page {
 		$fields->addFieldToTab("Root.Main", HtmlEditorField::create("mainDescription", "Description"), "Metadata");
 
 		$fields->addFieldToTab("Root.Images", UploadField::create("mainImage", "Main image"));
+
+		$fields->addFieldToTab("Root.Images", UploadField::create("featureImage", "Feature image"));
 
 		return $fields;
 
@@ -39,8 +42,7 @@ class CarPage_Controller extends Page_Controller {
 		parent::init();
 		Requirements::css("https://fonts.googleapis.com/css?family=Josefin+Sans:400,700");
 		Requirements::css("https://fonts.googleapis.com/css?family=Bad+Script");
-		Requirements::css($this->ThemeDir()."/css/landing.min.css");
-		Requirements::javascript($this->ThemeDir()."/javascript/homePage.js");
+		Requirements::css($this->ThemeDir()."/css/cars.min.css");
+		Requirements::javascript($this->ThemeDir()."/javascript/carsPage.js");
 	}
-
 }

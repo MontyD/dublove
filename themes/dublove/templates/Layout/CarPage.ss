@@ -1,7 +1,8 @@
 <% include header %>
 
 <main>
-  <h2>This is a car page</h2>
+  <div class="image fullWidth" style="background-image: url('$featureImage.SetWidth(1200).URL')"></div>
+  <h2>$Name</h2>
   $content
 </main>
 

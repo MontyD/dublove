@@ -6,7 +6,7 @@ $colorSubtle: #2B52A4;
 $colorHighlight: #F5D32C;
 $colorAccent: #F5B12C;
 $colorLight: #FFE154;
-$colorBackground: #e9e5cf;
+$colorBackground: rgb(229, 231, 218);
 $colorGrey: #757575;
 $colorWhite: #FFFFFF;
 $colorLightGrey: #f1f1f1;
@@ -105,9 +105,6 @@ h3 {
 		margin     : 0.4em auto;
 	}
 }
-img {
-	max-width: 90%;
-}
 .subtleText {
 	color     : $colorGrey;
 	font-style: italic;
@@ -163,19 +160,11 @@ img.boxed {
 .b-loaded {
 	opacity: 1;
 }
-header {
-	position  : relative;
-	background: $colorLightMain;
-	color     : $colorWhite;
-	height    : 200px;
-	box-sizing: border-box;
-	padding   : 1.5em;
-	text-align: center;
-}
 main {
 	background   : $colorWhite;
 	max-width    : $containerWidth;
 	border-radius: 0.3em;
+	overflow: hidden;
 	@include shadow(1);
 	section {
 		padding : 1em;
@@ -224,29 +213,24 @@ span.funFont {
 	color     : $colorWhite;
 }
 header {
-	.flowerGroup {
-		@media(max-width: $smallBP) {
-			&.bottomA {
-				display: none;
+	background: rgba(53, 28, 104, 0.72);
+	color     : $colorWhite;
+	nav {
+		a {
+			color          : $colorWhite;
+			text-decoration: none;
+			transition: background 0.3s ease;
+			border-radius: 0.1em;
+			@include darkShadow;
+			&.home {
+				font-family    : $funFont;
+				font-size      : 3em;
 			}
-			left  : 0;
-			right : 0;
-			margin: 0 auto;
-			i.one,
-			i.three,
-			i.two {
-				display : inline-block;
-				position: relative;
-				width   : 3em;
-				height  : 3em;
-				top     : auto;
-				left    : auto;
-				right   : auto;
-				&.small,
-				&.v-small {
-					width : 2em;
-					height: 2em;
-				}
+		}
+		ul a {
+			font-size: 1.4em;
+			&:hover {
+				background: rgba(0,0,0, 0.2);
 			}
 		}
 	}
