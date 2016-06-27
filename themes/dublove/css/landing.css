@@ -449,19 +449,20 @@ img {
 .thirds {
   display: inline-block;
   width: 32%;
-  text-align: justify;
   padding: 0 1em;
   box-sizing: border-box;
   margin-left: 0;
   margin-right: 0;
-  vertical-align: middle; }
+  vertical-align: top;
+  text-align: center; }
   .thirds.two {
     width: 65%; }
   .thirds p {
     padding: 0;
     margin: 1em auto;
     vertical-align: top;
-    width: 100%; }
+    width: 100%;
+    text-align: justify; }
   .thirds h3 {
     margin: 0 auto;
     font-size: 2.2em; }
@@ -589,8 +590,7 @@ h3 {
   font-style: italic; }
 
 p.strongText {
-  font-size: 1.6em;
-  text-shadow: 1px 1px 0 rgba(0, 0, 0, 0.8); }
+  font-size: 1.8em; }
 p.white {
   color: #FFFFFF; }
 p.subtleText {
@@ -605,7 +605,7 @@ button,
 input[type="button"],
 input[type="submit"] {
   display: inline-block;
-  background: #5f368e;
+  background: #634783;
   padding: 0.5em 1.6em;
   margin: 0.5em 0.8em;
   border: none;
@@ -619,16 +619,28 @@ input[type="submit"] {
   transition: box-shadow 0.2s ease;
   cursor: pointer;
   text-shadow: none; }
-  .likeButton.primary,
-  button.primary,
-  input[type="button"].primary,
-  input[type="submit"].primary {
-    background: #F5B12C; }
   .likeButton:hover,
   button:hover,
   input[type="button"]:hover,
   input[type="submit"]:hover {
     box-shadow: 0 3px 12px rgba(0, 0, 0, 0.23), 0 3px 12px rgba(0, 0, 0, 0.16); }
+  .likeButton.primary,
+  button.primary,
+  input[type="button"].primary,
+  input[type="submit"].primary {
+    background: #F5B12C; }
+  .likeButton.subtle,
+  button.subtle,
+  input[type="button"].subtle,
+  input[type="submit"].subtle {
+    border: 1px solid #757575;
+    background: transparent;
+    color: #212121; }
+    .likeButton.subtle:hover,
+    button.subtle:hover,
+    input[type="button"].subtle:hover,
+    input[type="submit"].subtle:hover {
+      box-shadow: none; }
   .likeButton:active, .likeButton:focus, .likeButton:visited,
   button:active,
   button:focus,
@@ -698,8 +710,7 @@ main {
       z-index: -1;
       -webkit-backface-visibility: hidden;
       -webkit-transform: rotate(3deg) translate3d(0, 0, 0);
-              transform: rotate(3deg) translate3d(0, 0, 0);
-      background: rgba(53, 28, 104, 0.72); }
+              transform: rotate(3deg) translate3d(0, 0, 0); }
 
 footer .subtleText {
   color: #FFFFFF;
@@ -709,21 +720,21 @@ footer .subtleText {
 span.funFont {
   font-family: "Bad Script", sans-serif;
   font-size: 1em;
-  color: #5f368e; }
+  color: #634783; }
 
 .light {
   background: #e5e7da;
   color: #212121; }
 
 .dark {
-  background: rgba(53, 28, 104, 0.72);
+  background: #504978;
   color: #FFFFFF; }
 
 .grey {
   background: #f1f1f1; }
 
 .darkBlue {
-  background: #413978;
+  background: #504978;
   color: #FFFFFF; }
 
 header {

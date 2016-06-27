@@ -93,12 +93,12 @@ img {
 .thirds {
 	display       : inline-block;
 	width         : 32%;
-	text-align    : justify;
 	padding       : 0 1em;
 	box-sizing    : border-box;
 	margin-left   : 0;
 	margin-right  : 0;
-	vertical-align: middle;
+	vertical-align: top;
+	text-align    : center;
 	&.two {
 		width: 65%;
 	}
@@ -107,6 +107,7 @@ img {
 		margin        : 1em auto;
 		vertical-align: top;
 		width         : 100%;
+		text-align    : justify;
 	}
 	h3 {
 		margin   : 0 auto;

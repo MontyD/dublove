@@ -1,8 +1,8 @@
 //Variables
-$colorMain: #5f368e;
-$colorDark: #413978;
-$colorLightMain: #5E35B1;
-$colorSubtle: #2B52A4;
+$colorMain: #634783;
+$colorDark: #504978;
+$colorLightMain: #5e5694;
+$colorSubtle: #5c6ea4;
 $colorHighlight: #F5D32C;
 $colorAccent: #F5B12C;
 $colorLight: #FFE154;
@@ -111,8 +111,7 @@ h3 {
 }
 p {
 	&.strongText {
-		font-size: 1.6em;
-		@include darkShadow;
+		font-size: 1.8em;
 	}
 	&.white {
 		color: $colorWhite;
@@ -142,12 +141,20 @@ input[type="submit"] {
 	@include shadow(1);
 	transition     : box-shadow 0.2s ease;
 	cursor         : pointer;
-	text-shadow: none;
+	text-shadow    : none;
+	&:hover {
+		@include shadow(2);
+	}
 	&.primary {
 		background: $colorAccent;
 	}
-	&:hover {
-		@include shadow(2);
+	&.subtle {
+		border    : 1px solid $colorGrey;
+		background: transparent;
+		color     : $colorBlack;
+		&:hover {
+			box-shadow: none;
+		}
 	}
 	&:active,
 	&:focus,
@@ -211,7 +218,6 @@ main {
 					z-index                    : -1;
 					-webkit-backface-visibility: hidden;
 					transform                  : rotate(3deg) translate3d( 0, 0, 0);
-					background                 : rgba(53, 28, 104, 0.72);
 				}
 			}
 		}
@@ -234,7 +240,7 @@ span.funFont {
 	color     : $colorBlack;
 }
 .dark {
-	background: rgba(53, 28, 104, 0.72);
+	background: $colorDark;
 	color     : $colorWhite;
 }
 .grey {
