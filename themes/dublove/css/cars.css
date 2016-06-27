@@ -500,7 +500,8 @@ main {
   position: relative;
   width: 95%;
   box-sizing: border-box;
-  margin: 1em auto 2em; }
+  margin: 1em auto 2em;
+  overflow-x: hidden; }
   main.overlap {
     margin-top: -3em; }
   main section {
@@ -511,6 +512,7 @@ main {
     text-align: center; }
     main section.emphasis, main section.emphasis__odd {
       z-index: 1;
+      margin-bottom: 0;
       overflow: hidden;
       padding-top: 2em;
       padding-bottom: 4.5em; }
@@ -586,6 +588,11 @@ h3 {
   color: #757575;
   font-style: italic; }
 
+p.strongText {
+  font-size: 1.6em;
+  text-shadow: 1px 1px 0 rgba(0, 0, 0, 0.8); }
+p.white {
+  color: #FFFFFF; }
 p.subtleText {
   font-size: 1.4em;
   margin: 0.5em auto 1em; }
@@ -600,7 +607,7 @@ input[type="submit"] {
   display: inline-block;
   background: #5f368e;
   padding: 0.5em 1.6em;
-  margin: 0.5em auto;
+  margin: 0.5em 0.8em;
   border: none;
   border-radius: 3px;
   color: #FFFFFF;
@@ -610,7 +617,8 @@ input[type="submit"] {
   box-shadow: 0 1.5px 4px rgba(0, 0, 0, 0.24), 0 1.5px 6px rgba(0, 0, 0, 0.12);
   -webkit-transition: box-shadow 0.2s ease;
   transition: box-shadow 0.2s ease;
-  cursor: pointer; }
+  cursor: pointer;
+  text-shadow: none; }
   .likeButton.primary,
   button.primary,
   input[type="button"].primary,
@@ -637,8 +645,8 @@ input[type="submit"] {
   button.small,
   input[type="button"].small,
   input[type="submit"].small {
-    padding: 0.4em 1em;
-    font-size: 1.2em; }
+    padding: 0.2em 0.8em;
+    font-size: 1em; }
 
 img.boxed {
   padding: 0.4em;

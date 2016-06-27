@@ -53,18 +53,18 @@ p {
 	text-align: justify;
 }
 img {
-  max-width: 90%;
-  &.fullWidth {
-    max-width: 100%;
-  }
+	max-width: 90%;
+	&.fullWidth {
+		max-width: 100%;
+	}
 }
 .image {
-  &.fullWidth {
-    height: 400px;
-    background-repeat: no-repeat;
-    background-size: auto;
-    width: 100%;
-  }
+	&.fullWidth {
+		height           : 400px;
+		background-repeat: no-repeat;
+		background-size  : auto;
+		width            : 100%;
+	}
 }
 .halves {
 	display       : inline-block;
@@ -136,9 +136,9 @@ header {
 	text-align: left;
 	nav {
 		@extend .container;
-    a.home {
-      margin-left: 0.5em;
-    }
+		a.home {
+			margin-left: 0.5em;
+		}
 		ul {
 			float     : right;
 			margin-top: 2.4em;
@@ -158,17 +158,20 @@ main {
 	width     : 95%;
 	box-sizing: border-box;
 	margin    : 1em auto 2em;
+	overflow-x: hidden;
 	&.overlap {
 		margin-top: -3em;
 	}
 	section {
-		position: relative;
-		padding : 1em;
-		margin  : 0.5em auto 1em;
-		position: relative;
+		position  : relative;
+		padding   : 1em;
+		margin    : 0.5em auto 1em;
+		position  : relative;
 		text-align: center;
-		&.emphasis, &.emphasis__odd {
+		&.emphasis,
+		&.emphasis__odd {
 			z-index       : 1;
+			margin-bottom : 0;
 			overflow      : hidden;
 			padding-top   : 2em;
 			padding-bottom: 4.5em;

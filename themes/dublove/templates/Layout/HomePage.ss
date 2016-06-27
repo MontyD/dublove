@@ -59,7 +59,7 @@
       </div>
     </section>
     <section class="fourth emphasis__odd">
-      <p>Interested? Get in contact with us today! <a class="likeButton primary small" href="/contact/" title="Conctact us!">Contact us</a></p>
+      <p class="strongText white">Interested? Get in contact with us today! <a class="likeButton primary small" href="/contact/" title="Conctact us!">Contact us</a></p>
     </section>
 </main>
 <% include footer %>

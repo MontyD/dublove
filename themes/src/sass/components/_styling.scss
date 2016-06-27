@@ -109,9 +109,18 @@ h3 {
 	color     : $colorGrey;
 	font-style: italic;
 }
-p.subtleText {
-	font-size: 1.4em;
-	margin   : 0.5em auto 1em;
+p {
+	&.strongText {
+		font-size: 1.6em;
+		@include darkShadow;
+	}
+	&.white {
+		color: $colorWhite;
+	}
+	&.subtleText {
+		font-size: 1.4em;
+		margin   : 0.5em auto 1em;
+	}
 }
 .textShadow {
 	@include darkShadow;
@@ -123,7 +132,7 @@ input[type="submit"] {
 	display        : inline-block;
 	background     : $colorMain;
 	padding        : 0.5em 1.6em;
-	margin         : 0.5em auto;
+	margin         : 0.5em 0.8em;
 	border         : none;
 	border-radius  : 3px;
 	color          : $colorWhite;
@@ -133,6 +142,7 @@ input[type="submit"] {
 	@include shadow(1);
 	transition     : box-shadow 0.2s ease;
 	cursor         : pointer;
+	text-shadow: none;
 	&.primary {
 		background: $colorAccent;
 	}
@@ -146,8 +156,8 @@ input[type="submit"] {
 		outline: none;
 	}
 	&.small {
-		padding: 0.4em 1em;
-		font-size: 1.2em;
+		padding  : 0.2em 0.8em;
+		font-size: 1em;
 	}
 }
 img.boxed {
@@ -200,8 +210,8 @@ main {
 					background                 : $colorBackground;
 					z-index                    : -1;
 					-webkit-backface-visibility: hidden;
-					transform: rotate(3deg) translate3d( 0, 0, 0);
-					background: rgba(53, 28, 104, 0.72);
+					transform                  : rotate(3deg) translate3d( 0, 0, 0);
+					background                 : rgba(53, 28, 104, 0.72);
 				}
 			}
 		}
