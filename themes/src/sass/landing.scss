@@ -140,7 +140,7 @@ h2.main {
 		}
 	}
 }
-section.second {
+section.second.emphasis {
 	h2 {
 		margin-bottom: -0.1em;
 		margin-top   : 0.4em;
@@ -148,8 +148,14 @@ section.second {
 	}
 	.flowerGroup {
 		top: 2.5em;
-		@media(max-width: mediumBP) {
+		@media(max-width: $mediumBP) {
 			display: none;
+		}
+	}
+	@media(max-width: $mediumBP) {
+		padding-bottom: 1em;
+		&::after {
+			height: 95%;
 		}
 	}
 }
@@ -157,14 +163,20 @@ section.third {
 	margin-top: 0;
 }
 section.fourth.emphasis__odd {
-	margin-top: 2.5em;
-	margin-bottom: 0;
-	padding-top: 6em;
+	margin-top    : 2.5em;
+	margin-bottom : 0;
+	padding-top   : 6em;
 	padding-bottom: 5.5em;
-	border-radius: .3em;
-	overflow-x: hidden;
+	border-radius : 0.3em;
+	overflow-x    : hidden;
 	&::after {
 		height: 100%;
 		top   : 2.5em;
+	}
+	@media(max-width: $smallBP) {
+		a.likeButton {
+			display: block;
+			margin : 0.8em auto;
+		}
 	}
 }

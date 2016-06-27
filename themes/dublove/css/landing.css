@@ -926,15 +926,20 @@ h2.main {
           width: 2em;
           height: 2em; } }
 
-section.second h2 {
+section.second.emphasis h2 {
   margin-bottom: -0.1em;
   margin-top: 0.4em;
   text-shadow: 1px 1px 0 rgba(255, 255, 255, 0.8); }
-section.second .flowerGroup {
+section.second.emphasis .flowerGroup {
   top: 2.5em; }
-  @media (max-width: mediumBP) {
-    section.second .flowerGroup {
+  @media (max-width: 900px) {
+    section.second.emphasis .flowerGroup {
       display: none; } }
+@media (max-width: 900px) {
+  section.second.emphasis {
+    padding-bottom: 1em; }
+    section.second.emphasis::after {
+      height: 95%; } }
 
 section.third {
   margin-top: 0; }
@@ -944,8 +949,12 @@ section.fourth.emphasis__odd {
   margin-bottom: 0;
   padding-top: 6em;
   padding-bottom: 5.5em;
-  border-radius: .3em;
+  border-radius: 0.3em;
   overflow-x: hidden; }
   section.fourth.emphasis__odd::after {
     height: 100%;
     top: 2.5em; }
+  @media (max-width: 650px) {
+    section.fourth.emphasis__odd a.likeButton {
+      display: block;
+      margin: 0.8em auto; } }
