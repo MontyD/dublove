@@ -698,19 +698,6 @@ main {
       -webkit-transform: rotate(-3deg) translate3d(0, 0, 0);
               transform: rotate(-3deg) translate3d(0, 0, 0);
       -webkit-backface-visibility: hidden; }
-    main section.emphasis__odd::after {
-      display: block;
-      content: ' ';
-      position: absolute;
-      left: -5em;
-      top: 2em;
-      height: 90%;
-      width: 140%;
-      background: #e5e7da;
-      z-index: -1;
-      -webkit-backface-visibility: hidden;
-      -webkit-transform: rotate(3deg) translate3d(0, 0, 0);
-              transform: rotate(3deg) translate3d(0, 0, 0); }
 
 footer .subtleText {
   color: #FFFFFF;

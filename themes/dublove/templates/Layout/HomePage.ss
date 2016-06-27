@@ -47,12 +47,12 @@
       <h2>Our Packages</h2>
       <div class="thirds">
         <h3 class="funFont">Proms / Partys</h3>
-        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur.</p>
+        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</p>
         <a class="likeButton subtle" href="#" title="#">More info</a>
       </div>
       <div class="thirds">
         <h3 class="funFont">Weddings</h3>
-        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. </p>
+        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</p>
         <a class="likeButton subtle" href="#" title="#">More info</a>
       </div>
       <div class="thirds">
@@ -61,8 +61,8 @@
         <a class="likeButton subtle" href="#" title="#">More info</a>
       </div>
     </section>
-    <section class="fourth emphasis__odd">
-      <p class="strongText">Interested? Get in contact with us today! <a class="likeButton small" href="/contact/" title="Conctact us!">Contact us</a></p>
+    <section class="fourth emphasis">
+      <p class="strongText">Interested? Get in contact with Mike and Jane today<a class="likeButton small" href="/contact/" title="Conctact us!">Contact us</a></p>
     </section>
 </main>
 <% include footer %>

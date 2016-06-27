@@ -205,21 +205,6 @@ main {
 				transform                  : rotate(-3deg) translate3d( 0, 0, 0);
 				-webkit-backface-visibility: hidden;
 			}
-			&__odd {
-				&::after {
-					display                    : block;
-					content                    : ' ';
-					position                   : absolute;
-					left                       : -5em;
-					top                        : 2em;
-					height                     : 90%;
-					width                      : 140%;
-					background                 : $colorBackground;
-					z-index                    : -1;
-					-webkit-backface-visibility: hidden;
-					transform                  : rotate(3deg) translate3d( 0, 0, 0);
-				}
-			}
 		}
 	}
 }

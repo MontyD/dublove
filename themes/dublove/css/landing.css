@@ -698,19 +698,6 @@ main {
       -webkit-transform: rotate(-3deg) translate3d(0, 0, 0);
               transform: rotate(-3deg) translate3d(0, 0, 0);
       -webkit-backface-visibility: hidden; }
-    main section.emphasis__odd::after {
-      display: block;
-      content: ' ';
-      position: absolute;
-      left: -5em;
-      top: 2em;
-      height: 90%;
-      width: 140%;
-      background: #e5e7da;
-      z-index: -1;
-      -webkit-backface-visibility: hidden;
-      -webkit-transform: rotate(3deg) translate3d(0, 0, 0);
-              transform: rotate(3deg) translate3d(0, 0, 0); }
 
 footer .subtleText {
   color: #FFFFFF;
@@ -839,10 +826,12 @@ header {
     height: 95%; }
 
 section.first {
-  padding-top: 0;
+  padding-top: 1em;
   padding-bottom: 0; }
   section.first .thirds.two {
     margin-bottom: 2em; }
+    section.first .thirds.two h2 {
+      margin-top: 0.2em; }
   @media (max-width: 900px) {
     section.first {
       padding: 0.1em 0 2em; }
@@ -955,17 +944,17 @@ section.second.emphasis .flowerGroup {
 section.third {
   margin-top: 0; }
 
-section.fourth.emphasis__odd {
+section.fourth.emphasis {
   margin-top: 2.5em;
   margin-bottom: 0;
-  padding-top: 6em;
-  padding-bottom: 5.5em;
+  padding-top: 7.5em;
+  padding-bottom: 5em;
   border-radius: 0.3em;
   overflow-x: hidden; }
-  section.fourth.emphasis__odd::after {
+  section.fourth.emphasis::after {
     height: 100%;
     top: 2.5em; }
   @media (max-width: 650px) {
-    section.fourth.emphasis__odd a.likeButton {
+    section.fourth.emphasis a.likeButton {
       display: block;
       margin: 0.8em auto; } }

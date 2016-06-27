@@ -39,10 +39,13 @@ header {
 	}
 }
 section.first {
-	padding-top   : 0;
+	padding-top   : 1em;
 	padding-bottom: 0;
 	.thirds.two {
 		margin-bottom: 2em;
+		h2 {
+			margin-top: 0.2em;
+		}
 	}
 	@media(max-width: $mediumBP) {
 		padding: 0.1em 0 2em;
@@ -162,11 +165,11 @@ section.second.emphasis {
 section.third {
 	margin-top: 0;
 }
-section.fourth.emphasis__odd {
+section.fourth.emphasis {
 	margin-top    : 2.5em;
 	margin-bottom : 0;
-	padding-top   : 6em;
-	padding-bottom: 5.5em;
+	padding-top   : 7.5em;
+	padding-bottom: 5em;
 	border-radius : 0.3em;
 	overflow-x    : hidden;
 	&::after {
