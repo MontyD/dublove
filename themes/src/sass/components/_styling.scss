@@ -145,6 +145,10 @@ input[type="submit"] {
 		color  : $colorWhite;
 		outline: none;
 	}
+	&.small {
+		padding: 0.4em 1em;
+		font-size: 1.2em;
+	}
 }
 img.boxed {
 	padding      : 0.4em;

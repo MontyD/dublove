@@ -507,7 +507,8 @@ main {
     position: relative;
     padding: 1em;
     margin: 0.5em auto 1em;
-    position: relative; }
+    position: relative;
+    text-align: center; }
     main section.emphasis, main section.emphasis__odd {
       z-index: 1;
       overflow: hidden;
@@ -632,6 +633,12 @@ input[type="submit"] {
   input[type="submit"]:visited {
     color: #FFFFFF;
     outline: none; }
+  .likeButton.small,
+  button.small,
+  input[type="button"].small,
+  input[type="submit"].small {
+    padding: 0.4em 1em;
+    font-size: 1.2em; }
 
 img.boxed {
   padding: 0.4em;

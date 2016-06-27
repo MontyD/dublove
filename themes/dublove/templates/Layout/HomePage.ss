@@ -16,14 +16,14 @@
   </section>
 </header>
 <main class="overlap">
-    <section class="centerAlign first">
+    <section class="first">
       <article class="thirds two centerAlign">
         <h2>$sectionOneHeading</h2>
         $sectionOneText
       </article>
       <img class="thirds boxed b-lazy" src="data:image/gif;base64,R0lGODlhAQABAAAAACH5BAEKAAEALAAAAAABAAEAAAICTAEAOw==" data-src="$sectionOneImage.SetWidth(600).URL" alt="Campervan" />
     </section>
-    <section class="centerAlign second emphasis">
+    <section class="second emphasis">
       <div class="flowerGroup rightA topA up animate">
         <i class="icon-Hibiscus-flip-p one animateScale"></i>
         <i class="icon-Hibiscus-p small two animateScale"></i>
@@ -43,7 +43,7 @@
         <% end_loop %>
       <% end_if %>
     </section>
-    <section class="centerAlign third">
+    <section class="third">
       <h2>Our Packages</h2>
       <div class="thirds">
         <h3 class="funFont">Proms / Partys</h3>
@@ -58,8 +58,8 @@
         <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
       </div>
     </section>
-    <section class="centerAlign fourth emphasis__odd">
-      <p>Interested? Get in contact with us today! <a class="likeButton primary" href="/contact/" title="Conctact us!">Contact us</a></p>
+    <section class="fourth emphasis__odd">
+      <p>Interested? Get in contact with us today! <a class="likeButton primary small" href="/contact/" title="Conctact us!">Contact us</a></p>
     </section>
 </main>
 <% include footer %>
