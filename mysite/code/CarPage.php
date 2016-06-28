@@ -9,7 +9,7 @@ class CarPage extends Page {
 	);
 
 	private static $has_one = array(
-	  "mainImage" => "Image",
+	  "mainImage" => "Image"
 	);
 
 	private static $has_many = array(
@@ -40,7 +40,7 @@ class CarPage extends Page {
 		$fields->addFieldToTab("Root.Images", GridField::create(
 			"FeatureImages",
 			"Images for slider",
-			$this->Packages(),
+			$this->FeatureImages(),
 			GridFieldConfig_RecordEditor::create()
 		));
 
