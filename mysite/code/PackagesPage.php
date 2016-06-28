@@ -22,7 +22,7 @@ class PackagesPage extends Page {
       "Packages list",
       $this->Packages(),
       GridFieldConfig_RecordEditor::create()
-    ));
+    ),"Metadata");
 
 		return $fields;
 	}
