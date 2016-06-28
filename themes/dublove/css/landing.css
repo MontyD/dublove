@@ -605,7 +605,7 @@ button,
 input[type="button"],
 input[type="submit"] {
   display: inline-block;
-  background: #634783;
+  background: #715196;
   padding: 0.5em 1.6em;
   margin: 0.5em 0.8em;
   border: none;
@@ -707,7 +707,7 @@ footer .subtleText {
 span.funFont {
   font-family: "Bad Script", sans-serif;
   font-size: 1em;
-  color: #634783; }
+  color: #715196; }
 
 .light {
   background: #e5e7da;
@@ -792,7 +792,7 @@ header {
 
 header {
   height: 600px;
-  background: rgba(76, 41, 146, 0.5);
+  background: rgba(90, 48, 146, 0.52);
   box-sizing: border-box; }
   header:before {
     content: ' ';
