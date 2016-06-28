@@ -10,7 +10,11 @@ class CarPage extends Page {
 
 	private static $has_one = array(
 	  "mainImage" => "Image",
-		"featureImage" => "Image"
+	);
+
+	private static $has_many = array(
+		"FeatureImages" => "featureImage",
+		"Packages" => "Package"
 	);
 
 	public function getCMSFields() {
@@ -24,15 +28,28 @@ class CarPage extends Page {
 
 		$fields->addFieldToTab("Root.Main", HtmlEditorField::create("mainDescription", "Description"), "Metadata");
 
+		$fields->addFieldToTab("Root.Main", GridField::create(
+			"Packages",
+			"Packages list",
+			$this->Packages(),
+			GridFieldConfig_RecordEditor::create()
+		), "Metadata");
+
 		$fields->addFieldToTab("Root.Images", UploadField::create("mainImage", "Main image"));
 
-		$fields->addFieldToTab("Root.Images", UploadField::create("featureImage", "Feature image"));
+		$fields->addFieldToTab("Root.Images", GridField::create(
+			"FeatureImages",
+			"Images for slider",
+			$this->Packages(),
+			GridFieldConfig_RecordEditor::create()
+		));
 
 		return $fields;
 
 	}
 
 }
+
 class CarPage_Controller extends Page_Controller {
 
 

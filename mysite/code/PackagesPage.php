@@ -4,25 +4,29 @@ class PackagesPage extends Page {
 
 	private static $db = array(
 		"Name" => "Varchar",
-		"tagLine" => "Varchar",
+		"shortDescription" => "Text",
 		"mainDescription" => "HTMLText"
 	);
 
-	private static $has_many = array(
-	  "Packages" => "Package"
+	private static $has_one = array(
+    "mainImage" => "Image",
 	);
+
+  private static $can_be_root = false;
 
 	public function getCMSFields() {
 
 		$fields = parent::getCMSFields();
 		$fields->removeFieldFromTab("Root.Content.Main", "Content");
 
-    $fields->addFieldToTab("Root.Main", GridField::create(
-      "Packages",
-      "Packages list",
-      $this->Packages(),
-      GridFieldConfig_RecordEditor::create()
-    ),"Metadata");
+    $fields->addFieldToTab("Root.Main", TextField::create("Name", "Package Name"), "Metadata");
+
+		$fields->addFieldToTab("Root.Main", TextareaField::create("shortDescription", "Short description"), "Metadata");
+
+		$fields->addFieldToTab("Root.Main", HtmlEditorField::create("mainDescription", "Main description"), "Metadata");
+
+		$fields->addFieldToTab("Root.Images", UploadField::create("mainImage", "Main Image"));
+
 
 		return $fields;
 	}

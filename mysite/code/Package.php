@@ -4,25 +4,26 @@ class Package extends DataObject {
 
   private static $db = array(
     "Name" => "Varchar",
+    "ShortDescription" => "Text",
     "Description" => "HTMLText",
   );
 
   private static $has_one = array(
     "Photo" => "Image",
-    "HomePage" => "HomePage",
-    "PackagesPage" => "PackagesPage"
+    "CarPage" => "CarPage"
   );
 
   private static $summary_fields = array(
     "Name" => "Name of package",
-    "Description" => "Description",
+    "ShortDescription" => "Short description",
     "Photo.CMSThumbnail" => ""
   );
 
   public function getCMSFields() {
     $fields = FieldList::create(
       TextField::create("Name"),
-      HTMLTextField::create("Description"),
+      TextareaField::create("ShortDescription"),
+      HtmlEditorField::create("Description"),
       $uploader = UploadField::create("Photo")
     );
 

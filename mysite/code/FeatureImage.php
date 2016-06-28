@@ -8,7 +8,8 @@ class FeatureImage extends DataObject {
 
   private static $has_one = array(
     "Photo" => "Image",
-    "HomePage" => "HomePage"
+    "HomePage" => "HomePage",
+    "CarPage" => "CarPage"
   );
 
   private static $summary_fields = array(
