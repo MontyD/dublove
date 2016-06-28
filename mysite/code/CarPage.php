@@ -1,4 +1,5 @@
 <?php
+
 class CarPage extends Page {
 
 	private static $db = array(
@@ -40,9 +41,5 @@ class CarPage_Controller extends Page_Controller {
 
 	public function init() {
 		parent::init();
-		Requirements::css("https://fonts.googleapis.com/css?family=Josefin+Sans:400,700");
-		Requirements::css("https://fonts.googleapis.com/css?family=Bad+Script");
-		Requirements::css($this->ThemeDir()."/css/cars.min.css");
-		Requirements::javascript($this->ThemeDir()."/javascript/carsPage.js");
 	}
 }

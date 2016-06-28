@@ -1,4 +1,5 @@
 <?php
+
 class HomePage extends Page {
 
 	private static $db = array(
@@ -12,7 +13,7 @@ class HomePage extends Page {
 	);
 
 	private static $has_many = array(
-		"FeatureImages" => "FeatureImage"
+		"Packages" => "Package"
 	);
 
 	public function getCMSFields() {
@@ -27,13 +28,6 @@ class HomePage extends Page {
 		$fields->addFieldToTab("Root.Main", HtmlEditorField::create("sectionOneText", "Section One Text"), "Metadata");
 
 		$fields->addFieldToTab("Root.Images", UploadField::create("sectionOneImage", "Section One Image"));
-
-		$fields->addFieldToTab("Root.Images", GridField::create(
-			"FeatureImages",
-			"Images for section two",
-			$this->FeatureImages(),
-			GridFieldConfig_RecordEditor::create()
-		));
 
 		return $fields;
 
@@ -53,6 +47,7 @@ class HomePage_Controller extends Page_Controller {
 
 	public function init() {
 		parent::init();
+		Requirements::clear();
 		Requirements::css("https://fonts.googleapis.com/css?family=Josefin+Sans:400,700");
 		Requirements::css("https://fonts.googleapis.com/css?family=Bad+Script");
 		Requirements::css($this->ThemeDir()."/css/landing.min.css");
