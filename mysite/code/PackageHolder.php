@@ -2,7 +2,7 @@
 
 class PackageHolder extends Page {
 
-  private static $allowed_children = array("PackagePage");
+  private static $allowed_children = array("PackagesPage");
 
 	public function getCMSFields() {
 

@@ -13,7 +13,7 @@ class CarPage extends Page {
 	);
 
 	private static $has_many = array(
-		"FeatureImages" => "featureImage",
+		"FeatureImages" => "FeatureImage",
 		"Packages" => "Package"
 	);
 

@@ -12,6 +12,10 @@ class PackagesPage extends Page {
     "mainImage" => "Image",
 	);
 
+  private static $has_many = array(
+    "FeatureImages" => "FeatureImage"
+  );
+
   private static $can_be_root = false;
 
 	public function getCMSFields() {
@@ -27,6 +31,12 @@ class PackagesPage extends Page {
 
 		$fields->addFieldToTab("Root.Images", UploadField::create("mainImage", "Main Image"));
 
+    $fields->addFieldToTab("Root.Images", GridField::create(
+			"FeatureImages",
+			"Images for slider",
+			$this->FeatureImages(),
+			GridFieldConfig_RecordEditor::create()
+		));
 
 		return $fields;
 	}
