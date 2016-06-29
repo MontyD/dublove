@@ -45,9 +45,12 @@ section.first {
 		margin-bottom: 2em;
 		h2 {
 			margin-top: 0.2em;
+			@media(max-width: $smallBP) {
+				margin-top: 0.8em;
+			}
 		}
 	}
-	@media(min-width: $largeBP) {
+	@media(min-width: $mediumBP) {
 		img {
 			margin-top: 1em;
 		}

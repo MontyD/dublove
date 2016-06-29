@@ -843,7 +843,10 @@ section.first {
     margin-bottom: 2em; }
     section.first .thirds.two h2 {
       margin-top: 0.2em; }
-  @media (min-width: 1100px) {
+      @media (max-width: 650px) {
+        section.first .thirds.two h2 {
+          margin-top: 0.8em; } }
+  @media (min-width: 900px) {
     section.first img {
       margin-top: 1em; } }
   @media (max-width: 900px) {

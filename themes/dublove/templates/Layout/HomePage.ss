@@ -56,7 +56,7 @@
     <% end_if %>
   </section>
   <section class="fourth emphasis">
-    <p class="strongText">Interested? Get in contact with Mike and Jane today<a class="likeButton small" href="/contact/" title="Conctact us!">Contact us</a></p>
+    <p class="strongText">Interested? Get in contact with Mike and Jane today<a class="likeButton small" href="contact" title="Conctact us!">Contact us</a></p>
   </section>
 </main>
 <% include footer %>
