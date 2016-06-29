@@ -155,6 +155,11 @@ input[type="submit"] {
 		&:hover {
 			box-shadow: none;
 		}
+		&:active,
+		&:focus,
+		&:visited {
+			color: $colorBlack;
+		}
 	}
 	&:active,
 	&:focus,

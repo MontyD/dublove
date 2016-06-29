@@ -47,6 +47,11 @@ section.first {
 			margin-top: 0.2em;
 		}
 	}
+	@media(min-width: $largeBP) {
+		img {
+			margin-top: 1em;
+		}
+	}
 	@media(max-width: $mediumBP) {
 		padding: 0.1em 0 2em;
 		.thirds.two {

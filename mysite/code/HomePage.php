@@ -45,6 +45,11 @@ class HomePage_Controller extends Page_Controller {
 		return $carPages->count() ? $carPages : false;
 	}
 
+	public function getPackagesPages() {
+		$packagesPage = PackagesPage::get();
+		return $packagesPage->count() ? $packagesPage : false;
+	}
+
 	public function init() {
 		parent::init();
 		Requirements::clear();
