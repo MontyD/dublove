@@ -37,11 +37,12 @@
     <h2>Packages</h2>
     <% loop $Packages %>
       <article class="innerModal $EvenOdd">
-        <div class="halves">
+        <div class="halfWidthImgContainer" style="background-image: url($Photo.SetWidth(600).URL)">
           <h3>$Name</h3>
+        </div>
+        <div class="halves">
           $Description
         </div>
-        <img class="b-lazy halves" src="data:image/gif;base64,R0lGODlhAQABAAAAACH5BAEKAAEALAAAAAABAAEAAAICTAEAOw==" data-src="$Photo.SetWidth(600).URL" alt="$Name" />
       </article>
     <% end_loop %>
   </section>

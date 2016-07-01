@@ -479,6 +479,18 @@ img {
       .fullWidthImgContainer h1 {
         line-height: 400px; } }
 
+.halfWidthImgContainer {
+  width: 50%;
+  display: inline-block;
+  background-repeat: no-repeat;
+  background-size: cover; }
+
+.even.halfWidthImgContainer {
+  float: left; }
+
+.odd.halfWidthImgContainer {
+  float: right; }
+
 .halves {
   display: inline-block;
   width: 49%;
@@ -533,7 +545,9 @@ img {
 .innerModal {
   display: block;
   margin: 1em auto;
-  width: 90%; }
+  width: 90%;
+  text-align: left;
+  overflow: hidden; }
 
 img.thirds {
   vertical-align: baseline; }
@@ -748,11 +762,14 @@ input[type="submit"] {
 
 .innerModal {
   background: #FFFFFF;
+  border-radius: 0.3em;
   box-shadow: 0 1.5px 4px rgba(0, 0, 0, 0.24), 0 1.5px 6px rgba(0, 0, 0, 0.12); }
   .innerModal h3 {
-    padding: 0.2em 0.4em;
+    padding: 0.4em 0 0;
     text-align: left;
-    font-size: 2.6em; }
+    font-size: 2.4em; }
+  .innerModal p {
+    text-align: left; }
 
 img.boxed {
   padding: 0.4em;
@@ -1429,6 +1446,18 @@ img {
       .fullWidthImgContainer h1 {
         line-height: 400px; } }
 
+.halfWidthImgContainer {
+  width: 50%;
+  display: inline-block;
+  background-repeat: no-repeat;
+  background-size: cover; }
+
+.even.halfWidthImgContainer {
+  float: left; }
+
+.odd.halfWidthImgContainer {
+  float: right; }
+
 .halves {
   display: inline-block;
   width: 49%;
@@ -1483,7 +1512,9 @@ img {
 .innerModal {
   display: block;
   margin: 1em auto;
-  width: 90%; }
+  width: 90%;
+  text-align: left;
+  overflow: hidden; }
 
 img.thirds {
   vertical-align: baseline; }
@@ -1698,11 +1729,14 @@ input[type="submit"] {
 
 .innerModal {
   background: #FFFFFF;
+  border-radius: 0.3em;
   box-shadow: 0 1.5px 4px rgba(0, 0, 0, 0.24), 0 1.5px 6px rgba(0, 0, 0, 0.12); }
   .innerModal h3 {
-    padding: 0.2em 0.4em;
+    padding: 0.4em 0 0;
     text-align: left;
-    font-size: 2.6em; }
+    font-size: 2.4em; }
+  .innerModal p {
+    text-align: left; }
 
 img.boxed {
   padding: 0.4em;

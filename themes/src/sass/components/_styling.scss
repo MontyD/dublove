@@ -176,11 +176,15 @@ input[type="submit"] {
 }
 .innerModal {
 	background: $colorWhite;
+	border-radius: 0.3em;
 	@include shadow(1);
 	h3 {
-		padding: 0.2em 0.4em;
+		padding: 0.4em 0 0;
 		text-align: left;
-		font-size: 2.6em;
+		font-size: 2.4em;
+	}
+	p {
+		text-align: left;
 	}
 }
 img.boxed {

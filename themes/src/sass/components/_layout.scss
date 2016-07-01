@@ -131,6 +131,18 @@ img {
 		}
 	}
 }
+.halfWidthImgContainer {
+	width            : 50%;
+	display          : inline-block;
+	background-repeat: no-repeat;
+	background-size  : cover;
+}
+.even.halfWidthImgContainer {
+	float: left;
+}
+.odd.halfWidthImgContainer {
+	float: right;
+}
 .halves {
 	display       : inline-block;
 	width         : 49%;
@@ -156,13 +168,13 @@ img {
 	}
 }
 .thirds {
-	display       : inline-block;
-	width         : 32%;
-	padding       : 0 1em;
-	box-sizing    : border-box;
-	margin-left   : 0;
-	margin-right  : 0;
-	text-align    : center;
+	display     : inline-block;
+	width       : 32%;
+	padding     : 0 1em;
+	box-sizing  : border-box;
+	margin-left : 0;
+	margin-right: 0;
+	text-align  : center;
 	&.two {
 		width: 65%;
 	}
@@ -190,15 +202,17 @@ img {
 	}
 }
 .innerModal {
-	display: block;
-	margin: 1em auto;
-	width: 90%;
+	display   : block;
+	margin    : 1em auto;
+	width     : 90%;
+	text-align: left;
+	overflow  : hidden;
 }
 img.thirds {
 	vertical-align: baseline;
 	@media(max-width: $mediumBP) {
-		max-width: 400px;
-		width    : 80%;
+		max-width     : 400px;
+		width         : 80%;
 		vertical-align: middle;
 	}
 }
@@ -250,9 +264,9 @@ main {
 			padding-top   : 2em;
 			padding-bottom: 5em;
 			&.overlap {
-				padding-top: 5em;
+				padding-top   : 5em;
 				padding-bottom: 6em;
-				margin-top : -4.5em;
+				margin-top    : -4.5em;
 			}
 		}
 		.flowerGroup {
