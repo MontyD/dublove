@@ -37,10 +37,11 @@
     <h2>Packages</h2>
     <% loop $Packages %>
       <article class="innerModal $EvenOdd">
-        <div class="halfWidthImgContainer" style="background-image: url($Photo.SetWidth(600).URL)">
-          <h3>$Name</h3>
+        <div class="halfWidthImgContainer">
+          <div class="img" style="background-image: url($Photo.SetWidth(600).URL)"></div>
+          <div class="title"><h3 class="white">$Name</h3></div>
         </div>
-        <div class="halves">
+        <div class="content">
           $Description
         </div>
       </article>

@@ -70,7 +70,7 @@ h1 {
 	&.main {
 		letter-spacing: 3px;
 		font-size     : 5em;
-		color: $colorWhite;
+		color         : $colorWhite;
 		@include darkShadow;
 		@media(min-width: $mediumBP) {
 			font-size: 5.5em;
@@ -175,16 +175,19 @@ input[type="submit"] {
 	}
 }
 .innerModal {
-	background: $colorWhite;
+	background   : $colorWhite;
 	border-radius: 0.3em;
 	@include shadow(1);
 	h3 {
-		padding: 0.4em 0 0;
+		padding   : 0.4em 0 0;
 		text-align: left;
-		font-size: 2.4em;
+		font-size : 2.4em;
 	}
 	p {
 		text-align: left;
+	}
+	.title {
+		background: $colorOverlay;
 	}
 }
 img.boxed {
@@ -230,7 +233,7 @@ main {
 }
 footer {
 	background: $colorDark;
-	color  : $colorWhite;
+	color     : $colorWhite;
 	.subtleText {
 		color  : $colorWhite;
 		margin : 0 auto;
