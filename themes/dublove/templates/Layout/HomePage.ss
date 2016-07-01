@@ -17,11 +17,15 @@
 </header>
 <main class="overlap">
     <section class="first">
-      <article class="thirds two centerAlign">
-        <h2>$sectionOneHeading</h2>
-        $sectionOneText
+      <article class="innerModal">
+        <div class="content">
+          <h2 class="topHeading">$sectionOneHeading</h2>
+          $sectionOneText
+        </div>
+        <div class="halfWidthImgContainer">
+          <div class="img" style="background-image: url($sectionOneImage.SetWidth(800).URL)"></div>
+        </div>
       </article>
-      <img class="thirds boxed b-lazy" src="data:image/gif;base64,R0lGODlhAQABAAAAACH5BAEKAAEALAAAAAABAAEAAAICTAEAOw==" data-src="$sectionOneImage.SetWidth(600).URL" alt="Campervan" />
     </section>
     <% if $getCarPages() %>
     <section class="second emphasis">
