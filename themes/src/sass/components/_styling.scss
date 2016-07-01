@@ -10,6 +10,7 @@ $colorBackground: rgb(229, 231, 218);
 $colorGrey: #757575;
 $colorWhite: #FFFFFF;
 $colorLightGrey: #f1f1f1;
+$colorOverlay: rgba(90, 48, 146, 0.4);
 $colorBlack: #212121;
 $funFont: 'Bad Script', sans-serif;
 $normalFont: 'Josefin Sans', sans-serif;
@@ -69,13 +70,16 @@ h1 {
 	&.main {
 		letter-spacing: 3px;
 		font-size     : 5em;
-		@include darkShadow;
 		@media(min-width: $mediumBP) {
 			font-size: 5.5em;
 		}
 		@media(min-width: $largeBP) {
 			font-size: 7.5em;
 		}
+	}
+	&.white {
+		color: $colorWhite;
+		@include darkShadow;
 	}
 }
 h2 {
@@ -240,6 +244,9 @@ span.funFont {
 	background: $colorDark;
 	color     : $colorWhite;
 }
+.overlayPurple {
+	background: $colorOverlay;
+}
 header {
 	background: rgba(53, 28, 104, 0.72);
 	color     : $colorWhite;
@@ -260,6 +267,59 @@ header {
 			&:hover {
 				background: rgba(0,0,0, 0.2);
 			}
+		}
+	}
+}
+.flowerGroup {
+	position: absolute;
+	display : inline-block;
+	margin  : 0 auto;
+	z-index: 10;
+	&.down {
+		margin-top: 1em;
+		i {
+			transition-delay   : 0.4s;
+			transition-duration: 2s;
+		}
+		.one {
+			display: inline-block;
+		}
+		.two {
+			position           : absolute;
+			top                : 0;
+			left               : 5.8em;
+			transition-delay   : 0.6s;
+			transition-duration: 1.2s;
+		}
+		.three {
+			position           : absolute;
+			top                : -1em;
+			left               : 4.5em;
+			transition-delay   : 1s;
+			transition-duration: 1s;
+		}
+	}
+	&.up {
+		i {
+			transition-delay   : 1.2s;
+			transition-duration: 2s;
+		}
+		.one {
+			display: inline-block;
+		}
+		.two {
+			position           : absolute;
+			top                : 1em;
+			left               : -3.7em;
+			transition-delay   : 1.7s;
+			transition-duration: 1s;
+		}
+		.three {
+			position           : absolute;
+			top                : -0.5em;
+			left               : -1em;
+			transition-delay   : 1.8s;
+			transition-duration: 0.8s;
 		}
 	}
 }

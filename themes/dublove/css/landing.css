@@ -395,7 +395,7 @@ textarea {
   display: block;
   position: relative;
   width: 100%;
-  max-width: 1200px;
+  max-width: 1100px;
   margin: 0 auto;
   box-sizing: border-box; }
 
@@ -428,27 +428,56 @@ img {
   position: relative;
   display: block;
   height: 400px;
-  margin: 0 auto; }
+  padding: 0;
+  margin: 0 auto;
+  z-index: 1; }
   .fullWidthImgContainer .img {
     display: block;
+    position: absolute;
+    top: 0;
+    left: 0;
     width: 100%;
     height: 100%;
     padding: 0;
     margin: 0;
     background-repeat: no-repeat;
-    background-size: cover; }
-  .fullWidthImgContainer .small, .fullWidthImgContainer .medium {
+    background-size: cover;
+    z-index: -1;
+    opacity: 0.7; }
+  .fullWidthImgContainer .medium,
+  .fullWidthImgContainer .small {
     display: none; }
+  @media (min-width: 1000px) {
+    .fullWidthImgContainer {
+      height: 500px; } }
   @media (max-width: 1100px) {
     .fullWidthImgContainer .large {
       display: none; }
     .fullWidthImgContainer .medium {
       display: block; } }
-  @media (max-width: 900px) {
+  @media (max-width: 550px) {
     .fullWidthImgContainer .medium {
       display: none; }
     .fullWidthImgContainer .small {
       display: block; } }
+  .fullWidthImgContainer .overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    width: 100%;
+    height: 100%;
+    margin: 0;
+    padding: 0;
+    z-index: -1; }
+  .fullWidthImgContainer h1 {
+    line-height: 350px;
+    vertical-align: middle;
+    margin: 0; }
+    @media (min-width: 1100px) {
+      .fullWidthImgContainer h1 {
+        line-height: 400px; } }
 
 .halves {
   display: inline-block;
@@ -537,12 +566,14 @@ main {
     margin: 0.5em auto 1em;
     position: relative;
     text-align: center; }
-    main section.emphasis, main section.emphasis__odd {
+    main section.emphasis {
       z-index: 1;
       margin-bottom: 0;
       overflow: hidden;
       padding-top: 2em;
       padding-bottom: 4.5em; }
+      main section.emphasis.overlap {
+        margin-top: -4.5em; }
 
 footer {
   width: 100%;
@@ -578,14 +609,16 @@ h1 {
   margin: 0.2em auto; }
   h1.main {
     letter-spacing: 3px;
-    font-size: 5em;
-    text-shadow: 1px 1px 0 rgba(0, 0, 0, 0.8); }
+    font-size: 5em; }
     @media (min-width: 900px) {
       h1.main {
         font-size: 5.5em; } }
     @media (min-width: 1100px) {
       h1.main {
         font-size: 7.5em; } }
+  h1.white {
+    color: #FFFFFF;
+    text-shadow: 1px 1px 0 rgba(0, 0, 0, 0.8); }
 
 h2 {
   font-weight: normal;
@@ -714,7 +747,7 @@ img.boxed {
 
 main {
   background: #FFFFFF;
-  max-width: 1200px;
+  max-width: 1100px;
   border-radius: 0.3em;
   overflow: hidden;
   box-shadow: 0 1.5px 4px rgba(0, 0, 0, 0.24), 0 1.5px 6px rgba(0, 0, 0, 0.12); }
@@ -761,6 +794,9 @@ span.funFont {
   background: #504978;
   color: #FFFFFF; }
 
+.overlayPurple {
+  background: rgba(90, 48, 146, 0.4); }
+
 header {
   background: rgba(53, 28, 104, 0.72);
   color: #FFFFFF; }
@@ -778,6 +814,60 @@ header {
     font-size: 1.4em; }
     header nav ul a:hover {
       background: rgba(0, 0, 0, 0.2); }
+
+.flowerGroup {
+  position: absolute;
+  display: inline-block;
+  margin: 0 auto;
+  z-index: 10; }
+  .flowerGroup.down {
+    margin-top: 1em; }
+    .flowerGroup.down i {
+      -webkit-transition-delay: 0.4s;
+              transition-delay: 0.4s;
+      -webkit-transition-duration: 2s;
+              transition-duration: 2s; }
+    .flowerGroup.down .one {
+      display: inline-block; }
+    .flowerGroup.down .two {
+      position: absolute;
+      top: 0;
+      left: 5.8em;
+      -webkit-transition-delay: 0.6s;
+              transition-delay: 0.6s;
+      -webkit-transition-duration: 1.2s;
+              transition-duration: 1.2s; }
+    .flowerGroup.down .three {
+      position: absolute;
+      top: -1em;
+      left: 4.5em;
+      -webkit-transition-delay: 1s;
+              transition-delay: 1s;
+      -webkit-transition-duration: 1s;
+              transition-duration: 1s; }
+  .flowerGroup.up i {
+    -webkit-transition-delay: 1.2s;
+            transition-delay: 1.2s;
+    -webkit-transition-duration: 2s;
+            transition-duration: 2s; }
+  .flowerGroup.up .one {
+    display: inline-block; }
+  .flowerGroup.up .two {
+    position: absolute;
+    top: 1em;
+    left: -3.7em;
+    -webkit-transition-delay: 1.7s;
+            transition-delay: 1.7s;
+    -webkit-transition-duration: 1s;
+            transition-duration: 1s; }
+  .flowerGroup.up .three {
+    position: absolute;
+    top: -0.5em;
+    left: -1em;
+    -webkit-transition-delay: 1.8s;
+            transition-delay: 1.8s;
+    -webkit-transition-duration: 0.8s;
+            transition-duration: 0.8s; }
 
 .animateScale {
   -webkit-transform: scale(0);
@@ -829,7 +919,7 @@ header {
 
 header {
   height: 600px;
-  background: rgba(90, 48, 146, 0.52);
+  background: rgba(90, 48, 146, 0.4);
   box-sizing: border-box; }
   header:before {
     content: ' ';
@@ -869,7 +959,7 @@ section.first {
     margin-bottom: 2em; }
     section.first .thirds.two h2 {
       margin-top: 0.2em; }
-      @media (max-width: 650px) {
+      @media (max-width: 550px) {
         section.first .thirds.two h2 {
           margin-top: 0.8em; } }
   @media (min-width: 900px) {
@@ -892,82 +982,30 @@ h1.main {
 h2.main {
   margin: 0.2em auto 1em; }
 
-.flowerGroup {
-  position: absolute;
-  display: inline-block;
-  margin: 0 auto; }
+@media (max-width: 550px) {
+  .flowerGroup.up {
+    display: none; }
   .flowerGroup.down {
-    margin-top: 1em; }
-    .flowerGroup.down i {
-      -webkit-transition-delay: 0.4s;
-              transition-delay: 0.4s;
-      -webkit-transition-duration: 2s;
-              transition-duration: 2s; }
-    .flowerGroup.down .one {
-      display: inline-block; }
-    .flowerGroup.down .two {
-      position: absolute;
-      top: 0;
-      left: 5.8em;
-      -webkit-transition-delay: 0.6s;
-              transition-delay: 0.6s;
-      -webkit-transition-duration: 1.2s;
-              transition-duration: 1.2s; }
-    .flowerGroup.down .three {
-      position: absolute;
-      top: -1em;
-      left: 4.5em;
-      -webkit-transition-delay: 1s;
-              transition-delay: 1s;
-      -webkit-transition-duration: 1s;
-              transition-duration: 1s; }
-  .flowerGroup.up i {
-    -webkit-transition-delay: 1.2s;
-            transition-delay: 1.2s;
-    -webkit-transition-duration: 2s;
-            transition-duration: 2s; }
-  .flowerGroup.up .one {
-    display: inline-block; }
-  .flowerGroup.up .two {
-    position: absolute;
-    top: 1em;
-    left: -3.7em;
-    -webkit-transition-delay: 1.7s;
-            transition-delay: 1.7s;
-    -webkit-transition-duration: 1s;
-            transition-duration: 1s; }
-  .flowerGroup.up .three {
-    position: absolute;
-    top: -0.5em;
-    left: -1em;
-    -webkit-transition-delay: 1.8s;
-            transition-delay: 1.8s;
-    -webkit-transition-duration: 0.8s;
-            transition-duration: 0.8s; }
-  @media (max-width: 650px) {
-    .flowerGroup.up {
-      display: none; }
-    .flowerGroup.down {
-      left: 0;
-      right: 0;
-      margin: 0 auto; }
-      .flowerGroup.down i.one,
-      .flowerGroup.down i.three,
-      .flowerGroup.down i.two {
-        display: inline-block;
-        position: relative;
-        width: 3em;
-        height: 3em;
-        top: auto;
-        left: auto;
-        right: auto; }
-        .flowerGroup.down i.one.small, .flowerGroup.down i.one.v-small,
-        .flowerGroup.down i.three.small,
-        .flowerGroup.down i.three.v-small,
-        .flowerGroup.down i.two.small,
-        .flowerGroup.down i.two.v-small {
-          width: 2em;
-          height: 2em; } }
+    left: 0;
+    right: 0;
+    margin: 0 auto; }
+    .flowerGroup.down i.one,
+    .flowerGroup.down i.three,
+    .flowerGroup.down i.two {
+      display: inline-block;
+      position: relative;
+      width: 3em;
+      height: 3em;
+      top: auto;
+      left: auto;
+      right: auto; }
+      .flowerGroup.down i.one.small, .flowerGroup.down i.one.v-small,
+      .flowerGroup.down i.three.small,
+      .flowerGroup.down i.three.v-small,
+      .flowerGroup.down i.two.small,
+      .flowerGroup.down i.two.v-small {
+        width: 2em;
+        height: 2em; } }
 
 section.second.emphasis h2 {
   margin-bottom: -0.1em;
@@ -997,7 +1035,7 @@ section.fourth.emphasis {
   section.fourth.emphasis::after {
     height: 100%;
     top: 2.5em; }
-  @media (max-width: 650px) {
+  @media (max-width: 550px) {
     section.fourth.emphasis a.likeButton {
       display: block;
       margin: 0.8em auto; } }

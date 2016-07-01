@@ -9,7 +9,9 @@ class CarPage extends Page {
 	);
 
 	private static $has_one = array(
-	  "mainImage" => "Image"
+	  "largeImage" => "Image",
+		"mediumImage" => "Image",
+		"smallImage" => "Image"
 	);
 
 	private static $has_many = array(
@@ -35,7 +37,9 @@ class CarPage extends Page {
 			GridFieldConfig_RecordEditor::create()
 		), "Metadata");
 
-		$fields->addFieldToTab("Root.Images", UploadField::create("mainImage", "Main image"));
+		$fields->addFieldToTab("Root.Images", UploadField::create("largeImage", "Large image"));
+		$fields->addFieldToTab("Root.Images", UploadField::create("mediumImage", "Medium image"));
+		$fields->addFieldToTab("Root.Images", UploadField::create("smallImage", "Small image"));
 
 		$fields->addFieldToTab("Root.Images", GridField::create(
 			"FeatureImages",
