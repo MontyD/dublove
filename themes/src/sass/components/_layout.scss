@@ -250,6 +250,12 @@ main {
 				margin-top : -4.5em;
 			}
 		}
+		.flowerGroup {
+			margin-top: 1.5em;
+			@media(max-width: $smallBP) {
+				display: none;
+			}
+		}
 	}
 }
 footer {

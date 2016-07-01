@@ -14,6 +14,11 @@
     <h1 class="main">$Name</h1>
   </section>
   <section class="emphasis overlap">
+    <div class="flowerGroup rightA topA up animate">
+      <i class="icon-Hibiscus-flip-p one animateScale"></i>
+      <i class="icon-Hibiscus-p small two animateScale"></i>
+      <i class="icon-Hibiscus-flip-p v-small three animateScale"></i>
+    </div>
     <h2>$tagLine</h2>
     <article class="thirds two centerAlign">
       $mainDescription
@@ -21,8 +26,17 @@
     <img class="thirds boxed" src="$squareImage.SetWidth(600).URL" data-src="" alt="$Name" />
   </section>
   <section>
-  <% include featureImageViewer %>
-</section>
+    <h2 class="subtleText">Photo gallery</h2>
+    <% include featureImageViewer %>
+  </section>
+  <section class="emphasis">
+    <div class="flowerGroup rightA topA up animate">
+      <i class="icon-Hibiscus-flip-p one animateScale"></i>
+      <i class="icon-Hibiscus-p small two animateScale"></i>
+      <i class="icon-Hibiscus-flip-p v-small three animateScale"></i>
+    </div>
+    <h2>Packages</h2>
+  </section>
 </main>
 
 
