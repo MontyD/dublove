@@ -20,7 +20,9 @@
     </article>
     <img class="thirds boxed" src="$squareImage.SetWidth(600).URL" data-src="" alt="$Name" />
   </section>
+  <section>
   <% include featureImageViewer %>
+</section>
 </main>
 
 

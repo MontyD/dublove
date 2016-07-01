@@ -1857,7 +1857,7 @@ header {
     .imageViewer button.imgRight {
       right: 0; }
   .imageViewer img.imgFeature {
-    display: none;
+    display: block;
     position: absolute;
     top: 50%;
     -webkit-transform: translateY(-50%);
@@ -1887,11 +1887,14 @@ header {
       opacity: 1; }
     .imageViewer img.imgFeature.left, .imageViewer img.imgFeature.right {
       display: block;
-      opacity: 0;
+      opacity: 0.6;
       -webkit-transform: translateY(-30%) scale(0.7);
               transform: translateY(-30%) scale(0.7);
       cursor: pointer;
       visibility: visible; }
+      @media (max-width: 550px) {
+        .imageViewer img.imgFeature.left, .imageViewer img.imgFeature.right {
+          opacity: 0.3; } }
     .imageViewer img.imgFeature.left {
       -webkit-transform: translateY(-50%) translateX(-110%) scale(0.7);
               transform: translateY(-50%) translateX(-110%) scale(0.7); }
