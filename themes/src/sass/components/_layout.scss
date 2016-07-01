@@ -120,12 +120,12 @@ img {
 		height  : 100%;
 		margin  : 0;
 		padding : 0;
-		z-index: -1;
+		z-index : -1;
 	}
 	h1 {
-		line-height: 350px;
+		line-height   : 350px;
 		vertical-align: middle;
-		margin: 0;
+		margin        : 0;
 		@media(min-width: $largeBP) {
 			line-height: 400px;
 		}
@@ -162,10 +162,12 @@ img {
 	box-sizing    : border-box;
 	margin-left   : 0;
 	margin-right  : 0;
-	vertical-align: top;
 	text-align    : center;
 	&.two {
 		width: 65%;
+	}
+	&.top {
+		vertical-align: top;
 	}
 	p {
 		padding       : 0;
@@ -187,10 +189,12 @@ img {
 		margin : 0.5em auto;
 	}
 }
-@media(max-width: $mediumBP) {
-	img.thirds {
+img.thirds {
+	vertical-align: baseline;
+	@media(max-width: $mediumBP) {
 		max-width: 400px;
 		width    : 80%;
+		vertical-align: middle;
 	}
 }
 header {
@@ -239,10 +243,10 @@ main {
 			margin-bottom : 0;
 			overflow      : hidden;
 			padding-top   : 2em;
-			padding-bottom: 4.5em;
+			padding-bottom: 5em;
 			&.overlap {
-				padding-top: 4.5em;
-				margin-top: -4.5em;
+				padding-top: 5.5em;
+				margin-top : -4.5em;
 			}
 		}
 	}

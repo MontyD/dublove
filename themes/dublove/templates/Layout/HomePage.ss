@@ -36,7 +36,7 @@
             <h3 class="normalFont">$Name</h3>
             <img class="boxed b-lazy" src="data:image/gif;base64,R0lGODlhAQABAAAAACH5BAEKAAEALAAAAAABAAEAAAICTAEAOw==" data-src="$mediumImage.SetWidth(400).URL" alt="$Name" />
             <p>
-              $mainDescription
+              $mainDescription.FirstParagraph()
             </p>
             <a class="likeButton" href="$Link" title="$Name">Meet $Name</a>
           </article>
@@ -47,7 +47,7 @@
     <section class="third">
       <h2>Our Packages</h2>
       <% loop $getPackagesPages() %>
-        <article class="thirds">
+        <article class="thirds top">
           <h3 class="funFont">$Name</h3>
           <p>$shortDescription</p>
           <a class="likeButton subtle" href="$Link" title="$Name">More info</a>

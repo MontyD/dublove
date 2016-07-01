@@ -50,10 +50,9 @@ section.first {
 			}
 		}
 	}
-	@media(min-width: $mediumBP) {
-		img {
-			margin-top: 1em;
-		}
+	img {
+		vertical-align: top;
+		margin-top: 1.5em;
 	}
 	@media(max-width: $mediumBP) {
 		padding: 0.1em 0 2em;
