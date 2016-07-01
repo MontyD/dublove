@@ -1,7 +1,6 @@
 var debounce = require('./components/_debounce');
 var scrollEvents = require('./components/_scrollEvents');
 var scrollAnimations = require('./components/_scrollAnimations');
-var imgViewer = require('./components/_imgViewer');
 var addDateToFooter = require('./components/_addDateToFooter');
 var setActive = require('./components/_setActive');
 var Blazy = require('./vendor/blazy.min');

@@ -7,7 +7,8 @@ module.exports = function(grunt) {
         webpack: {
             initial: {
                 entry: {
-                    homePage: path.resolve(__dirname, 'src', 'js', 'homePage.js')
+                    homePage: path.resolve(__dirname, 'src', 'js', 'homePage.js'),
+                    page: path.resolve(__dirname, 'src', 'js', 'page.js')
                 },
                 output: {
                     filename: '[name].js',

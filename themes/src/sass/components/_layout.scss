@@ -241,6 +241,7 @@ main {
 			padding-top   : 2em;
 			padding-bottom: 4.5em;
 			&.overlap {
+				padding-top: 4.5em;
 				margin-top: -4.5em;
 			}
 		}

@@ -34,7 +34,7 @@
         <% loop $getCarPages() %>
           <article class="halves centerAlign">
             <h3 class="normalFont">$Name</h3>
-            <img class="boxed b-lazy" src="data:image/gif;base64,R0lGODlhAQABAAAAACH5BAEKAAEALAAAAAABAAEAAAICTAEAOw==" data-src="$mainImage.SetWidth(400).URL" alt="$Name" />
+            <img class="boxed b-lazy" src="data:image/gif;base64,R0lGODlhAQABAAAAACH5BAEKAAEALAAAAAABAAEAAAICTAEAOw==" data-src="$mediumImage.SetWidth(400).URL" alt="$Name" />
             <p>
               $mainDescription
             </p>
