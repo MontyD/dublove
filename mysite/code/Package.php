@@ -4,8 +4,7 @@ class Package extends DataObject {
 
   private static $db = array(
     "Name" => "Varchar",
-    "ShortDescription" => "Text",
-    "Description" => "HTMLText",
+    "Description" => "HTMLText"
   );
 
   private static $has_one = array(
@@ -22,7 +21,6 @@ class Package extends DataObject {
   public function getCMSFields() {
     $fields = FieldList::create(
       TextField::create("Name"),
-      TextareaField::create("ShortDescription"),
       HtmlEditorField::create("Description"),
       $uploader = UploadField::create("Photo")
     );

@@ -530,6 +530,11 @@ img {
       .thirds.two {
         width: 90%; } }
 
+.innerModal {
+  display: block;
+  margin: 1em auto;
+  width: 90%; }
+
 img.thirds {
   vertical-align: baseline; }
   @media (max-width: 1000px) {
@@ -740,6 +745,14 @@ input[type="submit"] {
   input[type="submit"].small {
     padding: 0.2em 0.8em;
     font-size: 1em; }
+
+.innerModal {
+  background: #FFFFFF;
+  box-shadow: 0 1.5px 4px rgba(0, 0, 0, 0.24), 0 1.5px 6px rgba(0, 0, 0, 0.12); }
+  .innerModal h3 {
+    padding: 0.2em 0.4em;
+    text-align: left;
+    font-size: 2.6em; }
 
 img.boxed {
   padding: 0.4em;
@@ -1467,6 +1480,11 @@ img {
       .thirds.two {
         width: 90%; } }
 
+.innerModal {
+  display: block;
+  margin: 1em auto;
+  width: 90%; }
+
 img.thirds {
   vertical-align: baseline; }
   @media (max-width: 1000px) {
@@ -1678,6 +1696,14 @@ input[type="submit"] {
     padding: 0.2em 0.8em;
     font-size: 1em; }
 
+.innerModal {
+  background: #FFFFFF;
+  box-shadow: 0 1.5px 4px rgba(0, 0, 0, 0.24), 0 1.5px 6px rgba(0, 0, 0, 0.12); }
+  .innerModal h3 {
+    padding: 0.2em 0.4em;
+    text-align: left;
+    font-size: 2.6em; }
+
 img.boxed {
   padding: 0.4em;
   background: #FFFFFF;
@@ -1846,7 +1872,7 @@ header {
   display: block;
   position: relative;
   width: 100%;
-  margin: 0 auto 2em;
+  margin: 1em auto 0.5em;
   padding: 0.5em;
   height: 300px; }
   @media (max-width: 550px) {

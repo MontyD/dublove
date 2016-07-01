@@ -189,6 +189,11 @@ img {
 		margin : 0.5em auto;
 	}
 }
+.innerModal {
+	display: block;
+	margin: 1em auto;
+	width: 90%;
+}
 img.thirds {
 	vertical-align: baseline;
 	@media(max-width: $mediumBP) {

@@ -23,10 +23,9 @@
     <article class="thirds two centerAlign">
       $mainDescription
     </article>
-    <img class="thirds boxed" src="$squareImage.SetWidth(600).URL" data-src="" alt="$Name" />
+    <img class="thirds boxed b-lazy" src="data:image/gif;base64,R0lGODlhAQABAAAAACH5BAEKAAEALAAAAAABAAEAAAICTAEAOw==" data-src="$squareImage.SetWidth(600).URL" alt="$Name" />
   </section>
   <section>
-    <h2 class="subtleText">Photo gallery</h2>
     <% include featureImageViewer %>
   </section>
   <section class="emphasis">
@@ -36,6 +35,15 @@
       <i class="icon-Hibiscus-flip-p v-small three animateScale"></i>
     </div>
     <h2>Packages</h2>
+    <% loop $Packages %>
+      <article class="innerModal $EvenOdd">
+        <div class="halves">
+          <h3>$Name</h3>
+          $Description
+        </div>
+        <img class="b-lazy halves" src="data:image/gif;base64,R0lGODlhAQABAAAAACH5BAEKAAEALAAAAAABAAEAAAICTAEAOw==" data-src="$Photo.SetWidth(600).URL" alt="$Name" />
+      </article>
+    <% end_loop %>
   </section>
 </main>
 
