@@ -203,15 +203,22 @@ img {
 			line-height: 130%;
 		}
 	}
-	.halfWidthImgContainer {
+	.imageContainer {
 		display : block;
 		position: relative;
 		height  : 100%;
 		width   : 100%;
 		top     : 0;
 		left    : 0;
-		padding : 2.5em 0;
+		padding : 0;
 		z-index : 1;
+		overflow: hidden;
+		&.hide {
+			display: none;
+			.img {
+				opacity: 1;
+			}
+		}
 	}
 	.img {
 		position       : absolute;
@@ -231,11 +238,32 @@ img {
 		box-sizing: border-box;
 		padding   : 2em 0.8em;
 	}
+	img {
+		margin: 0.5em auto;
+		width : 80%;
+	}
+	h2.topHeading {
+		margin-top: 0;
+	}
 	@media(min-width: $mediumBP) {
 		text-align: left;
-		.halfWidthImgContainer {
+		.imageContainer {
 			position: absolute;
 			width   : 50%;
+			&.hide {
+				display: block;
+			}
+			img {
+				position: absolute;
+				top: 0;
+				height   : 100%;
+				width    : auto;
+				max-width: initial;
+				padding  : 0;
+				margin   : 0;
+				left: 50%;
+				transform: translateX(-50%);
+			}
 		}
 		.content {
 			margin    : 0;
@@ -262,9 +290,6 @@ img {
 			z-index   : 10;
 			width     : 80%;
 			text-align: center;
-			h2 {
-				margin-top: 0;
-			}
 			h3 {
 				width : 90%;
 				margin: 5% auto;
@@ -369,5 +394,13 @@ footer {
 	i {
 		opacity  : 1;
 		transform: scale(1);
+	}
+}
+.break {
+	display: none;
+	&Medium {
+		@media(max-width: $mediumBP) {
+			display: block;
+		}
 	}
 }

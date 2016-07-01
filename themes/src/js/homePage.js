@@ -15,10 +15,15 @@ var homePage = (function() {
 
   addDateToFooter();
 
+  window.addEventListener('resize', function(){
+    debounce(bLazy.revalidate(), 100);
+  },false);
+
   window.addEventListener('scroll', function() {
     debounce(scrollEvents(scrollAnimations), 50);
   }, false);
 
+  bLazy.revalidate();
 
 })();
 

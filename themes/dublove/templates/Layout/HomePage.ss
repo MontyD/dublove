@@ -21,9 +21,11 @@
         <div class="content">
           <h2 class="topHeading">$sectionOneHeading</h2>
           $sectionOneText
+          <img class="boxed b-lazy breakMedium break" src="data:image/gif;base64,R0lGODlhAQABAAAAACH5BAEKAAEALAAAAAABAAEAAAICTAEAOw==" data-src="$sectionOneImage.SetWidth(700).URL" alt="$sectionOneHeading" />
         </div>
-        <div class="halfWidthImgContainer">
-          <div class="img" style="background-image: url($sectionOneImage.SetWidth(800).URL)"></div>
+        <div class="imageContainer hide">
+          <!-- <div class="img" style="background-image: url($sectionOneImage.SetWidth(800).URL)"></div> -->
+          <img class="b-lazy" src="data:image/gif;base64,R0lGODlhAQABAAAAACH5BAEKAAEALAAAAAABAAEAAAICTAEAOw==" data-src="$sectionOneImage.SetWidth(700).URL" alt="$sectionOneHeading" />
         </div>
       </article>
     </section>

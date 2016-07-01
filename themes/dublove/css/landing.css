@@ -542,15 +542,20 @@ img {
     .innerModal .title h3 {
       margin: 0.5em;
       line-height: 130%; }
-  .innerModal .halfWidthImgContainer {
+  .innerModal .imageContainer {
     display: block;
     position: relative;
     height: 100%;
     width: 100%;
     top: 0;
     left: 0;
-    padding: 2.5em 0;
-    z-index: 1; }
+    padding: 0;
+    z-index: 1;
+    overflow: hidden; }
+    .innerModal .imageContainer.hide {
+      display: none; }
+      .innerModal .imageContainer.hide .img {
+        opacity: 1; }
   .innerModal .img {
     position: absolute;
     top: 0;
@@ -567,12 +572,30 @@ img {
     width: 100%;
     box-sizing: border-box;
     padding: 2em 0.8em; }
+  .innerModal img {
+    margin: 0.5em auto;
+    width: 80%; }
+  .innerModal h2.topHeading {
+    margin-top: 0; }
   @media (min-width: 1000px) {
     .innerModal {
       text-align: left; }
-      .innerModal .halfWidthImgContainer {
+      .innerModal .imageContainer {
         position: absolute;
         width: 50%; }
+        .innerModal .imageContainer.hide {
+          display: block; }
+        .innerModal .imageContainer img {
+          position: absolute;
+          top: 0;
+          height: 100%;
+          width: auto;
+          max-width: initial;
+          padding: 0;
+          margin: 0;
+          left: 50%;
+          -webkit-transform: translateX(-50%);
+                  transform: translateX(-50%); }
       .innerModal .content {
         margin: 0;
         left: 50%;
@@ -678,6 +701,12 @@ footer {
   opacity: 1;
   -webkit-transform: scale(1);
           transform: scale(1); }
+
+.break {
+  display: none; }
+  @media (max-width: 1000px) {
+    .breakMedium {
+      display: block; } }
 
 body {
   font-family: "Josefin Sans", sans-serif;
