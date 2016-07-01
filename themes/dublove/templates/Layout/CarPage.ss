@@ -50,6 +50,9 @@
       </article>
     <% end_loop %>
   </section>
+  <section class="last">
+      <p class="strongText">Not found what you're looking for? Have a look at our other packages:<a class="likeButton small" href="contact" title="Conctact us!">Packages</a></p>
+  </section>
 </main>
 
 
