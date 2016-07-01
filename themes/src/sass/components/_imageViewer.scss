@@ -40,8 +40,8 @@
 		border-radius: 3px;
 		opacity      : 0;
 		visibility   : hidden;
-		max-height   : 90%;
-		max-width    : 550px;
+		max-width    : 600px;
+		max-height   : 95%;
 		@include shadow(1);
 		transition   : all 0.3s ease;
 		@media(max-width: $mediumBP) {

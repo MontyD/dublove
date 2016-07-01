@@ -2088,8 +2088,8 @@ header {
     border-radius: 3px;
     opacity: 0;
     visibility: hidden;
-    max-height: 90%;
-    max-width: 550px;
+    max-width: 600px;
+    max-height: 95%;
     box-shadow: 0 1.5px 4px rgba(0, 0, 0, 0.24), 0 1.5px 6px rgba(0, 0, 0, 0.12);
     -webkit-transition: all 0.3s ease;
     transition: all 0.3s ease; }
