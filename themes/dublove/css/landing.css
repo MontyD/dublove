@@ -533,7 +533,7 @@ img {
 .innerModal {
   display: block;
   position: relative;
-  margin: 1em auto;
+  margin: 1.5em auto 3em;
   width: 90%;
   text-align: left;
   overflow: hidden; }
@@ -553,9 +553,9 @@ img {
     width: 50%;
     box-sizing: border-box;
     padding: 2em 0.8em; }
-  .innerModal .even .halfWidthImgContainer {
+  .innerModal.even .halfWidthImgContainer {
     left: 50%; }
-  .innerModal .even .content {
+  .innerModal.even .content {
     left: 0; }
   .innerModal .img {
     position: absolute;
@@ -568,7 +568,7 @@ img {
     opacity: 0.6; }
   .innerModal .title {
     position: absolute;
-    top: 50%;
+    top: 45%;
     -webkit-transform: translateY(-50%);
             transform: translateY(-50%);
     margin: 0 auto;
@@ -579,7 +579,8 @@ img {
     text-align: center; }
     .innerModal .title h3 {
       width: 90%;
-      margin: 25% auto; }
+      margin: 5% auto;
+      line-height: 130%; }
   .innerModal .likeButton {
     display: block;
     margin: 0.5em auto;

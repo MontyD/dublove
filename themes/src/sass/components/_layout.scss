@@ -192,7 +192,7 @@ img {
 .innerModal {
 	display   : block;
 	position  : relative;
-	margin    : 1em auto;
+	margin: 1.5em auto 3em;
 	width     : 90%;
 	text-align: left;
 	overflow  : hidden;
@@ -214,7 +214,7 @@ img {
 		box-sizing: border-box;
 		padding   : 2em 0.8em;
 	}
-	.even {
+	&.even {
 		.halfWidthImgContainer {
 			left: 50%;
 		}
@@ -234,7 +234,7 @@ img {
 	}
 	.title {
 		position  : absolute;
-		top       : 50%;
+		top       : 45%;
 		transform : translateY(-50%);
 		margin    : 0 auto;
 		left      : 0;
@@ -245,6 +245,7 @@ img {
 		h3 {
 			width : 90%;
 			margin: 5% auto;
+			line-height: 130%;
 		}
 	}
 	.likeButton {
