@@ -10,8 +10,7 @@
     <div class="large img" style="background-image: url('$largeImage.SetWidth(1200).URL')"></div>
     <div class="medium img" style="background-image: url('$mediumImage.SetWidth(900).URL')"></div>
     <div class="small img" style="background-image: url('$smallImage.SetWidth(700).URL')"></div>
-    <div class="overlayPurple overlay"></div>
-    <h1 class="main">$Name</h1>
+    <h1 class="carTitle">$Name</h1>
   </section>
   <section class="emphasis overlap">
     <div class="flowerGroup rightA topA up animate">
@@ -23,7 +22,7 @@
     <article class="thirds two centerAlign">
       $mainDescription
     </article>
-    <img class="thirds boxed b-lazy" src="data:image/gif;base64,R0lGODlhAQABAAAAACH5BAEKAAEALAAAAAABAAEAAAICTAEAOw==" data-src="$squareImage.SetWidth(600).URL" alt="$Name" />
+    <img class="thirds boxed b-lazy" src="data:image/gif;base64,R0lGODlhAQABAAAAACH5BAEKAAEALAAAAAABAAEAAAICTAEAOw==" data-src="$squareImage.SetWidth(700).URL" alt="$Name" />
   </section>
   <section>
     <% include featureImageViewer %>
@@ -51,7 +50,7 @@
     <% end_loop %>
   </section>
   <section class="last">
-      <p class="strongText">Not found what you're looking for? Have a look at our other packages:<a class="likeButton small" href="contact" title="Conctact us!">Packages</a></p>
+      <p class="strongText">Not found what you're looking for? Have a look at our other packages:<a class="likeButton small" href="packages" title="Conctact us!">Packages</a></p>
   </section>
 </main>
 

@@ -79,6 +79,19 @@ h1 {
 			font-size: 7.5em;
 		}
 	}
+	&.carTitle {
+		letter-spacing: 3px;
+		font-size     : 5em;
+		color         : $colorWhite;
+		background: $colorOverlay;
+		@include darkShadow;
+		@media(min-width: $mediumBP) {
+			font-size: 5.5em;
+		}
+		@media(min-width: $largeBP) {
+			font-size: 7.5em;
+		}
+	}
 }
 h2 {
 	font-weight: normal;
