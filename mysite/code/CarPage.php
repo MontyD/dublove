@@ -4,14 +4,14 @@ class CarPage extends Page {
 
 	private static $db = array(
 		"Name" => "Varchar",
-		"tagLine" => "Varchar",
 		"mainDescription" => "HTMLText"
 	);
 
 	private static $has_one = array(
 	  "largeImage" => "Image",
 		"mediumImage" => "Image",
-		"smallImage" => "Image"
+		"smallImage" => "Image",
+		"squareImage" => "Image"
 	);
 
 	private static $has_many = array(
@@ -26,8 +26,6 @@ class CarPage extends Page {
 
 		$fields->addFieldToTab("Root.Main", TextField::create("Name", "Name"), "Metadata");
 
-		$fields->addFieldToTab("Root.Main", TextField::create("tagLine", "Tag Line"), "Metadata");
-
 		$fields->addFieldToTab("Root.Main", HtmlEditorField::create("mainDescription", "Description"), "Metadata");
 
 		$fields->addFieldToTab("Root.Main", GridField::create(
@@ -40,6 +38,7 @@ class CarPage extends Page {
 		$fields->addFieldToTab("Root.Images", UploadField::create("largeImage", "Large image"));
 		$fields->addFieldToTab("Root.Images", UploadField::create("mediumImage", "Medium image"));
 		$fields->addFieldToTab("Root.Images", UploadField::create("smallImage", "Small image"));
+		$fields->addFieldToTab("Root.Main", UploadField::create("squareImage", "Square image"), "Metadata");
 
 		$fields->addFieldToTab("Root.Images", GridField::create(
 			"FeatureImages",

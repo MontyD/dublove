@@ -1,4 +1,4 @@
-<footer class="dark centerAlign">
+<footer class="centerAlign">
   <h3>DubLove</h3>
   <p class="subtleText">Any additional information goes here</p>
   <p class="subtleText">Contact details</p>

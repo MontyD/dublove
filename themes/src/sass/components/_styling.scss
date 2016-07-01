@@ -78,7 +78,7 @@ h1 {
 		@media(min-width: $largeBP) {
 			font-size: 7.5em;
 		}
-	}	
+	}
 }
 h2 {
 	font-weight: normal;
@@ -216,6 +216,8 @@ main {
 	}
 }
 footer {
+	background: $colorDark;
+	color  : $colorWhite;
 	.subtleText {
 		color  : $colorWhite;
 		margin : 0 auto;
@@ -246,7 +248,7 @@ span.funFont {
 	background: $colorOverlay;
 }
 header {
-	background: rgba(53, 28, 104, 0.72);
+	background: $colorDark;
 	color     : $colorWhite;
 	nav {
 		a {
