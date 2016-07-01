@@ -10,7 +10,7 @@ $colorBackground: rgb(229, 231, 218);
 $colorGrey: #757575;
 $colorWhite: #FFFFFF;
 $colorLightGrey: #f1f1f1;
-$colorOverlay: rgba(90, 48, 146, 0.4);
+$colorOverlay: rgba(90, 48, 146, 0.55);
 $colorBlack: #212121;
 $funFont: 'Bad Script', sans-serif;
 $normalFont: 'Josefin Sans', sans-serif;
@@ -179,15 +179,15 @@ input[type="submit"] {
 	border-radius: 0.3em;
 	@include shadow(1);
 	h3 {
-		padding   : 0.4em 0 0;
-		text-align: left;
-		font-size : 2.4em;
+		font-size: 3em;
+		@include darkShadow;
 	}
 	p {
 		text-align: left;
 	}
 	.title {
 		background: $colorOverlay;
+		color     : $colorWhite;
 	}
 }
 img.boxed {

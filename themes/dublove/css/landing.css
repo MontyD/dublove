@@ -565,15 +565,25 @@ img {
     height: 100%;
     background-size: cover;
     z-index: 0;
-    opacity: 0.7; }
+    opacity: 0.6; }
   .innerModal .title {
     position: absolute;
-    top: 5%;
+    top: 50%;
+    -webkit-transform: translateY(-50%);
+            transform: translateY(-50%);
     margin: 0 auto;
     left: 0;
     right: 0;
     z-index: 10;
     width: 80%;
+    text-align: center; }
+    .innerModal .title h3 {
+      width: 90%;
+      margin: 25% auto; }
+  .innerModal .likeButton {
+    display: block;
+    margin: 0.5em auto;
+    width: 120px;
     text-align: center; }
 
 img.thirds {
@@ -792,11 +802,13 @@ input[type="submit"] {
   border-radius: 0.3em;
   box-shadow: 0 1.5px 4px rgba(0, 0, 0, 0.24), 0 1.5px 6px rgba(0, 0, 0, 0.12); }
   .innerModal h3 {
-    padding: 0.4em 0 0;
-    text-align: left;
-    font-size: 2.4em; }
+    font-size: 3em;
+    text-shadow: 1px 1px 0 rgba(0, 0, 0, 0.8); }
   .innerModal p {
     text-align: left; }
+  .innerModal .title {
+    background: rgba(90, 48, 146, 0.55);
+    color: #FFFFFF; }
 
 img.boxed {
   padding: 0.4em;
@@ -866,7 +878,7 @@ span.funFont {
   color: #FFFFFF; }
 
 .overlayPurple {
-  background: rgba(90, 48, 146, 0.4); }
+  background: rgba(90, 48, 146, 0.55); }
 
 header {
   background: #504978;
@@ -994,7 +1006,7 @@ header {
 
 header {
   height: 600px;
-  background: rgba(90, 48, 146, 0.4);
+  background: rgba(90, 48, 146, 0.55);
   box-sizing: border-box; }
   header:before {
     content: ' ';

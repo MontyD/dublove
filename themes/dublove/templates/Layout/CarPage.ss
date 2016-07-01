@@ -39,10 +39,13 @@
       <article class="innerModal $EvenOdd">
         <div class="halfWidthImgContainer">
           <div class="img" style="background-image: url($Photo.SetWidth(600).URL)"></div>
-          <div class="title"><h3 class="white">$Name</h3></div>
+          <div class="title">
+            <h3 class="white">$Name</h3>
+          </div>
         </div>
         <div class="content">
           $Description
+          <a class="likeButton subtle" href="#" title="Book now">Book now</a>
         </div>
       </article>
     <% end_loop %>
