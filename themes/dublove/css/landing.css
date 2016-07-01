@@ -421,8 +421,34 @@ img {
 .image.fullWidth {
   height: 400px;
   background-repeat: no-repeat;
-  background-size: auto;
+  background-size: cover;
   width: 100%; }
+
+.fullWidthImgContainer {
+  position: relative;
+  display: block;
+  height: 400px;
+  margin: 0 auto; }
+  .fullWidthImgContainer .img {
+    display: block;
+    width: 100%;
+    height: 100%;
+    padding: 0;
+    margin: 0;
+    background-repeat: no-repeat;
+    background-size: cover; }
+  .fullWidthImgContainer .small, .fullWidthImgContainer .medium {
+    display: none; }
+  @media (max-width: 1100px) {
+    .fullWidthImgContainer .large {
+      display: none; }
+    .fullWidthImgContainer .medium {
+      display: block; } }
+  @media (max-width: 900px) {
+    .fullWidthImgContainer .medium {
+      display: none; }
+    .fullWidthImgContainer .small {
+      display: block; } }
 
 .halves {
   display: inline-block;
@@ -462,7 +488,7 @@ img {
     margin: 1em auto;
     vertical-align: top;
     width: 100%;
-    text-align: justify; }
+    text-align: center; }
   .thirds h3 {
     margin: 0 auto;
     font-size: 2.2em; }

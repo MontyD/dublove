@@ -62,8 +62,42 @@ img {
 	&.fullWidth {
 		height           : 400px;
 		background-repeat: no-repeat;
-		background-size  : auto;
+		background-size  : cover;
 		width            : 100%;
+	}
+}
+.fullWidthImgContainer {
+	position: relative;
+	display: block;
+	height: 400px;
+	margin: 0 auto;
+	.img {
+		display: block;
+		width: 100%;
+		height: 100%;
+		padding: 0;
+		margin: 0;
+		background-repeat: no-repeat;
+		background-size: cover;
+	}
+	.small, .medium {
+		display: none;
+	}
+	@media(max-width: $largeBP) {
+		.large {
+			display: none;
+		}
+		.medium {
+			display: block;
+		}
+	}
+	@media(max-width: $mediumBP) {
+		.medium {
+			display: none;
+		}
+		.small {
+			display: block;
+		}
 	}
 }
 .halves {
@@ -107,7 +141,7 @@ img {
 		margin        : 1em auto;
 		vertical-align: top;
 		width         : 100%;
-		text-align    : justify;
+		text-align    : center;
 	}
 	h3 {
 		margin   : 0 auto;
