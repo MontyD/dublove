@@ -36,13 +36,14 @@
     <h2>Packages</h2>
     <% loop $Packages %>
       <article class="innerModal $EvenOdd">
-        <div class="halfWidthImgContainer">
-          <div class="img" style="background-image: url($Photo.SetWidth(600).URL)"></div>
+        <div class="imageContainer">
+          <img class="b-lazy" src="data:image/gif;base64,R0lGODlhAQABAAAAACH5BAEKAAEALAAAAAABAAEAAAICTAEAOw==" data-src="$Photo.SetWidth(700).URL" alt="$Name" />
           <div class="title">
             <h3 class="white">$Name</h3>
           </div>
         </div>
         <div class="content">
+          <img class="boxed b-lazy breakMedium break" src="data:image/gif;base64,R0lGODlhAQABAAAAACH5BAEKAAEALAAAAAABAAEAAAICTAEAOw==" data-src="$Photo.SetWidth(700).URL" alt="$Name" />
           $Description
           <a class="likeButton subtle" href="#" title="Book now">Book now</a>
         </div>

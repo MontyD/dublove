@@ -537,11 +537,16 @@ img {
   text-align: center;
   overflow: hidden; }
   .innerModal .title {
-    display: inline-block;
-    max-width: 90%; }
+    display: block;
+    max-width: 100%;
+    margin: 0 auto;
+    background: transparent; }
     .innerModal .title h3 {
       margin: 0.5em;
-      line-height: 130%; }
+      line-height: 130%;
+      margin: 0;
+      padding: 0.4em 0 0.3em;
+      font-size: 2.0em; }
   .innerModal .imageContainer {
     display: block;
     position: relative;
@@ -554,24 +559,14 @@ img {
     overflow: hidden; }
     .innerModal .imageContainer.hide {
       display: none; }
-      .innerModal .imageContainer.hide .img {
-        opacity: 1; }
-  .innerModal .img {
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    background-size: cover;
-    z-index: 0;
-    opacity: 0.6;
-    z-index: -1; }
+    .innerModal .imageContainer img {
+      display: none; }
   .innerModal .content {
     position: relative;
-    margin: 1.5em auto;
+    margin: 1em auto 1.5em;
     width: 100%;
     box-sizing: border-box;
-    padding: 2em 0.8em; }
+    padding: 0.5em 0.8em 2em; }
   .innerModal img {
     margin: 0.5em auto;
     width: 80%; }
@@ -586,6 +581,7 @@ img {
         .innerModal .imageContainer.hide {
           display: block; }
         .innerModal .imageContainer img {
+          display: block;
           position: absolute;
           top: 0;
           height: 100%;
@@ -602,7 +598,7 @@ img {
         width: 50%;
         box-sizing: border-box;
         padding: 2em 0.8em; }
-      .innerModal.even .halfWidthImgContainer {
+      .innerModal.even .imageContainer {
         left: 50%; }
       .innerModal.even .content {
         left: 0; }
@@ -619,7 +615,8 @@ img {
         text-align: center; }
         .innerModal .title h3 {
           width: 90%;
-          margin: 5% auto; }
+          margin: 5% auto;
+          font-size: 2.8em; }
       .innerModal .likeButton {
         display: block;
         margin: 0.5em auto;
@@ -867,7 +864,11 @@ input[type="submit"] {
   box-shadow: 0 1.5px 4px rgba(0, 0, 0, 0.24), 0 1.5px 6px rgba(0, 0, 0, 0.12); }
   .innerModal h3 {
     font-size: 3em;
+    background: #504978;
     text-shadow: 1px 1px 0 rgba(0, 0, 0, 0.8); }
+    @media (min-width: 1000px) {
+      .innerModal h3 {
+        background: transparent; } }
   .innerModal p {
     text-align: left; }
   .innerModal .title {
@@ -1607,11 +1608,16 @@ img {
   text-align: center;
   overflow: hidden; }
   .innerModal .title {
-    display: inline-block;
-    max-width: 90%; }
+    display: block;
+    max-width: 100%;
+    margin: 0 auto;
+    background: transparent; }
     .innerModal .title h3 {
       margin: 0.5em;
-      line-height: 130%; }
+      line-height: 130%;
+      margin: 0;
+      padding: 0.4em 0 0.3em;
+      font-size: 2.0em; }
   .innerModal .imageContainer {
     display: block;
     position: relative;
@@ -1624,24 +1630,14 @@ img {
     overflow: hidden; }
     .innerModal .imageContainer.hide {
       display: none; }
-      .innerModal .imageContainer.hide .img {
-        opacity: 1; }
-  .innerModal .img {
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    background-size: cover;
-    z-index: 0;
-    opacity: 0.6;
-    z-index: -1; }
+    .innerModal .imageContainer img {
+      display: none; }
   .innerModal .content {
     position: relative;
-    margin: 1.5em auto;
+    margin: 1em auto 1.5em;
     width: 100%;
     box-sizing: border-box;
-    padding: 2em 0.8em; }
+    padding: 0.5em 0.8em 2em; }
   .innerModal img {
     margin: 0.5em auto;
     width: 80%; }
@@ -1656,6 +1652,7 @@ img {
         .innerModal .imageContainer.hide {
           display: block; }
         .innerModal .imageContainer img {
+          display: block;
           position: absolute;
           top: 0;
           height: 100%;
@@ -1672,7 +1669,7 @@ img {
         width: 50%;
         box-sizing: border-box;
         padding: 2em 0.8em; }
-      .innerModal.even .halfWidthImgContainer {
+      .innerModal.even .imageContainer {
         left: 50%; }
       .innerModal.even .content {
         left: 0; }
@@ -1689,7 +1686,8 @@ img {
         text-align: center; }
         .innerModal .title h3 {
           width: 90%;
-          margin: 5% auto; }
+          margin: 5% auto;
+          font-size: 2.8em; }
       .innerModal .likeButton {
         display: block;
         margin: 0.5em auto;
@@ -1937,7 +1935,11 @@ input[type="submit"] {
   box-shadow: 0 1.5px 4px rgba(0, 0, 0, 0.24), 0 1.5px 6px rgba(0, 0, 0, 0.12); }
   .innerModal h3 {
     font-size: 3em;
+    background: #504978;
     text-shadow: 1px 1px 0 rgba(0, 0, 0, 0.8); }
+    @media (min-width: 1000px) {
+      .innerModal h3 {
+        background: transparent; } }
   .innerModal p {
     text-align: left; }
   .innerModal .title {

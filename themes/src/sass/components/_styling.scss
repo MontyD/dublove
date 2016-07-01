@@ -193,7 +193,11 @@ input[type="submit"] {
 	@include shadow(1);
 	h3 {
 		font-size: 3em;
+		background : $colorDark;
 		@include darkShadow;
+		@media(min-width: $mediumBP) {
+			background: transparent;
+		}
 	}
 	p {
 		text-align: left;

@@ -22,6 +22,9 @@ var page = (function(){
     debounce(scrollEvents(scrollAnimations), 50);
   }, false);
 
+  window.addEventListener('resize', function(){
+    debounce(bLazy.revalidate(), 100);
+  },false);
 
 })();
 

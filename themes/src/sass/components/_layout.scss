@@ -196,11 +196,16 @@ img {
 	text-align: center;
 	overflow  : hidden;
 	.title {
-		display  : inline-block;
-		max-width: 90%;
+		display  : block;
+		max-width: 100%;
+		margin   : 0 auto;
+		background: transparent;
 		h3 {
 			margin     : 0.5em;
 			line-height: 130%;
+			margin     : 0;
+			padding    : 0.4em 0 0.3em;
+			font-size: 2.0em;
 		}
 	}
 	.imageContainer {
@@ -215,28 +220,17 @@ img {
 		overflow: hidden;
 		&.hide {
 			display: none;
-			.img {
-				opacity: 1;
-			}
 		}
-	}
-	.img {
-		position       : absolute;
-		top            : 0;
-		left           : 0;
-		width          : 100%;
-		height         : 100%;
-		background-size: cover;
-		z-index        : 0;
-		opacity        : 0.6;
-		z-index        : -1;
+		img {
+			display: none;
+		}
 	}
 	.content {
 		position  : relative;
-		margin    : 1.5em auto;
+		margin    : 1em auto 1.5em;
 		width     : 100%;
 		box-sizing: border-box;
-		padding   : 2em 0.8em;
+		padding   : 0.5em 0.8em 2em;
 	}
 	img {
 		margin: 0.5em auto;
@@ -254,14 +248,15 @@ img {
 				display: block;
 			}
 			img {
-				position: absolute;
-				top: 0;
+				display  : block;
+				position : absolute;
+				top      : 0;
 				height   : 100%;
 				width    : auto;
 				max-width: initial;
 				padding  : 0;
 				margin   : 0;
-				left: 50%;
+				left     : 50%;
 				transform: translateX(-50%);
 			}
 		}
@@ -273,7 +268,7 @@ img {
 			padding   : 2em 0.8em;
 		}
 		&.even {
-			.halfWidthImgContainer {
+			.imageContainer {
 				left: 50%;
 			}
 			.content {
@@ -293,6 +288,7 @@ img {
 			h3 {
 				width : 90%;
 				margin: 5% auto;
+				font-size: 2.8em;
 			}
 		}
 		.likeButton {
