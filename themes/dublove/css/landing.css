@@ -495,7 +495,7 @@ img {
   .halves h3 {
     margin-top: 0;
     font-size: 2.2em; }
-  @media (max-width: 900px) {
+  @media (max-width: 1000px) {
     .halves {
       display: block;
       width: 90%;
@@ -522,7 +522,7 @@ img {
   .thirds h3 {
     margin: 0 auto;
     font-size: 2.2em; }
-  @media (max-width: 900px) {
+  @media (max-width: 1000px) {
     .thirds {
       display: block;
       width: 90%;
@@ -532,7 +532,7 @@ img {
 
 img.thirds {
   vertical-align: baseline; }
-  @media (max-width: 900px) {
+  @media (max-width: 1000px) {
     img.thirds {
       max-width: 400px;
       width: 80%;
@@ -578,7 +578,8 @@ main {
       padding-top: 2em;
       padding-bottom: 5em; }
       main section.emphasis.overlap {
-        padding-top: 4.5em;
+        padding-top: 5em;
+        padding-bottom: 6em;
         margin-top: -4.5em; }
 
 footer {
@@ -618,7 +619,7 @@ h1 {
     font-size: 5em;
     color: #FFFFFF;
     text-shadow: 1px 1px 0 rgba(0, 0, 0, 0.8); }
-    @media (min-width: 900px) {
+    @media (min-width: 1000px) {
       h1.main {
         font-size: 5.5em; } }
     @media (min-width: 1100px) {
@@ -977,7 +978,7 @@ section.first {
   section.first img {
     vertical-align: top;
     margin-top: 1.5em; }
-  @media (max-width: 900px) {
+  @media (max-width: 1000px) {
     section.first {
       padding: 0.1em 0 2em; }
       section.first .thirds.two {
@@ -1025,10 +1026,10 @@ section.second.emphasis h2 {
   text-shadow: 1px 1px 0 rgba(255, 255, 255, 0.8); }
 section.second.emphasis .flowerGroup {
   top: 2.5em; }
-  @media (max-width: 900px) {
+  @media (max-width: 1000px) {
     section.second.emphasis .flowerGroup {
       display: none; } }
-@media (max-width: 900px) {
+@media (max-width: 1000px) {
   section.second.emphasis {
     padding-bottom: 1em; }
     section.second.emphasis::after {

@@ -1,7 +1,7 @@
 @import "normalize";
 $containerWidth: 1100px;
 $largeBP: 1100px;
-$mediumBP: 900px;
+$mediumBP: 1000px;
 $smallBP: 550px;
 .leftA {
 	position: absolute;
@@ -245,7 +245,8 @@ main {
 			padding-top   : 2em;
 			padding-bottom: 5em;
 			&.overlap {
-				padding-top: 5.5em;
+				padding-top: 5em;
+				padding-bottom: 6em;
 				margin-top : -4.5em;
 			}
 		}

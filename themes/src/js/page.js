@@ -16,6 +16,8 @@ var page = (function(){
 
   addDateToFooter();
 
+  imgViewer(bLazy);
+
   window.addEventListener('scroll', function() {
     debounce(scrollEvents(scrollAnimations), 50);
   }, false);

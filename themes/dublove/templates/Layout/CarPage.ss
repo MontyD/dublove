@@ -14,12 +14,13 @@
     <h1 class="main">$Name</h1>
   </section>
   <section class="emphasis overlap">
+    <h2>$tagLine</h2>
     <article class="thirds two centerAlign">
       $mainDescription
     </article>
     <img class="thirds boxed" src="$squareImage.SetWidth(600).URL" data-src="" alt="$Name" />
   </section>
-  $content
+  <% include featureImageViewer %>
 </main>
 
 

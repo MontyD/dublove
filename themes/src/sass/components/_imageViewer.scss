@@ -58,13 +58,10 @@
         &.left,
         &.right {
             display   : block;
-            opacity   : 0.5;
+            opacity   : 0;
             transform : translateY(-30%) scale(0.7);
             cursor    : pointer;
             visibility: visible;
-            @media(max-width: $smallBP) {
-              opacity: 0.3;
-            }
         }
         &.left {
             transform: translateY(-50%) translateX(-110%) scale(0.7);

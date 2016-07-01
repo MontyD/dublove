@@ -4,7 +4,8 @@ class CarPage extends Page {
 
 	private static $db = array(
 		"Name" => "Varchar",
-		"mainDescription" => "HTMLText"
+		"mainDescription" => "HTMLText",
+		"tagLine" => "Text"
 	);
 
 	private static $has_one = array(
@@ -25,6 +26,8 @@ class CarPage extends Page {
 		$fields->removeFieldFromTab("Root.Content.Main", "Content");
 
 		$fields->addFieldToTab("Root.Main", TextField::create("Name", "Name"), "Metadata");
+
+			$fields->addFieldToTab("Root.Main", TextField::create("tagLine", "Tag Line"), "Metadata");
 
 		$fields->addFieldToTab("Root.Main", HtmlEditorField::create("mainDescription", "Description"), "Metadata");
 
