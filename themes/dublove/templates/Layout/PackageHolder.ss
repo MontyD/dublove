@@ -2,7 +2,9 @@
 <main>
   <section>
     <h1>Packages</h1>
-    $Content
+    <article class="subtleText">
+      $Content
+    </article>
   </section>
   <% loop $Packages %>
     <% if $Odd %>
@@ -34,8 +36,8 @@
       </article>
     </section>
   <% end_loop %>
-  <section class="last">
-      <p class="strongText">Not found what you're looking for? Have a look at our other packages:<a class="likeButton small" href="packages" title="Conctact us!">Packages</a></p>
+  <section>
+      <p class="strongText">Not found what you're looking for? Get in contact<a class="likeButton small" href="contact" title="Conctact us!">Contact us</a></p>
   </section>
 </main>
 

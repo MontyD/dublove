@@ -1,0 +1,30 @@
+<?php
+
+class ContactUsPage extends Page
+{
+    private static $db = array(
+    );
+
+    private static $has_one = array(
+    );
+
+    private static $has_many = array(
+    );
+
+    public function getCMSFields()
+    {
+        $fields = parent::getCMSFields();
+        return $fields;
+    }
+}
+
+class ContactUsPage_Controller extends Page_Controller
+{
+    private static $allowed_actions = array(
+    );
+
+    public function init()
+    {
+        parent::init();
+    }
+}
