@@ -55,7 +55,7 @@
         <article class="thirds top">
           <h3 class="funFont">$Name</h3>
           <p>$ShortDescription</p>
-          <a class="likeButton subtle" href="$Link" title="$Name">More info</a>
+          <a class="likeButton subtle" href="packages/#target__$Name" title="$Name">More info</a>
         </article>
       <% end_loop %>
     <% end_if %>

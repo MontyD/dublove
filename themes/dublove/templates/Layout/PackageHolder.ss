@@ -10,7 +10,7 @@
     <% else %>
       <section>
     <% end_if %>
-      <article class="innerModal $EvenOdd">
+      <article class="innerModal $EvenOdd" id="target__$Name">
         <div class="imageContainer">
           <% if $FrankDescription %>
             <img class="b-lazy transparent" src="data:image/gif;base64,R0lGODlhAQABAAAAACH5BAEKAAEALAAAAAABAAEAAAICTAEAOw==" data-src="$FrankPhoto.SetWidth(700).URL" alt="$Name" />
@@ -34,8 +34,9 @@
       </article>
     </section>
   <% end_loop %>
-
-
+  <section class="last">
+      <p class="strongText">Not found what you're looking for? Have a look at our other packages:<a class="likeButton small" href="packages" title="Conctact us!">Packages</a></p>
+  </section>
 </main>
 
 <% include footer %>
