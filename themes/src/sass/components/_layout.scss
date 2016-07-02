@@ -362,6 +362,11 @@ main {
 				padding-bottom: 6em;
 				margin-top    : -4.5em;
 			}
+			&.short {
+				@media(min-width: $mediumBP) {
+					padding-bottom: 1em
+				}
+			}
 		}
 		&.last {
 			margin-top: -3em;

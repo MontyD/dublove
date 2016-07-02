@@ -673,6 +673,9 @@ main {
         padding-top: 5em;
         padding-bottom: 6em;
         margin-top: -4.5em; }
+      @media (min-width: 1000px) {
+        main section.emphasis.short {
+          padding-bottom: 1em; } }
     main section.last {
       margin-top: -3em; }
       @media (max-width: 550px) {
