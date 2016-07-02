@@ -14,7 +14,6 @@ class Package extends DataObject {
 
   private static $summary_fields = array(
     "Name" => "Name of package",
-    "ShortDescription" => "Short description",
     "Photo.CMSThumbnail" => ""
   );
 

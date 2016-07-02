@@ -19,10 +19,15 @@
       <i class="icon-Hibiscus-flip-p v-small three animateScale"></i>
     </div>
     <h2>$tagLine</h2>
-    <article class="thirds two centerAlign">
-      $mainDescription
+    <article class="innerModal">
+      <div class="content">
+        $mainDescription
+        <img class="boxed b-lazy breakMedium break" src="data:image/gif;base64,R0lGODlhAQABAAAAACH5BAEKAAEALAAAAAABAAEAAAICTAEAOw==" data-src="$squareImage.SetWidth(1000).URL"  alt="$tagLine" />
+      </div>
+      <div class="imageContainer hide">
+        <img class="b-lazy" src="data:image/gif;base64,R0lGODlhAQABAAAAACH5BAEKAAEALAAAAAABAAEAAAICTAEAOw==" data-src="$squareImage.SetWidth(700).URL"  alt="$tagLine" />
+      </div>
     </article>
-    <img class="thirds boxed b-lazy" src="data:image/gif;base64,R0lGODlhAQABAAAAACH5BAEKAAEALAAAAAABAAEAAAICTAEAOw==" data-src="$squareImage.SetWidth(700).URL" alt="$Name" />
   </section>
   <section>
     <% include featureImageViewer %>
