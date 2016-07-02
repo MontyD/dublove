@@ -196,16 +196,16 @@ img {
 	text-align: center;
 	overflow  : hidden;
 	.title {
-		display  : block;
-		max-width: 100%;
-		margin   : 0 auto;
+		display   : block;
+		max-width : 100%;
+		margin    : 0 auto;
 		background: transparent;
 		h3 {
 			margin     : 0.5em;
 			line-height: 130%;
 			margin     : 0;
 			padding    : 0.4em 0 0.3em;
-			font-size: 2.0em;
+			font-size  : 2.0em;
 		}
 	}
 	.imageContainer {
@@ -258,6 +258,9 @@ img {
 				margin   : 0;
 				left     : 50%;
 				transform: translateX(-50%);
+				&.transparent {
+					opacity: 0.7;
+				}
 			}
 		}
 		.content {
@@ -286,8 +289,8 @@ img {
 			width     : 80%;
 			text-align: center;
 			h3 {
-				width : 90%;
-				margin: 5% auto;
+				width    : 90%;
+				margin   : 5% auto;
 				font-size: 2.8em;
 			}
 		}
