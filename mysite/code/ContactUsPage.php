@@ -52,7 +52,7 @@ class ContactUsPage_Controller extends Page_Controller
 
     public function sendContactForm($data, $form)
     {
-      $form->sessionMessage("Thanks for contacting us, we will be in touch shortly.");
+      $form->sessionMessage("Thanks for contacting us, we will be in touch shortly.", "Good");
 
       return $this->redirectBack();
     }
