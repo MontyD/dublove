@@ -60,5 +60,11 @@ class ContactUsPage_Controller extends Page_Controller
     public function init()
     {
         parent::init();
+
+        Requirements::clear();
+        Requirements::css("https://fonts.googleapis.com/css?family=Josefin+Sans:400,700");
+        Requirements::css("https://fonts.googleapis.com/css?family=Bad+Script");
+        Requirements::css($this->ThemeDir()."/css/contactus.min.css");
+        Requirements::javascript($this->ThemeDir()."/javascript/page.js");
     }
 }
