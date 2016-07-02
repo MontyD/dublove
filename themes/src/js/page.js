@@ -26,6 +26,8 @@ var page = (function(){
     debounce(bLazy.revalidate(), 100);
   },false);
 
+  bLazy.revalidate();
+
 })();
 
 module.exports = page;

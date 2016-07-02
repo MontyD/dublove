@@ -28,8 +28,8 @@ class Package extends DataObject {
     $fields = FieldList::create(
       TextField::create("Name"),
       TextareaField::create("ShortDescription"),
-      CheckboxField::create("Frank"),
-      CheckboxField::create("Frannie"),
+      new CheckboxField("Frank"),
+      new CheckboxField("Frannie"),
       HtmlEditorField::create("FrankDescription"),
       HtmlEditorField::create("FrannieDescription"),
       $FrankUploader = UploadField::create("FrankPhoto"),
