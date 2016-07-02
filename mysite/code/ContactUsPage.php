@@ -22,6 +22,7 @@ class ContactUsPage extends Page
 class ContactUsPage_Controller extends Page_Controller
 {
     private static $allowed_actions = array(
+      'ContactUsForm'
     );
 
     public function ContactUsForm()
@@ -33,9 +34,9 @@ class ContactUsPage_Controller extends Page_Controller
           TextField::create('Your Name', 'Name'),
           new OptionsetField('Package', 'Which Package are you interested in?', array(
            'Wedding' => 'Wedding',
-           'Prom / Party' => 'PromParty',
+           'PromParty' => 'Prom / Party',
            'Picnic' => 'Picnic',
-           'Something a bit different...' => 'Other',
+           'Other' => 'Something a bit different...',
          )),
           EmailField::create('Your Email', 'Email'),
           TextField::create('Telephone number', 'Telephone')
@@ -51,7 +52,9 @@ class ContactUsPage_Controller extends Page_Controller
 
     public function sendContactForm($data, $form)
     {
+      $form->sessionMessage("Thanks for contacting us, we will be in touch shortly.");
 
+      return $this->redirectBack();
     }
 
     public function init()
