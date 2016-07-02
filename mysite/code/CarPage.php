@@ -54,6 +54,21 @@ class CarPage_Controller extends Page_Controller {
 	private static $allowed_actions = array (
 	);
 
+	public function getPackages() {
+		if($this->Name == 'Frannie') {
+			$packages = Package::get()->filter(array(
+                 'Frannie' => true
+               ));
+		} elseif ($this->Name == 'Frank') {
+			$packages = Package::get()->filter(array(
+                 'Frank' => true
+               ));
+		} else {
+			return false;
+		}
+		return $packages->count() ? $packages : false;
+	}
+
 	public function init() {
 		parent::init();
 	}

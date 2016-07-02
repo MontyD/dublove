@@ -54,7 +54,7 @@
       <% loop $getPackages() %>
         <article class="thirds top">
           <h3 class="funFont">$Name</h3>
-          <p>$shortDescription</p>
+          <p>$ShortDescription</p>
           <a class="likeButton subtle" href="$Link" title="$Name">More info</a>
         </article>
       <% end_loop %>
