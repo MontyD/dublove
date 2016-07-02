@@ -4,27 +4,42 @@ class Package extends DataObject {
 
   private static $db = array(
     "Name" => "Varchar",
-    "Description" => "HTMLText"
+    "ShortDescription" => "Text",
+    "Frank" => "Boolean",
+    "Frannie" => "Boolean",
+    "FrankDescription" => "HTMLText",
+    "FrannieDescription" => "HTMLText"
   );
 
   private static $has_one = array(
-    "Photo" => "Image",
+    "FranniePhoto" => "Image",
+    "FrankPhoto" => "Image",
     "CarPage" => "CarPage"
   );
 
   private static $summary_fields = array(
     "Name" => "Name of package",
-    "Photo.CMSThumbnail" => ""
+    "FranniePhoto.CMSThumbnail" => "",
+    "FrankPhoto.CMSThumbnail" => ""
   );
 
   public function getCMSFields() {
     $fields = FieldList::create(
       TextField::create("Name"),
-      HtmlEditorField::create("Description"),
-      $uploader = UploadField::create("Photo")
+      TextareaField::create("ShortDescription"),
+      CheckboxField::create("Frank"),
+      CheckboxField::create("Frannie"),
+      HtmlEditorField::create("FrankDescription"),
+      HtmlEditorField::create("FrannieDescription"),
+      $FrankUploader = UploadField::create("FrankPhoto"),
+      $FrannieUploader = UploadField::create("FranniePhoto")
     );
 
-    $uploader->getValidator()->setAllowedExtensions(array(
+    $FrankUploader->getValidator()->setAllowedExtensions(array(
+      "png", "gif", "jpeg", "jpg"
+    ));
+
+    $FrannieUploader->getValidator()->setAllowedExtensions(array(
       "png", "gif", "jpeg", "jpg"
     ));
 
