@@ -51,7 +51,7 @@ class CarPage_Controller extends Page_Controller
     private static $allowed_actions = array(
     );
 
-    public function getPackages()
+    public function returnPackages()
     {
         $topTitle = $this->Name;
         $packages = Package::get()->filter(array(

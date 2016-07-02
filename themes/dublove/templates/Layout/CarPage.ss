@@ -32,7 +32,7 @@
   <section>
     <% include featureImageViewer %>
   </section>
-  <% if getPackages() %>
+  <% if returnPackages() %>
   <section class="emphasis">
     <div class="flowerGroup rightA topA up animate">
       <i class="icon-Hibiscus-flip-p one animateScale"></i>
@@ -40,7 +40,7 @@
       <i class="icon-Hibiscus-flip-p v-small three animateScale"></i>
     </div>
     <h2>Packages</h2>
-    <% loop $getPackages() %>
+    <% loop $returnPackages() %>
       <article class="innerModal $EvenOdd">
         <div class="imageContainer">
           <% if $Top.Name == 'Frank' %>
