@@ -14,7 +14,7 @@ class Package extends DataObject {
   private static $has_one = array(
     "FranniePhoto" => "Image",
     "FrankPhoto" => "Image",
-    "CarPage" => "CarPage"
+    "PackageHolder" => "PackageHolder"
   );
 
   private static $summary_fields = array(
@@ -24,6 +24,7 @@ class Package extends DataObject {
   );
 
   public function getCMSFields() {
+
     $fields = FieldList::create(
       TextField::create("Name"),
       TextareaField::create("ShortDescription"),

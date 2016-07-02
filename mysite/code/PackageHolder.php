@@ -2,12 +2,21 @@
 
 class PackageHolder extends Page {
 
-  private static $allowed_children = array("PackagesPage");
+  private static $has_many = array(
+    "Packages" => "Package"
+  );
 
 	public function getCMSFields() {
 
 		$fields = parent::getCMSFields();
-		$fields->removeFieldFromTab("Root.Content.Main", "Content");
+
+    $fields->addFieldToTab("Root.Main", GridField::create(
+      "Packages",
+      "Packages list",
+      $this->Packages(),
+      GridFieldConfig_RecordEditor::create()
+    ), "Metadata");
+
 		return $fields;
 	}
 

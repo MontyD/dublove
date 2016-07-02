@@ -16,8 +16,7 @@ class CarPage extends Page {
 	);
 
 	private static $has_many = array(
-		"FeatureImages" => "FeatureImage",
-		"Packages" => "Package"
+		"FeatureImages" => "FeatureImage"
 	);
 
 	public function getCMSFields() {
@@ -27,16 +26,9 @@ class CarPage extends Page {
 
 		$fields->addFieldToTab("Root.Main", TextField::create("Name", "Name"), "Metadata");
 
-			$fields->addFieldToTab("Root.Main", TextField::create("tagLine", "Tag Line"), "Metadata");
+		$fields->addFieldToTab("Root.Main", TextField::create("tagLine", "Tag Line"), "Metadata");
 
 		$fields->addFieldToTab("Root.Main", HtmlEditorField::create("mainDescription", "Description"), "Metadata");
-
-		$fields->addFieldToTab("Root.Main", GridField::create(
-			"Packages",
-			"Packages list",
-			$this->Packages(),
-			GridFieldConfig_RecordEditor::create()
-		), "Metadata");
 
 		$fields->addFieldToTab("Root.Images", UploadField::create("largeImage", "Large image"));
 		$fields->addFieldToTab("Root.Images", UploadField::create("mediumImage", "Medium image"));

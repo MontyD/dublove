@@ -48,10 +48,10 @@
         <% end_loop %>
     </section>
     <% end_if %>
-    <% if $getPackagesPages() %>
+    <% if $getPackages() %>
     <section class="third">
       <h2>Our Packages</h2>
-      <% loop $getPackagesPages() %>
+      <% loop $getPackages() %>
         <article class="thirds top">
           <h3 class="funFont">$Name</h3>
           <p>$shortDescription</p>
