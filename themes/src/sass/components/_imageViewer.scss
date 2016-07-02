@@ -20,6 +20,11 @@
 		box-shadow: none;
 		z-index   : 10;
 		cursor    : pointer;
+		img {
+			padding      : 0.6em 0.4em;
+			border-radius: 0.3em;
+			background   : $colorOverlay;
+		}
 		&.imgLeft {
 			left: 0;
 		}
