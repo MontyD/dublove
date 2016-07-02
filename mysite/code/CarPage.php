@@ -53,17 +53,10 @@ class CarPage_Controller extends Page_Controller
 
     public function getPackages()
     {
-        if ($this->Name == 'Frannie') {
-            $packages = Package::get()->filter(array(
-                 'Frannie' => true,
+        $topTitle = $this->Name;
+        $packages = Package::get()->filter(array(
+                 $topTitle => true,
                ));
-        } elseif ($this->Name == 'Frank') {
-            $packages = Package::get()->filter(array(
-                 'Frank' => true,
-               ));
-        } else {
-            return false;
-        }
         return $packages->count() ? $packages : false;
     }
 
