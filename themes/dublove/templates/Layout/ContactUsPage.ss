@@ -5,6 +5,9 @@
     <article class="halves">
       $ContactUsForm
     </article>
+    <article class="halves subtleText">
+      $Content
+    </article>
   </section>
 </main>
 <% include footer %>

@@ -1086,14 +1086,14 @@ textarea {
   border: 2px solid #e7e7e7;
   color: inherit;
   font-size: 1.2em;
-  -webkit-transition: background 0.2s ease;
-  transition: background 0.2s ease;
+  -webkit-transition: border-color 0.2s ease;
+  transition: border-color 0.2s ease;
   box-sizing: border-box; }
   input[type="email"]:focus,
   input[type="text"]:focus,
   textarea:focus {
     outline: none;
-    background: rgba(255, 255, 255, 0.1); }
+    border-color: #d1d1d1; }
 
 textarea {
   resize: vertical; }
@@ -1123,3 +1123,6 @@ fieldset {
     color: #D32F2F; }
   .message.Good {
     font-size: 1.4em; }
+
+article.halves.subtleText {
+  padding-top: 1.5em; }
