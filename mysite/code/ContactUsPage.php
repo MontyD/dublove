@@ -31,20 +31,21 @@ class ContactUsPage_Controller extends Page_Controller
         $this,
         __FUNCTION__,
         FieldList::create(
-          TextField::create('Your Name', 'Name'),
+          TextField::create('Name', 'Your Name'),
           new OptionsetField('Package', 'Which Package are you interested in?', array(
            'Wedding' => 'Wedding',
            'PromParty' => 'Prom / Party',
            'Picnic' => 'Picnic',
            'Other' => 'Something a bit different...',
          )),
-          EmailField::create('Your Email', 'Email'),
-          TextField::create('Telephone number', 'Telephone')
+          EmailField::create('Email', 'Your Email'),
+          TextField::create('Telephone number', 'Telephone'),
+          TextareaField::create('Inquiry', 'Inquiry')
         ),
         FieldList::create(
           FormAction::create('sendContactForm', 'Send')
         ),
-        RequiredFields::create('Name', 'Package', 'Email')
+        RequiredFields::create('Name', 'Package', 'Email', 'Inquiry')
       );
 
       return $contactForm;

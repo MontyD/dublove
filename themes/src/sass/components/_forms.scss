@@ -8,7 +8,7 @@ textarea {
 	background: transparent;
 	border    : 2px solid #e7e7e7;
 	color     : inherit;
-	font-size : 1.5em;
+	font-size : 1.2em;
 	transition: background 0.2s ease;
 	box-sizing: border-box;
 	&:focus {
@@ -16,24 +16,37 @@ textarea {
 		background: rgba(255,255,255,0.1);
 	}
 }
+textarea {
+  resize: vertical;
+}
 label {
 	display   : block;
 	margin    : 1em auto 0;
-	font-size : 1.5em;
+	font-size : 1.3em;
 	width     : 90%;
 	color     : #464646;
 	text-align: left;
 }
 fieldset {
 	border: none;
-  ul {
-    margin-top: 0;
-  }
+	ul {
+		margin-top: 0;
+	}
 	li {
 		list-style: none;
 		label {
 			display: inline-block;
 			margin : 1em auto 0 0.2em;
 		}
+	}
+}
+.message {
+	margin-top: 0.2em;
+  font-size: 1.1em;
+	&.required, &.validation {
+		color: #D32F2F;
+	}
+	&.Good {
+		font-size: 1.4em;
 	}
 }
