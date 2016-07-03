@@ -21,7 +21,7 @@ textarea {
 }
 label {
 	display   : block;
-	margin    : 1em auto 0;
+	margin    : 1.4em auto 0;
 	font-size : 1.3em;
 	width     : 90%;
 	color     : #464646;
@@ -30,7 +30,8 @@ label {
 fieldset {
 	border: none;
 	ul {
-		margin-top: 0;
+		margin-top: 0.2em;
+		margin-bottom: 0.8em;
 	}
 	li {
 		list-style: none;
