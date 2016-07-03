@@ -1049,29 +1049,41 @@ header {
 .active.transparent {
   opacity: 0.4; }
 
-input[type="text"],
 input[type="email"],
+input[type="text"],
 textarea {
   display: block;
   margin: 0 auto 0.2em;
   width: 90%;
   padding: 0.4em;
   background: transparent;
-  border: 1px solid #FFFFFF;
-  border-bottom-width: 2px;
+  border: 2px solid #e7e7e7;
   color: inherit;
-  border-radius: 3px;
   font-size: 1.5em;
-  transition: background 0.2s ease; }
-  input[type="text"]:focus,
+  transition: background 0.2s ease;
+  box-sizing: border-box; }
   input[type="email"]:focus,
+  input[type="text"]:focus,
   textarea:focus {
     outline: none;
     background: rgba(255, 255, 255, 0.1); }
 
 label {
   display: block;
-  margin: 1em auto 0.1em;
-  font-size: 1.5em; }
+  margin: 1em auto 0;
+  font-size: 1.5em;
+  width: 90%;
+  color: #464646;
+  text-align: left; }
+
+fieldset {
+  border: none; }
+  fieldset ul {
+    margin-top: 0; }
+  fieldset li {
+    list-style: none; }
+    fieldset li label {
+      display: inline-block;
+      margin: 1em auto 0 0.2em; }
 
 /*# sourceMappingURL=contactus.css.map */
