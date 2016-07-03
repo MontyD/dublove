@@ -9,10 +9,8 @@ class CarPage extends Page
     );
 
     private static $has_one = array(
-      'largeImage' => 'Image',
-        'mediumImage' => 'Image',
-        'smallImage' => 'Image',
-        'squareImage' => 'Image',
+      'backgroundImage' => 'Image',
+        'descriptionImage' => 'Image',
     );
 
     private static $has_many = array(
@@ -22,7 +20,7 @@ class CarPage extends Page
     public function getCMSFields()
     {
         $fields = parent::getCMSFields();
-        $fields->removeFieldFromTab('Root.Content.Main', 'Content');
+        $fields->removeFieldFromTab('Root.Main', 'Content');
 
         $fields->addFieldToTab('Root.Main', TextField::create('Name', 'Name'), 'Metadata');
 
@@ -30,10 +28,8 @@ class CarPage extends Page
 
         $fields->addFieldToTab('Root.Main', HtmlEditorField::create('mainDescription', 'Description'), 'Metadata');
 
-        $fields->addFieldToTab('Root.Images', UploadField::create('largeImage', 'Large image'));
-        $fields->addFieldToTab('Root.Images', UploadField::create('mediumImage', 'Medium image'));
-        $fields->addFieldToTab('Root.Images', UploadField::create('smallImage', 'Small image'));
-        $fields->addFieldToTab('Root.Main', UploadField::create('squareImage', 'Square image'), 'mainDescription');
+        $fields->addFieldToTab('Root.Images', UploadField::create('backgroundImage', 'Background image'));
+        $fields->addFieldToTab('Root.Main', UploadField::create('descriptionImage', 'Description image'), 'mainDescription');
 
         $fields->addFieldToTab('Root.Images', GridField::create(
             'FeatureImages',
@@ -57,6 +53,7 @@ class CarPage_Controller extends Page_Controller
         $packages = Package::get()->filter(array(
                  $topTitle => true,
                ));
+
         return $packages->count() ? $packages : false;
     }
 

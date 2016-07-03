@@ -19,7 +19,7 @@ class HomePage extends Page {
 	public function getCMSFields() {
 
 		$fields = parent::getCMSFields();
-		$fields->removeFieldFromTab("Root.Content.Main","Content");
+		$fields->removeFieldFromTab("Root.Main","Content");
 
 		$fields->addFieldToTab("Root.Main", TextField::create("tagLine", "Tagline"), "Metadata");
 

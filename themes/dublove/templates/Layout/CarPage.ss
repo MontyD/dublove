@@ -7,9 +7,9 @@
       <i class="icon-Hibiscus v-small three "></i>
   </div>
   <section class="fullWidthImgContainer">
-    <div class="large img" style="background-image: url('$largeImage.SetWidth(1200).URL')"></div>
-    <div class="medium img" style="background-image: url('$mediumImage.SetWidth(900).URL')"></div>
-    <div class="small img" style="background-image: url('$smallImage.SetWidth(700).URL')"></div>
+    <div class="large img" style="background-image: url('$backgroundImage.croppedImage(1100, 500).URL')"></div>
+    <div class="medium img" style="background-image: url('$backgroundImage.croppedImage(900, 500).URL')"></div>
+    <div class="small img" style="background-image: url('$backgroundImage.croppedImage(700, 500).URL')"></div>
     <h1 class="carTitle">$Name</h1>
   </section>
   <section class="emphasis overlap">
@@ -22,10 +22,10 @@
     <article class="innerModal">
       <div class="content">
         $mainDescription
-        <img class="boxed b-lazy breakMedium break" src="data:image/gif;base64,R0lGODlhAQABAAAAACH5BAEKAAEALAAAAAABAAEAAAICTAEAOw==" data-src="$squareImage.SetWidth(1000).URL"  alt="$tagLine" />
+        <img class="boxed b-lazy breakMedium break" src="data:image/gif;base64,R0lGODlhAQABAAAAACH5BAEKAAEALAAAAAABAAEAAAICTAEAOw==" data-src="$descriptionImage.SetWidth(700).URL"  alt="$tagLine" />
       </div>
       <div class="imageContainer hide">
-        <img class="b-lazy" src="data:image/gif;base64,R0lGODlhAQABAAAAACH5BAEKAAEALAAAAAABAAEAAAICTAEAOw==" data-src="$squareImage.SetWidth(700).URL"  alt="$tagLine" />
+        <img class="b-lazy" src="data:image/gif;base64,R0lGODlhAQABAAAAACH5BAEKAAEALAAAAAABAAEAAAICTAEAOw==" data-src="$descriptionImage.croppedImage(500, 610).URL"  alt="$tagLine" />
       </div>
     </article>
   </section>
