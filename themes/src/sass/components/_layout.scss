@@ -323,8 +323,9 @@ header {
 			margin-left: 0.5em;
 		}
 		ul {
-			float     : right;
-			margin-top: 2.4em;
+			float       : right;
+			margin-top  : 2.4em;
+			margin-right: 1em;
 			a {
 				padding: 0.4em 0.4em 0.3em;
 				margin : 0 0.1em;
@@ -364,7 +365,7 @@ main {
 			}
 			&.short {
 				@media(min-width: $mediumBP) {
-					padding-bottom: 1em
+					padding-bottom: 1em;
 				}
 			}
 		}

@@ -1,11 +1,10 @@
 <% include header %>
 <main>
   <section>
-    $ContactUsForm
+    <h1>Contact us</h1>
+    <article class="halves">
+      $ContactUsForm
+    </article>
   </section>
-
 </main>
-
-
-
 <% include footer %>
