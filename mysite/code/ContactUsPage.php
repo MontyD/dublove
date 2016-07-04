@@ -40,6 +40,8 @@ class ContactUsPage_Controller extends Page_Controller
            'Picnic' => 'Picnic',
            'Other' => 'Something a bit different...',
          )),
+          DateField::create('date', 'Date of potential booking')
+            ->setConfig('dateformat', 'dd-MM-yyyy'),
           EmailField::create('Email', 'Your Email'),
           TextField::create('Telephone number', 'Telephone'),
           TextareaField::create('Inquiry', 'Inquiry')
