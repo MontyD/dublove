@@ -242,8 +242,7 @@ main {
 				width                      : 140%;
 				background                 : $colorBackground;
 				z-index                    : -1;
-				transform                  : rotate(-3deg) translate3d( 0, 0, 0);
-				-webkit-backface-visibility: hidden;
+				transform                  : skewY(-3deg);
 			}
 		}
 	}

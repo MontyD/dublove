@@ -29,7 +29,7 @@
       </div>
     </article>
   </section>
-  <section>
+  <section class="imageViewer">
     <% include featureImageViewer %>
   </section>
   <% if returnPackages() %>

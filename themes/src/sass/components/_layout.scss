@@ -378,6 +378,10 @@ main {
 				}
 			}
 		}
+		&.imageViewer {
+			padding-left : 0;
+			padding-right: 0;
+		}
 		.flowerGroup {
 			margin-top: 1.5em;
 			@media(max-width: $smallBP) {
