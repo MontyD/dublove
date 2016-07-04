@@ -6,6 +6,7 @@ class ContactUsPage extends Page
     );
 
     private static $has_one = array(
+      "mainImage" => "Image"
     );
 
     private static $has_many = array(
@@ -14,6 +15,7 @@ class ContactUsPage extends Page
     public function getCMSFields()
     {
         $fields = parent::getCMSFields();
+        $fields->addFieldToTab('Root.Main', UploadField::create('mainImage', 'Main image'), 'Metadata');
 
         return $fields;
     }

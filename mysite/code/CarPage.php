@@ -10,7 +10,7 @@ class CarPage extends Page
 
     private static $has_one = array(
       'backgroundImage' => 'Image',
-        'descriptionImage' => 'Image',
+      'descriptionImage' => 'Image',
     );
 
     private static $has_many = array(

@@ -499,6 +499,8 @@ img {
       display: block;
       width: 90%;
       margin: 1em auto 3.5em; } }
+  .halves img.boxed {
+    width: 80%; }
 
 .thirds {
   display: inline-block;
