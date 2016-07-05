@@ -7,7 +7,7 @@
     </article>
     <article class="halves subtleText">
       $Content
-      <img class="boxed b-lazy" src="data:image/gif;base64,R0lGODlhAQABAAAAACH5BAEKAAEALAAAAAABAAEAAAICTAEAOw==" data-src="$mainImage.setWidth(700).URL" alt="Contact us" />
+      <div id="map" class="googleMap"></div>
     </article>
   </section>
 </main>

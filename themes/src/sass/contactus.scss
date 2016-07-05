@@ -6,3 +6,11 @@
 article.halves.subtleText {
   padding-top: 1.5em;
 }
+
+.googleMap {
+  @extend .boxed;
+  width: 95%;
+  display: block;
+  margin: 0.5em auto;
+  height: 400px;
+}

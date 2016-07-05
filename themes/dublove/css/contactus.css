@@ -500,7 +500,7 @@ img {
       display: block;
       width: 90%;
       margin: 1em auto 3.5em; } }
-  .halves img.boxed {
+  .halves img.boxed, .halves img.googleMap {
     width: 80%; }
 
 .thirds {
@@ -887,7 +887,7 @@ input[type="submit"] {
     background: rgba(90, 48, 146, 0.5);
     color: #FFFFFF; }
 
-img.boxed {
+.boxed, .googleMap {
   padding: 0.4em;
   background: #FFFFFF;
   border-radius: 3px;
@@ -1334,3 +1334,9 @@ fieldset {
 
 article.halves.subtleText {
   padding-top: 1.5em; }
+
+.googleMap {
+  width: 95%;
+  display: block;
+  margin: 0.5em auto;
+  height: 400px; }

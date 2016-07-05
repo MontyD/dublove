@@ -21,6 +21,33 @@ var page = (function() {
 
 	bLazy.revalidate();
 
+
+
+	window.initMap = function() {
+			var myCenter = { lat: 52.247312, lng: 0.697720};
+        var mapDiv = document.getElementById('map');
+        var map = new google.maps.Map(mapDiv, {
+            center: myCenter,
+            zoom: 7
+        });
+
+				var marker = new google.maps.Marker({
+					position: myCenter,
+					map: map,
+					title: 'Dublove'
+				});
+
+				var circle = new google.maps.Circle({
+            strokeColor: '#5e5694',
+            strokeOpacity: 0.8,
+            strokeWeight: 1,
+            fillColor: '#5e5694',
+            fillOpacity: 0.2,
+            map: map,
+            center: myCenter,
+            radius: 40000,
+          });
+      };
 })();
 
 module.exports = page;

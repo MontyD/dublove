@@ -886,7 +886,7 @@ input[type="submit"] {
     background: rgba(90, 48, 146, 0.5);
     color: #FFFFFF; }
 
-img.boxed {
+.boxed {
   padding: 0.4em;
   background: #FFFFFF;
   border-radius: 3px;
