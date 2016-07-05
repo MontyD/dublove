@@ -8,14 +8,14 @@ textarea {
 	width     : 90%;
 	padding   : 0.4em;
 	background: transparent;
-	border    : 2px solid #e7e7e7;
+	border    : 2px solid #cacaca;
 	color     : inherit;
 	font-size : 1.2em;
 	transition: border-color 0.2s ease;
 	box-sizing: border-box;
 	&:focus {
 		outline   : none;
-		border-color: #d1d1d1;
+		border-color: #9a9a9a;
 	}
 }
 textarea {

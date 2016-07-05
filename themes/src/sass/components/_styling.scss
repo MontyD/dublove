@@ -81,15 +81,15 @@ h1 {
 	}
 	&.carTitle {
 		letter-spacing: 3px;
-		font-size     : 5em;
+		font-size     : 4em;
 		color         : $colorWhite;
 		background: $colorOverlay;
 		@include darkShadow;
 		@media(min-width: $mediumBP) {
-			font-size: 5.5em;
+			font-size: 5em;
 		}
 		@media(min-width: $largeBP) {
-			font-size: 7.5em;
+			font-size: 6.5em;
 		}
 	}
 }

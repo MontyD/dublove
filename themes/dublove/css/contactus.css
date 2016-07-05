@@ -749,16 +749,16 @@ h1 {
         font-size: 7.5em; } }
   h1.carTitle {
     letter-spacing: 3px;
-    font-size: 5em;
+    font-size: 4em;
     color: #FFFFFF;
     background: rgba(90, 48, 146, 0.5);
     text-shadow: 1px 1px 0 rgba(0, 0, 0, 0.8); }
     @media (min-width: 1000px) {
       h1.carTitle {
-        font-size: 5.5em; } }
+        font-size: 5em; } }
     @media (min-width: 1100px) {
       h1.carTitle {
-        font-size: 7.5em; } }
+        font-size: 6.5em; } }
 
 h2 {
   font-weight: normal;
@@ -1264,7 +1264,7 @@ textarea {
   width: 90%;
   padding: 0.4em;
   background: transparent;
-  border: 2px solid #e7e7e7;
+  border: 2px solid #cacaca;
   color: inherit;
   font-size: 1.2em;
   -webkit-transition: border-color 0.2s ease;
@@ -1274,7 +1274,7 @@ textarea {
   input[type="text"]:focus,
   textarea:focus {
     outline: none;
-    border-color: #d1d1d1; }
+    border-color: #9a9a9a; }
 
 textarea {
   resize: vertical; }
