@@ -974,6 +974,39 @@ span.funFont {
 .overlayPurple {
   background: rgba(90, 48, 146, 0.5); }
 
+.menu {
+  display: inline-block;
+  padding: .4em .6em .3em;
+  background: rgba(198, 200, 188, 0.58);
+  border-radius: 0.4em; }
+
+.overlay {
+  position: fixed;
+  display: block;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 0, 0, 0.6);
+  z-index: 9000; }
+
+nav.popupMenu {
+  position: fixed;
+  left: 0;
+  right: 0;
+  margin: 10% auto;
+  width: 100%;
+  max-width: 600px; }
+  nav.popupMenu ul {
+    padding: 1em;
+    margin: 0;
+    box-sizing: border-box; }
+  nav.popupMenu li {
+    list-style: none;
+    font-family: "Bad Script", sans-serif; }
+  nav.popupMenu a {
+    color: #FFFFFF; }
+
 header {
   background: #504978;
   color: #FFFFFF; }
@@ -1078,6 +1111,12 @@ header {
 
 .active.transparent {
   opacity: 0.4; }
+
+.icon-hamburger, .icon-close {
+  display: inline-block;
+  background-size: 100%;
+  width: 2.1em;
+  height: 2.1em; }
 
 /*! normalize.css v4.1.1 | MIT License | github.com/necolas/normalize.css */
 /**

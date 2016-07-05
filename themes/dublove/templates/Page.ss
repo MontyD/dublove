@@ -22,8 +22,19 @@
   </head>
   <body>
 
+
     $Layout
 
+    <div class="overlay"></div>
+    <nav class="popupMenu">
+      <ul>
+        <% loop $Menu(1) %>
+          <% if $MenuTitle != "Home" %>
+            <li><a class="$LinkingMode" href="$Link" title="$Title">$MenuTitle</a></li>
+          <% end_if %>
+        <% end_loop %>
+      </ul>
+    </nav>
   </body>
 
 </html>

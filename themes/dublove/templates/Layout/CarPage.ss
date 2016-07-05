@@ -60,7 +60,7 @@
             <img class="boxed b-lazy breakMedium break" src="data:image/gif;base64,R0lGODlhAQABAAAAACH5BAEKAAEALAAAAAABAAEAAAICTAEAOw==" data-src="$FranniePhoto.SetWidth(700).URL" alt="$Name" />
             $FrannieDescription
           <% end_if %>
-          <a class="likeButton subtle" href="#" title="Book now">Book now</a>
+          <a class="likeButton subtle" href="contact" title="Book now">Book now</a>
         </div>
       </article>
     <% end_loop %>

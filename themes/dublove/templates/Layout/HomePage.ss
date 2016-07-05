@@ -13,6 +13,7 @@
         <i class="icon-Hibiscus small two animateScale"></i>
         <i class="icon-Hibiscus-flip v-small three animateScale"></i>
       </div>
+      <a href="#" title="Menu" class="menu topA rightA"><span class="icon-hamburger"></span></a>
   </section>
 </header>
 <main class="overlap">
