@@ -8,7 +8,8 @@ module.exports = function(grunt) {
             initial: {
                 entry: {
                     homePage: path.resolve(__dirname, 'src', 'js', 'homePage.js'),
-                    page: path.resolve(__dirname, 'src', 'js', 'page.js')
+                    page: path.resolve(__dirname, 'src', 'js', 'page.js'),
+                    contactPage: path.resolve(__dirname, 'src', 'js', 'contactPage.js')
                 },
                 output: {
                     filename: '[name].js',
