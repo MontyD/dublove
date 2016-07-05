@@ -17,7 +17,7 @@ class ContactUsPage extends Page
     {
         $fields = parent::getCMSFields();
         $fields->addFieldToTab('Root.Main', UploadField::create('mainImage', 'Main image'), 'Metadata');
-        $fields->addFeildToTab('Root.Main', TextareaField::create('OpeningParagraph', 'Opening Paragraph'), 'Content');
+        $fields->addFieldToTab('Root.Main', TextareaField::create('OpeningParagraph', 'Opening Paragraph'), 'Content');
 
         return $fields;
     }

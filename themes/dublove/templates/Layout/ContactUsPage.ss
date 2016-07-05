@@ -7,6 +7,7 @@
       <i class="icon-Hibiscus-p v-small three"></i>
     </div>
     <h1>Contact us</h1>
+    <p class="opener">$OpeningParagraph</p>
     <article class="halves formContainer">
       $ContactUsForm
     </article>

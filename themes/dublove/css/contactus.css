@@ -378,7 +378,6 @@ textarea {
   top: auto; }
 
 .noTransition {
-  -webkit-transition: none;
   transition: none; }
 
 .hidden {
@@ -592,8 +591,7 @@ img {
           padding: 0;
           margin: 0;
           left: 50%;
-          -webkit-transform: translateX(-50%);
-                  transform: translateX(-50%); }
+          transform: translateX(-50%); }
           .innerModal .imageContainer img.transparent {
             opacity: 0.7; }
       .innerModal .content {
@@ -609,8 +607,7 @@ img {
       .innerModal .title {
         position: absolute;
         top: 40%;
-        -webkit-transform: translateY(-50%);
-                transform: translateY(-50%);
+        transform: translateY(-50%);
         margin: 0 auto;
         left: 0;
         right: 0;
@@ -718,8 +715,7 @@ footer {
 
 .active i {
   opacity: 1;
-  -webkit-transform: scale(1);
-          transform: scale(1); }
+  transform: scale(1); }
 
 .break {
   display: none; }
@@ -805,6 +801,14 @@ p.white {
 p.subtleText {
   font-size: 1.4em;
   margin: 0.5em auto 1em; }
+p.opener {
+  padding-top: 0;
+  margin-top: 0;
+  font-style: italic;
+  font-size: 1.3em; }
+@media (max-width: 550px) {
+  p {
+    text-align: justify; } }
 
 .textShadow {
   text-shadow: 1px 1px 0 rgba(0, 0, 0, 0.8); }
@@ -823,8 +827,8 @@ input[type="submit"] {
   text-decoration: none;
   font-size: 1.4em;
   z-index: 10;
+  text-align: center;
   box-shadow: 0 1.5px 4px rgba(0, 0, 0, 0.24), 0 1.5px 6px rgba(0, 0, 0, 0.12);
-  -webkit-transition: box-shadow 0.2s ease;
   transition: box-shadow 0.2s ease;
   cursor: pointer;
   text-shadow: none; }
@@ -910,7 +914,6 @@ input[type="submit"] {
       width: 95%; } }
 
 .b-lazy {
-  -webkit-transition: opacity 500ms ease-in-out;
   transition: opacity 500ms ease-in-out;
   max-width: 100%;
   opacity: 0; }
@@ -938,8 +941,7 @@ main {
       width: 140%;
       background: #e5e7da;
       z-index: -1;
-      -webkit-transform: skewY(-3deg);
-              transform: skewY(-3deg); }
+      transform: skewY(-3deg); }
 
 footer {
   background: #504978;
@@ -978,7 +980,6 @@ header {
   header nav a {
     color: #FFFFFF;
     text-decoration: none;
-    -webkit-transition: background 0.3s ease;
     transition: background 0.3s ease;
     border-radius: 0.1em;
     text-shadow: 1px 1px 0 rgba(0, 0, 0, 0.8); }
@@ -1002,68 +1003,50 @@ header {
   .flowerGroup.down {
     margin-top: 1em; }
     .flowerGroup.down i {
-      -webkit-transition-delay: 0.4s;
-              transition-delay: 0.4s;
-      -webkit-transition-duration: 2s;
-              transition-duration: 2s; }
+      transition-delay: 0.4s;
+      transition-duration: 2s; }
     .flowerGroup.down .one {
       display: inline-block; }
     .flowerGroup.down .two {
       position: absolute;
       top: 0;
       left: 5.8em;
-      -webkit-transition-delay: 0.6s;
-              transition-delay: 0.6s;
-      -webkit-transition-duration: 1.2s;
-              transition-duration: 1.2s; }
+      transition-delay: 0.6s;
+      transition-duration: 1.2s; }
     .flowerGroup.down .three {
       position: absolute;
       top: -1em;
       left: 4.5em;
-      -webkit-transition-delay: 1s;
-              transition-delay: 1s;
-      -webkit-transition-duration: 1s;
-              transition-duration: 1s; }
+      transition-delay: 1s;
+      transition-duration: 1s; }
   .flowerGroup.up i {
-    -webkit-transition-delay: 1.2s;
-            transition-delay: 1.2s;
-    -webkit-transition-duration: 2s;
-            transition-duration: 2s; }
+    transition-delay: 1.2s;
+    transition-duration: 2s; }
   .flowerGroup.up .one {
     display: inline-block; }
   .flowerGroup.up .two {
     position: absolute;
     top: 1em;
     left: -3.7em;
-    -webkit-transition-delay: 1.7s;
-            transition-delay: 1.7s;
-    -webkit-transition-duration: 1s;
-            transition-duration: 1s; }
+    transition-delay: 1.7s;
+    transition-duration: 1s; }
   .flowerGroup.up .three {
     position: absolute;
     top: -0.5em;
     left: -1em;
-    -webkit-transition-delay: 1.8s;
-            transition-delay: 1.8s;
-    -webkit-transition-duration: 0.8s;
-            transition-duration: 0.8s; }
+    transition-delay: 1.8s;
+    transition-duration: 0.8s; }
 
 .animateScale {
-  -webkit-transform: scale(0);
-          transform: scale(0);
+  transform: scale(0);
   opacity: 0;
-  -webkit-transition: opacity 0.8s ease, -webkit-transform 1.2s ease;
-  transition: opacity 0.8s ease, -webkit-transform 1.2s ease;
-  transition: opacity 0.8s ease, transform 1.2s ease;
-  transition: opacity 0.8s ease, transform 1.2s ease, -webkit-transform 1.2s ease; }
+  transition: opacity 0.8s ease, transform 1.2s ease; }
   .animateScale.active {
-    -webkit-transform: scale(1);
-            transform: scale(1);
+    transform: scale(1);
     opacity: 1; }
 
 .active .animateScale {
-  -webkit-transform: scale(1);
-          transform: scale(1);
+  transform: scale(1);
   opacity: 1; }
 
 .icon-Hibiscus,
@@ -1475,7 +1458,6 @@ textarea {
   top: auto; }
 
 .noTransition {
-  -webkit-transition: none;
   transition: none; }
 
 .hidden {
@@ -1689,8 +1671,7 @@ img {
           padding: 0;
           margin: 0;
           left: 50%;
-          -webkit-transform: translateX(-50%);
-                  transform: translateX(-50%); }
+          transform: translateX(-50%); }
           .innerModal .imageContainer img.transparent {
             opacity: 0.7; }
       .innerModal .content {
@@ -1706,8 +1687,7 @@ img {
       .innerModal .title {
         position: absolute;
         top: 40%;
-        -webkit-transform: translateY(-50%);
-                transform: translateY(-50%);
+        transform: translateY(-50%);
         margin: 0 auto;
         left: 0;
         right: 0;
@@ -1815,8 +1795,7 @@ footer {
 
 .active i {
   opacity: 1;
-  -webkit-transform: scale(1);
-          transform: scale(1); }
+  transform: scale(1); }
 
 .break {
   display: none; }
@@ -2011,7 +1990,6 @@ textarea {
   border: 2px solid #cacaca;
   color: inherit;
   font-size: 1.2em;
-  -webkit-transition: border-color 0.2s ease;
   transition: border-color 0.2s ease;
   box-sizing: border-box; }
   input[type="email"]:focus,
@@ -2099,3 +2077,5 @@ article.halves.subtleText {
   display: block;
   margin: 0.5em auto;
   height: 400px; }
+
+/*# sourceMappingURL=contactus.css.map */
