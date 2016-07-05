@@ -1102,6 +1102,10 @@ fieldset {
   .message.Good {
     font-size: 1.4em; }
 
+#Form_ContactUsForm_Captcha_Holder {
+  display: inline-block;
+  margin: 1em auto; }
+
 article.halves.subtleText {
   padding-top: 1.5em; }
 

@@ -6,7 +6,7 @@ class ContactUsPage extends Page
     );
 
     private static $has_one = array(
-      "mainImage" => "Image"
+      'mainImage' => 'Image',
     );
 
     private static $has_many = array(
@@ -24,7 +24,7 @@ class ContactUsPage extends Page
 class ContactUsPage_Controller extends Page_Controller
 {
     private static $allowed_actions = array(
-      'ContactUsForm'
+      'ContactUsForm',
     );
 
     public function ContactUsForm()
@@ -52,14 +52,17 @@ class ContactUsPage_Controller extends Page_Controller
         RequiredFields::create('Name', 'Package', 'Email', 'Inquiry')
       );
 
-      return $contactForm;
+        $contactForm->enableSpamProtection()
+        ->fields()->fieldByName('Captcha');
+
+        return $contactForm;
     }
 
     public function sendContactForm($data, $form)
     {
-      $form->sessionMessage("Thanks for contacting us, we will be in touch shortly.", "Good");
+        $form->sessionMessage('Thanks for contacting us, we will be in touch shortly.', 'Good');
 
-      return $this->redirectBack();
+        return $this->redirectBack();
     }
 
     public function init()
@@ -67,9 +70,9 @@ class ContactUsPage_Controller extends Page_Controller
         parent::init();
 
         Requirements::clear();
-        Requirements::css("https://fonts.googleapis.com/css?family=Josefin+Sans:400,700");
-        Requirements::css("https://fonts.googleapis.com/css?family=Bad+Script");
-        Requirements::css($this->ThemeDir()."/css/contactus.min.css");
-        Requirements::javascript($this->ThemeDir()."/javascript/page.js");
+        Requirements::css('https://fonts.googleapis.com/css?family=Josefin+Sans:400,700');
+        Requirements::css('https://fonts.googleapis.com/css?family=Bad+Script');
+        Requirements::css($this->ThemeDir().'/css/contactus.min.css');
+        Requirements::javascript($this->ThemeDir().'/javascript/page.js');
     }
 }

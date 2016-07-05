@@ -12,3 +12,13 @@ SSViewer:
 SiteConfig:
   extensions:
     - SiteConfigExtension
+FormSpamProtectionExtension:
+  default_spam_protector: NocaptchaProtector
+
+NocaptchaField:
+    site_key: "6LfgViQTAAAAAJsKO-tItY_7pvfJdO1uup7fWQyb"
+    secret_key: "6LfgViQTAAAAAD5afLtL6tshB9-ZQLUWsT-oqX1q"
+    verify_ssl: true
+    default_theme: "light"
+    default_type: "image"
+    default_size: "normal"

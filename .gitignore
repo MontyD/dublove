@@ -23,3 +23,9 @@ node_modules/
 .DS_Store
 
 .sass-cache/
+
+/mysite/_config/config.yml
+
+/spamprotection/
+
+/nocaptcha/
