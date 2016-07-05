@@ -124,14 +124,6 @@ dfn {
   font-style: italic; }
 
 /**
- * Correct the font size and margin on `h1` elements within `section` and
- * `article` contexts in Chrome, Firefox, and Safari.
- */
-h1 {
-  font-size: 2em;
-  margin: 0.67em 0; }
-
-/**
  * Add the correct background and color in IE 9-.
  */
 mark {
@@ -499,6 +491,13 @@ img {
       display: block;
       width: 90%;
       margin: 1em auto 3.5em; } }
+  @media (max-width: 550px) {
+    .halves {
+      width: 98%; }
+      .halves img.boxed {
+        width: 95%; }
+      .halves p {
+        text-align: justify; } }
   .halves img.boxed {
     width: 80%; }
 
@@ -527,7 +526,7 @@ img {
     .thirds {
       display: block;
       width: 90%;
-      margin: 0.5em auto; }
+      margin: 0.5em auto 1em; }
       .thirds.two {
         width: 90%; } }
 
@@ -626,6 +625,14 @@ img {
         margin: 0.5em auto;
         width: 120px;
         text-align: center; } }
+  @media (max-width: 550px) {
+    .innerModal {
+      padding-left: 0.1em;
+      padding-right: 0.1em;
+      width: 95%; }
+      .innerModal p, .innerModal img {
+        width: 98%;
+        max-width: 98%; } }
 
 img.thirds {
   vertical-align: baseline; }
@@ -688,6 +695,9 @@ main {
         main section.last a.likeButton {
           display: block;
           margin: 0.8em auto; } }
+    @media (max-width: 550px) {
+      main section {
+        padding: 1em 0.2em; } }
     main section.imageViewer {
       padding-left: 0;
       padding-right: 0; }
@@ -733,7 +743,7 @@ h5 {
   text-align: center; }
 
 h1 {
-  font-size: 2.5em;
+  font-size: 4em;
   margin: 0.2em auto; }
   h1.main {
     letter-spacing: 3px;
@@ -885,12 +895,18 @@ input[type="submit"] {
   .innerModal .title {
     background: rgba(90, 48, 146, 0.5);
     color: #FFFFFF; }
+  @media (max-width: 550px) {
+    .innerModal {
+      box-shadow: none; } }
 
 .boxed {
   padding: 0.4em;
   background: #FFFFFF;
   border-radius: 3px;
   box-shadow: 0 1.5px 4px rgba(0, 0, 0, 0.24), 0 1.5px 6px rgba(0, 0, 0, 0.12); }
+  @media (max-width: 550px) {
+    .boxed {
+      width: 95%; } }
 
 .b-lazy {
   -webkit-transition: opacity 500ms ease-in-out;
@@ -1205,14 +1221,6 @@ dfn {
   font-style: italic; }
 
 /**
- * Correct the font size and margin on `h1` elements within `section` and
- * `article` contexts in Chrome, Firefox, and Safari.
- */
-h1 {
-  font-size: 2em;
-  margin: 0.67em 0; }
-
-/**
  * Add the correct background and color in IE 9-.
  */
 mark {
@@ -1580,6 +1588,13 @@ img {
       display: block;
       width: 90%;
       margin: 1em auto 3.5em; } }
+  @media (max-width: 550px) {
+    .halves {
+      width: 98%; }
+      .halves img.boxed {
+        width: 95%; }
+      .halves p {
+        text-align: justify; } }
   .halves img.boxed {
     width: 80%; }
 
@@ -1608,7 +1623,7 @@ img {
     .thirds {
       display: block;
       width: 90%;
-      margin: 0.5em auto; }
+      margin: 0.5em auto 1em; }
       .thirds.two {
         width: 90%; } }
 
@@ -1707,6 +1722,14 @@ img {
         margin: 0.5em auto;
         width: 120px;
         text-align: center; } }
+  @media (max-width: 550px) {
+    .innerModal {
+      padding-left: 0.1em;
+      padding-right: 0.1em;
+      width: 95%; }
+      .innerModal p, .innerModal img {
+        width: 98%;
+        max-width: 98%; } }
 
 img.thirds {
   vertical-align: baseline; }
@@ -1769,6 +1792,9 @@ main {
         main section.last a.likeButton {
           display: block;
           margin: 0.8em auto; } }
+    @media (max-width: 550px) {
+      main section {
+        padding: 1em 0.2em; } }
     main section.imageViewer {
       padding-left: 0;
       padding-right: 0; }
@@ -1814,7 +1840,7 @@ h5 {
   text-align: center; }
 
 h1 {
-  font-size: 2.5em;
+  font-size: 4em;
   margin: 0.2em auto; }
   h1.main {
     letter-spacing: 3px;
@@ -1966,12 +1992,18 @@ input[type="submit"] {
   .innerModal .title {
     background: rgba(90, 48, 146, 0.5);
     color: #FFFFFF; }
+  @media (max-width: 550px) {
+    .innerModal {
+      box-shadow: none; } }
 
 .boxed {
   padding: 0.4em;
   background: #FFFFFF;
   border-radius: 3px;
   box-shadow: 0 1.5px 4px rgba(0, 0, 0, 0.24), 0 1.5px 6px rgba(0, 0, 0, 0.12); }
+  @media (max-width: 550px) {
+    .boxed {
+      width: 95%; } }
 
 .b-lazy {
   -webkit-transition: opacity 500ms ease-in-out;

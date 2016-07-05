@@ -3,6 +3,7 @@
 class ContactUsPage extends Page
 {
     private static $db = array(
+      'OpeningParagraph' => 'Text'
     );
 
     private static $has_one = array(
@@ -16,6 +17,7 @@ class ContactUsPage extends Page
     {
         $fields = parent::getCMSFields();
         $fields->addFieldToTab('Root.Main', UploadField::create('mainImage', 'Main image'), 'Metadata');
+        $fields->addFeildToTab('Root.Main', TextareaField::create('OpeningParagraph', 'Opening Paragraph'), 'Content');
 
         return $fields;
     }

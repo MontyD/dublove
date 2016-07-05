@@ -153,6 +153,15 @@ img {
 		width  : 90%;
 		margin : 1em auto 3.5em;
 	}
+	@media(max-width: $smallBP) {
+		width: 98%;
+		img.boxed {
+			width: 95%;
+		}
+		p {
+			text-align: justify;
+		}
+	}
 	img.boxed {
 		width: 80%;
 	}
@@ -188,7 +197,7 @@ img {
 		}
 		display: block;
 		width  : 90%;
-		margin : 0.5em auto;
+		margin : 0.5em auto 1em;
 	}
 }
 .innerModal {
@@ -304,6 +313,15 @@ img {
 			text-align: center;
 		}
 	}
+	@media (max-width: $smallBP) {
+		padding-left: 0.1em;
+		padding-right: 0.1em;
+		width: 95%;
+		p, img {
+			width: 98%;
+			max-width: 98%;
+		}
+	}
 }
 img.thirds {
 	vertical-align: baseline;
@@ -380,6 +398,9 @@ main {
 					margin : 0.8em auto;
 				}
 			}
+		}
+		@media(max-width: $smallBP) {
+			padding: 1em 0.2em;
 		}
 		&.imageViewer {
 			padding-left : 0;

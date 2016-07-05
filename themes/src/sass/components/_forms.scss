@@ -1,5 +1,5 @@
+@import '_layout';
 @import '_pickaday';
-
 input[type="email"],
 input[type="text"],
 textarea {
@@ -14,17 +14,17 @@ textarea {
 	transition: border-color 0.2s ease;
 	box-sizing: border-box;
 	&:focus {
-		outline   : none;
+		outline     : none;
 		border-color: #9a9a9a;
 	}
 }
 textarea {
-  resize: vertical;
+	resize: vertical;
 }
 select {
-	width: 90%;
-	padding: 0.4em;
-	height: 38px;
+	width     : 90%;
+	padding   : 0.4em;
+	height    : 38px;
 	box-sizing: border-box;
 }
 label {
@@ -35,17 +35,29 @@ label {
 	color     : #464646;
 	text-align: left;
 }
+@media(max-width: $smallBP) {
+	input[type="email"],
+	input[type="text"],
+	label,
+	select,
+	textarea {
+		width: 100%;
+	}
+}
 .required label {
-		&::after {
-			content: '*';
-			color: #D32F2F;
-			font-size: 1.2em;
-		}
+	&::after {
+		content  : '*';
+		color    : #D32F2F;
+		font-size: 1.2em;
+	}
 }
 fieldset {
 	border: none;
+	@media(max-width: $smallBP) {
+		margin: 0;
+	}
 	ul {
-		margin-top: 0.2em;
+		margin-top   : 0.2em;
 		margin-bottom: 0.8em;
 	}
 	li {
@@ -57,29 +69,36 @@ fieldset {
 	}
 }
 .message {
-	width: 90%;
-	margin: 0.2em auto 0;
-  font-size: 1.2em;
-	&.required, &.validation {
-		color: #D32F2F;
+	width    : 90%;
+	margin   : 0.2em auto 0;
+	font-size: 1.2em;
+	&.required,
+	&.validation {
+		color     : #D32F2F;
 		text-align: left;
 	}
 	&.Good {
-		font-size: 1.4em;
-		background: #a3dea3;
-    color: #2b6d2b;
-    border-top: 1px solid #4aa04a;
-    border-bottom: 1px solid #4aa04a;
-    padding: 1em 0;
+		font-size    : 1.4em;
+		background   : #a3dea3;
+		color        : #2b6d2b;
+		border-top   : 1px solid #4aa04a;
+		border-bottom: 1px solid #4aa04a;
+		padding      : 1em 0;
 	}
 }
 #Form_ContactUsForm_Captcha_Holder {
 	display: inline-block;
-	margin: 1em auto;
+	margin : 1em auto;
 }
 .pika-lendar {
 	button {
 		box-shadow: none;
-		margin: 0;
+		margin    : 0;
+	}
+}
+article.formContainer {
+	@media(max-width: $smallBP) {
+		width  : 100%;
+		padding: 0;
 	}
 }

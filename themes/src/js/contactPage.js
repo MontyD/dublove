@@ -24,7 +24,7 @@ var page = (function() {
 
 
 	window.initMap = function() {
-			var myCenter = { lat: 52.247312, lng: 0.697720};
+			var myCenter = { lat: 52.082766, lng: 0.440945};
         var mapDiv = document.getElementById('map');
         var map = new google.maps.Map(mapDiv, {
             center: myCenter,
@@ -45,7 +45,7 @@ var page = (function() {
             fillOpacity: 0.2,
             map: map,
             center: myCenter,
-            radius: 40000,
+            radius: 45000,
           });
       };
 })();
