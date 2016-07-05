@@ -1279,6 +1279,12 @@ textarea {
 textarea {
   resize: vertical; }
 
+select {
+  width: 90%;
+  padding: 0.4em;
+  height: 38px;
+  box-sizing: border-box; }
+
 label {
   display: block;
   margin: 1.4em auto 0;
@@ -1286,6 +1292,11 @@ label {
   width: 90%;
   color: #464646;
   text-align: left; }
+
+.required label::after {
+  content: '*';
+  color: #D32F2F;
+  font-size: 1.2em; }
 
 fieldset {
   border: none; }
@@ -1299,12 +1310,19 @@ fieldset {
       margin: 1em auto 0 0.2em; }
 
 .message {
-  margin-top: 0.2em;
-  font-size: 1.1em; }
+  width: 90%;
+  margin: 0.2em auto 0;
+  font-size: 1.2em; }
   .message.required, .message.validation {
-    color: #D32F2F; }
+    color: #D32F2F;
+    text-align: left; }
   .message.Good {
-    font-size: 1.4em; }
+    font-size: 1.4em;
+    background: #a3dea3;
+    color: #2b6d2b;
+    border-top: 1px solid #4aa04a;
+    border-bottom: 1px solid #4aa04a;
+    padding: 1em 0; }
 
 #Form_ContactUsForm_Captcha_Holder {
   display: inline-block;

@@ -33,18 +33,22 @@ class ContactUsPage_Controller extends Page_Controller
         $this,
         __FUNCTION__,
         FieldList::create(
-          TextField::create('Name', 'Your Name'),
-          new OptionsetField('Package', 'Which Package are you interested in?', array(
+          TextField::create('Name', 'Your Name')
+            ->addExtraClass('required'),
+          DropdownField::create('Package', 'Which Package are you interested in?', array(
            'Wedding' => 'Wedding',
            'PromParty' => 'Prom / Party',
            'Picnic' => 'Picnic',
            'Other' => 'Something a bit different...',
-         )),
+         )) ->setEmptyString('Please select')
+            ->addExtraClass('required'),
           DateField::create('date', 'Date of booking')
             ->setConfig('dateformat', 'dd/MM/yyyy'),
-          EmailField::create('Email', 'Your Email'),
+          EmailField::create('Email', 'Your Email')
+            ->addExtraClass('required'),
           TextField::create('Telephone number', 'Telephone'),
           TextareaField::create('Inquiry', 'Inquiry')
+            ->addExtraClass('required')
         ),
         FieldList::create(
           FormAction::create('sendContactForm', 'Send')
