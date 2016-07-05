@@ -27,11 +27,10 @@
 
     <div class="overlay"></div>
     <nav class="popupMenu">
+      <a href="#" title="Menu" class="close topA rightA"><span class="icon-close"></span></a>
       <ul>
         <% loop $Menu(1) %>
-          <% if $MenuTitle != "Home" %>
-            <li><a class="$LinkingMode" href="$Link" title="$Title">$MenuTitle</a></li>
-          <% end_if %>
+          <li><a class="$LinkingMode" href="$Link" title="$Title">$MenuTitle</a></li>
         <% end_loop %>
       </ul>
     </nav>

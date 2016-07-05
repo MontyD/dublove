@@ -377,6 +377,7 @@ textarea {
   top: auto; }
 
 .noTransition {
+  -webkit-transition: none;
   transition: none; }
 
 .hidden {
@@ -590,7 +591,8 @@ img {
           padding: 0;
           margin: 0;
           left: 50%;
-          transform: translateX(-50%); }
+          -webkit-transform: translateX(-50%);
+                  transform: translateX(-50%); }
           .innerModal .imageContainer img.transparent {
             opacity: 0.7; }
       .innerModal .content {
@@ -606,7 +608,8 @@ img {
       .innerModal .title {
         position: absolute;
         top: 40%;
-        transform: translateY(-50%);
+        -webkit-transform: translateY(-50%);
+                transform: translateY(-50%);
         margin: 0 auto;
         left: 0;
         right: 0;
@@ -714,7 +717,8 @@ footer {
 
 .active i {
   opacity: 1;
-  transform: scale(1); }
+  -webkit-transform: scale(1);
+          transform: scale(1); }
 
 .break {
   display: none; }
@@ -828,6 +832,7 @@ input[type="submit"] {
   z-index: 10;
   text-align: center;
   box-shadow: 0 1.5px 4px rgba(0, 0, 0, 0.24), 0 1.5px 6px rgba(0, 0, 0, 0.12);
+  -webkit-transition: box-shadow 0.2s ease;
   transition: box-shadow 0.2s ease;
   cursor: pointer;
   text-shadow: none; }
@@ -913,6 +918,7 @@ input[type="submit"] {
       width: 95%; } }
 
 .b-lazy {
+  -webkit-transition: opacity 500ms ease-in-out;
   transition: opacity 500ms ease-in-out;
   max-width: 100%;
   opacity: 0; }
@@ -940,7 +946,8 @@ main {
       width: 140%;
       background: #e5e7da;
       z-index: -1;
-      transform: skewY(-3deg); }
+      -webkit-transform: skewY(-3deg);
+              transform: skewY(-3deg); }
 
 footer {
   background: #504978;
@@ -975,7 +982,7 @@ span.funFont {
 
 .menu {
   display: inline-block;
-  padding: .4em .6em .3em;
+  padding: 0.4em 0.6em 0.3em;
   background: rgba(198, 200, 188, 0.58);
   border-radius: 0.4em; }
 
@@ -991,20 +998,48 @@ span.funFont {
 
 nav.popupMenu {
   position: fixed;
+  top: 0;
   left: 0;
   right: 0;
-  margin: 10% auto;
   width: 100%;
-  max-width: 600px; }
+  max-width: 1100px;
+  z-index: 9999;
+  margin: 0 auto; }
+  nav.popupMenu a.close {
+    display: inline-block;
+    padding: 0.4em 0.6em 0.3em;
+    background: rgba(0, 0, 0, 0.58);
+    border-radius: 0.4em; }
   nav.popupMenu ul {
+    position: fixed;
     padding: 1em;
-    margin: 0;
-    box-sizing: border-box; }
-  nav.popupMenu li {
-    list-style: none;
-    font-family: "Bad Script", sans-serif; }
-  nav.popupMenu a {
-    color: #FFFFFF; }
+    margin: 5% auto;
+    box-sizing: border-box;
+    text-align: center;
+    background: #504978;
+    max-width: 400px;
+    top: 10%;
+    left: 0;
+    right: 0;
+    margin: 2% auto;
+    width: 95%;
+    box-shadow: 0 3px 12px rgba(0, 0, 0, 0.23), 0 3px 12px rgba(0, 0, 0, 0.16); }
+    nav.popupMenu ul li {
+      list-style: none;
+      font-family: "Bad Script", sans-serif;
+      margin: 0.2em auto; }
+    nav.popupMenu ul a {
+      color: #FFFFFF;
+      text-decoration: none;
+      font-size: 2.5em;
+      -webkit-transition: background-color 0.3s ease;
+      transition: background-color 0.3s ease;
+      padding: 0 1em;
+      text-shadow: 1px 1px 0 rgba(0, 0, 0, 0.8); }
+      nav.popupMenu ul a.current {
+        background: rgba(0, 0, 0, 0.1); }
+      nav.popupMenu ul a:hover {
+        background: rgba(0, 0, 0, 0.3); }
 
 header {
   background: #504978;
@@ -1012,6 +1047,7 @@ header {
   header nav a {
     color: #FFFFFF;
     text-decoration: none;
+    -webkit-transition: background 0.3s ease;
     transition: background 0.3s ease;
     border-radius: 0.1em;
     text-shadow: 1px 1px 0 rgba(0, 0, 0, 0.8); }
@@ -1035,50 +1071,68 @@ header {
   .flowerGroup.down {
     margin-top: 1em; }
     .flowerGroup.down i {
-      transition-delay: 0.4s;
-      transition-duration: 2s; }
+      -webkit-transition-delay: 0.4s;
+              transition-delay: 0.4s;
+      -webkit-transition-duration: 2s;
+              transition-duration: 2s; }
     .flowerGroup.down .one {
       display: inline-block; }
     .flowerGroup.down .two {
       position: absolute;
       top: 0;
       left: 5.8em;
-      transition-delay: 0.6s;
-      transition-duration: 1.2s; }
+      -webkit-transition-delay: 0.6s;
+              transition-delay: 0.6s;
+      -webkit-transition-duration: 1.2s;
+              transition-duration: 1.2s; }
     .flowerGroup.down .three {
       position: absolute;
       top: -1em;
       left: 4.5em;
-      transition-delay: 1s;
-      transition-duration: 1s; }
+      -webkit-transition-delay: 1s;
+              transition-delay: 1s;
+      -webkit-transition-duration: 1s;
+              transition-duration: 1s; }
   .flowerGroup.up i {
-    transition-delay: 1.2s;
-    transition-duration: 2s; }
+    -webkit-transition-delay: 1.2s;
+            transition-delay: 1.2s;
+    -webkit-transition-duration: 2s;
+            transition-duration: 2s; }
   .flowerGroup.up .one {
     display: inline-block; }
   .flowerGroup.up .two {
     position: absolute;
     top: 1em;
     left: -3.7em;
-    transition-delay: 1.7s;
-    transition-duration: 1s; }
+    -webkit-transition-delay: 1.7s;
+            transition-delay: 1.7s;
+    -webkit-transition-duration: 1s;
+            transition-duration: 1s; }
   .flowerGroup.up .three {
     position: absolute;
     top: -0.5em;
     left: -1em;
-    transition-delay: 1.8s;
-    transition-duration: 0.8s; }
+    -webkit-transition-delay: 1.8s;
+            transition-delay: 1.8s;
+    -webkit-transition-duration: 0.8s;
+            transition-duration: 0.8s; }
 
 .animateScale {
-  transform: scale(0);
+  -webkit-transform: scale(0);
+          transform: scale(0);
   opacity: 0;
-  transition: opacity 0.8s ease, transform 1.2s ease; }
+  -webkit-transition: opacity 0.8s ease, -webkit-transform 1.2s ease;
+  transition: opacity 0.8s ease, -webkit-transform 1.2s ease;
+  transition: opacity 0.8s ease, transform 1.2s ease;
+  transition: opacity 0.8s ease, transform 1.2s ease, -webkit-transform 1.2s ease; }
   .animateScale.active {
-    transform: scale(1);
+    -webkit-transform: scale(1);
+            transform: scale(1);
     opacity: 1; }
 
 .active .animateScale {
-  transform: scale(1);
+  -webkit-transform: scale(1);
+          transform: scale(1);
   opacity: 1; }
 
 .icon-Hibiscus,
@@ -1115,7 +1169,9 @@ header {
   display: inline-block;
   background-size: 100%;
   width: 2.1em;
-  height: 2.1em; }
+  height: 2.1em;
+  border-radius: 0.3em;
+  overflow: hidden; }
 
 header {
   height: 600px;
@@ -1239,5 +1295,3 @@ section.fourth.emphasis {
     section.fourth.emphasis a.likeButton {
       display: block;
       margin: 0.8em auto; } }
-
-/*# sourceMappingURL=landing.css.map */

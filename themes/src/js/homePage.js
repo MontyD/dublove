@@ -21,6 +21,7 @@ var homePage = (function() {
 
   window.addEventListener('scroll', function() {
     debounce(scrollEvents(scrollAnimations), 50);
+    debounce(bLazy.revalidate(), 300);
   }, false);
 
   bLazy.revalidate();
