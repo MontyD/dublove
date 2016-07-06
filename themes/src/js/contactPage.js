@@ -3,8 +3,11 @@ var setActive = require('./components/_setActive');
 var Blazy = require('./vendor/blazy.min');
 var moment = require('moment');
 var Pikaday = require('./vendor/pickaday');
+var menu = require('./components/_menu');
 
 var page = (function() {
+
+	menu();
 
 	setActive();
 
@@ -20,8 +23,6 @@ var page = (function() {
 	addDateToFooter();
 
 	bLazy.revalidate();
-
-
 
 	window.initMap = function() {
 			var myCenter = { lat: 52.082766, lng: 0.440945};

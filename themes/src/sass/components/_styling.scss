@@ -1,6 +1,7 @@
 //Variables
 $colorMain: #715196;
 $colorDark: #504978;
+$colorVeryDark: #3a3265;
 $colorLightMain: #5e5694;
 $colorSubtle: #5c6ea4;
 $colorHighlight: #F5D32C;
@@ -323,7 +324,7 @@ nav.popupMenu {
 	width     : 250px;
 	z-index   : 9999;
 	margin    : 0 auto;
-	background: $colorDark;
+	background: $colorVeryDark;
 	height    : 100%;
 	@include shadow(1);
 	transform : translateX(250px);

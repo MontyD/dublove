@@ -629,12 +629,12 @@ img {
         text-align: center; } }
   @media (max-width: 550px) {
     .innerModal {
-      padding-left: 0.1em;
-      padding-right: 0.1em;
+      padding-left: 0;
+      padding-right: 0;
       width: 95%; }
       .innerModal p, .innerModal img {
-        width: 98%;
-        max-width: 98%; } }
+        width: 95%;
+        max-width: 95%; } }
 
 img.thirds {
   vertical-align: baseline; }
@@ -657,12 +657,20 @@ header {
     float: right;
     margin-top: 2.4em;
     margin-right: 1em; }
+    @media (max-width: 1000px) {
+      header nav ul {
+        display: none; } }
     header nav ul a {
       padding: 0.4em 0.4em 0.3em;
       margin: 0 0.1em; }
   header nav li {
     list-style: none;
     display: inline-block; }
+  header a.menu {
+    display: none; }
+    @media (max-width: 1000px) {
+      header a.menu {
+        display: block; } }
 
 main {
   position: relative;
@@ -1011,7 +1019,7 @@ nav.popupMenu {
   width: 250px;
   z-index: 9999;
   margin: 0 auto;
-  background: #504978;
+  background: #3a3265;
   height: 100%;
   box-shadow: 0 1.5px 4px rgba(0, 0, 0, 0.24), 0 1.5px 6px rgba(0, 0, 0, 0.12);
   -webkit-transform: translateX(250px);
@@ -1855,12 +1863,12 @@ img {
         text-align: center; } }
   @media (max-width: 550px) {
     .innerModal {
-      padding-left: 0.1em;
-      padding-right: 0.1em;
+      padding-left: 0;
+      padding-right: 0;
       width: 95%; }
       .innerModal p, .innerModal img {
-        width: 98%;
-        max-width: 98%; } }
+        width: 95%;
+        max-width: 95%; } }
 
 img.thirds {
   vertical-align: baseline; }
@@ -1883,12 +1891,20 @@ header {
     float: right;
     margin-top: 2.4em;
     margin-right: 1em; }
+    @media (max-width: 1000px) {
+      header nav ul {
+        display: none; } }
     header nav ul a {
       padding: 0.4em 0.4em 0.3em;
       margin: 0 0.1em; }
   header nav li {
     list-style: none;
     display: inline-block; }
+  header a.menu {
+    display: none; }
+    @media (max-width: 1000px) {
+      header a.menu {
+        display: block; } }
 
 main {
   position: relative;

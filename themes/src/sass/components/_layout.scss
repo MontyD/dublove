@@ -314,12 +314,12 @@ img {
 		}
 	}
 	@media (max-width: $smallBP) {
-		padding-left: 0.1em;
-		padding-right: 0.1em;
+		padding-left: 0;
+		padding-right: 0;
 		width: 95%;
 		p, img {
-			width: 98%;
-			max-width: 98%;
+			width: 95%;
+			max-width: 95%;
 		}
 	}
 }
@@ -347,6 +347,9 @@ header {
 			float       : right;
 			margin-top  : 2.4em;
 			margin-right: 1em;
+			@media(max-width: $mediumBP) {
+				display: none;
+			}
 			a {
 				padding: 0.4em 0.4em 0.3em;
 				margin : 0 0.1em;
@@ -355,6 +358,12 @@ header {
 		li {
 			list-style: none;
 			display   : inline-block;
+		}
+	}
+	a.menu {
+		display: none;
+		@media(max-width: $mediumBP) {
+			display: block;
 		}
 	}
 }

@@ -8,5 +8,6 @@
         <% end_if %>
       <% end_loop %>
     </ul>
+    <a href="#" title="Menu" class="menu topA rightA"><span class="icon-hamburger"></span></a>
   </nav>
 </header>

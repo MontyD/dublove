@@ -65,6 +65,7 @@
 		}
 		@media(max-width: $smallBP) {
 			max-width: 70%;
+			transition: none;
 		}
 		&.active {
 			display   : block;

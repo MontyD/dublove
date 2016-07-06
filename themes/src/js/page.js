@@ -5,8 +5,11 @@ var imgViewer = require('./components/_imgViewer');
 var addDateToFooter = require('./components/_addDateToFooter');
 var setActive = require('./components/_setActive');
 var Blazy = require('./vendor/blazy.min');
+var menu = require('./components/_menu');
 
 var page = (function(){
+
+  menu();
 
   setActive();
 
