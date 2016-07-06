@@ -49,7 +49,7 @@ class CarPage_Controller extends Page_Controller
 
     public function returnPackages()
     {
-        if (!isset($this->Name)) {
+        if (strlen($this->Name) < 1) {
           return false;
         }
         $topTitle = $this->Name;
