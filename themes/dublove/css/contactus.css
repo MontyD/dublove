@@ -591,7 +591,9 @@ img {
           padding: 0;
           margin: 0;
           left: 50%;
-          transform: translateX(-50%); }
+          -webkit-transform: translateX(-50%);
+              -ms-transform: translateX(-50%);
+                  transform: translateX(-50%); }
           .innerModal .imageContainer img.transparent {
             opacity: 0.7; }
       .innerModal .content {
@@ -607,7 +609,9 @@ img {
       .innerModal .title {
         position: absolute;
         top: 40%;
-        transform: translateY(-50%);
+        -webkit-transform: translateY(-50%);
+            -ms-transform: translateY(-50%);
+                transform: translateY(-50%);
         margin: 0 auto;
         left: 0;
         right: 0;
@@ -715,7 +719,9 @@ footer {
 
 .active i {
   opacity: 1;
-  transform: scale(1); }
+  -webkit-transform: scale(1);
+      -ms-transform: scale(1);
+          transform: scale(1); }
 
 .break {
   display: none; }
@@ -941,7 +947,9 @@ main {
       width: 140%;
       background: #e5e7da;
       z-index: -1;
-      transform: skewY(-3deg); }
+      -webkit-transform: skewY(-3deg);
+          -ms-transform: skewY(-3deg);
+              transform: skewY(-3deg); }
 
 footer {
   background: #504978;
@@ -1098,15 +1106,23 @@ header {
     transition-duration: 0.8s; }
 
 .animateScale {
-  transform: scale(0);
+  -webkit-transform: scale(0);
+      -ms-transform: scale(0);
+          transform: scale(0);
   opacity: 0;
-  transition: opacity 0.8s ease, transform 1.2s ease; }
+  transition: opacity 0.8s ease, -webkit-transform 1.2s ease;
+  transition: opacity 0.8s ease, transform 1.2s ease;
+  transition: opacity 0.8s ease, transform 1.2s ease, -webkit-transform 1.2s ease; }
   .animateScale.active {
-    transform: scale(1);
+    -webkit-transform: scale(1);
+        -ms-transform: scale(1);
+            transform: scale(1);
     opacity: 1; }
 
 .active .animateScale {
-  transform: scale(1);
+  -webkit-transform: scale(1);
+      -ms-transform: scale(1);
+          transform: scale(1);
   opacity: 1; }
 
 .icon-Hibiscus,
@@ -1739,7 +1755,9 @@ img {
           padding: 0;
           margin: 0;
           left: 50%;
-          transform: translateX(-50%); }
+          -webkit-transform: translateX(-50%);
+              -ms-transform: translateX(-50%);
+                  transform: translateX(-50%); }
           .innerModal .imageContainer img.transparent {
             opacity: 0.7; }
       .innerModal .content {
@@ -1755,7 +1773,9 @@ img {
       .innerModal .title {
         position: absolute;
         top: 40%;
-        transform: translateY(-50%);
+        -webkit-transform: translateY(-50%);
+            -ms-transform: translateY(-50%);
+                transform: translateY(-50%);
         margin: 0 auto;
         left: 0;
         right: 0;
@@ -1863,7 +1883,9 @@ footer {
 
 .active i {
   opacity: 1;
-  transform: scale(1); }
+  -webkit-transform: scale(1);
+      -ms-transform: scale(1);
+          transform: scale(1); }
 
 .break {
   display: none; }
@@ -1996,7 +2018,6 @@ footer {
 .pika-button {
   cursor: pointer;
   display: block;
-  -moz-box-sizing: border-box;
   box-sizing: border-box;
   outline: none;
   border: 0;
