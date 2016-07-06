@@ -49,6 +49,9 @@ class CarPage_Controller extends Page_Controller
 
     public function returnPackages()
     {
+        if (!isset($this->Name)) {
+          return false;
+        }
         $topTitle = $this->Name;
         $packages = Package::get()->filter(array(
                  $topTitle => true,
