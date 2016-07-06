@@ -4,8 +4,11 @@ var scrollAnimations = require('./components/_scrollAnimations');
 var addDateToFooter = require('./components/_addDateToFooter');
 var setActive = require('./components/_setActive');
 var Blazy = require('./vendor/blazy.min');
+var menu = require('./components/_menu');
 
 var homePage = (function() {
+
+  menu();
 
   setActive();
 

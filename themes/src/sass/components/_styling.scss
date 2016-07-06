@@ -261,6 +261,9 @@ main {
 				transform : skewY(-3deg);
 			}
 		}
+		.innerModal {
+			@include shadow(1);
+		}
 	}
 }
 footer {
@@ -298,8 +301,10 @@ span.funFont {
 .menu {
 	display      : inline-block;
 	padding      : 0.4em 0.6em 0.3em;
-	background   : rgba(198, 200, 188, 0.58);
+	background   : rgba(0,0,0,0.3);
 	border-radius: 0.4em;
+	transition   : transform 0.2s ease;
+	z-index: 9000;
 }
 .overlay {
 	position  : fixed;
@@ -308,47 +313,63 @@ span.funFont {
 	left      : 0;
 	width     : 100%;
 	height    : 100%;
-	background: rgba(0,0,0,0.6);
-	z-index   : 9000;
+	z-index   : -1;
+	visibility: hidden;
 }
 nav.popupMenu {
-	position : fixed;
-	top      : 0;
-	left     : 0;
-	right    : 0;
-	width    : 100%;
-	max-width: $containerWidth;
-	z-index  : 9999;
-	margin   : 0 auto;
+	position  : fixed;
+	top       : 0;
+	right     : 0;
+	width     : 250px;
+	z-index   : 9999;
+	margin    : 0 auto;
+	background: $colorDark;
+	height    : 100%;
+	@include shadow(1);
+	transform : translateX(250px);
+	transition: all 0.3s ease;
 	a.close {
 		display      : inline-block;
-		padding      : 0.4em 0.6em 0.3em;
-		background   : rgba(0, 0, 0, 0.58);
+		padding      : 0.4em 0.4em 0.2em;
+		background   : rgba(0,0,0,0.3);
 		border-radius: 0.4em;
 	}
 	ul {
-		position  : fixed;
-		padding   : 1em;
-		margin    : 5% auto;
-		box-sizing: border-box;
-		text-align: center;
-		background: $colorDark;
-		max-width : 400px;
-		top       : 10%;
-		left      : 0;
-		right     : 0;
-		margin    : 2% auto;
-		width     : 95%;
-		@include shadow(2);
+		position   : relative;
+		padding    : 1em;
+		margin     : 0 auto;
+		box-sizing : border-box;
+		text-align : center;
+		max-width  : 400px;
+		top        : 10%;
+		left       : 0;
+		right      : 0;
+		margin     : 2% auto;
+		width      : 95%;
+		padding-top: 2em;
+		@for $i from 1 through 8 {
+			li:nth-child(#{$i}) {
+				transition-delay: #{$i * 0.1}s;
+			}
+		}
 		li {
+			display    : block;
 			list-style : none;
 			font-family: $funFont;
 			margin     : 0.2em auto;
+			opacity    : 0;
+			transform  : translateX(40px);
+			transition : all;
+			transition-duration: 0.4s;
 		}
 		a {
+			display        : block;
 			color          : $colorWhite;
 			text-decoration: none;
 			font-size      : 2.5em;
+			@media(max-height: 600px) {
+				font-size: 1.8em;
+			}
 			transition     : background-color 0.3s ease;
 			padding        : 0 1em;
 			@include darkShadow;
@@ -358,6 +379,22 @@ nav.popupMenu {
 			&:hover {
 				background: rgba(0,0,0,0.3);
 			}
+		}
+	}
+}
+body.menuOpen {
+	.overlay {
+		visibility: visible;
+		z-index   : 9000;
+	}
+	.menu {
+		transform: scale(0);
+	}
+	.popupMenu {
+		transform: translate(0);
+		li {
+			transform: translate(0);
+			opacity  : 1;
 		}
 	}
 }

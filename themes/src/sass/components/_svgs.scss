@@ -22,11 +22,19 @@
         opacity: 0.4;
     }
 }
-.icon-hamburger, .icon-close {
+.icon-hamburger {
   display: inline-block;
   background-size: 100%;
   width          : 2.1em;
   height         : 2.1em;
-  border-radius: 0.3em;
+  border-radius: 0.2em;
+  overflow: hidden;
+}
+.icon-close {
+  display: inline-block;
+  background-size: 100%;
+  width          : 1.8em;
+  height         : 1.8em;
+  border-radius: 0.5em;
   overflow: hidden;
 }

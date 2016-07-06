@@ -25,9 +25,9 @@
 
     $Layout
 
-    <div class="overlay"></div>
+    <div class="overlay" id="overlay"></div>
     <nav class="popupMenu">
-      <a href="#" title="Menu" class="close topA rightA"><span class="icon-close"></span></a>
+      <a href="#" title="Menu" class="close topA rightA" id="closeMenu"><span class="icon-close"></span></a>
       <ul>
         <% loop $Menu(1) %>
           <li><a class="$LinkingMode" href="$Link" title="$Title">$MenuTitle</a></li>

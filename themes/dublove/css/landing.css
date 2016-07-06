@@ -496,7 +496,7 @@ img {
       .halves img.boxed {
         width: 95%; }
       .halves p {
-        text-align: justify; } }
+        text-align: center; } }
   .halves img.boxed {
     width: 80%; }
 
@@ -949,6 +949,8 @@ main {
       -webkit-transform: skewY(-3deg);
           -ms-transform: skewY(-3deg);
               transform: skewY(-3deg); }
+    main section .innerModal {
+      box-shadow: 0 1.5px 4px rgba(0, 0, 0, 0.24), 0 1.5px 6px rgba(0, 0, 0, 0.12); }
 
 footer {
   background: #504978;
@@ -984,8 +986,12 @@ span.funFont {
 .menu {
   display: inline-block;
   padding: 0.4em 0.6em 0.3em;
-  background: rgba(198, 200, 188, 0.58);
-  border-radius: 0.4em; }
+  background: rgba(0, 0, 0, 0.3);
+  border-radius: 0.4em;
+  transition: -webkit-transform 0.2s ease;
+  transition: transform 0.2s ease;
+  transition: transform 0.2s ease, -webkit-transform 0.2s ease;
+  z-index: 9000; }
 
 .overlay {
   position: fixed;
@@ -994,52 +1000,100 @@ span.funFont {
   left: 0;
   width: 100%;
   height: 100%;
-  background: rgba(0, 0, 0, 0.6);
-  z-index: 9000; }
+  z-index: -1;
+  visibility: hidden; }
 
 nav.popupMenu {
   position: fixed;
   top: 0;
-  left: 0;
   right: 0;
-  width: 100%;
-  max-width: 1100px;
+  width: 250px;
   z-index: 9999;
-  margin: 0 auto; }
+  margin: 0 auto;
+  background: #504978;
+  height: 100%;
+  box-shadow: 0 1.5px 4px rgba(0, 0, 0, 0.24), 0 1.5px 6px rgba(0, 0, 0, 0.12);
+  -webkit-transform: translateX(250px);
+      -ms-transform: translateX(250px);
+          transform: translateX(250px);
+  transition: all 0.3s ease; }
   nav.popupMenu a.close {
     display: inline-block;
-    padding: 0.4em 0.6em 0.3em;
-    background: rgba(0, 0, 0, 0.58);
+    padding: 0.4em 0.4em 0.2em;
+    background: rgba(0, 0, 0, 0.3);
     border-radius: 0.4em; }
   nav.popupMenu ul {
-    position: fixed;
+    position: relative;
     padding: 1em;
-    margin: 5% auto;
+    margin: 0 auto;
     box-sizing: border-box;
     text-align: center;
-    background: #504978;
     max-width: 400px;
     top: 10%;
     left: 0;
     right: 0;
     margin: 2% auto;
     width: 95%;
-    box-shadow: 0 3px 12px rgba(0, 0, 0, 0.23), 0 3px 12px rgba(0, 0, 0, 0.16); }
+    padding-top: 2em; }
+    nav.popupMenu ul li:nth-child(1) {
+      transition-delay: 0.1s; }
+    nav.popupMenu ul li:nth-child(2) {
+      transition-delay: 0.2s; }
+    nav.popupMenu ul li:nth-child(3) {
+      transition-delay: 0.3s; }
+    nav.popupMenu ul li:nth-child(4) {
+      transition-delay: 0.4s; }
+    nav.popupMenu ul li:nth-child(5) {
+      transition-delay: 0.5s; }
+    nav.popupMenu ul li:nth-child(6) {
+      transition-delay: 0.6s; }
+    nav.popupMenu ul li:nth-child(7) {
+      transition-delay: 0.7s; }
+    nav.popupMenu ul li:nth-child(8) {
+      transition-delay: 0.8s; }
     nav.popupMenu ul li {
+      display: block;
       list-style: none;
       font-family: "Bad Script", sans-serif;
-      margin: 0.2em auto; }
+      margin: 0.2em auto;
+      opacity: 0;
+      -webkit-transform: translateX(40px);
+          -ms-transform: translateX(40px);
+              transform: translateX(40px);
+      transition: all;
+      transition-duration: 0.4s; }
     nav.popupMenu ul a {
+      display: block;
       color: #FFFFFF;
       text-decoration: none;
       font-size: 2.5em;
       transition: background-color 0.3s ease;
       padding: 0 1em;
       text-shadow: 1px 1px 0 rgba(0, 0, 0, 0.8); }
+      @media (max-height: 600px) {
+        nav.popupMenu ul a {
+          font-size: 1.8em; } }
       nav.popupMenu ul a.current {
         background: rgba(0, 0, 0, 0.1); }
       nav.popupMenu ul a:hover {
         background: rgba(0, 0, 0, 0.3); }
+
+body.menuOpen .overlay {
+  visibility: visible;
+  z-index: 9000; }
+body.menuOpen .menu {
+  -webkit-transform: scale(0);
+      -ms-transform: scale(0);
+          transform: scale(0); }
+body.menuOpen .popupMenu {
+  -webkit-transform: translate(0);
+      -ms-transform: translate(0);
+          transform: translate(0); }
+  body.menuOpen .popupMenu li {
+    -webkit-transform: translate(0);
+        -ms-transform: translate(0);
+            transform: translate(0);
+    opacity: 1; }
 
 header {
   background: #504978;
@@ -1154,12 +1208,20 @@ header {
 .active.transparent {
   opacity: 0.4; }
 
-.icon-hamburger, .icon-close {
+.icon-hamburger {
   display: inline-block;
   background-size: 100%;
   width: 2.1em;
   height: 2.1em;
-  border-radius: 0.3em;
+  border-radius: 0.2em;
+  overflow: hidden; }
+
+.icon-close {
+  display: inline-block;
+  background-size: 100%;
+  width: 1.8em;
+  height: 1.8em;
+  border-radius: 0.5em;
   overflow: hidden; }
 
 header {
