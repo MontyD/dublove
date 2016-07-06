@@ -1,7 +1,7 @@
 <% include header %>
 
 <main>
-  <div class="flowerGroup leftA down topA">
+  <div class="flowerGroup leftA down topA hidden-small">
       <i class="icon-Hibiscus-flip small two "></i>
       <i class="icon-Hibiscus one "></i>
       <i class="icon-Hibiscus v-small three "></i>

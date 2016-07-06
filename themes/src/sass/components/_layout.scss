@@ -314,11 +314,12 @@ img {
 		}
 	}
 	@media (max-width: $smallBP) {
-		padding-left: 0;
+		padding-left : 0;
 		padding-right: 0;
-		width: 95%;
-		p, img {
-			width: 95%;
+		width        : 95%;
+		img,
+		p {
+			width    : 95%;
 			max-width: 95%;
 		}
 	}
@@ -424,6 +425,7 @@ main {
 	}
 }
 footer {
+	position: relative;
 	width     : 100%;
 	margin    : 2em 0 0;
 	box-sizing: border-box;
@@ -436,6 +438,14 @@ footer {
 	i {
 		opacity  : 1;
 		transform: scale(1);
+	}
+}
+.hidden {
+	display: none;
+	&-small {
+		@media(max-width: $smallBP) {
+			visibility: hidden;
+		}
 	}
 }
 .break {

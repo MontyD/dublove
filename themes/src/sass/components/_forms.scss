@@ -67,6 +67,12 @@ fieldset {
 			margin : 1em auto 0 0.2em;
 		}
 	}
+	.field {
+		@media(max-width: 350px) {
+			width: 80%;
+			margin:1em;
+		}
+	}
 }
 .message {
 	width    : 90%;
@@ -89,6 +95,10 @@ fieldset {
 #Form_ContactUsForm_Captcha_Holder {
 	display: inline-block;
 	margin : 1em auto;
+	@media(max-width: 350px) {
+		transform: scale(0.8);
+		width: 300px !important;
+	}
 }
 .pika-lendar {
 	button {
