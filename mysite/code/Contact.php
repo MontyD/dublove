@@ -6,7 +6,7 @@ class Contact extends DataObject {
     "Name" => "Varchar",
     "Package" => "Varchar",
     "Date" => "Date",
-    "DateCreated" => "Date",
+    "DateCreated" => "Varchar",
     "Email" => "Varchar",
     "Telephone" => "Varchar",
     "Inquiry" => "Text"
@@ -32,12 +32,12 @@ class Contact extends DataObject {
        'Picnic' => 'Picnic',
        'Other' => 'Something a bit different...',
      )),
-      DateField::create("Date", "Date of potential booking"),
+      TextField::create("Date", "Date of potential booking"),
       TextField::create("Email", "Email address"),
       TextField::create("Telephone", "Telephone"),
       TextareaField::create("Inquiry", "Inquiry")
     );
-    
+
     return $fields;
   }
 

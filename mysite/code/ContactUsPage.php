@@ -52,7 +52,7 @@ class ContactUsPage_Controller extends Page_Controller
            'Other' => 'Something a bit different...',
          )) ->setEmptyString('Please select')
             ->addExtraClass('required'),
-          DateField::create('date', 'Date of booking')
+          DateField::create('Date', 'Date of booking')
             ->setConfig('dateformat', 'dd/MM/yyyy'),
           EmailField::create('Email', 'Your Email')
             ->addExtraClass('required'),
@@ -75,7 +75,8 @@ class ContactUsPage_Controller extends Page_Controller
     public function sendContactForm($data, $form)
     {
         $contact = Contact::create();
-        $contact->ContactUsPage = $this->ID;
+        $contact->ContactUsPageID = $this->ID;
+        $contact->DateCreated = date("Y-m-d H:i:s");
         $form->saveInto($contact);
         $contact->write();
 

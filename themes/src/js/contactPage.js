@@ -16,7 +16,7 @@ var page = (function() {
 	});
 
 	var picker = new Pikaday({
-		field: document.getElementById('Form_ContactUsForm_date'),
+		field: document.getElementById('Form_ContactUsForm_Date'),
 		format: 'DD/MM/YYYY'
 	});
 

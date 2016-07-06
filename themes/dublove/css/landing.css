@@ -1023,15 +1023,15 @@ nav.popupMenu {
   position: fixed;
   top: 0;
   right: 0;
-  width: 220px;
+  width: 250px;
   z-index: 9999;
   margin: 0 auto;
   background: #3a3265;
   height: 100%;
   box-shadow: 0 1.5px 4px rgba(0, 0, 0, 0.24), 0 1.5px 6px rgba(0, 0, 0, 0.12);
-  -webkit-transform: translateX(230px);
-      -ms-transform: translateX(230px);
-          transform: translateX(230px);
+  -webkit-transform: translateX(250px);
+      -ms-transform: translateX(250px);
+          transform: translateX(250px);
   transition: all 0.3s ease; }
   nav.popupMenu a.close {
     display: inline-block;
@@ -1040,7 +1040,7 @@ nav.popupMenu {
     border-radius: 0.4em; }
   nav.popupMenu ul {
     position: relative;
-    padding: 1em;
+    padding: 0.5em;
     margin: 0 auto;
     box-sizing: border-box;
     text-align: center;

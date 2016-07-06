@@ -321,13 +321,13 @@ nav.popupMenu {
 	position  : fixed;
 	top       : 0;
 	right     : 0;
-	width     : 220px;
+	width     : 250px;
 	z-index   : 9999;
 	margin    : 0 auto;
 	background: $colorVeryDark;
 	height    : 100%;
 	@include shadow(1);
-	transform : translateX(230px);
+	transform : translateX(250px);
 	transition: all 0.3s ease;
 	a.close {
 		display      : inline-block;
@@ -337,7 +337,7 @@ nav.popupMenu {
 	}
 	ul {
 		position   : relative;
-		padding    : 1em;
+		padding    : 0.5em;
 		margin     : 0 auto;
 		box-sizing : border-box;
 		text-align : center;
