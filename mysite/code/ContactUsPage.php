@@ -11,6 +11,7 @@ class ContactUsPage extends Page
     );
 
     private static $has_many = array(
+      "Contacts" => "Contact"
     );
 
     public function getCMSFields()
@@ -18,6 +19,13 @@ class ContactUsPage extends Page
         $fields = parent::getCMSFields();
         $fields->addFieldToTab('Root.Main', UploadField::create('mainImage', 'Main image'), 'Metadata');
         $fields->addFieldToTab('Root.Main', TextareaField::create('OpeningParagraph', 'Opening Paragraph'), 'Content');
+
+        $fields->addFieldToTab("Root.Contacts", GridField::create(
+          "Contacts",
+          "Contacts list",
+          $this->Contacts(),
+          GridFieldConfig_RecordEditor::create()
+        ));
 
         return $fields;
     }
@@ -66,6 +74,11 @@ class ContactUsPage_Controller extends Page_Controller
 
     public function sendContactForm($data, $form)
     {
+        $contact = Contact::create();
+        $contact->ContactUsPage = $this->ID;
+        $form->saveInto($contact);
+        $contact->write();
+
         $form->sessionMessage('Thanks for contacting us, we will be in touch shortly.', 'Good');
 
         return $this->redirectBack();

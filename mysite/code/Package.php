@@ -27,13 +27,13 @@ class Package extends DataObject {
 
     $fields = FieldList::create(
       TextField::create("Name"),
-      TextareaField::create("ShortDescription"),
+      TextareaField::create("ShortDescription", "Short description"),
       new CheckboxField("Frank"),
       new CheckboxField("Frannie"),
-      HtmlEditorField::create("FrankDescription"),
-      HtmlEditorField::create("FrannieDescription"),
-      $FrankUploader = UploadField::create("FrankPhoto"),
-      $FrannieUploader = UploadField::create("FranniePhoto")
+      HtmlEditorField::create("FrankDescription", "Description for Frank"),
+      HtmlEditorField::create("FrannieDescription", "Description for Frannie"),
+      $FrankUploader = UploadField::create("FrankPhoto", "Frank Photo"),
+      $FrannieUploader = UploadField::create("FranniePhoto", "Frannie Photo")
     );
 
     $FrankUploader->getValidator()->setAllowedExtensions(array(
