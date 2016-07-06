@@ -830,7 +830,7 @@ p.opener {
   font-size: 1.3em; }
 @media (max-width: 550px) {
   p {
-    text-align: justify; } }
+    text-align: center; } }
 
 .textShadow {
   text-shadow: 1px 1px 0 rgba(0, 0, 0, 0.8); }
