@@ -3,7 +3,7 @@
 class ContactUsPage extends Page
 {
     private static $db = array(
-      'OpeningParagraph' => 'Text'
+      'OpeningParagraph' => 'Text',
     );
 
     private static $has_one = array(
@@ -11,7 +11,7 @@ class ContactUsPage extends Page
     );
 
     private static $has_many = array(
-      "Contacts" => "Contact"
+      'Contacts' => 'Contact',
     );
 
     public function getCMSFields()
@@ -20,9 +20,9 @@ class ContactUsPage extends Page
         $fields->addFieldToTab('Root.Main', UploadField::create('mainImage', 'Main image'), 'Metadata');
         $fields->addFieldToTab('Root.Main', TextareaField::create('OpeningParagraph', 'Opening Paragraph'), 'Content');
 
-        $fields->addFieldToTab("Root.Contacts", GridField::create(
-          "Contacts",
-          "Contacts list",
+        $fields->addFieldToTab('Root.Contacts', GridField::create(
+          'Contacts',
+          'Contacts list',
           $this->Contacts(),
           GridFieldConfig_RecordEditor::create()
         ));
@@ -50,8 +50,12 @@ class ContactUsPage_Controller extends Page_Controller
            'PromParty' => 'Prom / Party',
            'Picnic' => 'Picnic',
            'Other' => 'Something a bit different...',
-         )) ->setEmptyString('Please select')
+         ))->setEmptyString('Please select')
             ->addExtraClass('required'),
+          DropdownField::create('Car', 'Which car are you interested in?', array(
+             'Frannie' => 'Frannie',
+             'Frank' => 'Frank',
+           ))->setEmptyString('Please select'),
           DateField::create('Date', 'Date of booking')
             ->setConfig('dateformat', 'dd/MM/yyyy'),
           EmailField::create('Email', 'Your Email')
@@ -76,7 +80,7 @@ class ContactUsPage_Controller extends Page_Controller
     {
         $contact = Contact::create();
         $contact->ContactUsPageID = $this->ID;
-        $contact->DateCreated = date("Y-m-d H:i:s");
+        $contact->DateCreated = date('Y-m-d H:i:s');
         $form->saveInto($contact);
         $contact->write();
 
