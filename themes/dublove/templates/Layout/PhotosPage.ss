@@ -24,11 +24,11 @@
         <% end_if %>
           <a href="$Photo.URL" data-height="$Photo.getHeight" data-width="$Photo.getWidth">
             <% if $Pos = 1 %>
-              <img src="$Photo.croppedImage(400,400).URL" class="img__main boxed" itemprop="thumbnail" alt="$Caption" />
+              <img src="data:image/gif;base64,R0lGODlhAQABAAAAACH5BAEKAAEALAAAAAABAAEAAAICTAEAOw=="  data-src="$Photo.croppedImage(400,400).URL" class="b-lazy boxed" itemprop="thumbnail" alt="$Caption" />
             <% else_if $Pos < 4 %>
-              <img src="$Photo.croppedImage(340,220).URL" class="img__secondary boxed" itemprop="thumbnail" alt="$Caption" />
+              <img src="data:image/gif;base64,R0lGODlhAQABAAAAACH5BAEKAAEALAAAAAABAAEAAAICTAEAOw=="  data-src="$Photo.croppedImage(340,220).URL" class="b-lazy boxed" itemprop="thumbnail" alt="$Caption" />
             <% else %>
-              <img src="$Photo.croppedImage(230,150).URL" class="boxed" itemprop="thumbnail" alt="$Caption" />
+              <img src="data:image/gif;base64,R0lGODlhAQABAAAAACH5BAEKAAEALAAAAAABAAEAAAICTAEAOw=="  data-src="$Photo.croppedImage(230,150).URL" class="b-lazy boxed" itemprop="thumbnail" alt="$Caption" />
             <% end_if %>
           </a>
           <figcaption itemprop="caption description">$Caption</figcaption>

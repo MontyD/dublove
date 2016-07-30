@@ -85,6 +85,9 @@ h1 {
 		font-size     : 4em;
 		color         : $colorWhite;
 		background    : $colorOverlay;
+		&:after {
+			display: none;
+		}
 		@include darkShadow;
 		@media(min-width: $mediumBP) {
 			font-size: 5em;
@@ -266,6 +269,21 @@ main {
 			@include shadow(1);
 		}
 	}
+	h1 {
+		position   : relative;
+		display    : inline-block;
+		text-shadow: 0.03em 0 $colorWhite, -.03em 0 $colorWhite, 0 0.03em $colorWhite, 0 -.03em $colorWhite, 0.06em 0 $colorWhite, -.06em 0 $colorWhite, 0.09em 0 $colorWhite, -.09em 0 $colorWhite, 0.12em 0 $colorWhite, -.12em 0 $colorWhite, 0.15em 0 $colorWhite, -.15em 0 $colorWhite;
+		z-index    : 1;
+		&:after {
+			content   : ' ';
+			position  : absolute;
+			width     : 104%;
+			left      : -2%;
+			bottom    : 0.5em;
+			border-top: 2px solid $colorMain;
+			z-index   : -1;
+		}
+	}
 }
 footer {
 	background: $colorDark;
@@ -301,11 +319,11 @@ span.funFont {
 }
 .menu {
 	display      : inline-block;
-	padding      : .3em .4em .2em;
+	padding      : 0.3em 0.4em 0.2em;
 	background   : rgba(0,0,0,0.3);
 	border-radius: 0.2em;
 	transition   : transform 0.2s ease;
-	z-index: 9000;
+	z-index      : 9000;
 }
 .overlay {
 	position  : fixed;
@@ -331,7 +349,7 @@ nav.popupMenu {
 	transition: all 0.3s ease;
 	a.close {
 		display      : inline-block;
-		padding      : .3em .4em .1em;;
+		padding      : 0.3em 0.4em 0.1em;
 		background   : rgba(0,0,0,0.3);
 		border-radius: 0.2em;
 	}
@@ -342,7 +360,7 @@ nav.popupMenu {
 		box-sizing : border-box;
 		text-align : center;
 		max-width  : 400px;
-		top        : 10%;
+		top        : 6%;
 		left       : 0;
 		right      : 0;
 		margin     : 2% auto;
@@ -354,20 +372,20 @@ nav.popupMenu {
 			}
 		}
 		li {
-			display    : block;
-			list-style : none;
-			font-family: $funFont;
-			margin     : 0.2em auto;
-			opacity    : 0;
-			transform  : translateX(40px);
-			transition : all;
+			display            : block;
+			list-style         : none;
+			font-family        : $funFont;
+			margin             : 0.2em auto;
+			opacity            : 0;
+			transform          : translateX(40px);
+			transition         : all;
 			transition-duration: 0.4s;
 		}
 		a {
 			display        : block;
 			color          : $colorWhite;
 			text-decoration: none;
-			font-size      : 2.5em;
+			font-size      : 2em;
 			@media(max-height: 600px) {
 				font-size: 1.8em;
 			}

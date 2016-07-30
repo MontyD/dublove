@@ -3,6 +3,7 @@ var PhotoSwipeUI_Default = require('./vendor/photoswipe-ui-default');
 var addDateToFooter = require('./components/_addDateToFooter');
 var setActive = require('./components/_setActive');
 var menu = require('./components/_menu');
+var Blazy = require('./vendor/blazy.min');
 
 (function() {
 
@@ -11,6 +12,10 @@ var menu = require('./components/_menu');
 	menu();
 
 	setActive();
+
+	var bLazy = new Blazy({
+		offset: 500
+	});
 
 	var initPhotoSwipeFromDOM = function(gallerySelector) {
 
