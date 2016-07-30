@@ -13,19 +13,45 @@
 		margin    : 0.8em 0.4em;
 		background: $colorBackground;
 	}
-	figure {
-		&.secondary {
-			float: right;
-		}
-		&.feature {
-			float     : left;
-			margin-top: 1.2em;
+	img {
+		max-width: 230px;
+		width    : 95%;
+	}
+	.feature {
+		display: block;
+		margin : 0 auto 0.5em;
+		img {
+			max-width: 300px;
+			width    : 60%;
 		}
 	}
-}
-hr {
-	clear: both;
-	border: none;
+	hr {
+		display: none;
+		clear  : both;
+		border : none;
+	}
+	@media(min-width: $largeBP) {
+		hr {
+			display: block;
+		}
+		figure {
+			&.secondary {
+				float: right;
+				img {
+					max-width: none;
+					width    : auto;
+				}
+			}
+			&.feature {
+				float     : left;
+				margin-top: 1.4em;
+				img {
+					max-width: none;
+					width    : auto;
+				}
+			}
+		}
+	}
 }
 .last.emphasis {
 	margin-top    : -3em;

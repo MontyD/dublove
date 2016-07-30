@@ -100,7 +100,6 @@
 					item.el = figureEl; // save link to element for getThumbBoundsFn
 					items.push(item);
 				}
-				console.log(items);
 				return items;
 			};
 
