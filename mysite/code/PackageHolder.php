@@ -1,33 +1,32 @@
 <?php
 
-class PackageHolder extends Page {
-
-  private static $has_many = array(
-    "Packages" => "Package"
+class PackageHolder extends Page
+{
+    private static $has_many = array(
+    'Packages' => 'Package',
   );
 
-	public function getCMSFields() {
+    public function getCMSFields()
+    {
+        $fields = parent::getCMSFields();
 
-		$fields = parent::getCMSFields();
-
-    $fields->addFieldToTab("Root.Main", GridField::create(
-      "Packages",
-      "Packages list",
+        $fields->addFieldToTab('Root.Main', GridField::create(
+      'Packages',
+      'Packages list',
       $this->Packages(),
       GridFieldConfig_RecordEditor::create()
-    ), "Metadata");
+    ), 'Metadata');
 
-		return $fields;
-	}
-
+        return $fields;
+    }
 }
-class PackageHolder_Controller extends Page_Controller {
+class PackageHolder_Controller extends Page_Controller
+{
+    private static $allowed_actions = array(
+    );
 
-
-	private static $allowed_actions = array (
-	);
-
-	public function init() {
-		parent::init();
-	}
+    public function init()
+    {
+        parent::init();
+    }
 }

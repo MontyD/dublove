@@ -3,6 +3,7 @@
 class PhotosPage extends Page
 {
     private static $db = array(
+      'ShortDescription' => 'Text',
     );
 
     private static $has_one = array(
@@ -12,6 +13,8 @@ class PhotosPage extends Page
     {
         $fields = parent::getCMSFields();
         $fields->removeFieldFromTab('Root.Main', 'Content');
+
+        $fields->addFieldToTab('Root.Main', TextareaField::create('ShortDescription', 'Short description'), 'Metadata');
 
         return $fields;
     }

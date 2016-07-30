@@ -1,6 +1,51 @@
 <% include header %>
 
 <main>
+  <% if $returnPhotos() %>
+  <section class="head">
+    <div class="flowerGroup leftA topA down animate">
+      <i class="icon-Hibiscus-p one"></i>
+      <i class="icon-Hibiscus-flip-p small two"></i>
+      <i class="icon-Hibiscus-p v-small three"></i>
+    </div>
+    <h1>$Title</h1>
+    <article class="subtleText">
+      <p>$ShortDescription</p>
+    </article>
+  </section>
+  <section class="main-gallery">
+    <% loop $returnPhotos() %>
+        <% if $Pos = 1 %>
+          <figure class="feature" itemprop="associatedMedia">
+        <% else_if $Pos < 4 %>
+          <figure class="secondary" itemprop="associatedMedia">
+        <% else %>
+          <figure itemprop="associatedMedia">
+        <% end_if %>
+          <a href="$Photo.URL" data-height="$Photo.getHeight" data-width="$Photo.getWidth">
+            <% if $Pos = 1 %>
+              <img src="$Photo.croppedImage(400,400).URL" class="img__main boxed" itemprop="thumbnail" alt="$Caption" />
+            <% else_if $Pos < 4 %>
+              <img src="$Photo.croppedImage(340,220).URL" class="img__secondary boxed" itemprop="thumbnail" alt="$Caption" />
+            <% else %>
+              <img src="$Photo.croppedImage(230,150).URL" class="boxed" itemprop="thumbnail" alt="$Caption" />
+            <% end_if %>
+          </a>
+          <figcaption itemprop="caption description">$Caption</figcaption>
+        </figure>
+        <% if $Pos = 3 %>
+        <hr>
+        <% end_if %>
+    <% end_loop %>
+  </section>
+
+  <% end_if %>
+
+
+  <section class="last emphasis">
+      <p class="strongText">Have a look at what we offer: <a class="likeButton small" href="contact" title="Packages">Packages</a></p>
+  </section>
+
   <div class="pswp" tabindex="-1" role="dialog" aria-hidden="true">
     <div class="pswp__bg"></div>
     <div class="pswp__scroll-wrap">
@@ -37,47 +82,6 @@
         </div>
     </div>
 </div>
-  <% if $returnPhotos() %>
-  <section class="head">
-    <div class="flowerGroup leftA topA down animate">
-      <i class="icon-Hibiscus-p one"></i>
-      <i class="icon-Hibiscus-flip-p small two"></i>
-      <i class="icon-Hibiscus-p v-small three"></i>
-    </div>
-    <h1>$Title</h1>
-  </section>
-  <section class="main-gallery">
-    <% loop $returnPhotos() %>
-        <% if $Pos = 1 %>
-          <figure class="feature" itemprop="associatedMedia">
-        <% else_if $Pos < 4 %>
-          <figure class="secondary" itemprop="associatedMedia">
-        <% else %>
-          <figure itemprop="associatedMedia">
-        <% end_if %>
-          <a href="$Photo.URL" data-height="$Photo.getHeight" data-width="$Photo.getWidth">
-            <% if $Pos = 1 %>
-              <img src="$Photo.croppedImage(400,400).URL" class="img__main boxed" itemprop="thumbnail" alt="$Caption" />
-            <% else_if $Pos < 4 %>
-              <img src="$Photo.croppedImage(340,220).URL" class="img__secondary boxed" itemprop="thumbnail" alt="$Caption" />
-            <% else %>
-              <img src="$Photo.croppedImage(230,150).URL" class="boxed" itemprop="thumbnail" alt="$Caption" />
-            <% end_if %>
-          </a>
-          <figcaption itemprop="caption description">$Caption</figcaption>
-        </figure>
-        <% if $Pos = 3 %>
-        <hr>
-        <% end_if %>
-    <% end_loop %>
-  </section>
-
-  <% end_if %>
-
-
-  <section class="last emphasis">
-      <p class="strongText">Have a look at what we offer: <a class="likeButton small" href="contact" title="Packages">Packages</a></p>
-  </section>
 
 </main>
 
