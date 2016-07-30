@@ -28,10 +28,10 @@
      id="namedview9"
      showgrid="false"
      inkscape:zoom="7.375"
-     inkscape:cx="16"
+     inkscape:cx="-5.6271186"
      inkscape:cy="20.442034"
-     inkscape:window-x="82"
-     inkscape:window-y="56"
+     inkscape:window-x="184"
+     inkscape:window-y="154"
      inkscape:window-maximized="0"
      inkscape:current-layer="svg4184" />
   <defs
@@ -50,22 +50,22 @@
   </metadata>
   <g
      id="layer1"
-     style="fill:none;fill-opacity:1;stroke:#ffffff;stroke-width:3;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1"
+     style="fill:none;fill-opacity:1;stroke:#ffffff;stroke-width:2.26798426;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1"
      transform="matrix(1.1548205,0,0,1.0521689,-2.3453301,-0.15645926)">
     <path
        id="path4732"
        d="m 2.0115667,4.4990897 28.0258943,0 z"
-       style="fill:none;fill-opacity:1;fill-rule:evenodd;stroke:#ffffff;stroke-width:3;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1"
+       style="fill:none;fill-opacity:1;fill-rule:evenodd;stroke:#ffffff;stroke-width:2.26798426;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1"
        inkscape:connector-curvature="0" />
     <path
-       style="fill:none;fill-opacity:1;fill-rule:evenodd;stroke:#ffffff;stroke-width:3;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1"
+       style="fill:none;fill-opacity:1;fill-rule:evenodd;stroke:#ffffff;stroke-width:2.26798426;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1"
        d="m 2.0115667,15.928684 28.0258943,0 z"
        id="path4760"
        inkscape:connector-curvature="0" />
     <path
        id="path4762"
        d="m 2.0115667,27.49028 28.0258943,0 z"
-       style="fill:none;fill-opacity:1;fill-rule:evenodd;stroke:#ffffff;stroke-width:3;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1"
+       style="fill:none;fill-opacity:1;fill-rule:evenodd;stroke:#ffffff;stroke-width:2.26798426;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1"
        inkscape:connector-curvature="0" />
   </g>
 </svg>

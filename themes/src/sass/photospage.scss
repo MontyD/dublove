@@ -1,6 +1,35 @@
 @import 'components/_layout';
 @import 'components/_styling';
 @import 'components/_svgs';
-
 @import 'components/photoswipe';
 @import 'components/default-skin';
+.main-gallery {
+	max-width: 800px;
+	figure {
+		display: inline-block;
+		margin : 0;
+	}
+	.boxed {
+		margin    : 0.8em 0.4em;
+		background: $colorBackground;
+	}
+	.initial {
+		position: relative;
+		margin  : 0 auto 0.5em;
+		figure {
+			float: right;
+			&.feature {
+				float     : left;
+				margin-top: 1.2em;
+			}
+		}
+		&:after {
+			visibility: hidden;
+			display   : block;
+			font-size : 0;
+			content   : " ";
+			clear     : both;
+			height    : 0;
+		}
+	}
+}

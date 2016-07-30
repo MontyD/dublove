@@ -62,7 +62,7 @@
 		var initPhotoSwipeFromDOM = function(gallerySelector) {
 
 			var parseThumbnailElements = function(el) {
-				var thumbElements = el.childNodes,
+				var thumbElements = el.getElementsByTagName('figure'),
 					numNodes = thumbElements.length,
 					items = [],
 					figureEl,
@@ -95,11 +95,6 @@
 					if (figureEl.children.length > 1) {
 						// <figcaption> content
 						item.title = figureEl.children[1].innerHTML;
-					}
-
-					if (linkEl.children.length > 0) {
-						// <img> thumbnail element, retrieving thumbnail url
-						item.msrc = linkEl.children[0].getAttribute('src');
 					}
 
 					item.el = figureEl; // save link to element for getThumbBoundsFn
@@ -203,18 +198,11 @@
 
 					shareEl: false,
 
-					getThumbBoundsFn: function(index) {
-						// See Options -> getThumbBoundsFn section of documentation for more info
-						var thumbnail = items[index].el.getElementsByTagName('img')[0], // find thumbnail
-							pageYScroll = window.pageYOffset || document.documentElement.scrollTop,
-							rect = thumbnail.getBoundingClientRect();
+					getThumbBoundsFn: false,
 
-						return {
-							x: rect.left,
-							y: rect.top + pageYScroll,
-							w: rect.width
-						};
-					}
+					showHideOpacity: true,
+
+
 
 				};
 

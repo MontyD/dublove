@@ -591,7 +591,9 @@ img {
           padding: 0;
           margin: 0;
           left: 50%;
-          transform: translateX(-50%); }
+          -webkit-transform: translateX(-50%);
+              -ms-transform: translateX(-50%);
+                  transform: translateX(-50%); }
           .innerModal .imageContainer img.transparent {
             opacity: 0.7; }
       .innerModal .content {
@@ -607,7 +609,9 @@ img {
       .innerModal .title {
         position: absolute;
         top: 40%;
-        transform: translateY(-50%);
+        -webkit-transform: translateY(-50%);
+            -ms-transform: translateY(-50%);
+                transform: translateY(-50%);
         margin: 0 auto;
         left: 0;
         right: 0;
@@ -725,7 +729,9 @@ footer {
 
 .active i {
   opacity: 1;
-  transform: scale(1); }
+  -webkit-transform: scale(1);
+      -ms-transform: scale(1);
+          transform: scale(1); }
 
 .hidden {
   display: none; }
@@ -957,7 +963,9 @@ main {
       width: 140%;
       background: #e5e7da;
       z-index: -1;
-      transform: skewY(-3deg); }
+      -webkit-transform: skewY(-3deg);
+          -ms-transform: skewY(-3deg);
+              transform: skewY(-3deg); }
     main section .innerModal {
       box-shadow: 0 1.5px 4px rgba(0, 0, 0, 0.24), 0 1.5px 6px rgba(0, 0, 0, 0.12); }
 
@@ -994,10 +1002,12 @@ span.funFont {
 
 .menu {
   display: inline-block;
-  padding: 0.4em 0.6em 0.3em;
+  padding: .3em .4em .2em;
   background: rgba(0, 0, 0, 0.3);
-  border-radius: 0.4em;
+  border-radius: 0.2em;
+  transition: -webkit-transform 0.2s ease;
   transition: transform 0.2s ease;
+  transition: transform 0.2s ease, -webkit-transform 0.2s ease;
   z-index: 9000; }
 
 .overlay {
@@ -1020,13 +1030,15 @@ nav.popupMenu {
   background: #3a3265;
   height: 100%;
   box-shadow: 0 1.5px 4px rgba(0, 0, 0, 0.24), 0 1.5px 6px rgba(0, 0, 0, 0.12);
-  transform: translateX(250px);
+  -webkit-transform: translateX(250px);
+      -ms-transform: translateX(250px);
+          transform: translateX(250px);
   transition: all 0.3s ease; }
   nav.popupMenu a.close {
     display: inline-block;
-    padding: 0.4em 0.4em 0.2em;
+    padding: .3em .4em .1em;
     background: rgba(0, 0, 0, 0.3);
-    border-radius: 0.4em; }
+    border-radius: 0.2em; }
   nav.popupMenu ul {
     position: relative;
     padding: 0.5em;
@@ -1062,7 +1074,9 @@ nav.popupMenu {
       font-family: "Bad Script", sans-serif;
       margin: 0.2em auto;
       opacity: 0;
-      transform: translateX(40px);
+      -webkit-transform: translateX(40px);
+          -ms-transform: translateX(40px);
+              transform: translateX(40px);
       transition: all;
       transition-duration: 0.4s; }
     nav.popupMenu ul a {
@@ -1085,11 +1099,17 @@ body.menuOpen .overlay {
   visibility: visible;
   z-index: 9000; }
 body.menuOpen .menu {
-  transform: scale(0); }
+  -webkit-transform: scale(0);
+      -ms-transform: scale(0);
+          transform: scale(0); }
 body.menuOpen .popupMenu {
-  transform: translate(0); }
+  -webkit-transform: translate(0);
+      -ms-transform: translate(0);
+          transform: translate(0); }
   body.menuOpen .popupMenu li {
-    transform: translate(0);
+    -webkit-transform: translate(0);
+        -ms-transform: translate(0);
+            transform: translate(0);
     opacity: 1; }
 
 header {
@@ -1156,15 +1176,23 @@ header {
     transition-duration: 0.8s; }
 
 .animateScale {
-  transform: scale(0);
+  -webkit-transform: scale(0);
+      -ms-transform: scale(0);
+          transform: scale(0);
   opacity: 0;
-  transition: opacity 0.8s ease, transform 1.2s ease; }
+  transition: opacity 0.8s ease, -webkit-transform 1.2s ease;
+  transition: opacity 0.8s ease, transform 1.2s ease;
+  transition: opacity 0.8s ease, transform 1.2s ease, -webkit-transform 1.2s ease; }
   .animateScale.active {
-    transform: scale(1);
+    -webkit-transform: scale(1);
+        -ms-transform: scale(1);
+            transform: scale(1);
     opacity: 1; }
 
 .active .animateScale {
-  transform: scale(1);
+  -webkit-transform: scale(1);
+      -ms-transform: scale(1);
+          transform: scale(1);
   opacity: 1; }
 
 .icon-Hibiscus,
@@ -1805,7 +1833,9 @@ img {
           padding: 0;
           margin: 0;
           left: 50%;
-          transform: translateX(-50%); }
+          -webkit-transform: translateX(-50%);
+              -ms-transform: translateX(-50%);
+                  transform: translateX(-50%); }
           .innerModal .imageContainer img.transparent {
             opacity: 0.7; }
       .innerModal .content {
@@ -1821,7 +1851,9 @@ img {
       .innerModal .title {
         position: absolute;
         top: 40%;
-        transform: translateY(-50%);
+        -webkit-transform: translateY(-50%);
+            -ms-transform: translateY(-50%);
+                transform: translateY(-50%);
         margin: 0 auto;
         left: 0;
         right: 0;
@@ -1939,7 +1971,9 @@ footer {
 
 .active i {
   opacity: 1;
-  transform: scale(1); }
+  -webkit-transform: scale(1);
+      -ms-transform: scale(1);
+          transform: scale(1); }
 
 .hidden {
   display: none; }
@@ -2078,7 +2112,6 @@ footer {
 .pika-button {
   cursor: pointer;
   display: block;
-  -moz-box-sizing: border-box;
   box-sizing: border-box;
   outline: none;
   border: 0;
@@ -2215,7 +2248,9 @@ fieldset {
   margin: 1em auto; }
   @media (max-width: 350px) {
     #Form_ContactUsForm_Captcha_Holder {
-      transform: scale(0.8);
+      -webkit-transform: scale(0.8);
+          -ms-transform: scale(0.8);
+              transform: scale(0.8);
       width: 300px !important; } }
 
 .pika-lendar button {
