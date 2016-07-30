@@ -3,7 +3,8 @@
 class FeatureImage extends DataObject {
 
   private static $db = array(
-    "Caption" => "Varchar"
+    "Caption" => "Varchar",
+    "HidePhotosPage" => "Boolean"
   );
 
   private static $has_one = array(
@@ -19,6 +20,7 @@ class FeatureImage extends DataObject {
   public function getCMSFields() {
     $fields = FieldList::create(
       TextField::create("Caption"),
+      new CheckboxField("HidePhotosPage", "Hide on photos page"),
       $uploader = UploadField::create("Photo")
     );
 
