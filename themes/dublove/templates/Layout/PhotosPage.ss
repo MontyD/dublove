@@ -47,31 +47,37 @@
     <h1>$Title</h1>
   </section>
   <section class="main-gallery">
-    <div class="initial">
     <% loop $returnPhotos() %>
-      <% if $Pos = 4 %>
-        </div>
-      <% end_if %>
         <% if $Pos = 1 %>
           <figure class="feature" itemprop="associatedMedia">
+        <% else_if $Pos < 4 %>
+          <figure class="secondary" itemprop="associatedMedia">
         <% else %>
           <figure itemprop="associatedMedia">
         <% end_if %>
           <a href="$Photo.URL" data-height="$Photo.getHeight" data-width="$Photo.getWidth">
             <% if $Pos = 1 %>
-              <img src="$Photo.croppedImage(400,400).URL" class="boxed" itemprop="thumbnail" alt="$Caption" />
+              <img src="$Photo.croppedImage(400,400).URL" class="img__main boxed" itemprop="thumbnail" alt="$Caption" />
             <% else_if $Pos < 4 %>
-              <img src="$Photo.croppedImage(340,200).URL" class="boxed" itemprop="thumbnail" alt="$Caption" />
+              <img src="$Photo.croppedImage(340,200).URL" class="img__secondary boxed" itemprop="thumbnail" alt="$Caption" />
             <% else %>
               <img src="$Photo.croppedImage(230,150).URL" class="boxed" itemprop="thumbnail" alt="$Caption" />
             <% end_if %>
           </a>
           <figcaption itemprop="caption description">$Caption</figcaption>
         </figure>
+        <% if $Pos = 3 %>
+        <hr>
+        <% end_if %>
     <% end_loop %>
   </section>
 
   <% end_if %>
+
+
+  <section class="last emphasis">
+      <p class="strongText">Have a look at what we offer: <a class="likeButton small" href="contact" title="Packages">Packages</a></p>
+  </section>
 
 </main>
 

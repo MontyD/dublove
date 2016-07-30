@@ -100,7 +100,7 @@
 					item.el = figureEl; // save link to element for getThumbBoundsFn
 					items.push(item);
 				}
-
+				console.log(items);
 				return items;
 			};
 
@@ -128,7 +128,7 @@
 				// find index of clicked item by looping through all child nodes
 				// alternatively, you may define index via data- attribute
 				var clickedGallery = clickedListItem.parentNode,
-					childNodes = clickedListItem.parentNode.childNodes,
+					childNodes = clickedListItem.parentNode.getElementsByTagName('figure'),
 					numChildNodes = childNodes.length,
 					nodeIndex = 0,
 					index;

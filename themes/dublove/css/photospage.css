@@ -1911,20 +1911,20 @@ a.pswp__share--download:hover {
   .main-gallery .boxed {
     margin: 0.8em 0.4em;
     background: #e5e7da; }
-  .main-gallery .initial {
-    position: relative;
-    margin: 0 auto 0.5em; }
-    .main-gallery .initial figure {
-      float: right; }
-      .main-gallery .initial figure.feature {
-        float: left;
-        margin-top: 1.2em; }
-    .main-gallery .initial:after {
-      visibility: hidden;
-      display: block;
-      font-size: 0;
-      content: " ";
-      clear: both;
-      height: 0; }
+  .main-gallery figure.secondary {
+    float: right; }
+  .main-gallery figure.feature {
+    float: left;
+    margin-top: 1.2em; }
+
+hr {
+  clear: both;
+  border: none; }
+
+.last.emphasis {
+  margin-top: -3em;
+  padding-top: 6em;
+  padding-bottom: 5em;
+  margin-bottom: -1.5em; }
 
 /*# sourceMappingURL=photospage.css.map */
