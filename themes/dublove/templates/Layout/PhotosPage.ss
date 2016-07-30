@@ -1,3 +1,5 @@
+<% include header %>
+
 <main>
   <% if $returnPhotos() %>
   <section>
@@ -9,3 +11,5 @@
   <% end_if %>
 
 </main>
+
+<% include footer %>
