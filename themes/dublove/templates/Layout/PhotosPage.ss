@@ -2,34 +2,20 @@
 
 <main>
   <div class="pswp" tabindex="-1" role="dialog" aria-hidden="true">
-
-
     <div class="pswp__bg"></div>
-
     <div class="pswp__scroll-wrap">
-
-
         <div class="pswp__container">
             <div class="pswp__item"></div>
             <div class="pswp__item"></div>
             <div class="pswp__item"></div>
         </div>
         <div class="pswp__ui pswp__ui--hidden">
-
             <div class="pswp__top-bar">
-
-
                 <div class="pswp__counter"></div>
-
                 <button class="pswp__button pswp__button--close" title="Close (Esc)"></button>
-
                 <button class="pswp__button pswp__button--share" title="Share"></button>
-
                 <button class="pswp__button pswp__button--fs" title="Toggle fullscreen"></button>
-
                 <button class="pswp__button pswp__button--zoom" title="Zoom in/out"></button>
-
-
                 <div class="pswp__preloader">
                     <div class="pswp__preloader__icn">
                       <div class="pswp__preloader__cut">
@@ -38,32 +24,33 @@
                     </div>
                 </div>
             </div>
-
             <div class="pswp__share-modal pswp__share-modal--hidden pswp__single-tap">
                 <div class="pswp__share-tooltip"></div>
             </div>
-
             <button class="pswp__button pswp__button--arrow--left" title="Previous (arrow left)">
             </button>
-
             <button class="pswp__button pswp__button--arrow--right" title="Next (arrow right)">
             </button>
-
             <div class="pswp__caption">
                 <div class="pswp__caption__center"></div>
             </div>
-
         </div>
-
     </div>
-
 </div>
   <% if $returnPhotos() %>
+  <section class="head">
+    <div class="flowerGroup leftA topA down animate">
+      <i class="icon-Hibiscus-p one"></i>
+      <i class="icon-Hibiscus-flip-p small two"></i>
+      <i class="icon-Hibiscus-p v-small three"></i>
+    </div>
+    <h1>$Title</h1>
+  </section>
   <section class="main-gallery">
     <% loop $returnPhotos() %>
         <figure itemprop="associatedMedia">
-          <a href="$Photo.SetWidth(700).URL" data-height="$Photo.getHeight" data-width="$Photo.getWidth">
-              <img src="$Photo.SetWidth(400).URL" itemprop="thumbnail" alt="$Caption" />
+          <a href="$Photo.URL" data-height="$Photo.getHeight" data-width="$Photo.getWidth">
+              <img src="$Photo.SetWidth(350).URL" itemprop="thumbnail" alt="$Caption" />
           </a>
           <figcaption itemprop="caption description">$Caption</figcaption>
         </figure>

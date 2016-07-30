@@ -11,6 +11,7 @@ class PhotosPage extends Page
     public function getCMSFields()
     {
         $fields = parent::getCMSFields();
+        $fields->removeFieldFromTab('Root.Main', 'Content');
 
         return $fields;
     }
@@ -24,8 +25,8 @@ class PhotosPage_Controller extends Page_Controller
     public function returnPhotos()
     {
         $images = FeatureImage::get()->filter(array(
-                 "HidePhotosPage" => false,
-               ));
+                 'HidePhotosPage' => false,
+               ))->sort('Created');
 
         return $images->count() ? $images : false;
     }

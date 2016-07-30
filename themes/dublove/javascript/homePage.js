@@ -1,1 +1,257 @@
-!function(e){function t(o){if(n[o])return n[o].exports;var s=n[o]={exports:{},id:o,loaded:!1};return e[o].call(s.exports,s,s.exports,t),s.loaded=!0,s.exports}var n={};return t.m=e,t.c=n,t.p="",t(0)}({0:function(e,t,n){var o=n(111),s=n(112),i=n(113),r=n(1),a=n(2),c=n(3),l=n(109),u=function(){l(),a();var e=new c({offset:500});r(),window.addEventListener("resize",function(){o(e.revalidate(),100)},!1),window.addEventListener("scroll",function(){o(s(i),50),o(e.revalidate(),300)},!1),e.revalidate()}();e.exports=u},1:function(e,t){var n=function(){var e=document.getElementById("dateNow");if(e){var t=new Date;e.innerHTML=t.getFullYear()}};e.exports=n},2:function(e,t){var n=function(){window.setTimeout(function(){document.getElementsByTagName("body")[0].className=document.getElementsByTagName("body")[0].className.replace("noJS","JS"),document.getElementsByTagName("header")[0].className+=" active"},300)};e.exports=n},3:function(e,t,n){var o,s;!function(i,r){o=r,s="function"==typeof o?o.call(t,n,t,e):o,!(void 0!==s&&(e.exports=s))}(this,function(){function e(e){setTimeout(function(){var n=e._util;n.elements=i(e.options.selector),n.count=n.elements.length,n.destroyed&&(n.destroyed=!1,e.options.container&&l(e.options.container,function(e){a(e,"scroll",n.validateT)}),a(window,"resize",n.saveViewportOffsetT),a(window,"resize",n.validateT),a(window,"scroll",n.validateT)),t(e)},1)}function t(e){for(var t=e._util,n=0;n<t.count;n++){var o=t.elements[n],i=o.getBoundingClientRect();(i.right>=f.left&&i.bottom>=f.top&&i.left<=f.right&&i.top<=f.bottom||s(o,e.options.successClass))&&(e.load(o),t.elements.splice(n,1),t.count--,n--)}0===t.count&&e.destroy()}function n(e,t,n){if(!s(e,n.successClass)&&(t||n.loadInvisible||0<e.offsetWidth&&0<e.offsetHeight))if(t=e.getAttribute(d)||e.getAttribute(n.src)){t=t.split(n.separator);var i=t[p&&1<t.length?1:0],r="img"===e.nodeName.toLowerCase();r||void 0===e.src?(t=new Image,t.onerror=function(){n.error&&n.error(e,"invalid"),e.className=e.className+" "+n.errorClass},t.onload=function(){r?e.src=i:e.style.backgroundImage='url("'+i+'")',o(e,n)},t.src=i):(e.src=i,o(e,n))}else n.error&&n.error(e,"missing"),s(e,n.errorClass)||(e.className=e.className+" "+n.errorClass)}function o(e,t){e.className=e.className+" "+t.successClass,t.success&&t.success(e),l(t.breakpoints,function(t){e.removeAttribute(t.src)}),e.removeAttribute(t.src)}function s(e,t){return-1!==(" "+e.className+" ").indexOf(" "+t+" ")}function i(e){var t=[];e=document.querySelectorAll(e);for(var n=e.length;n--;t.unshift(e[n]));return t}function r(e){f.bottom=(window.innerHeight||document.documentElement.clientHeight)+e,f.right=(window.innerWidth||document.documentElement.clientWidth)+e}function a(e,t,n){e.attachEvent?e.attachEvent&&e.attachEvent("on"+t,n):e.addEventListener(t,n,!1)}function c(e,t,n){e.detachEvent?e.detachEvent&&e.detachEvent("on"+t,n):e.removeEventListener(t,n,!1)}function l(e,t){if(e&&t)for(var n=e.length,o=0;n>o&&!1!==t(e[o],o);o++);}function u(e,t,n){var o=0;return function(){var s=+new Date;t>s-o||(o=s,e.apply(n,arguments))}}var d,f,p;return function(o){if(!document.querySelectorAll){var s=document.createStyleSheet();document.querySelectorAll=function(e,t,n,o,i){for(i=document.all,t=[],e=e.replace(/\[for\b/gi,"[htmlFor").split(","),n=e.length;n--;){for(s.addRule(e[n],"k:v"),o=i.length;o--;)i[o].currentStyle.k&&t.push(i[o]);s.removeRule(0)}return t}}var i=this,a=i._util={};a.elements=[],a.destroyed=!0,i.options=o||{},i.options.error=i.options.error||!1,i.options.offset=i.options.offset||100,i.options.success=i.options.success||!1,i.options.selector=i.options.selector||".b-lazy",i.options.separator=i.options.separator||"|",i.options.container=i.options.container?document.querySelectorAll(i.options.container):!1,i.options.errorClass=i.options.errorClass||"b-error",i.options.breakpoints=i.options.breakpoints||!1,i.options.loadInvisible=i.options.loadInvisible||!1,i.options.successClass=i.options.successClass||"b-loaded",i.options.validateDelay=i.options.validateDelay||25,i.options.saveViewportOffsetDelay=i.options.saveViewportOffsetDelay||50,i.options.src=d=i.options.src||"data-src",p=1<window.devicePixelRatio,f={},f.top=0-i.options.offset,f.left=0-i.options.offset,i.revalidate=function(){e(this)},i.load=function(e,t){var o=this.options;void 0===e.length?n(e,t,o):l(e,function(e){n(e,t,o)})},i.destroy=function(){var e=this._util;this.options.container&&l(this.options.container,function(t){c(t,"scroll",e.validateT)}),c(window,"scroll",e.validateT),c(window,"resize",e.validateT),c(window,"resize",e.saveViewportOffsetT),e.count=0,e.elements.length=0,e.destroyed=!0},a.validateT=u(function(){t(i)},i.options.validateDelay,i),a.saveViewportOffsetT=u(function(){r(i.options.offset)},i.options.saveViewportOffsetDelay,i),r(i.options.offset),l(i.options.breakpoints,function(e){return e.width>=window.screen.width?(d=e.src,!1):void 0}),e(i)}})},109:function(e,t,n){var o=n(110),s=function(){function e(e,t){if(!t){var o=e||window.event;o.preventDefault?o.preventDefault():o.returnValue=!1}n.className.indexOf(" menuOpen")>-1||t?n.className=n.className.replace(" menuOpen",""):n.className+=" menuOpen"}function t(t){var n=t||window.event;n.preventDefault?n.preventDefault():n.returnValue=!1,e(null,!0)}for(var n=document.getElementsByTagName("body")[0],s=document.getElementsByClassName("menu"),i=0;i<s.length;i++)o("click",s[i],e);o("click",document.getElementById("overlay"),t),o("click",document.getElementById("closeMenu"),t)};e.exports=s},110:function(e,t){var n=function(e,t,n){t.addEventListener?t.addEventListener(e,n,!1):t.attachEvent?t.attachEvent("on"+e,n):t[e]=n};e.exports=n},111:function(e,t){var n=function(e,t,n){var o;return function(){var s=this,i=arguments,r=function(){o=null,n||e.apply(s,i)},a=n&&!o;clearTimeout(o),o=setTimeout(r,t),a&&e.apply(s,i)}};e.exports=n},112:function(e,t){var n=function(e){var t=document.documentElement,n=(window.pageYOffset||t.scrollTop)-(t.clientTop||0);return e?e(n):!1};e.exports=n},113:function(e,t){var n=[].slice.call(document.getElementsByClassName("animate")),o=function(e){for(var t=0;t<n.length;t++)n[t].getBoundingClientRect().top<550&&-1===n[t].className.indexOf("active")&&(n[t].className+=" active",n.splice(t,1))};e.exports=o}});
+/******/ (function(modules) { // webpackBootstrap
+/******/ 	// The module cache
+/******/ 	var installedModules = {};
+
+/******/ 	// The require function
+/******/ 	function __webpack_require__(moduleId) {
+
+/******/ 		// Check if module is in cache
+/******/ 		if(installedModules[moduleId])
+/******/ 			return installedModules[moduleId].exports;
+
+/******/ 		// Create a new module (and put it into the cache)
+/******/ 		var module = installedModules[moduleId] = {
+/******/ 			exports: {},
+/******/ 			id: moduleId,
+/******/ 			loaded: false
+/******/ 		};
+
+/******/ 		// Execute the module function
+/******/ 		modules[moduleId].call(module.exports, module, module.exports, __webpack_require__);
+
+/******/ 		// Flag the module as loaded
+/******/ 		module.loaded = true;
+
+/******/ 		// Return the exports of the module
+/******/ 		return module.exports;
+/******/ 	}
+
+
+/******/ 	// expose the modules object (__webpack_modules__)
+/******/ 	__webpack_require__.m = modules;
+
+/******/ 	// expose the module cache
+/******/ 	__webpack_require__.c = installedModules;
+
+/******/ 	// __webpack_public_path__
+/******/ 	__webpack_require__.p = "";
+
+/******/ 	// Load entry module and return exports
+/******/ 	return __webpack_require__(0);
+/******/ })
+/************************************************************************/
+/******/ ({
+
+/***/ 0:
+/***/ function(module, exports, __webpack_require__) {
+
+	var debounce = __webpack_require__(111);
+	var scrollEvents = __webpack_require__(112);
+	var scrollAnimations = __webpack_require__(113);
+	var addDateToFooter = __webpack_require__(1);
+	var setActive = __webpack_require__(2);
+	var Blazy = __webpack_require__(3);
+	var menu = __webpack_require__(109);
+
+	var homePage = (function() {
+
+	  menu();
+
+	  setActive();
+
+	  var bLazy = new Blazy({
+	      offset: 500
+	  });
+
+	  addDateToFooter();
+
+	  window.addEventListener('resize', function(){
+	    debounce(bLazy.revalidate(), 100);
+	  },false);
+
+	  window.addEventListener('scroll', function() {
+	    debounce(scrollEvents(scrollAnimations), 50);
+	    debounce(bLazy.revalidate(), 300);
+	  }, false);
+
+	  bLazy.revalidate();
+
+	})();
+
+
+	module.exports = homePage;
+
+
+/***/ },
+
+/***/ 1:
+/***/ function(module, exports) {
+
+	var addDateToFooter = function() {
+	    var dateElement = document.getElementById('dateNow');
+	    if (dateElement) {
+	        var tempDate = new Date();
+	        dateElement.innerHTML = tempDate.getFullYear();
+	    }
+	};
+
+	module.exports = addDateToFooter;
+
+
+/***/ },
+
+/***/ 2:
+/***/ function(module, exports) {
+
+	var setActive = function() {
+	    window.setTimeout(function() {
+	        document.getElementsByTagName('body')[0].className = document.getElementsByTagName('body')[0].className.replace('noJS', 'JS');
+	        document.getElementsByTagName('header')[0].className += ' active';
+	    }, 300);
+	};
+
+	module.exports = setActive;
+
+
+/***/ },
+
+/***/ 3:
+/***/ function(module, exports, __webpack_require__) {
+
+	var __WEBPACK_AMD_DEFINE_FACTORY__, __WEBPACK_AMD_DEFINE_RESULT__;  (function(k,f){ true?!(__WEBPACK_AMD_DEFINE_FACTORY__ = (f), __WEBPACK_AMD_DEFINE_RESULT__ = (typeof __WEBPACK_AMD_DEFINE_FACTORY__ === 'function' ? (__WEBPACK_AMD_DEFINE_FACTORY__.call(exports, __webpack_require__, exports, module)) : __WEBPACK_AMD_DEFINE_FACTORY__), __WEBPACK_AMD_DEFINE_RESULT__ !== undefined && (module.exports = __WEBPACK_AMD_DEFINE_RESULT__)):"object"===typeof exports?module.exports=f():k.Blazy=f()})(this,function(){function k(b){setTimeout(function(){var c=b._util;c.elements=w(b.options.selector);c.count=c.elements.length;c.destroyed&&(c.destroyed=!1,b.options.container&&h(b.options.container,function(a){l(a,"scroll",c.validateT)}),l(window,"resize",c.saveViewportOffsetT),l(window,"resize",c.validateT),l(window,"scroll",c.validateT));f(b)},1)}function f(b){for(var c=b._util,a=0;a<c.count;a++){var d=c.elements[a],g=d.getBoundingClientRect();if(g.right>=e.left&&g.bottom>=e.top&&g.left<=e.right&&g.top<=e.bottom||n(d,b.options.successClass))b.load(d),c.elements.splice(a,1),c.count--,a--}0===c.count&&b.destroy()}function q(b,c,a){if(!n(b,a.successClass)&&(c||a.loadInvisible||0<b.offsetWidth&&0<b.offsetHeight))if(c=b.getAttribute(p)||b.getAttribute(a.src)){c=c.split(a.separator);var d=c[r&&1<c.length?1:0],g="img"===b.nodeName.toLowerCase();g||void 0===b.src?(c=new Image,c.onerror=function(){a.error&&a.error(b,"invalid");b.className=b.className+" "+a.errorClass},c.onload=function(){g?b.src=d:b.style.backgroundImage='url("'+d+'")';t(b,a)},c.src=d):(b.src=d,t(b,a))}else a.error&&a.error(b,"missing"),n(b,a.errorClass)||(b.className=b.className+" "+a.errorClass)}function t(b,c){b.className=b.className+" "+c.successClass;c.success&&c.success(b);h(c.breakpoints,function(a){b.removeAttribute(a.src)});b.removeAttribute(c.src)}function n(b,c){return-1!==(" "+b.className+" ").indexOf(" "+c+" ")}function w(b){var c=[];b=document.querySelectorAll(b);for(var a=b.length;a--;c.unshift(b[a]));return c}function u(b){e.bottom=(window.innerHeight||document.documentElement.clientHeight)+b;e.right=(window.innerWidth||document.documentElement.clientWidth)+b}function l(b,c,a){b.attachEvent?b.attachEvent&&b.attachEvent("on"+c,a):b.addEventListener(c,a,!1)}function m(b,c,a){b.detachEvent?b.detachEvent&&b.detachEvent("on"+c,a):b.removeEventListener(c,a,!1)}function h(b,c){if(b&&c)for(var a=b.length,d=0;d<a&&!1!==c(b[d],d);d++);}function v(b,c,a){var d=0;return function(){var g=+new Date;g-d<c||(d=g,b.apply(a,arguments))}}var p,e,r;return function(b){if(!document.querySelectorAll){var c=document.createStyleSheet();document.querySelectorAll=function(a,b,d,e,f){f=document.all;b=[];a=a.replace(/\[for\b/gi,"[htmlFor").split(",");for(d=a.length;d--;){c.addRule(a[d],"k:v");for(e=f.length;e--;)f[e].currentStyle.k&&b.push(f[e]);c.removeRule(0)}return b}}var a=this,d=a._util={};d.elements=[];d.destroyed=!0;a.options=b||{};a.options.error=a.options.error||!1;a.options.offset=a.options.offset||100;a.options.success=a.options.success||!1;a.options.selector=a.options.selector||".b-lazy";a.options.separator=a.options.separator||"|";a.options.container=a.options.container?document.querySelectorAll(a.options.container):!1;a.options.errorClass=a.options.errorClass||"b-error";a.options.breakpoints=a.options.breakpoints||!1;a.options.loadInvisible=a.options.loadInvisible||!1;a.options.successClass=a.options.successClass||"b-loaded";a.options.validateDelay=a.options.validateDelay||25;a.options.saveViewportOffsetDelay=a.options.saveViewportOffsetDelay||50;a.options.src=p=a.options.src||"data-src";r=1<window.devicePixelRatio;e={};e.top=0-a.options.offset;e.left=0-a.options.offset;a.revalidate=function(){k(this)};a.load=function(a,b){var c=this.options;void 0===a.length?q(a,b,c):h(a,function(a){q(a,b,c)})};a.destroy=function(){var a=this._util;this.options.container&&h(this.options.container,function(b){m(b,"scroll",a.validateT)});m(window,"scroll",a.validateT);m(window,"resize",a.validateT);m(window,"resize",a.saveViewportOffsetT);a.count=0;a.elements.length=0;a.destroyed=!0};d.validateT=v(function(){f(a)},a.options.validateDelay,a);d.saveViewportOffsetT=v(function(){u(a.options.offset)},a.options.saveViewportOffsetDelay,a);u(a.options.offset);h(a.options.breakpoints,function(a){if(a.width>=window.screen.width)return p=a.src,!1});k(a)}});
+
+
+/***/ },
+
+/***/ 109:
+/***/ function(module, exports, __webpack_require__) {
+
+	var addEvent = __webpack_require__(110);
+
+	var menu = function() {
+
+		var body = document.getElementsByTagName('body')[0],
+			menuElements = document.getElementsByClassName('menu');
+
+		function menuOnClick(e, close) {
+			if (!close) {
+				var evt = e || window.event;
+				if (evt.preventDefault) {
+					evt.preventDefault();
+				} else {
+					evt.returnValue = false;
+				}
+			}
+
+			if (body.className.indexOf(' menuOpen') > -1 || close) {
+				body.className = body.className.replace(' menuOpen', '');
+			} else {
+				body.className += ' menuOpen';
+			}
+
+		}
+
+	  function closeMenu(e) {
+	    var evt = e || window.event;
+	    if (evt.preventDefault) {
+	      evt.preventDefault();
+	    } else {
+	      evt.returnValue = false;
+	    }
+	    menuOnClick(null, true);
+	  }
+
+		for (var i = 0; i < menuElements.length; i++) {
+			addEvent('click', menuElements[i], menuOnClick);
+		}
+
+		addEvent('click', document.getElementById('overlay'), closeMenu);
+
+	  addEvent('click', document.getElementById('closeMenu'), closeMenu);
+
+	};
+
+	module.exports = menu;
+
+
+/***/ },
+
+/***/ 110:
+/***/ function(module, exports) {
+
+	var addEvent = function(evnt, elem, func) {
+	   if (elem.addEventListener)  {
+		  elem.addEventListener(evnt,func,false);
+	   } else if (elem.attachEvent) {
+		  elem.attachEvent("on" + evnt, func);
+	   } else {
+		  elem[evnt] = func;
+	   }
+	};
+
+	module.exports = addEvent;
+
+
+/***/ },
+
+/***/ 111:
+/***/ function(module, exports) {
+
+	var debounce = function(func, wait, immediate) {
+	    var timeout;
+	    return function() {
+	        var context = this,
+	            args = arguments;
+	        var later = function() {
+	            timeout = null;
+	            if (!immediate) func.apply(context, args);
+	        };
+	        var callNow = immediate && !timeout;
+	        clearTimeout(timeout);
+	        timeout = setTimeout(later, wait);
+	        if (callNow) func.apply(context, args);
+	    };
+	};
+
+	module.exports = debounce;
+
+
+/***/ },
+
+/***/ 112:
+/***/ function(module, exports) {
+
+	var scrollEvents = function(callback) {
+	    var doc = document.documentElement;
+	    var top = (window.pageYOffset || doc.scrollTop) - (doc.clientTop || 0);
+	    if (callback) {
+	        return callback(top);
+	    }
+	    return false;
+	};
+
+	module.exports = scrollEvents;
+
+
+/***/ },
+
+/***/ 113:
+/***/ function(module, exports) {
+
+	var animatationEls = [].slice.call(document.getElementsByClassName('animate'));
+
+	var scrollAnimations = function(top) {
+	  for (var i = 0; i < animatationEls.length; i++) {
+	      if (animatationEls[i].getBoundingClientRect().top < 550 && animatationEls[i].className.indexOf('active') === -1) {
+	          animatationEls[i].className += ' active';
+	          animatationEls.splice(i, 1);
+	      }
+	  }
+	};
+
+	module.exports = scrollAnimations;
+
+
+/***/ }
+
+/******/ });
