@@ -274,7 +274,6 @@ button:-moz-focusring,
  * Change the border, margin, and padding in all browsers (opinionated).
  */
 fieldset {
-  border: 1px solid #c0c0c0;
   margin: 0 2px;
   padding: 0.35em 0.625em 0.75em; }
 
@@ -662,7 +661,7 @@ header {
         display: none; } }
     header nav ul a {
       padding: 0.4em 0.4em 0.3em;
-      margin: 0 0.1em; }
+      margin: 0 0.3em; }
   header nav li {
     list-style: none;
     display: inline-block; }

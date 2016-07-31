@@ -17,9 +17,11 @@
     <noscript>
         <link href="$ThemeDir/icons/icons.data.svg.css" rel="stylesheet">
     </noscript>
+    <% if $Form %>
+      <link href="$ThemeDir/css/login.min.css" rel="stylesheet">
+    <% end_if %>
   </head>
   <body>
-
 
     $Layout
 
