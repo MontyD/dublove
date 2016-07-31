@@ -1013,7 +1013,7 @@ span.funFont {
     position: absolute;
     left: -10em;
     top: 0em;
-    height: 90%;
+    height: 85%;
     width: 270%;
     background: #e5e7da;
     z-index: -1;
@@ -2202,6 +2202,7 @@ footer {
 
 input[type="email"],
 input[type="text"],
+input[type="password"],
 textarea {
   display: block;
   margin: 0 auto 0.2em;
@@ -2215,6 +2216,7 @@ textarea {
   box-sizing: border-box; }
   input[type="email"]:focus,
   input[type="text"]:focus,
+  input[type="password"]:focus,
   textarea:focus {
     outline: none;
     border-color: #9a9a9a; }
@@ -2239,6 +2241,7 @@ label {
 @media (max-width: 550px) {
   input[type="email"],
   input[type="text"],
+  input[type="password"],
   label,
   select,
   textarea {
@@ -2291,6 +2294,13 @@ fieldset {
           -ms-transform: scale(0.8);
               transform: scale(0.8);
       width: 300px !important; } }
+
+.field.checkbox {
+  text-align: center; }
+  .field.checkbox label {
+    padding-top: 0.2em;
+    width: auto;
+    display: inline-block; }
 
 .pika-lendar button {
   box-shadow: none;
