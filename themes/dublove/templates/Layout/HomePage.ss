@@ -69,12 +69,10 @@
       <section class="third">
         <h2>Our Packages</h2>
         <% loop $getPackages() %>
-          <% if $packagesCount() > 2 %>
+          <% if $Up.packagesCount() > 2 %>
             <article class="thirds top">
-          <% else_if $packagesCount() = 2 %>
-            <article class="halves top">
           <% else %>
-            <article class="top">
+            <article class="halves top">
           <% end_if %>
             <h3 class="funFont">$Name</h3>
             <p>$ShortDescription</p>
@@ -82,7 +80,9 @@
           </article>
         <% end_loop %>
         <% if $packagesCount > 3 %>
+        <div>
           <a class="likeButton subtle" href="packages" title="All packages">View all packages</a>
+        </div>
         <% end_if %>
       </section>
     <% end_if %>
