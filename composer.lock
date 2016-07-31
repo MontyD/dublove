@@ -4,8 +4,8 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#composer-lock-the-lock-file",
         "This file is @generated automatically"
     ],
-    "hash": "a2d792ff50b7f20ee8931c3d4c3da10a",
-    "content-hash": "3ce016b0e9aa0d4420e66fdefb97e543",
+    "hash": "c93a88d24acb677b1fd447365945bbab",
+    "content-hash": "31b907a1d76e41e05445945c8da5781b",
     "packages": [
         {
             "name": "composer/installers",
@@ -216,6 +216,43 @@
                 "silverstripe"
             ],
             "time": "2016-06-02 22:59:29"
+        },
+        {
+            "name": "silverstripe/googlesitemaps",
+            "version": "1.5.0",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/silverstripe-labs/silverstripe-googlesitemaps.git",
+                "reference": "356350ede586818544d6a5f51aa0dddf5c70b18c"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/silverstripe-labs/silverstripe-googlesitemaps/zipball/356350ede586818544d6a5f51aa0dddf5c70b18c",
+                "reference": "356350ede586818544d6a5f51aa0dddf5c70b18c",
+                "shasum": ""
+            },
+            "require": {
+                "silverstripe/framework": "~3.1"
+            },
+            "type": "silverstripe-module",
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "BSD"
+            ],
+            "authors": [
+                {
+                    "name": "Will Rossiter",
+                    "email": "will@fullscreen.io"
+                }
+            ],
+            "description": "SilverStripe support for the Google Sitemaps XML system, enabling Google and other search engines to see all urls on your site. This helps your SilverStripe website rank well in search engines, and to encourage the information on your site to be discovered by Google quickly.",
+            "homepage": "https://github.com/silverstripe-labs/silverstripe-googlesitemaps",
+            "keywords": [
+                "googlesitemaps",
+                "seo",
+                "silverstripe"
+            ],
+            "time": "2016-03-04 03:40:30"
         },
         {
             "name": "silverstripe/reports",

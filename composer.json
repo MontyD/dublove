@@ -8,7 +8,8 @@
 		"silverstripe/reports": "3.4.0",
 		"silverstripe/siteconfig": "3.4.0",
 		"silverstripe/spamprotection": "dev-master",
-		"undefinedoffset/silverstripe-nocaptcha": "^0.1.5"
+		"undefinedoffset/silverstripe-nocaptcha": "^0.1.5",
+		"silverstripe/googlesitemaps": "^1.5"
 	},
 	"require-dev": {
 		"phpunit/PHPUnit": "~3.7@stable"
