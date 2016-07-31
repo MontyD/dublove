@@ -1,3 +1,19 @@
+<!--[if lt IE 9]>
+  <main>
+    <section>
+      <h1>You're using quite an old browser</h1>
+      <p>
+        From the looks of things you are using a fairly old browser.
+        This website will not render correctly in this browser, and
+        other websites will probably look odd too!
+      </p>
+      <p>
+        <a href="http://outdatedbrowser.com/en" title="Upgrade your browser">
+          Please upgrade your browser using this link</a>
+      </p>
+    </section>
+  </main>
+<![endif]-->
 <header class="centerAlign">
   <section class="container padded">
       <h1 class="main">$SiteConfig.Title</h1>
@@ -50,17 +66,26 @@
     </section>
     <% end_if %>
     <% if $getPackages() %>
-    <section class="third">
-      <h2>Our Packages</h2>
-      <% loop $getPackages() %>
-        <article class="thirds top">
-          <h3 class="funFont">$Name</h3>
-          <p>$ShortDescription</p>
-          <a class="likeButton subtle" href="packages/#target__$Name" title="$Name">More info</a>
-        </article>
-      <% end_loop %>
+      <section class="third">
+        <h2>Our Packages</h2>
+        <% loop $getPackages() %>
+          <% if $packagesCount() > 2 %>
+            <article class="thirds top">
+          <% else_if $packagesCount() = 2 %>
+            <article class="halves top">
+          <% else %>
+            <article class="top">
+          <% end_if %>
+            <h3 class="funFont">$Name</h3>
+            <p>$ShortDescription</p>
+            <a class="likeButton subtle" href="packages/#target__$Name" title="$Name">More info</a>
+          </article>
+        <% end_loop %>
+        <% if $packagesCount > 3 %>
+          <a class="likeButton subtle" href="packages" title="All packages">View all packages</a>
+        <% end_if %>
+      </section>
     <% end_if %>
-  </section>
   <section class="fourth emphasis last">
     <p class="strongText">Interested? Get in contact with Mike and Jane today<a class="likeButton small" href="contact" title="Conctact us!">Contact us</a></p>
   </section>

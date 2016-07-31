@@ -11,3 +11,19 @@
     <a href="#" title="Menu" class="menu topA rightA"><span class="icon-hamburger"></span></a>
   </nav>
 </header>
+<!--[if lt IE 9]>
+  <main>
+    <section>
+      <h1>You're using quite an old browser</h1>
+      <p>
+        From the looks of things you are using a fairly old browser.
+        This website will not render correctly in this browser, and
+        other websites will probably look odd too!
+      </p>
+      <p>
+        <a href="http://outdatedbrowser.com/en" title="Upgrade your browser">
+          Please upgrade your browser using this link</a>
+      </p>
+    </section>
+  </main>
+<![endif]-->

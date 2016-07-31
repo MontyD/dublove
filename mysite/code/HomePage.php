@@ -46,9 +46,15 @@ class HomePage_Controller extends Page_Controller {
 	}
 
 	public function getPackages() {
-		$packages = Package::get();
+		$packages = Package::get()->limit(2);
 		return $packages->count() ? $packages : false;
 	}
+
+	public function packagesCount() {
+		$packagesCount = Package::get()->count();
+		return 2;
+	}
+
 
 	public function init() {
 		parent::init();
