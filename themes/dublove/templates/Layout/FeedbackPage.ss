@@ -16,7 +16,7 @@
     $FeedbackForm
   </section>
 
-  <section class="last">
+  <section class="last emphasis">
       <p class="strongText">Like what you hear? Have a look at our packages<a class="likeButton small" href="packages" title="Packages">Packages</a></p>
   </section>
 </main>

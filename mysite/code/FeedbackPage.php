@@ -74,5 +74,14 @@ class FeedbackPage_Controller extends Page_Controller
     public function init()
     {
         parent::init();
+        parent::init();
+
+        Requirements::clear();
+        Requirements::css('https://fonts.googleapis.com/css?family=Josefin+Sans:400,700');
+        Requirements::css('https://fonts.googleapis.com/css?family=Bad+Script');
+
+        Requirements::css($this->ThemeDir().'/css/feedbackPage.min.css');
+        Requirements::javascript($this->ThemeDir().'/javascript/page.js');
+        Requirements::javascript('https://maps.googleapis.com/maps/api/js?key=AIzaSyBzICHyqdCdY19NqntpSca1YBXo2-YdCEI&callback=initMap');
     }
 }

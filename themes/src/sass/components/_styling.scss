@@ -264,6 +264,12 @@ main {
 				z-index   : -1;
 				transform : skewY(-3deg);
 			}
+			&.last {
+				margin-top    : -3em;
+				padding-top   : 6em;
+				padding-bottom: 5em;
+				margin-bottom : -1.5em;
+			}
 		}
 		.innerModal {
 			@include shadow(1);
