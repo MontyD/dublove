@@ -16,6 +16,11 @@
     </script>
     <noscript>
         <link href="$ThemeDir/icons/icons.data.svg.css" rel="stylesheet">
+        <style type="text/css">
+          .b-lazy {
+            display: none !important;
+          }
+        </style>
     </noscript>
     <% if $Form %>
       <link href="$ThemeDir/css/login.min.css" rel="stylesheet">

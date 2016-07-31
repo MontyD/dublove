@@ -39,9 +39,11 @@
           <h2 class="topHeading">$sectionOneHeading</h2>
           $sectionOneText
           <img class="boxed b-lazy breakMedium break" src="data:image/gif;base64,R0lGODlhAQABAAAAACH5BAEKAAEALAAAAAABAAEAAAICTAEAOw==" data-src="$sectionOneImage.SetWidth(700).URL" alt="$sectionOneHeading" />
+          <noscript><img class="boxed breakMedium break" src="$sectionOneImage.SetWidth(700).URL" alt="$sectionOneHeading" /></noscript>
         </div>
         <div class="imageContainer hide">
           <img class="b-lazy" src="data:image/gif;base64,R0lGODlhAQABAAAAACH5BAEKAAEALAAAAAABAAEAAAICTAEAOw==" data-src="$sectionOneImage.SetWidth(700).URL" alt="$sectionOneHeading" />
+          <noscript><img src="$sectionOneImage.SetWidth(700).URL" alt="$sectionOneHeading" /></noscript>
         </div>
       </article>
     </section>
@@ -57,6 +59,7 @@
           <article class="halves centerAlign">
             <h3 class="normalFont">$Name</h3>
             <img class="boxed b-lazy" src="data:image/gif;base64,R0lGODlhAQABAAAAACH5BAEKAAEALAAAAAABAAEAAAICTAEAOw==" data-src="$backgroundImage.croppedImage(430, 280).URL" alt="$Name" />
+            <noscript><img class="boxed" src="$backgroundImage.croppedImage(430, 280).URL" alt="$Name" /></noscript>
             <p>
               $mainDescription.FirstParagraph()
             </p>

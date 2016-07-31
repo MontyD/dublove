@@ -37,6 +37,9 @@
         <hr>
         <% end_if %>
     <% end_loop %>
+    <noscript>
+      <h2>Please enable Javascript in order to view more photos</h2>
+    </noscript>
   </section>
 
   <% end_if %>

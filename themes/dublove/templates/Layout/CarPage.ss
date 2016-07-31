@@ -23,9 +23,15 @@
       <div class="content">
         $mainDescription
         <img class="boxed b-lazy breakMedium break" src="data:image/gif;base64,R0lGODlhAQABAAAAACH5BAEKAAEALAAAAAABAAEAAAICTAEAOw==" data-src="$descriptionImage.SetWidth(700).URL"  alt="$tagLine" />
+        <noscript>
+          <img class="boxed breakMedium break" src="$descriptionImage.SetWidth(700).URL" alt="$tagLine" />
+        </noscript>
       </div>
       <div class="imageContainer hide">
         <img class="b-lazy" src="data:image/gif;base64,R0lGODlhAQABAAAAACH5BAEKAAEALAAAAAABAAEAAAICTAEAOw==" data-src="$descriptionImage.croppedImage(500, 610).URL"  alt="$tagLine" />
+        <noscript>
+          <img src="$descriptionImage.croppedImage(500, 610).URL" alt="$tagLine" />
+        </noscript>
       </div>
     </article>
   </section>
@@ -45,8 +51,14 @@
         <div class="imageContainer">
           <% if $Top.Name == 'Frank' %>
             <img class="b-lazy transparent" src="data:image/gif;base64,R0lGODlhAQABAAAAACH5BAEKAAEALAAAAAABAAEAAAICTAEAOw==" data-src="$FrankPhoto.SetWidth(700).URL" alt="$Name" />
+            <noscript>
+              <img class="transparent" src="$FrankPhoto.SetWidth(700).URL" alt="$Name" />
+            </noscript>
           <% else %>
             <img class="b-lazy transparent" src="data:image/gif;base64,R0lGODlhAQABAAAAACH5BAEKAAEALAAAAAABAAEAAAICTAEAOw==" data-src="$FranniePhoto.SetWidth(700).URL" alt="$Name" />
+            <noscript>
+              <img class="transparent" src="$FranniePhoto.SetWidth(700).URL" alt="$Name" />
+            </noscript>
           <% end_if %>
           <div class="title">
             <h3 class="white">$Name</h3>
@@ -55,9 +67,15 @@
         <div class="content">
           <% if $Top.Name == 'Frank' %>
             <img class="boxed b-lazy breakMedium break" src="data:image/gif;base64,R0lGODlhAQABAAAAACH5BAEKAAEALAAAAAABAAEAAAICTAEAOw==" data-src="$FrankPhoto.SetWidth(700).URL" alt="$Name" />
+            <noscript>
+              <img class="boxed breakMedium break" src="$FrankPhoto.SetWidth(700).URL" alt="$Name" />
+            </noscript>
             $FrankDescription
           <% else %>
             <img class="boxed b-lazy breakMedium break" src="data:image/gif;base64,R0lGODlhAQABAAAAACH5BAEKAAEALAAAAAABAAEAAAICTAEAOw==" data-src="$FranniePhoto.SetWidth(700).URL" alt="$Name" />
+            <noscript>
+              <img class="boxed breakMedium break" src="$FranniePhoto.SetWidth(700).URL" alt="$Name" />
+            </noscript>
             $FrannieDescription
           <% end_if %>
           <a class="likeButton subtle" href="contact" title="Book now">Book now</a>
