@@ -289,13 +289,6 @@ span.funFont {
 	background: $colorDark;
 	color     : $colorWhite;
 }
-.grey {
-	background: $colorLightGrey;
-}
-.darkBlue {
-	background: $colorDark;
-	color     : $colorWhite;
-}
 .overlayPurple {
 	background: $colorOverlay;
 }
@@ -523,4 +516,9 @@ header {
 		transform: scale(1);
 		opacity  : 1;
 	}
+}
+.javascript-banner {
+    margin: 0;
+    padding: 1em;
+    box-sizing: border-box;
 }

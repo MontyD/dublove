@@ -27,6 +27,11 @@
     <% end_if %>
   </head>
   <body>
+    <noscript>
+      <article class="dark javascript-banner">
+        <p>Please enable Javascript to view all content on this page.</p>
+      </article>
+    </noscript>
 
     $Layout
 

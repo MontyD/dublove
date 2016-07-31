@@ -14,6 +14,11 @@
     </section>
   </main>
 <![endif]-->
+<noscript>
+  <article class="dark javascript-banner">
+    <p>Please enable Javascript to view all content on this page.</p>
+  </article>
+</noscript>
 <header class="centerAlign">
   <section class="container padded">
       <h1 class="main">$SiteConfig.Title</h1>

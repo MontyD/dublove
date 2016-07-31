@@ -55,7 +55,7 @@ section.first {
 	}
 	img {
 		vertical-align: top;
-		margin-top: 1.5em;
+		margin-top    : 1.5em;
 	}
 	@media(max-width: $mediumBP) {
 		padding: 0.1em 0 2em;
@@ -123,5 +123,7 @@ section.second.emphasis {
 	}
 }
 section.third {
-	margin-top: 0;
+	margin-top   : -2em;
+	padding-top  : 0;
+	margin-bottom: 3em;
 }

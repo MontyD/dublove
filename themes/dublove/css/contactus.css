@@ -590,9 +590,7 @@ img {
           padding: 0;
           margin: 0;
           left: 50%;
-          -webkit-transform: translateX(-50%);
-              -ms-transform: translateX(-50%);
-                  transform: translateX(-50%); }
+          transform: translateX(-50%); }
           .innerModal .imageContainer img.transparent {
             opacity: 0.7; }
       .innerModal .content {
@@ -608,9 +606,7 @@ img {
       .innerModal .title {
         position: absolute;
         top: 40%;
-        -webkit-transform: translateY(-50%);
-            -ms-transform: translateY(-50%);
-                transform: translateY(-50%);
+        transform: translateY(-50%);
         margin: 0 auto;
         left: 0;
         right: 0;
@@ -688,7 +684,7 @@ main {
     text-align: center; }
     main section.emphasis {
       z-index: 1;
-      margin-bottom: -4em;
+      margin-bottom: -1em;
       overflow: hidden;
       padding-top: 2em;
       padding-bottom: 7em; }
@@ -702,7 +698,7 @@ main {
       main section.emphasis.last {
         margin-top: 0;
         padding-top: 6em;
-        padding-bottom: 5em;
+        padding-bottom: 4em;
         margin-bottom: 0; }
         main section.emphasis.last::after {
           height: 150%; }
@@ -735,9 +731,7 @@ footer {
 
 .active i {
   opacity: 1;
-  -webkit-transform: scale(1);
-      -ms-transform: scale(1);
-          transform: scale(1); }
+  transform: scale(1); }
 
 .hidden {
   display: none; }
@@ -1001,13 +995,6 @@ span.funFont {
   background: #504978;
   color: #FFFFFF; }
 
-.grey {
-  background: #f1f1f1; }
-
-.darkBlue {
-  background: #504978;
-  color: #FFFFFF; }
-
 .overlayPurple {
   background: rgba(90, 48, 146, 0.5); }
 
@@ -1024,9 +1011,7 @@ span.funFont {
     width: 270%;
     background: #e5e7da;
     z-index: -1;
-    -webkit-transform: skewY(-3deg);
-        -ms-transform: skewY(-3deg);
-            transform: skewY(-3deg); }
+    transform: skewY(-3deg); }
   .emphasis.emphasis-purple::after {
     background: rgba(90, 48, 146, 0.5); }
 
@@ -1035,9 +1020,7 @@ span.funFont {
   padding: 0.3em 0.4em 0.2em;
   background: rgba(0, 0, 0, 0.3);
   border-radius: 0.2em;
-  transition: -webkit-transform 0.2s ease;
   transition: transform 0.2s ease;
-  transition: transform 0.2s ease, -webkit-transform 0.2s ease;
   z-index: 9000; }
 
 .overlay {
@@ -1060,9 +1043,7 @@ nav.popupMenu {
   background: #3a3265;
   height: 100%;
   box-shadow: 0 1.5px 4px rgba(0, 0, 0, 0.24), 0 1.5px 6px rgba(0, 0, 0, 0.12);
-  -webkit-transform: translateX(250px);
-      -ms-transform: translateX(250px);
-          transform: translateX(250px);
+  transform: translateX(250px);
   transition: all 0.3s ease; }
   nav.popupMenu a.close {
     display: inline-block;
@@ -1104,9 +1085,7 @@ nav.popupMenu {
       font-family: "Bad Script", sans-serif;
       margin: 0.2em auto;
       opacity: 0;
-      -webkit-transform: translateX(40px);
-          -ms-transform: translateX(40px);
-              transform: translateX(40px);
+      transform: translateX(40px);
       transition: all;
       transition-duration: 0.4s; }
     nav.popupMenu ul a {
@@ -1129,17 +1108,11 @@ body.menuOpen .overlay {
   visibility: visible;
   z-index: 9000; }
 body.menuOpen .menu {
-  -webkit-transform: scale(0);
-      -ms-transform: scale(0);
-          transform: scale(0); }
+  transform: scale(0); }
 body.menuOpen .popupMenu {
-  -webkit-transform: translate(0);
-      -ms-transform: translate(0);
-          transform: translate(0); }
+  transform: translate(0); }
   body.menuOpen .popupMenu li {
-    -webkit-transform: translate(0);
-        -ms-transform: translate(0);
-            transform: translate(0);
+    transform: translate(0);
     opacity: 1; }
 
 header {
@@ -1214,24 +1187,21 @@ header {
   background: #E0E0E0; }
 
 .animateScale {
-  -webkit-transform: scale(0);
-      -ms-transform: scale(0);
-          transform: scale(0);
+  transform: scale(0);
   opacity: 0;
-  transition: opacity 0.8s ease, -webkit-transform 1.2s ease;
-  transition: opacity 0.8s ease, transform 1.2s ease;
-  transition: opacity 0.8s ease, transform 1.2s ease, -webkit-transform 1.2s ease; }
+  transition: opacity 0.8s ease, transform 1.2s ease; }
   .animateScale.active {
-    -webkit-transform: scale(1);
-        -ms-transform: scale(1);
-            transform: scale(1);
+    transform: scale(1);
     opacity: 1; }
 
 .active .animateScale {
-  -webkit-transform: scale(1);
-      -ms-transform: scale(1);
-          transform: scale(1);
+  transform: scale(1);
   opacity: 1; }
+
+.javascript-banner {
+  margin: 0;
+  padding: 1em;
+  box-sizing: border-box; }
 
 .icon-Hibiscus,
 .icon-Hibiscus-center,
@@ -1873,9 +1843,7 @@ img {
           padding: 0;
           margin: 0;
           left: 50%;
-          -webkit-transform: translateX(-50%);
-              -ms-transform: translateX(-50%);
-                  transform: translateX(-50%); }
+          transform: translateX(-50%); }
           .innerModal .imageContainer img.transparent {
             opacity: 0.7; }
       .innerModal .content {
@@ -1891,9 +1859,7 @@ img {
       .innerModal .title {
         position: absolute;
         top: 40%;
-        -webkit-transform: translateY(-50%);
-            -ms-transform: translateY(-50%);
-                transform: translateY(-50%);
+        transform: translateY(-50%);
         margin: 0 auto;
         left: 0;
         right: 0;
@@ -1971,7 +1937,7 @@ main {
     text-align: center; }
     main section.emphasis {
       z-index: 1;
-      margin-bottom: -4em;
+      margin-bottom: -1em;
       overflow: hidden;
       padding-top: 2em;
       padding-bottom: 7em; }
@@ -1985,7 +1951,7 @@ main {
       main section.emphasis.last {
         margin-top: 0;
         padding-top: 6em;
-        padding-bottom: 5em;
+        padding-bottom: 4em;
         margin-bottom: 0; }
         main section.emphasis.last::after {
           height: 150%; }
@@ -2018,9 +1984,7 @@ footer {
 
 .active i {
   opacity: 1;
-  -webkit-transform: scale(1);
-      -ms-transform: scale(1);
-          transform: scale(1); }
+  transform: scale(1); }
 
 .hidden {
   display: none; }
@@ -2159,6 +2123,7 @@ footer {
 .pika-button {
   cursor: pointer;
   display: block;
+  -moz-box-sizing: border-box;
   box-sizing: border-box;
   outline: none;
   border: 0;
@@ -2300,9 +2265,7 @@ fieldset {
   margin: 1em auto; }
   @media (max-width: 350px) {
     .field.nocaptcha {
-      -webkit-transform: scale(0.8);
-          -ms-transform: scale(0.8);
-              transform: scale(0.8);
+      transform: scale(0.8);
       width: 300px !important; } }
 
 .field.checkbox {
