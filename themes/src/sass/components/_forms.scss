@@ -1,8 +1,8 @@
 @import '_layout';
 @import '_pickaday';
 input[type="email"],
-input[type="text"],
 input[type="password"],
+input[type="text"],
 textarea {
 	display   : block;
 	margin    : 0 auto 0.2em;
@@ -38,8 +38,8 @@ label {
 }
 @media(max-width: $smallBP) {
 	input[type="email"],
-	input[type="text"],
 	input[type="password"],
+	input[type="text"],
 	label,
 	select,
 	textarea {
@@ -71,8 +71,8 @@ fieldset {
 	}
 	.field {
 		@media(max-width: 350px) {
-			width: 80%;
-			margin:1em;
+			width : 80%;
+			margin: 1em;
 		}
 	}
 }
@@ -82,9 +82,10 @@ fieldset {
 	font-size: 1.2em;
 	&.required,
 	&.validation {
-		margin: 0.5em auto 0.7em;
+		display   : block;
+		margin    : 0.6em auto 0.7em;
 		color     : #D32F2F;
-		text-align: left;
+		text-align: center;
 	}
 	&.Good {
 		font-size    : 1.4em;
@@ -100,15 +101,15 @@ fieldset {
 	margin : 1em auto;
 	@media(max-width: 350px) {
 		transform: scale(0.8);
-		width: 300px !important;
+		width    : 300px !important;
 	}
 }
 .field.checkbox {
 	text-align: center;
 	label {
 		padding-top: 0.2em;
-		width: auto;
-		display: inline-block;
+		width      : auto;
+		display    : inline-block;
 	}
 }
 .pika-lendar {
@@ -118,11 +119,11 @@ fieldset {
 	}
 }
 .formContainer {
-	text-align: center;
+	text-align   : center;
 	margin-bottom: 3em;
 	&.formContainerSmall {
-		max-width: 600px;
-		margin-left: auto;
+		max-width   : 600px;
+		margin-left : auto;
 		margin-right: auto;
 	}
 	h2 {

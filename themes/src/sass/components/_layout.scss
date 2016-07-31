@@ -385,10 +385,10 @@ main {
 		text-align: center;
 		&.emphasis {
 			z-index       : 1;
-			margin-bottom : 0;
+			margin-bottom : -4em;
 			overflow      : hidden;
 			padding-top   : 2em;
-			padding-bottom: 5em;
+			padding-bottom: 7em;
 			&.overlap {
 				padding-top   : 5em;
 				padding-bottom: 6em;
@@ -397,6 +397,15 @@ main {
 			&.short {
 				@media(min-width: $mediumBP) {
 					padding-bottom: 1em;
+				}
+			}
+			&.last {
+				margin-top    : 0;
+				padding-top   : 6em;
+				padding-bottom: 5em;
+				margin-bottom : 0;
+				&::after {
+					height: 150%;
 				}
 			}
 		}

@@ -125,21 +125,3 @@ section.second.emphasis {
 section.third {
 	margin-top: 0;
 }
-section.fourth.emphasis {
-	margin-top    : 2.5em;
-	margin-bottom : 0;
-	padding-top   : 7.5em;
-	padding-bottom: 5em;
-	border-radius : 0.3em;
-	overflow-x    : hidden;
-	&::after {
-		height: 100%;
-		top   : 2.5em;
-	}
-	@media(max-width: $smallBP) {
-		a.likeButton {
-			display: block;
-			margin : 0.8em auto;
-		}
-	}
-}

@@ -687,10 +687,10 @@ main {
     text-align: center; }
     main section.emphasis {
       z-index: 1;
-      margin-bottom: 0;
+      margin-bottom: -4em;
       overflow: hidden;
       padding-top: 2em;
-      padding-bottom: 5em; }
+      padding-bottom: 7em; }
       main section.emphasis.overlap {
         padding-top: 5em;
         padding-bottom: 6em;
@@ -698,6 +698,13 @@ main {
       @media (min-width: 1000px) {
         main section.emphasis.short {
           padding-bottom: 1em; } }
+      main section.emphasis.last {
+        margin-top: 0;
+        padding-top: 6em;
+        padding-bottom: 5em;
+        margin-bottom: 0; }
+        main section.emphasis.last::after {
+          height: 150%; }
     main section.last {
       margin-top: -3em; }
       @media (max-width: 550px) {
@@ -1019,11 +1026,6 @@ span.funFont {
     -webkit-transform: skewY(-3deg);
         -ms-transform: skewY(-3deg);
             transform: skewY(-3deg); }
-  .emphasis.last {
-    margin-top: -3em;
-    padding-top: 6em;
-    padding-bottom: 5em;
-    margin-bottom: -1.5em; }
   .emphasis.emphasis-purple::after {
     background: rgba(90, 48, 146, 0.5); }
 
@@ -1116,7 +1118,7 @@ nav.popupMenu {
       text-shadow: 1px 1px 0 rgba(0, 0, 0, 0.8); }
       @media (max-height: 600px) {
         nav.popupMenu ul a {
-          font-size: 1.8em; } }
+          font-size: 1.4em; } }
       nav.popupMenu ul a.current {
         background: rgba(0, 0, 0, 0.1); }
       nav.popupMenu ul a:hover {

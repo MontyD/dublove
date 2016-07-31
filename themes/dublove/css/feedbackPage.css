@@ -688,10 +688,10 @@ main {
     text-align: center; }
     main section.emphasis {
       z-index: 1;
-      margin-bottom: 0;
+      margin-bottom: -4em;
       overflow: hidden;
       padding-top: 2em;
-      padding-bottom: 5em; }
+      padding-bottom: 7em; }
       main section.emphasis.overlap {
         padding-top: 5em;
         padding-bottom: 6em;
@@ -699,6 +699,13 @@ main {
       @media (min-width: 1000px) {
         main section.emphasis.short {
           padding-bottom: 1em; } }
+      main section.emphasis.last {
+        margin-top: 0;
+        padding-top: 6em;
+        padding-bottom: 5em;
+        margin-bottom: 0; }
+        main section.emphasis.last::after {
+          height: 150%; }
     main section.last {
       margin-top: -3em; }
       @media (max-width: 550px) {
@@ -1020,11 +1027,6 @@ span.funFont {
     -webkit-transform: skewY(-3deg);
         -ms-transform: skewY(-3deg);
             transform: skewY(-3deg); }
-  .emphasis.last {
-    margin-top: -3em;
-    padding-top: 6em;
-    padding-bottom: 5em;
-    margin-bottom: -1.5em; }
   .emphasis.emphasis-purple::after {
     background: rgba(90, 48, 146, 0.5); }
 
@@ -1117,7 +1119,7 @@ nav.popupMenu {
       text-shadow: 1px 1px 0 rgba(0, 0, 0, 0.8); }
       @media (max-height: 600px) {
         nav.popupMenu ul a {
-          font-size: 1.8em; } }
+          font-size: 1.4em; } }
       nav.popupMenu ul a.current {
         background: rgba(0, 0, 0, 0.1); }
       nav.popupMenu ul a:hover {
@@ -1969,10 +1971,10 @@ main {
     text-align: center; }
     main section.emphasis {
       z-index: 1;
-      margin-bottom: 0;
+      margin-bottom: -4em;
       overflow: hidden;
       padding-top: 2em;
-      padding-bottom: 5em; }
+      padding-bottom: 7em; }
       main section.emphasis.overlap {
         padding-top: 5em;
         padding-bottom: 6em;
@@ -1980,6 +1982,13 @@ main {
       @media (min-width: 1000px) {
         main section.emphasis.short {
           padding-bottom: 1em; } }
+      main section.emphasis.last {
+        margin-top: 0;
+        padding-top: 6em;
+        padding-bottom: 5em;
+        margin-bottom: 0; }
+        main section.emphasis.last::after {
+          height: 150%; }
     main section.last {
       margin-top: -3em; }
       @media (max-width: 550px) {
@@ -2201,8 +2210,8 @@ footer {
   border-radius: 3px; }
 
 input[type="email"],
-input[type="text"],
 input[type="password"],
+input[type="text"],
 textarea {
   display: block;
   margin: 0 auto 0.2em;
@@ -2215,8 +2224,8 @@ textarea {
   transition: border-color 0.2s ease;
   box-sizing: border-box; }
   input[type="email"]:focus,
-  input[type="text"]:focus,
   input[type="password"]:focus,
+  input[type="text"]:focus,
   textarea:focus {
     outline: none;
     border-color: #9a9a9a; }
@@ -2240,8 +2249,8 @@ label {
 
 @media (max-width: 550px) {
   input[type="email"],
-  input[type="text"],
   input[type="password"],
+  input[type="text"],
   label,
   select,
   textarea {
@@ -2274,9 +2283,10 @@ fieldset {
   margin: 0.2em auto 0;
   font-size: 1.2em; }
   .message.required, .message.validation {
-    margin: 0.5em auto 0.7em;
+    display: block;
+    margin: 0.6em auto 0.7em;
     color: #D32F2F;
-    text-align: left; }
+    text-align: center; }
   .message.Good {
     font-size: 1.4em;
     background: #c8edce;
@@ -2323,12 +2333,12 @@ fieldset {
 .feedback-row {
   position: relative;
   display: block;
-  margin: 0 auto 0.5em;
+  margin: 0 auto 0.8em;
   text-align: right;
   width: 95%; }
   @media (max-width: 550px) {
     .feedback-row {
-      margin-bottom: 1em; } }
+      margin-bottom: 2em; } }
   .feedback-row.even {
     text-align: left; }
   .feedback-row .feedback-item {

@@ -688,10 +688,10 @@ main {
     text-align: center; }
     main section.emphasis {
       z-index: 1;
-      margin-bottom: 0;
+      margin-bottom: -4em;
       overflow: hidden;
       padding-top: 2em;
-      padding-bottom: 5em; }
+      padding-bottom: 7em; }
       main section.emphasis.overlap {
         padding-top: 5em;
         padding-bottom: 6em;
@@ -699,6 +699,13 @@ main {
       @media (min-width: 1000px) {
         main section.emphasis.short {
           padding-bottom: 1em; } }
+      main section.emphasis.last {
+        margin-top: 0;
+        padding-top: 6em;
+        padding-bottom: 5em;
+        margin-bottom: 0; }
+        main section.emphasis.last::after {
+          height: 150%; }
     main section.last {
       margin-top: -3em; }
       @media (max-width: 550px) {
@@ -920,8 +927,8 @@ footer {
   border-radius: 3px; }
 
 input[type="email"],
-input[type="text"],
 input[type="password"],
+input[type="text"],
 textarea {
   display: block;
   margin: 0 auto 0.2em;
@@ -934,8 +941,8 @@ textarea {
   transition: border-color 0.2s ease;
   box-sizing: border-box; }
   input[type="email"]:focus,
-  input[type="text"]:focus,
   input[type="password"]:focus,
+  input[type="text"]:focus,
   textarea:focus {
     outline: none;
     border-color: #9a9a9a; }
@@ -959,8 +966,8 @@ label {
 
 @media (max-width: 550px) {
   input[type="email"],
-  input[type="text"],
   input[type="password"],
+  input[type="text"],
   label,
   select,
   textarea {
@@ -993,9 +1000,10 @@ fieldset {
   margin: 0.2em auto 0;
   font-size: 1.2em; }
   .message.required, .message.validation {
-    margin: 0.5em auto 0.7em;
+    display: block;
+    margin: 0.6em auto 0.7em;
     color: #D32F2F;
-    text-align: left; }
+    text-align: center; }
   .message.Good {
     font-size: 1.4em;
     background: #c8edce;

@@ -5,11 +5,11 @@
 .feedback-row {
 	position  : relative;
 	display   : block;
-	margin    : 0 auto 0.5em;
+	margin    : 0 auto 0.8em;
 	text-align: right;
 	width     : 95%;
   @media(max-width: $smallBP) {
-    margin-bottom: 1em;
+    margin-bottom: 2em;
   }
 	&.even {
 		text-align: left;

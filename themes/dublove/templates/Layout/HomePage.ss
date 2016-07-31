@@ -61,7 +61,7 @@
       <% end_loop %>
     <% end_if %>
   </section>
-  <section class="fourth emphasis">
+  <section class="fourth emphasis last">
     <p class="strongText">Interested? Get in contact with Mike and Jane today<a class="likeButton small" href="contact" title="Conctact us!">Contact us</a></p>
   </section>
 </main>
