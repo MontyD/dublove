@@ -6,10 +6,6 @@ class ContactUsPage extends Page
       'OpeningParagraph' => 'Text',
     );
 
-    private static $has_one = array(
-      'mainImage' => 'Image',
-    );
-
     private static $has_many = array(
       'Contacts' => 'Contact',
     );
@@ -17,7 +13,6 @@ class ContactUsPage extends Page
     public function getCMSFields()
     {
         $fields = parent::getCMSFields();
-        $fields->addFieldToTab('Root.Main', UploadField::create('mainImage', 'Main image'), 'Metadata');
         $fields->addFieldToTab('Root.Main', TextareaField::create('OpeningParagraph', 'Opening Paragraph'), 'Content');
 
         $fields->addFieldToTab('Root.Contacts', GridField::create(
