@@ -13,8 +13,26 @@
         $OpeningParagraph
       </p>
     </article>
-    $FeedbackForm
+
   </section>
+
+  <section class="feedback-main">
+    <% if approvedFeedback() %>
+
+
+    <% else %>
+
+    <p> We haven't received any feedback, please add some using the form below </p>
+
+    <% end_if %>
+
+  </section>
+
+  <article class="formContainer formContainerSmall">
+
+    $FeedbackForm
+
+  </article>
 
   <section class="last emphasis">
       <p class="strongText">Like what you hear? Have a look at our packages<a class="likeButton small" href="packages" title="Packages">Packages</a></p>

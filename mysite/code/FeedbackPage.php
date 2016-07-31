@@ -71,6 +71,15 @@ class FeedbackPage_Controller extends Page_Controller
         return $this->redirectBack();
     }
 
+    public function approvedFeedback()
+    {
+      $feedback = Feedback::get()->filter(array(
+               'Visible' => true,
+             ));
+      return $feedback->count() ? $feedback : false;
+
+    }
+
     public function init()
     {
         parent::init();
@@ -82,6 +91,5 @@ class FeedbackPage_Controller extends Page_Controller
 
         Requirements::css($this->ThemeDir().'/css/feedbackPage.min.css');
         Requirements::javascript($this->ThemeDir().'/javascript/page.js');
-        Requirements::javascript('https://maps.googleapis.com/maps/api/js?key=AIzaSyBzICHyqdCdY19NqntpSca1YBXo2-YdCEI&callback=initMap');
     }
 }
