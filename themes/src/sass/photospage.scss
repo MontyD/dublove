@@ -6,8 +6,17 @@
 .main-gallery {
 	max-width: 800px;
 	figure {
-		display: inline-block;
-		margin : 0;
+		position: relative;
+		display : inline-block;
+		margin  : 0;
+		&.feature {
+			&::after {
+				top: 0;
+			}
+		}
+		&.secondary {
+			z-index: 2;
+		}
 	}
 	.boxed {
 		margin    : 0.8em 0.4em;
@@ -44,7 +53,7 @@
 			}
 			&.feature {
 				float     : left;
-				margin-top: 1.8em;
+				margin-top: 2.4em;
 				img {
 					max-width: none;
 					width    : auto;

@@ -16,7 +16,7 @@
   <section class="main-gallery">
     <% loop $returnPhotos() %>
         <% if $Pos = 1 %>
-          <figure class="feature" itemprop="associatedMedia">
+          <figure class="feature emphasis emphasis-purple" itemprop="associatedMedia">
         <% else_if $Pos < 4 %>
           <figure class="secondary" itemprop="associatedMedia">
         <% else %>

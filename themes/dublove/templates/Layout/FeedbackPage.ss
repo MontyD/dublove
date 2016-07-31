@@ -19,6 +19,15 @@
   <section class="feedback-main">
     <% if approvedFeedback() %>
 
+      <% loop approvedFeedback() %>
+        <article class="feedback-row $EvenOdd">
+          <div class="feedback-item">
+            <p>$Feedback</p>
+            <strong>$Name</strong>
+          </div>
+          <i class="icon-user-icon small outline-round"></i>
+        <article>
+      <% end_loop %>
 
     <% else %>
 
