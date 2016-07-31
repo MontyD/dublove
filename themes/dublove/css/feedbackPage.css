@@ -1013,7 +1013,7 @@ span.funFont {
     content: ' ';
     position: absolute;
     left: -10em;
-    top: 2em;
+    top: 0em;
     height: 90%;
     width: 270%;
     background: #e5e7da;
@@ -1144,23 +1144,25 @@ body.menuOpen .popupMenu {
 header {
   background: #504978;
   color: #FFFFFF; }
-  header nav a {
-    color: #FFFFFF;
-    text-decoration: none;
-    transition: background 0.3s ease;
-    border-radius: 0.1em;
-    text-shadow: 1px 1px 0 rgba(0, 0, 0, 0.8); }
-    header nav a.home {
-      font-family: "Bad Script", sans-serif;
-      font-size: 3em; }
-    header nav a.current {
-      border-bottom: 3px solid #FFFFFF;
-      border-bottom-left-radius: 0;
-      border-bottom-right-radius: 0; }
-  header nav ul a {
-    font-size: 1.4em; }
-    header nav ul a:hover {
-      background: rgba(0, 0, 0, 0.2); }
+  header nav {
+    height: 95px; }
+    header nav a {
+      color: #FFFFFF;
+      text-decoration: none;
+      transition: background 0.3s ease;
+      border-radius: 0.1em;
+      text-shadow: 1px 1px 0 rgba(0, 0, 0, 0.8); }
+      header nav a.home {
+        font-family: "Bad Script", sans-serif;
+        font-size: 3em; }
+      header nav a.current {
+        border-bottom: 3px solid #FFFFFF;
+        border-bottom-left-radius: 0;
+        border-bottom-right-radius: 0; }
+    header nav ul a {
+      font-size: 1.4em; }
+      header nav ul a:hover {
+        background: rgba(0, 0, 0, 0.2); }
 
 .flowerGroup {
   position: absolute;
@@ -1203,6 +1205,12 @@ header {
     left: -1em;
     transition-delay: 1.8s;
     transition-duration: 0.8s; }
+
+.outline-round {
+  display: inline-block;
+  padding: 0.5em;
+  border-radius: 50%;
+  background: #E0E0E0; }
 
 .animateScale {
   -webkit-transform: scale(0);
@@ -2270,7 +2278,7 @@ fieldset {
     text-align: left; }
   .message.Good {
     font-size: 1.4em;
-    background: #a3dea3;
+    background: #c8edce;
     color: #2b6d2b;
     border-top: 1px solid #4aa04a;
     border-bottom: 1px solid #4aa04a;
@@ -2297,9 +2305,48 @@ article.formContainer {
     max-width: 600px;
     margin-left: auto;
     margin-right: auto; }
+  article.formContainer h2 {
+    margin-bottom: 0; }
   @media (max-width: 550px) {
     article.formContainer {
       width: 100%;
       padding: 0; } }
+
+.feedback-row {
+  position: relative;
+  display: block;
+  margin: 0 auto 0.2em;
+  text-align: right;
+  width: 95%; }
+  @media (max-width: 550px) {
+    .feedback-row {
+      margin-bottom: 0.8em; } }
+  .feedback-row.even {
+    text-align: left; }
+  .feedback-row .feedback-item {
+    position: relative;
+    display: inline-block;
+    padding: 0.7em 0;
+    width: 95%;
+    margin: 0 1em 0.5em;
+    max-width: 600px;
+    background: #e5e7da;
+    box-shadow: 0 1.5px 4px rgba(0, 0, 0, 0.24), 0 1.5px 6px rgba(0, 0, 0, 0.12); }
+    @media (max-width: 550px) {
+      .feedback-row .feedback-item {
+        margin: 0 0 0.5em; } }
+    .feedback-row .feedback-item p,
+    .feedback-row .feedback-item strong {
+      margin: 0 0 0.5em;
+      padding: 0 0.7em;
+      width: 100%;
+      line-height: 120%;
+      box-sizing: border-box; }
+    .feedback-row .feedback-item p {
+      text-align: justify; }
+  @media (max-width: 550px) {
+    .feedback-row .icon-user-icon {
+      width: 2.5em;
+      height: 2.5em; } }
 
 /*# sourceMappingURL=feedbackPage.css.map */

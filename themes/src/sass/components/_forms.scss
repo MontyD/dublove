@@ -86,7 +86,7 @@ fieldset {
 	}
 	&.Good {
 		font-size    : 1.4em;
-		background   : #a3dea3;
+		background   : #c8edce;
 		color        : #2b6d2b;
 		border-top   : 1px solid #4aa04a;
 		border-bottom: 1px solid #4aa04a;
@@ -114,6 +114,9 @@ article.formContainer {
 		max-width: 600px;
 		margin-left: auto;
 		margin-right: auto;
+	}
+	h2 {
+		margin-bottom: 0;
 	}
 	@media(max-width: $smallBP) {
 		width  : 100%;

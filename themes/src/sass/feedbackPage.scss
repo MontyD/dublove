@@ -2,3 +2,46 @@
 @import 'components/_styling';
 @import 'components/_svgs';
 @import 'components/_forms';
+.feedback-row {
+	position  : relative;
+	display   : block;
+	margin    : 0 auto 0.2em;
+	text-align: right;
+	width     : 95%;
+  @media(max-width: $smallBP) {
+    margin-bottom: 0.8em;
+  }
+	&.even {
+		text-align: left;
+	}
+	.feedback-item {
+		position  : relative;
+		display   : inline-block;
+		padding   : 0.7em 0;
+		width     : 95%;
+		margin    : 0 1em 0.5em;
+		max-width : 600px;
+		background: $colorBackground;
+		@include shadow(1);
+    @media(max-width: $smallBP) {
+      margin: 0 0 0.5em;
+    }
+		p,
+		strong {
+			margin    : 0 0 0.5em;
+			padding   : 0 0.7em;
+			width     : 100%;
+      line-height: 120%;
+			box-sizing: border-box;
+		}
+		p {
+			text-align: justify;
+		}
+	}
+  @media(max-width: $smallBP) {
+    .icon-user-icon {
+      width: 2.5em;
+      height: 2.5em;
+    }
+  }
+}

@@ -25,8 +25,12 @@
             <p>$Feedback</p>
             <strong>$Name</strong>
           </div>
-          <i class="icon-user-icon small outline-round"></i>
-        <article>
+          <div class="icon-holder">
+            <span class="outline-round">
+              <i class="icon-user-icon small"></i>
+            </span>
+          </div>
+        </article>
       <% end_loop %>
 
     <% else %>
@@ -38,9 +42,8 @@
   </section>
 
   <article class="formContainer formContainerSmall">
-
+    <h2>Add feedback...</h2>
     $FeedbackForm
-
   </article>
 
   <section class="last emphasis">

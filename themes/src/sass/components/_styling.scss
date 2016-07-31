@@ -308,7 +308,7 @@ span.funFont {
 		content   : ' ';
 		position  : absolute;
 		left      : -10em;
-		top       : 2em;
+		top       : 0em;
 		height    : 90%;
 		width     : 270%;
 		background: $colorBackground;
@@ -431,6 +431,7 @@ header {
 	background: $colorDark;
 	color     : $colorWhite;
 	nav {
+		height: 95px;
 		a {
 			color          : $colorWhite;
 			text-decoration: none;
@@ -509,7 +510,8 @@ header {
 	}
 }
 .outline-round {
-	padding: 1em;
+	display: inline-block;
+	padding: 0.5em;
 	border-radius: 50%;
 	background: #E0E0E0;
 }

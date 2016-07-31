@@ -1012,7 +1012,7 @@ span.funFont {
     content: ' ';
     position: absolute;
     left: -10em;
-    top: 2em;
+    top: 0em;
     height: 90%;
     width: 270%;
     background: #e5e7da;
@@ -1143,23 +1143,25 @@ body.menuOpen .popupMenu {
 header {
   background: #504978;
   color: #FFFFFF; }
-  header nav a {
-    color: #FFFFFF;
-    text-decoration: none;
-    transition: background 0.3s ease;
-    border-radius: 0.1em;
-    text-shadow: 1px 1px 0 rgba(0, 0, 0, 0.8); }
-    header nav a.home {
-      font-family: "Bad Script", sans-serif;
-      font-size: 3em; }
-    header nav a.current {
-      border-bottom: 3px solid #FFFFFF;
-      border-bottom-left-radius: 0;
-      border-bottom-right-radius: 0; }
-  header nav ul a {
-    font-size: 1.4em; }
-    header nav ul a:hover {
-      background: rgba(0, 0, 0, 0.2); }
+  header nav {
+    height: 95px; }
+    header nav a {
+      color: #FFFFFF;
+      text-decoration: none;
+      transition: background 0.3s ease;
+      border-radius: 0.1em;
+      text-shadow: 1px 1px 0 rgba(0, 0, 0, 0.8); }
+      header nav a.home {
+        font-family: "Bad Script", sans-serif;
+        font-size: 3em; }
+      header nav a.current {
+        border-bottom: 3px solid #FFFFFF;
+        border-bottom-left-radius: 0;
+        border-bottom-right-radius: 0; }
+    header nav ul a {
+      font-size: 1.4em; }
+      header nav ul a:hover {
+        background: rgba(0, 0, 0, 0.2); }
 
 .flowerGroup {
   position: absolute;
@@ -1202,6 +1204,12 @@ header {
     left: -1em;
     transition-delay: 1.8s;
     transition-duration: 0.8s; }
+
+.outline-round {
+  display: inline-block;
+  padding: 0.5em;
+  border-radius: 50%;
+  background: #E0E0E0; }
 
 .animateScale {
   -webkit-transform: scale(0);
