@@ -1273,7 +1273,7 @@ header {
         display: none; }
       header .cover-image.medium {
         display: block; } }
-    @media (max-width: 500px) {
+    @media (max-width: 400px) {
       header .cover-image.medium {
         display: none; }
       header .cover-image.small {
