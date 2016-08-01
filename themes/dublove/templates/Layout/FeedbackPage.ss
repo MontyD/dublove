@@ -47,7 +47,11 @@
   </article>
 
   <section class="last emphasis">
-      <p class="strongText">Like what you hear? Have a look at our packages<a class="likeButton small" href="packages" title="Packages">Packages</a></p>
+    <p class="strongText">$lastSentence
+      <% if $finalLinkLocation && $finalLinkText %>
+        <a class="likeButton small" href="$finalLinkLocation" title="$finalLinkText">$finalLinkText</a>
+      <% end_if %>
+    </p>
   </section>
 </main>
 

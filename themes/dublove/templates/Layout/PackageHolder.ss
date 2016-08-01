@@ -49,7 +49,11 @@
     </section>
   <% end_loop %>
   <section>
-      <p class="strongText">Not found what you're looking for? Get in contact<a class="likeButton small" href="contact" title="Conctact us!">Contact us</a></p>
+    <p class="strongText">$lastSentence
+      <% if $finalLinkLocation && $finalLinkText %>
+        <a class="likeButton small" href="$finalLinkLocation" title="$finalLinkText">$finalLinkText</a>
+      <% end_if %>
+    </p>
   </section>
 </main>
 

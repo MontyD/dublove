@@ -8,7 +8,7 @@ class HomePage extends Page {
 		"sectionOneText" => "HTMLText",
 		"initialButtonText" => "Varchar",
 		"initialButtonLocation" => "Varchar",
-		"lastSentence" => "Varchar",
+		"lastSentence" => "Text",
 		"finalLinkText" => "Varchar",
 		"finalLinkLocation" => "Varchar"
 	);

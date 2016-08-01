@@ -6,6 +6,9 @@ class CarPage extends Page
         'Name' => 'Varchar',
         'mainDescription' => 'HTMLText',
         'tagLine' => 'Text',
+        "lastSentence" => "Text",
+        "finalLinkText" => "Varchar",
+        "finalLinkLocation" => "Varchar"
     );
 
     private static $has_one = array(
@@ -28,8 +31,15 @@ class CarPage extends Page
 
         $fields->addFieldToTab('Root.Main', HtmlEditorField::create('mainDescription', 'Description'), 'Metadata');
 
+        $fields->addFieldToTab("Root.Main", TextField::create("lastSentence", "Final sentence"), "Metadata");
+
+        $fields->addFieldToTab("Root.Main", TextField::create("finalLinkText", "Last button text"), "Metadata");
+
+        $fields->addFieldToTab("Root.Main", TextField::create("finalLinkLocation", "Last button location"), "Metadata");
+
         $fields->addFieldToTab('Root.Images', UploadField::create('backgroundImage', 'Background image'));
-        $fields->addFieldToTab('Root.Main', UploadField::create('descriptionImage', 'Description image'), 'mainDescription');
+
+        $fields->addFieldToTab('Root.Images', UploadField::create('descriptionImage', 'Description image'), 'mainDescription');
 
         $fields->addFieldToTab('Root.Images', GridField::create(
             'FeatureImages',

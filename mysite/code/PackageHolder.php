@@ -2,6 +2,12 @@
 
 class PackageHolder extends Page
 {
+    private static $db = array(
+    'lastSentence' => 'Text',
+    'finalLinkText' => 'Varchar',
+    'finalLinkLocation' => 'Varchar',
+  );
+
     private static $has_many = array(
     'Packages' => 'Package',
   );
@@ -11,11 +17,17 @@ class PackageHolder extends Page
         $fields = parent::getCMSFields();
 
         $fields->addFieldToTab('Root.Main', GridField::create(
-      'Packages',
-      'Packages list',
-      $this->Packages(),
-      GridFieldConfig_RecordEditor::create()
-    ), 'Metadata');
+          'Packages',
+          'Packages list',
+          $this->Packages(),
+          GridFieldConfig_RecordEditor::create()
+        ), 'Metadata');
+
+        $fields->addFieldToTab('Root.Main', TextField::create('lastSentence', 'Final sentence'), 'Metadata');
+
+        $fields->addFieldToTab('Root.Main', TextField::create('finalLinkText', 'Last button text'), 'Metadata');
+
+        $fields->addFieldToTab('Root.Main', TextField::create('finalLinkLocation', 'Last button location'), 'Metadata');
 
         return $fields;
     }

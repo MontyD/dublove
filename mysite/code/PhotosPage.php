@@ -4,6 +4,9 @@ class PhotosPage extends Page
 {
     private static $db = array(
       'ShortDescription' => 'Text',
+      'lastSentence' => 'Text',
+      'finalLinkText' => 'Varchar',
+      'finalLinkLocation' => 'Varchar',
     );
 
     private static $has_one = array(
@@ -12,9 +15,16 @@ class PhotosPage extends Page
     public function getCMSFields()
     {
         $fields = parent::getCMSFields();
+
         $fields->removeFieldFromTab('Root.Main', 'Content');
 
         $fields->addFieldToTab('Root.Main', TextareaField::create('ShortDescription', 'Short description'), 'Metadata');
+
+        $fields->addFieldToTab('Root.Main', TextField::create('lastSentence', 'Final sentence'), 'Metadata');
+
+        $fields->addFieldToTab('Root.Main', TextField::create('finalLinkText', 'Last button text'), 'Metadata');
+
+        $fields->addFieldToTab('Root.Main', TextField::create('finalLinkLocation', 'Last button location'), 'Metadata');
 
         return $fields;
     }

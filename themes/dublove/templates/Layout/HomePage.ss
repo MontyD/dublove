@@ -104,7 +104,6 @@
       <% if $finalLinkLocation && $finalLinkText %>
         <a class="likeButton small" href="$finalLinkLocation" title="$finalLinkText">$finalLinkText</a>
       <% end_if %>
-
     </p>
   </section>
 </main>

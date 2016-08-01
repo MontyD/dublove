@@ -4,6 +4,9 @@ class FeedbackPage extends Page
 {
     private static $db = array(
       'OpeningParagraph' => 'Text',
+      "lastSentence" => "Text",
+      "finalLinkText" => "Varchar",
+      "finalLinkLocation" => "Varchar"
     );
 
     private static $has_many = array(
@@ -16,6 +19,12 @@ class FeedbackPage extends Page
         $fields->removeFieldFromTab('Root.Main', 'Content');
 
         $fields->addFieldToTab('Root.Main', TextareaField::create('OpeningParagraph', 'Opening Paragraph'), 'Metadata');
+
+        $fields->addFieldToTab("Root.Main", TextField::create("lastSentence", "Final sentence"), "Metadata");
+
+        $fields->addFieldToTab("Root.Main", TextField::create("finalLinkText", "Last button text"), "Metadata");
+
+        $fields->addFieldToTab("Root.Main", TextField::create("finalLinkLocation", "Last button location"), "Metadata");
 
         $fields->addFieldToTab('Root.Feedback', GridField::create(
           'Feedbacks',

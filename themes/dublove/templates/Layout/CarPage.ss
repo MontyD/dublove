@@ -85,7 +85,11 @@
   </section>
   <% end_if %>
   <section class="last">
-      <p class="strongText">Not found what you're looking for? Have a look at our other packages:<a class="likeButton small" href="packages" title="Packages">Packages</a></p>
+    <p class="strongText">$lastSentence
+      <% if $finalLinkLocation && $finalLinkText %>
+        <a class="likeButton small" href="$finalLinkLocation" title="$finalLinkText">$finalLinkText</a>
+      <% end_if %>
+    </p>
   </section>
 </main>
 

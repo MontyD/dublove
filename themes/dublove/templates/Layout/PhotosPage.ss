@@ -45,7 +45,11 @@
 
 
   <section class="last emphasis">
-      <p class="strongText">Have a look at what we offer: <a class="likeButton small" href="contact" title="Packages">Packages</a></p>
+    <p class="strongText">$lastSentence
+      <% if $finalLinkLocation && $finalLinkText %>
+        <a class="likeButton small" href="$finalLinkLocation" title="$finalLinkText">$finalLinkText</a>
+      <% end_if %>
+    </p>
   </section>
 
   <div class="pswp" tabindex="-1" role="dialog" aria-hidden="true">
