@@ -36,6 +36,9 @@
       </div>
       <a href="#" title="Menu" class="menu topA rightA"><span class="icon-hamburger"></span></a>
   </section>
+  <div class="cover-image main" style="background-image: url($mainImage.setHeight(800).URL)"></div>
+  <div class="cover-image medium" style="background-image: url($mainImage.croppedImage(800, 600).URL)"></div>
+  <div class="cover-image small" style="background-image: url($mainImage.croppedImage(800, 500).URL)"></div>
 </header>
 <main class="overlap">
     <section class="first">

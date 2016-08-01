@@ -5,8 +5,7 @@ header {
 	height    : 600px;
 	background: $colorOverlay;
 	box-sizing: border-box;
-	&:before {
-		content          : ' ';
+	.cover-image {
 		display          : block;
 		position         : absolute;
 		left             : 0;
@@ -15,23 +14,27 @@ header {
 		height           : 100%;
 		z-index          : -1;
 		opacity          : 0.6;
-		background-image : url('../images/background.jpg');
 		background-repeat: no-repeat;
 		background-size  : cover;
-		@media(min-width: 1300px) {
-			background-image: url('../images/background-1300.jpg');
-		}
-		@media(max-width: 900px) {
-			background-image: url('../images/background-900.jpg');
+		&.small,
+		&.medium {
+			display: none;
 		}
 		@media(max-width: 700px) {
-			background-image: url('../images/background-700.jpg');
+			&.main {
+				display: none;
+			}
+			&.medium {
+				display: block;
+			}
 		}
 		@media(max-width: 500px) {
-			background-image: url('../images/background-500.jpg');
-		}
-		@media(max-width: 350px) {
-			background-image: url('../images/background-350.jpg');
+			&.medium {
+				display: none;
+			}
+			&.small {
+				display: block;
+			}
 		}
 	}
 	section.container {

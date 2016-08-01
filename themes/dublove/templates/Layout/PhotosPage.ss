@@ -1,4 +1,4 @@
-<% include header %>
+ <% include header %>
 
 <main>
   <% if $returnPhotos() %>

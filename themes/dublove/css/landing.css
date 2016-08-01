@@ -1255,8 +1255,7 @@ header {
   height: 600px;
   background: rgba(90, 48, 146, 0.5);
   box-sizing: border-box; }
-  header:before {
-    content: ' ';
+  header .cover-image {
     display: block;
     position: absolute;
     left: 0;
@@ -1265,24 +1264,20 @@ header {
     height: 100%;
     z-index: -1;
     opacity: 0.6;
-    background-image: url("../images/background.jpg");
     background-repeat: no-repeat;
     background-size: cover; }
-    @media (min-width: 1300px) {
-      header:before {
-        background-image: url("../images/background-1300.jpg"); } }
-    @media (max-width: 900px) {
-      header:before {
-        background-image: url("../images/background-900.jpg"); } }
+    header .cover-image.small, header .cover-image.medium {
+      display: none; }
     @media (max-width: 700px) {
-      header:before {
-        background-image: url("../images/background-700.jpg"); } }
+      header .cover-image.main {
+        display: none; }
+      header .cover-image.medium {
+        display: block; } }
     @media (max-width: 500px) {
-      header:before {
-        background-image: url("../images/background-500.jpg"); } }
-    @media (max-width: 350px) {
-      header:before {
-        background-image: url("../images/background-350.jpg"); } }
+      header .cover-image.medium {
+        display: none; }
+      header .cover-image.small {
+        display: block; } }
   header section.container {
     height: 95%; }
   header a.menu {
