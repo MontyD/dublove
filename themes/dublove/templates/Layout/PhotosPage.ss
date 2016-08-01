@@ -31,7 +31,6 @@
               <img src="data:image/gif;base64,R0lGODlhAQABAAAAACH5BAEKAAEALAAAAAABAAEAAAICTAEAOw=="  data-src="$Photo.croppedImage(230,150).URL" class="b-lazy boxed" itemprop="thumbnail" alt="$Caption" />
             <% end_if %>
           </a>
-          <figcaption itemprop="caption description">$Caption</figcaption>
         </figure>
         <% if $Pos = 3 %>
         <hr>

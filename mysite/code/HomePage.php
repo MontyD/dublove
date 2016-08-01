@@ -9,7 +9,8 @@ class HomePage extends Page {
 	);
 
 	private static $has_one = array(
-	  "sectionOneImage" => "Image",
+		"mainImage" => "Image",
+	  "sectionOneImage" => "Image"
 	);
 
 	private static $has_many = array(
@@ -26,6 +27,8 @@ class HomePage extends Page {
 		$fields->addFieldToTab("Root.Main", TextField::create("sectionOneHeading", "Section One Heading"), "Metadata");
 
 		$fields->addFieldToTab("Root.Main", HtmlEditorField::create("sectionOneText", "Section One Text"), "Metadata");
+
+		$fields->addFieldToTab("Root.Images", UploadField::create("mainImage", "Main Background Image"));
 
 		$fields->addFieldToTab("Root.Images", UploadField::create("sectionOneImage", "Section One Image"));
 
