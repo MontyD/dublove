@@ -24,7 +24,7 @@
       <h1 class="main">$SiteConfig.Title</h1>
       <h2 class="main">$tagLine</h2>
       <% if $initialButtonText && $initialButtonLocation %>
-        <a href="contact" title="Book now!" class="likeButton primary">Book now</a>
+        <a href="$initialButtonLocation" title="$initialButtonText" class="likeButton primary">$initialButtonText</a>
       <% end_if %>
       <div class="flowerGroup leftA down topA">
           <i class="icon-Hibiscus-flip small two animateScale"></i>

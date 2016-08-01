@@ -1,7 +1,6 @@
 var debounce = require('./components/_debounce');
 var scrollEvents = require('./components/_scrollEvents');
 var scrollAnimations = require('./components/_scrollAnimations');
-var addDateToFooter = require('./components/_addDateToFooter');
 var setActive = require('./components/_setActive');
 var Blazy = require('./vendor/blazy.min');
 var menu = require('./components/_menu');
@@ -15,8 +14,6 @@ var homePage = (function() {
   var bLazy = new Blazy({
       offset: 500
   });
-
-  addDateToFooter();
 
   window.addEventListener('resize', function(){
     debounce(bLazy.revalidate(), 100);

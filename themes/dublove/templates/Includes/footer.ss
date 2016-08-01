@@ -4,10 +4,10 @@
       <i class="icon-Hibiscus one "></i>
       <i class="icon-Hibiscus v-small three "></i>
   </div>
-  <h3> DubLove </h3>
+  <h3> $SiteConfig.Title </h3>
   <p class="subtleText">Any additional information goes here</p>
   <p class="subtleText">Contact details</p>
-  <p class="subtleText">DubLove <span id="dateNow"></span></p>
+  <p class="subtleText">$SiteConfig.Title $Now.year()</p>
   <div class="flowerGroup rightA up bottomA hidden-small">
     <i class="icon-Hibiscus-flip one"></i>
     <i class="icon-Hibiscus small two"></i>

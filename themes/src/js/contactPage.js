@@ -1,4 +1,3 @@
-var addDateToFooter = require('./components/_addDateToFooter');
 var setActive = require('./components/_setActive');
 var Blazy = require('./vendor/blazy.min');
 var moment = require('moment');
@@ -19,8 +18,6 @@ var page = (function() {
 		field: document.getElementById('Form_ContactUsForm_Date'),
 		format: 'DD/MM/YYYY'
 	});
-
-	addDateToFooter();
 
 	bLazy.revalidate();
 

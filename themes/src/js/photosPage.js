@@ -1,6 +1,5 @@
 var PhotoSwipe = require('./vendor/photoswipe');
 var PhotoSwipeUI_Default = require('./vendor/photoswipe-ui-default');
-var addDateToFooter = require('./components/_addDateToFooter');
 var setActive = require('./components/_setActive');
 var menu = require('./components/_menu');
 var Blazy = require('./vendor/blazy.min');
