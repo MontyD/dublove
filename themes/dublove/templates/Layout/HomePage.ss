@@ -23,7 +23,9 @@
   <section class="container padded">
       <h1 class="main">$SiteConfig.Title</h1>
       <h2 class="main">$tagLine</h2>
-      <a href="contact" title="Book now!" class="likeButton primary">Book now</a>
+      <% if $initialButtonText && $initialButtonLocation %>
+        <a href="contact" title="Book now!" class="likeButton primary">Book now</a>
+      <% end_if %>
       <div class="flowerGroup leftA down topA">
           <i class="icon-Hibiscus-flip small two animateScale"></i>
           <i class="icon-Hibiscus one animateScale"></i>
@@ -87,7 +89,7 @@
           <% end_if %>
             <h3 class="funFont">$Name</h3>
             <p>$ShortDescription</p>
-            <a class="likeButton subtle" href="packages/#target__$Name" title="$Name">More info</a>
+            <a class="likeButton subtle" href="packages/#target__$Top.urlEncodeLink($Name)" title="$Name">More info</a>
           </article>
         <% end_loop %>
         <% if $packagesCount > 3 %>
@@ -98,7 +100,12 @@
       </section>
     <% end_if %>
   <section class="fourth emphasis last">
-    <p class="strongText">Interested? Get in contact with Mike and Jane today<a class="likeButton small" href="contact" title="Conctact us!">Contact us</a></p>
+    <p class="strongText">$lastSentence
+      <% if $finalLinkLocation && $finalLinkText %>
+        <a class="likeButton small" href="$finalLinkLocation" title="$finalLinkText">$finalLinkText</a>
+      <% end_if %>
+
+    </p>
   </section>
 </main>
 <% include footer %>

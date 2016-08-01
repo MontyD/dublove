@@ -5,7 +5,12 @@ class HomePage extends Page {
 	private static $db = array(
 		"tagLine" => "Varchar",
 		"sectionOneHeading" => "Varchar",
-		"sectionOneText" => "HTMLText"
+		"sectionOneText" => "HTMLText",
+		"initialButtonText" => "Varchar",
+		"initialButtonLocation" => "Varchar",
+		"lastSentence" => "Varchar",
+		"finalLinkText" => "Varchar",
+		"finalLinkLocation" => "Varchar"
 	);
 
 	private static $has_one = array(
@@ -24,9 +29,19 @@ class HomePage extends Page {
 
 		$fields->addFieldToTab("Root.Main", TextField::create("tagLine", "Tagline"), "Metadata");
 
+		$fields->addFieldToTab("Root.Main", TextField::create("initialButtonText", "First button text"), "Metadata");
+
+		$fields->addFieldToTab("Root.Main", TextField::create("initialButtonLocation", "First button location"), "Metadata");
+
 		$fields->addFieldToTab("Root.Main", TextField::create("sectionOneHeading", "Section One Heading"), "Metadata");
 
 		$fields->addFieldToTab("Root.Main", HtmlEditorField::create("sectionOneText", "Section One Text"), "Metadata");
+
+		$fields->addFieldToTab("Root.Main", TextField::create("lastSentence", "Final sentence"), "Metadata");
+
+		$fields->addFieldToTab("Root.Main", TextField::create("finalLinkText", "Last button text"), "Metadata");
+
+		$fields->addFieldToTab("Root.Main", TextField::create("finalLinkLocation", "Last button location"), "Metadata");
 
 		$fields->addFieldToTab("Root.Images", UploadField::create("mainImage", "Main Background Image"));
 
@@ -56,6 +71,10 @@ class HomePage_Controller extends Page_Controller {
 	public function packagesCount() {
 		$count = Package::get()->count();
 		return $count;
+	}
+
+	public function urlEncodeLink($link) {
+		return rawurlencode($link);
 	}
 
 
