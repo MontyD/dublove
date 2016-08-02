@@ -22,7 +22,7 @@
 <header class="centerAlign">
   <section class="container padded">
       <h1 class="main">$SiteConfig.Title</h1>
-      <h2 class="main">$tagLine</h2>
+      <h2 class="main">$SiteConfig.Tagline</h2>
       <% if $initialButtonText && $initialButtonLocation %>
         <a href="$initialButtonLocation" title="$initialButtonText" class="likeButton primary">$initialButtonText</a>
       <% end_if %>

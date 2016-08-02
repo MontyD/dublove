@@ -434,13 +434,19 @@ main {
 	}
 }
 footer {
-	position: relative;
-	width     : 100%;
-	margin    : 2em 0 0;
-	box-sizing: border-box;
+	position      : relative;
+	width         : 100%;
+	margin        : 2em 0 0;
+	box-sizing    : border-box;
+	padding-bottom: 0.7em;
 	h3 {
-		padding-top  : 0.2em;
-		margin-bottom: 0.2em;
+		font-size    : 3.5em;
+		line-height  : 90%;
+		padding-top  : 0.5em;
+		margin-bottom: 0;
+	}
+	article {
+		margin-top: 1.5em;
 	}
 }
 .active {
@@ -451,6 +457,11 @@ footer {
 }
 .hidden {
 	display: none;
+	&-medium {
+		@media(max-width: $mediumBP) {
+			visibility: hidden;
+		}
+	}
 	&-small {
 		@media(max-width: $smallBP) {
 			visibility: hidden;

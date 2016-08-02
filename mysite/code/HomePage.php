@@ -3,7 +3,6 @@
 class HomePage extends Page {
 
 	private static $db = array(
-		"tagLine" => "Varchar",
 		"sectionOneHeading" => "Varchar",
 		"sectionOneText" => "HTMLText",
 		"initialButtonText" => "Varchar",
@@ -26,8 +25,6 @@ class HomePage extends Page {
 
 		$fields = parent::getCMSFields();
 		$fields->removeFieldFromTab("Root.Main","Content");
-
-		$fields->addFieldToTab("Root.Main", TextField::create("tagLine", "Tagline"), "Metadata");
 
 		$fields->addFieldToTab("Root.Main", TextField::create("initialButtonText", "First button text"), "Metadata");
 

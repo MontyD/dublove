@@ -274,6 +274,10 @@ footer {
 		color  : $colorWhite;
 		margin : 0 auto;
 		padding: 0.5em;
+		box-sizing: border-box;
+	}
+	article {
+		border-radius: 0.3em;
 	}
 }
 span.funFont {
@@ -286,7 +290,7 @@ span.funFont {
 	color     : $colorBlack;
 }
 .dark {
-	background: $colorDark;
+	background: $colorVeryDark;
 	color     : $colorWhite;
 }
 .overlayPurple {

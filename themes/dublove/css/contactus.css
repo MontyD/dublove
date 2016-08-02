@@ -590,7 +590,9 @@ img {
           padding: 0;
           margin: 0;
           left: 50%;
-          transform: translateX(-50%); }
+          -webkit-transform: translateX(-50%);
+              -ms-transform: translateX(-50%);
+                  transform: translateX(-50%); }
           .innerModal .imageContainer img.transparent {
             opacity: 0.7; }
       .innerModal .content {
@@ -606,7 +608,9 @@ img {
       .innerModal .title {
         position: absolute;
         top: 40%;
-        transform: translateY(-50%);
+        -webkit-transform: translateY(-50%);
+            -ms-transform: translateY(-50%);
+                transform: translateY(-50%);
         margin: 0 auto;
         left: 0;
         right: 0;
@@ -724,17 +728,27 @@ footer {
   position: relative;
   width: 100%;
   margin: 2em 0 0;
-  box-sizing: border-box; }
+  box-sizing: border-box;
+  padding-bottom: 0.7em; }
   footer h3 {
-    padding-top: 0.2em;
-    margin-bottom: 0.2em; }
+    font-size: 3.5em;
+    line-height: 90%;
+    padding-top: 0.5em;
+    margin-bottom: 0; }
+  footer article {
+    margin-top: 1.5em; }
 
 .active i {
   opacity: 1;
-  transform: scale(1); }
+  -webkit-transform: scale(1);
+      -ms-transform: scale(1);
+          transform: scale(1); }
 
 .hidden {
   display: none; }
+  @media (max-width: 1000px) {
+    .hidden-medium {
+      visibility: hidden; } }
   @media (max-width: 550px) {
     .hidden-small {
       visibility: hidden; } }
@@ -980,7 +994,10 @@ footer {
   footer .subtleText {
     color: #FFFFFF;
     margin: 0 auto;
-    padding: 0.5em; }
+    padding: 0.5em;
+    box-sizing: border-box; }
+  footer article {
+    border-radius: 0.3em; }
 
 span.funFont {
   font-family: "Bad Script", sans-serif;
@@ -992,7 +1009,7 @@ span.funFont {
   color: #212121; }
 
 .dark {
-  background: #504978;
+  background: #3a3265;
   color: #FFFFFF; }
 
 .overlayPurple {
@@ -1011,7 +1028,9 @@ span.funFont {
     width: 270%;
     background: #e5e7da;
     z-index: -1;
-    transform: skewY(-3deg); }
+    -webkit-transform: skewY(-3deg);
+        -ms-transform: skewY(-3deg);
+            transform: skewY(-3deg); }
   .emphasis.emphasis-purple::after {
     background: rgba(90, 48, 146, 0.5); }
 
@@ -1020,7 +1039,9 @@ span.funFont {
   padding: 0.3em 0.4em 0.2em;
   background: rgba(0, 0, 0, 0.3);
   border-radius: 0.2em;
+  transition: -webkit-transform 0.2s ease;
   transition: transform 0.2s ease;
+  transition: transform 0.2s ease, -webkit-transform 0.2s ease;
   z-index: 9000; }
 
 .overlay {
@@ -1043,7 +1064,9 @@ nav.popupMenu {
   background: #3a3265;
   height: 100%;
   box-shadow: 0 1.5px 4px rgba(0, 0, 0, 0.24), 0 1.5px 6px rgba(0, 0, 0, 0.12);
-  transform: translateX(250px);
+  -webkit-transform: translateX(250px);
+      -ms-transform: translateX(250px);
+          transform: translateX(250px);
   transition: all 0.3s ease; }
   nav.popupMenu a.close {
     display: inline-block;
@@ -1085,7 +1108,9 @@ nav.popupMenu {
       font-family: "Bad Script", sans-serif;
       margin: 0.2em auto;
       opacity: 0;
-      transform: translateX(40px);
+      -webkit-transform: translateX(40px);
+          -ms-transform: translateX(40px);
+              transform: translateX(40px);
       transition: all;
       transition-duration: 0.4s; }
     nav.popupMenu ul a {
@@ -1108,11 +1133,17 @@ body.menuOpen .overlay {
   visibility: visible;
   z-index: 9000; }
 body.menuOpen .menu {
-  transform: scale(0); }
+  -webkit-transform: scale(0);
+      -ms-transform: scale(0);
+          transform: scale(0); }
 body.menuOpen .popupMenu {
-  transform: translate(0); }
+  -webkit-transform: translate(0);
+      -ms-transform: translate(0);
+          transform: translate(0); }
   body.menuOpen .popupMenu li {
-    transform: translate(0);
+    -webkit-transform: translate(0);
+        -ms-transform: translate(0);
+            transform: translate(0);
     opacity: 1; }
 
 header {
@@ -1187,15 +1218,23 @@ header {
   background: #E0E0E0; }
 
 .animateScale {
-  transform: scale(0);
+  -webkit-transform: scale(0);
+      -ms-transform: scale(0);
+          transform: scale(0);
   opacity: 0;
-  transition: opacity 0.8s ease, transform 1.2s ease; }
+  transition: opacity 0.8s ease, -webkit-transform 1.2s ease;
+  transition: opacity 0.8s ease, transform 1.2s ease;
+  transition: opacity 0.8s ease, transform 1.2s ease, -webkit-transform 1.2s ease; }
   .animateScale.active {
-    transform: scale(1);
+    -webkit-transform: scale(1);
+        -ms-transform: scale(1);
+            transform: scale(1);
     opacity: 1; }
 
 .active .animateScale {
-  transform: scale(1);
+  -webkit-transform: scale(1);
+      -ms-transform: scale(1);
+          transform: scale(1);
   opacity: 1; }
 
 .javascript-banner {
@@ -1843,7 +1882,9 @@ img {
           padding: 0;
           margin: 0;
           left: 50%;
-          transform: translateX(-50%); }
+          -webkit-transform: translateX(-50%);
+              -ms-transform: translateX(-50%);
+                  transform: translateX(-50%); }
           .innerModal .imageContainer img.transparent {
             opacity: 0.7; }
       .innerModal .content {
@@ -1859,7 +1900,9 @@ img {
       .innerModal .title {
         position: absolute;
         top: 40%;
-        transform: translateY(-50%);
+        -webkit-transform: translateY(-50%);
+            -ms-transform: translateY(-50%);
+                transform: translateY(-50%);
         margin: 0 auto;
         left: 0;
         right: 0;
@@ -1977,17 +2020,27 @@ footer {
   position: relative;
   width: 100%;
   margin: 2em 0 0;
-  box-sizing: border-box; }
+  box-sizing: border-box;
+  padding-bottom: 0.7em; }
   footer h3 {
-    padding-top: 0.2em;
-    margin-bottom: 0.2em; }
+    font-size: 3.5em;
+    line-height: 90%;
+    padding-top: 0.5em;
+    margin-bottom: 0; }
+  footer article {
+    margin-top: 1.5em; }
 
 .active i {
   opacity: 1;
-  transform: scale(1); }
+  -webkit-transform: scale(1);
+      -ms-transform: scale(1);
+          transform: scale(1); }
 
 .hidden {
   display: none; }
+  @media (max-width: 1000px) {
+    .hidden-medium {
+      visibility: hidden; } }
   @media (max-width: 550px) {
     .hidden-small {
       visibility: hidden; } }
@@ -2123,7 +2176,6 @@ footer {
 .pika-button {
   cursor: pointer;
   display: block;
-  -moz-box-sizing: border-box;
   box-sizing: border-box;
   outline: none;
   border: 0;
@@ -2265,7 +2317,9 @@ fieldset {
   margin: 1em auto; }
   @media (max-width: 350px) {
     .field.nocaptcha {
-      transform: scale(0.8);
+      -webkit-transform: scale(0.8);
+          -ms-transform: scale(0.8);
+              transform: scale(0.8);
       width: 300px !important; } }
 
 .field.checkbox {
