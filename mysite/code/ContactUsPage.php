@@ -79,6 +79,9 @@ class ContactUsPage_Controller extends Page_Controller
         $form->saveInto($contact);
         $contact->write();
 
+        $email = new Email("montydawsonauto@gmail.com", "hello@montydawson.co.uk", "New Dublove Contact", "New contact has been submitted \n\n Name:" . $data.Name . "\n\nPackage: " . $data.Package . "\n\nCar: " . $data.Car . "\n\nDate: " . $data.Date . "\n\nEmail: " . $data.Email . "\n\nInquiry:" . $data.Inquiry);
+        $email->sendPlain();
+
         $form->sessionMessage('Thanks for contacting us, we will be in touch shortly.', 'Good');
 
         return $this->redirectBack();
