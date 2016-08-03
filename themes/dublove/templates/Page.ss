@@ -7,6 +7,13 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     $MetaTags(false)
+    <link rel="apple-touch-icon" sizes="$ThemeDir/favicons/180x180" href="/apple-touch-icon.png">
+    <link rel="icon" type="image/png" href="$ThemeDir/favicons/favicon-32x32.png" sizes="32x32">
+    <link rel="icon" type="image/png" href="$ThemeDir/favicons/favicon-16x16.png" sizes="16x16">
+    <link rel="manifest" href="$ThemeDir/favicons/manifest.json">
+    <link rel="mask-icon" href="$ThemeDir/favicons/safari-pinned-tab.svg" color="#504978">
+    <link rel="mask-icon" href="$ThemeDir/favicons/safari-pinned-tab.svg" color="#504978">
+    <meta name="theme-color" content="#504978">
     <!--[if lt IE 9]>
       <script src="https://cdnjs.cloudflare.com/ajax/libs/html5shiv/3.7.3/html5shiv.min.js"></script>
     <![endif]-->
@@ -51,7 +58,6 @@
       })(window,document,'script','https://www.google-analytics.com/analytics.js','ga');
       ga('create', 'UA-81887612-1', 'auto');
       ga('send', 'pageview');
-
     </script>
   </body>
 
