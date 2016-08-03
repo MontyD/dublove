@@ -74,8 +74,9 @@ class FeedbackPage_Controller extends Page_Controller
         $feedback->FeedbackPageID = $this->ID;
         $form->saveInto($feedback);
         $feedback->write();
-
-        $email = new Email("montydawsonauto@gmail.com", "hello@montydawson.co.uk", "New Dublove Feedback", "New feedback has been submitted, log into CMS to review.");
+        
+        $emailTo = SiteConfig::current_site_config()->sendEmailsTo;
+        $email = new Email("montydawsonauto@gmail.com", $emailTo, "New Dublove Feedback", "New feedback has been submitted, log into CMS to review.");
         $email->sendPlain();
 
         $form->sessionMessage("Thank you for your feedback, Mike and Jane will have a read before it is added above.", 'Good');
