@@ -78,7 +78,7 @@
         <% end_loop %>
     </section>
     <% end_if %>
-    <% if $getPackages() %>
+    <% if $showPackagesSection && $getPackages() %>
       <section class="third">
         <h2>Our Packages</h2>
         <% loop $getPackages() %>
@@ -99,10 +99,14 @@
         <% end_if %>
       </section>
     <% end_if %>
+  <% if $showPackagesSection && $getPackages() %>
   <section class="fourth emphasis last">
+  <% else %>
+  <section class="fourth last">
+  <% end_if %>
     <p class="strongText">$lastSentence
       <% if $finalLinkLocation && $finalLinkText %>
-        <a class="likeButton small" href="$finalLinkLocation" title="$finalLinkText">$finalLinkText</a>
+        <a class="likeButton subtle small" href="$finalLinkLocation" title="$finalLinkText">$finalLinkText</a>
       <% end_if %>
     </p>
   </section>
